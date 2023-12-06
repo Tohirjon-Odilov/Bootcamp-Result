@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 Console.WriteLine("Salom, Dunyo");
+
 Console.WriteLine("Calculator!");
 
 Console.WriteLine("Enter the number: ");
