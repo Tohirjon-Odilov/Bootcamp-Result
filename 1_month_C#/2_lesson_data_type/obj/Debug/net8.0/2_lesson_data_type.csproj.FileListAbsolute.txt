@@ -1,0 +1,15 @@
+P:\DotNet\Bootcamp-Result\1_month_C#\2_lesson_data_type\bin\Debug\net8.0\2_lesson_data_type.exe
+P:\DotNet\Bootcamp-Result\1_month_C#\2_lesson_data_type\bin\Debug\net8.0\2_lesson_data_type.deps.json
+P:\DotNet\Bootcamp-Result\1_month_C#\2_lesson_data_type\bin\Debug\net8.0\2_lesson_data_type.runtimeconfig.json
+P:\DotNet\Bootcamp-Result\1_month_C#\2_lesson_data_type\bin\Debug\net8.0\2_lesson_data_type.dll
+P:\DotNet\Bootcamp-Result\1_month_C#\2_lesson_data_type\bin\Debug\net8.0\2_lesson_data_type.pdb
+P:\DotNet\Bootcamp-Result\1_month_C#\2_lesson_data_type\obj\Debug\net8.0\2_lesson_data_type.GeneratedMSBuildEditorConfig.editorconfig
+P:\DotNet\Bootcamp-Result\1_month_C#\2_lesson_data_type\obj\Debug\net8.0\2_lesson_data_type.AssemblyInfoInputs.cache
+P:\DotNet\Bootcamp-Result\1_month_C#\2_lesson_data_type\obj\Debug\net8.0\2_lesson_data_type.AssemblyInfo.cs
+P:\DotNet\Bootcamp-Result\1_month_C#\2_lesson_data_type\obj\Debug\net8.0\2_lesson_data_type.csproj.CoreCompileInputs.cache
+P:\DotNet\Bootcamp-Result\1_month_C#\2_lesson_data_type\obj\Debug\net8.0\2_lesson_data_type.sourcelink.json
+P:\DotNet\Bootcamp-Result\1_month_C#\2_lesson_data_type\obj\Debug\net8.0\2_lesson_data_type.dll
+P:\DotNet\Bootcamp-Result\1_month_C#\2_lesson_data_type\obj\Debug\net8.0\refint\2_lesson_data_type.dll
+P:\DotNet\Bootcamp-Result\1_month_C#\2_lesson_data_type\obj\Debug\net8.0\2_lesson_data_type.pdb
+P:\DotNet\Bootcamp-Result\1_month_C#\2_lesson_data_type\obj\Debug\net8.0\2_lesson_data_type.genruntimeconfig.cache
+P:\DotNet\Bootcamp-Result\1_month_C#\2_lesson_data_type\obj\Debug\net8.0\ref\2_lesson_data_type.dll
