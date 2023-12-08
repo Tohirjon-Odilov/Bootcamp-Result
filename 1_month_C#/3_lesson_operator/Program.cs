@@ -46,4 +46,5 @@ string result = color switch
     "green" => "The color is green",
     _ => "Unknown color"
 };
+
 Console.WriteLine(result);
