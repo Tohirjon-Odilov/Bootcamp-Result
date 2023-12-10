@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("3_lesson_operator")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+02d5d6d74317800b19c554acb827cb34bf35522a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+33107b6ac7245338616d627346eee7ad6c07b149")]
 [assembly: System.Reflection.AssemblyProductAttribute("3_lesson_operator")]
 [assembly: System.Reflection.AssemblyTitleAttribute("3_lesson_operator")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
