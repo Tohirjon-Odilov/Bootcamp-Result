@@ -20,11 +20,26 @@
 
 Console.WriteLine(Sum(45.5454m, 4545, 454545, 4545.859m));
 */
-
+/*
 decimal i = 0;
 decimal sum(decimal a)
 {
     return sum(i+1);
 }
 
-Console.WriteLine(sum(5));
+Console.WriteLine(sum(5));*/
+
+
+
+// vazifa ///////////////////
+
+int n = 30;
+
+var tempA = 0;
+var tempB = 1;
+for (var i = 0; i < n; i++)
+{
+    tempB = tempA + tempB;
+    tempA = tempB - tempA;
+}
+Console.WriteLine(tempA);
