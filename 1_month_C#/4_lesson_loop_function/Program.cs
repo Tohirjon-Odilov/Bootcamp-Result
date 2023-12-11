@@ -32,7 +32,7 @@ Console.WriteLine(sum(5));*/
 
 
 // vazifa ///////////////////
-
+/*
 int n = 30;
 
 var tempA = 0;
@@ -42,4 +42,18 @@ for (var i = 0; i < n; i++)
     tempB = tempA + tempB;
     tempA = tempB - tempA;
 }
-Console.WriteLine(tempA);
+Console.WriteLine(tempA);*/
+
+// ################ funksi bir nechta qiymat qaytara oladi
+/*(int, int, int) sum(int a, int b)
+{
+    return (a + b, a - b, a * b);
+}
+Console.WriteLine(sum(2, 3));*/
+
+// Item1... ni o'zgartirish mumkin
+(int sum, int division, int multiple) sum(int a, int b)
+{
+    return (a + b, a - b, a * b);
+}
+Console.WriteLine(sum(2, 3).multiple);
