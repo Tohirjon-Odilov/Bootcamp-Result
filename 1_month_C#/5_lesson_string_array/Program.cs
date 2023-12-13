@@ -25,7 +25,7 @@
 //Output: true
 
 //##################################//
-// homework
+// homework 11.12.2023
 #region koordinata
 Console.WriteLine("Nechta kordinata kiritmoqchisiz >> ");
 int l = int.Parse(Console.ReadLine()!);
@@ -137,4 +137,35 @@ public class Solution
         return count == num ? true : false;
     }
 }*/
+#endregion
+
+//12.12.2023 homework
+#region  Reverse String
+//public class Solution
+//{
+//    public void ReverseString(char[] s)
+//    {
+//        Array.Reverse(s);
+//    }
+//}
+#endregion
+
+#region interpret
+//public class Solution
+//{
+//    public string Interpret(string command)
+//    {
+//        return command.Replace("(al)", "al").Replace("()", "o");
+//    }
+//}
+#endregion
+
+#region ip address
+//public class Solution
+//{
+//    public string DefangIPaddr(string address)
+//    {
+//        return address.Replace(".", "[.]");
+//    }
+//}
 #endregion
