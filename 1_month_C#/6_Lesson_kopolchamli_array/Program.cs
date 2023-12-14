@@ -60,43 +60,44 @@ internal class Program
     {
         while (true)
         {
-            if (isWin)
-            {
-                Console.ForegroundColor = ConsoleColor.Green;
-                toShow();
-                Console.ResetColor();
-                return;
-            }
-            toShow();
-
-            var key = Console.ReadKey();
-
-            Console.Clear();
-
-            if (key.Key == ConsoleKey.DownArrow)
-            {
-                toBottom();
-            }
-            else if (key.Key == ConsoleKey.UpArrow)
-            {
-                toTop();
-            }
-            else if (key.Key == ConsoleKey.RightArrow)
-            {
-                toRight();
-            }
-            else if (key.Key == ConsoleKey.LeftArrow)
-            {
-                toLeft();
-            }
-            else if (key.Key == ConsoleKey.Escape)
-            {
-                Console.Clear();
-                return;
-            }
             isWin = AreArraysEqual(arr, arrTrue);
             if (isWin)
             {
+                if (isWin)
+                {
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    toShow();
+                    Console.ResetColor();
+                    return;
+                }
+                toShow();
+
+                var key = Console.ReadKey();
+
+                Console.Clear();
+
+                if (key.Key == ConsoleKey.DownArrow)
+                {
+                    toBottom();
+                }
+                else if (key.Key == ConsoleKey.UpArrow)
+                {
+                    toTop();
+                }
+                else if (key.Key == ConsoleKey.RightArrow)
+                {
+                    toRight();
+                }
+                else if (key.Key == ConsoleKey.LeftArrow)
+                {
+                    toLeft();
+                }
+                else if (key.Key == ConsoleKey.Escape)
+                {
+                    Console.Clear();
+                    return;
+                }
+
                 Console.Clear();
             }
         }
@@ -115,11 +116,8 @@ internal class Program
                     arr[i, j] = arr[i - 1, j];
                     arr[i - 1, j] = "  ";
                 }
-                //Console.Write(arr[i,j] + " ");
             }
-            //Console.WriteLine();
         }
-        //return arr;
     }
     #endregion
 
