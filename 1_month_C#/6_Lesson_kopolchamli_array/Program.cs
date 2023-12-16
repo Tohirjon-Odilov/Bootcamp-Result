@@ -97,7 +97,6 @@ internal class Program
                     Console.Clear();
                     return;
                 }
-
                 Console.Clear();
             }
         }
@@ -147,10 +146,6 @@ internal class Program
             {
                 if (i + 1 < 4 && arr[i, j] == "  ")
                 {
-                    // [][][][]
-                    // [][][][]
-                    // [][][][]
-                    // [][][][]
                     arr[i, j] = arr[i + 1, j];
                     arr[i + 1, j] = "  ";
                     return;
@@ -169,7 +164,6 @@ internal class Program
             {
                 if (j + 1 < 4 && arr[i, j] == "  ")
                 {
-                    //Console.WriteLine($"{i},{j}");
                     arr[i, j] = arr[i, j + 1];
                     arr[i, j + 1] = "  ";
                     return;
@@ -184,7 +178,6 @@ internal class Program
     {
         if (arr1.GetLength(0) != arr2.GetLength(0) || arr1.GetLength(1) != arr2.GetLength(1))
         {
-            // Massivlar uzunligi yoki balandligi bir xil emas
             return false;
         }
 
@@ -194,18 +187,11 @@ internal class Program
             {
                 if (arr1[i, j] != arr2[i, j])
                 {
-                    // Massivlar bir-biriga teng emas
                     return false;
                 }
             }
         }
-
-        // Agar yuqorida hech qanday nuqta to'g'ri kelmasa, massivlar bir-biriga teng
         return true;
-
-
-        //bool areArraysEqual = AreArraysEqual(arr, arr1);
-        //Console.WriteLine("Massivlar bir xilmi? " + areArraysEqual);
     }
     #endregion
 
