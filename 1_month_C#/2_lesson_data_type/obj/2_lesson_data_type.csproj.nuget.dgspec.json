@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "P:\\DotNet\\Bootcamp-Result\\1_month_C#\\2_lesson_data_type\\2_lesson_data_type.csproj": {}
+    "C:\\Users\\user\\Source\\Repos\\Bootcamp-Result\\1_month_C#\\2_lesson_data_type\\2_lesson_data_type.csproj": {}
   },
   "projects": {
-    "P:\\DotNet\\Bootcamp-Result\\1_month_C#\\2_lesson_data_type\\2_lesson_data_type.csproj": {
+    "C:\\Users\\user\\Source\\Repos\\Bootcamp-Result\\1_month_C#\\2_lesson_data_type\\2_lesson_data_type.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "P:\\DotNet\\Bootcamp-Result\\1_month_C#\\2_lesson_data_type\\2_lesson_data_type.csproj",
+        "projectUniqueName": "C:\\Users\\user\\Source\\Repos\\Bootcamp-Result\\1_month_C#\\2_lesson_data_type\\2_lesson_data_type.csproj",
         "projectName": "2_lesson_data_type",
-        "projectPath": "P:\\DotNet\\Bootcamp-Result\\1_month_C#\\2_lesson_data_type\\2_lesson_data_type.csproj",
+        "projectPath": "C:\\Users\\user\\Source\\Repos\\Bootcamp-Result\\1_month_C#\\2_lesson_data_type\\2_lesson_data_type.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "P:\\DotNet\\Bootcamp-Result\\1_month_C#\\2_lesson_data_type\\obj\\",
+        "outputPath": "C:\\Users\\user\\Source\\Repos\\Bootcamp-Result\\1_month_C#\\2_lesson_data_type\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",

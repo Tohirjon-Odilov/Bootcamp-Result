@@ -61,7 +61,7 @@ internal class Program
         while (true)
         {
             isWin = AreArraysEqual(arr, arrTrue);
-            if (isWin)
+            if (!isWin)
             {
                 if (isWin)
                 {
