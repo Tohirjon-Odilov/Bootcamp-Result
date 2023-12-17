@@ -178,6 +178,7 @@ internal class Program
     {
         if (arr1.GetLength(0) != arr2.GetLength(0) || arr1.GetLength(1) != arr2.GetLength(1))
         {
+            //isWin = true;
             return false;
         }
 
@@ -187,6 +188,7 @@ internal class Program
             {
                 if (arr1[i, j] != arr2[i, j])
                 {
+                    //isWin = true;
                     return false;
                 }
             }
