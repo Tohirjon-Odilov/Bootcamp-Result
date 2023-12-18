@@ -3,7 +3,7 @@
     public class Library
     {
         
-        public Library(string author, string bookName, string[] books) 
+        public Library(string author, string bookName, string[][][] books) 
         {
             this.author = author;
             this.bookName = bookName;
@@ -11,7 +11,7 @@
         }
         private string? author;
         private string? bookName;
-        private string[] books;
+        private string[][][] books;
 
         public string getAuthor{ get { return author!; } }
         public string getBookName { get { return bookName!; } }
@@ -22,8 +22,21 @@
         }
 
         public void add() { }
-        public void contains(int floor, int shelf) { }
-        public string getBooks() { return $"Shelf {1}, "; }
+        public bool contains(string book, int floor, int closet) { 
+            for(var i = 0;  i < books.Length; i++)
+                if (books[floor][closet][i] == book) return true;
+            return false;
+        }
+        public string getBooks(int floor, int closet) 
+        {
+            string booksIntoShelf;
+            for(var i = 0; i < books.Length; i++)
+            {
+                //booksIntoShelf += "Shelf";
+            }
+            return;
+            //return books[floor][closet][shelf]; 
+        }
         public int getFloor() { return 1; }
         public int getShelf() {  return 1; }
         public int getCloset() { return 1; }

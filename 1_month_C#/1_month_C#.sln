@@ -19,7 +19,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "6_Lesson_kopolchamli_array"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "7_lesson_oop_davomi", "7_lesson_oop_davomi\7_lesson_oop_davomi.csproj", "{DE67A545-8563-4D97-AA64-E38CD9AC5500}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "8_lesson_oop_advansed_sealid_static_class", "8_lesson_oop_advansed_sealid_static_class\8_lesson_oop_advansed_sealid_static_class.csproj", "{3075A617-38BA-4C54-A2F6-17DA6BDF6763}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "8_lesson_oop_advansed_sealid_static_class", "8_lesson_oop_advansed_sealid_static_class\8_lesson_oop_advansed_sealid_static_class.csproj", "{3075A617-38BA-4C54-A2F6-17DA6BDF6763}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
