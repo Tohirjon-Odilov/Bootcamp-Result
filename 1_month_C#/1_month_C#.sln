@@ -21,7 +21,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "7_lesson_oop_davomi", "7_le
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "8_lesson_oop_advansed_sealid_static_class", "8_lesson_oop_advansed_sealid_static_class\8_lesson_oop_advansed_sealid_static_class.csproj", "{3075A617-38BA-4C54-A2F6-17DA6BDF6763}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "9_lesson_interfeys_partial_virtual_struct_enum", "9_lesson_OOP_polymorphizm\9_lesson_interfeys_partial_virtual_struct_enum.csproj", "{2547F259-7309-4DB7-B6C8-2603772C1BBF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "9_lesson_interfeys_partial_virtual_struct_enum", "9_lesson_OOP_polymorphizm\9_lesson_interfeys_partial_virtual_struct_enum.csproj", "{2547F259-7309-4DB7-B6C8-2603772C1BBF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

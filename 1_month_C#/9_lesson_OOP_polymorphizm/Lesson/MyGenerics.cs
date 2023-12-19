@@ -6,9 +6,14 @@
         public MyInt? year;
         public MyInt? month;
         public MyInt? day;
-        public MyGenerics()
+
+        public MyGenerics(MyString name, MyInt year, MyInt month, MyInt day)
         {
-            Console.WriteLine($"Maning ismim {name}. Men {year} - yil {month} - oy {day} da tug'ilganman. ");
+            this.name = name;
+            this.year = year;
+            this.month = month;
+            this.day = day;
         }
+        public string About() => $"Mening ismim {name}. {year}/{month}/{day} kun tavallud topganman.";
     }
 }
