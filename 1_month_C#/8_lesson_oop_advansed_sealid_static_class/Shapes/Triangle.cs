@@ -1,4 +1,4 @@
-﻿namespace _8_lesson_oop_advansed_sealid_static_class
+﻿namespace _8_lesson_oop_advansed_sealid_static_class.Shape
 {
     public class Triangle : Shape
     {
@@ -6,7 +6,7 @@
         private double secondSide;
         private double thirdSide;
 
-        public Triangle(double firstSide, double secondSide, double thirdSide, double x, double y) : base(x,y)
+        public Triangle(double firstSide, double secondSide, double thirdSide, double x, double y) : base(x, y)
         {
             this.firstSide = firstSide;
             this.secondSide = secondSide;
@@ -21,7 +21,7 @@
 
         public override double CalculatePerimeter()
         {
-            return (firstSide + secondSide + thirdSide);
+            return firstSide + secondSide + thirdSide;
         }
     }
 }

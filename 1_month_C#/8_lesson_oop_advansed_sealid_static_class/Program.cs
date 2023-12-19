@@ -1,4 +1,4 @@
-﻿using _8_lesson_oop_advansed_sealid_static_class;
+﻿using _8_lesson_oop_advansed_sealid_static_class.Shape;
 
 var uchburchak = new Triangle(3, 4, 5, 9, 7);
 Console.WriteLine(uchburchak.CalculateArea());
@@ -11,7 +11,6 @@ Console.WriteLine(tortburchak.CalculateArea());
 var dumaloq = new Circle(8, 4, 5);
 Console.WriteLine(dumaloq.CalculatePerimeter());
 Console.WriteLine(dumaloq.CalculateArea());
-
 
 //////////////////////////// Library ////////////////////////////////
 
