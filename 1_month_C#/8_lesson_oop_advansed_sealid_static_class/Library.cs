@@ -36,7 +36,7 @@
             {
                 //booksIntoShelf += "Shelf";
             }
-            return;
+            return "";
             //return books[floor][closet][shelf]; 
         }
         public int getFloor() { return 1; }
