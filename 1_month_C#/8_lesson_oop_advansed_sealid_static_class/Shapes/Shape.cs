@@ -1,4 +1,6 @@
-﻿namespace _8_lesson_oop_advansed_sealid_static_class.Shape
+﻿using _8_lesson_oop_advansed_sealid_static_class.Shapes;
+
+namespace _8_lesson_oop_advansed_sealid_static_class.Shape
 {
     public abstract class Shape : Point
     {

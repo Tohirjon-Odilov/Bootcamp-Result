@@ -9,26 +9,8 @@
 // struct
 #endregion
 
-//public interface IMyClass
-//{
-//    public static void MyMessage()
-//    {
-//        Console.WriteLine("Hello interface");
-//    }
-//}
-
-//// STRUCT
-//public struct MyStruct
-//{
-//    public int test;
-//    public int test1;
-//}
-
-//IMyClass.Equals();
-//var hi = new IMyClass();
-
+#region Calculator
 using _9_lesson_OOP_polymorphizm.Calculator;
 
-Console.WriteLine();
-
 ICalculatorService calculator = new CalculatorService(2, 3);
+#endregion
