@@ -10,6 +10,26 @@
             Console.WriteLine("Bu static class");
         }
 
+        public static class StaticClass { } // nested static class ocha olamiz
+
+    }
+
+    public sealed class SealedClass : NormalClass
+    {
+        /// <summary>
+        /// Sealed class ichida nested class ocha olamiz
+        /// Sealed class'da boshqa class'da vorish olib ishlatsa bo'ladi
+        /// Ammo voris bermaydi
+        /// Constructor'ga
+        /// 
+        /// </summary>
+        public sealed class SealedClass2 // nested sealed class ocha olamiz
+        {
+            public SealedClass2()
+            {
+                Console.WriteLine("Hello sealed class");
+            }
+        }
     }
 
     public class NormalClass

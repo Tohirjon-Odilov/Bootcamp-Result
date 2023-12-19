@@ -1,8 +1,97 @@
-﻿namespace _8_lesson_oop_advansed_sealid_static_class
+﻿using System.Text;
+
+namespace _8_lesson_oop_advansed_sealid_static_class
 {
 
-    public class Library
-    {
+    /*    public class Library
+        {
+            private Shelf[] Shelves { get; }
+
+            public Library()
+            {
+                Shelves = new Shelf[]
+                {
+                new Shelf(3, 30),
+                     Add more shelves if needed
+                };
+        }
+
+        public void AddBook(
+            Book book,
+            int shelf,
+            int floor,
+            int closet,
+            int javon)
+        {
+            Shelves[shelf - 1].Add(book, floor - 1, closet - 1, javon - 1);
+        }
+
+        public bool ContainsBook(Book book, int shelf, int floor, int closet, int javon)
+        {
+            return Shelves[shelf - 1].Contains(book, floor - 1, closet - 1, javon - 1);
+        }
+
+        public string GetBooks()
+        {
+            StringBuilder result = new StringBuilder();
+            foreach (Shelf shelf in Shelves)
+            {
+                result.Append(shelf.GetBooks());
+            }
+            return result.ToString();
+        }
+
+        public int GetFloor(Book book)
+        {
+            foreach (Shelf shelf in Shelves)
+            {
+                int floor = shelf.GetFloor(book);
+                if (floor != -1)
+                {
+                    return floor;
+                }
+            }
+            return -1;
+        }
+
+        public int GetCloset(Book book)
+        {
+            foreach (Shelf shelf in Shelves)
+            {
+                int closet = shelf.GetCloset(book);
+                if (closet != -1)
+                {
+                    return closet;
+                }
+            }
+            return -1;
+        }
+
+        public int GetShelf(Book book)
+        {
+            foreach (Shelf shelf in Shelves)
+            {
+                int javon = shelf.GetShelf(book);
+                if (javon != -1)
+                {
+                    return javon;
+                }
+            }
+            return -1;
+        }
+
+        public Book? FindBook(string authorName, string title)
+        {
+            foreach (Shelf shelf in Shelves)
+            {
+                Book book = shelf.Find(authorName, title);
+                if (book != null)
+                {
+                    return book;
+                }
+            }
+            return null;
+        }
 
         public Library(string author, string bookName, string[][][] books)
         {
@@ -43,7 +132,7 @@
         public int getShelf() { return 1; }
         public int getCloset() { return 1; }
         public void find() { }
-    }
+    }*/
 
     #region other
     //public class Book
