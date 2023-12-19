@@ -14,6 +14,7 @@
             this.month = month;
             this.day = day;
         }
-        public string About() => $"Mening ismim {name}. {year}/{month}/{day} kun tavallud topganman.";
+        public string About() => $"Mening ismim {name}. {year}/{month}/{day} kun tavallud topganman. \nbu enum=>" +
+            $"{(int)MyEnum.affirmative}";
     }
 }
