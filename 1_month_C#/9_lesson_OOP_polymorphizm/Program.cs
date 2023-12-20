@@ -20,8 +20,8 @@ using System.Collections;
 
 #region Clinic
 
-//Patient person = new Patient("name", "secondname", 2, Gender.Famale);
-////Console.WriteLine(person.Gender);
+Doctor person = new Doctor("name", "secondname", 2, 3, Gender.Famale, "Doctor");
+Console.WriteLine(person.Name);
 //ArrayList Patients = new ArrayList();
 //Patients.Add(person);
 

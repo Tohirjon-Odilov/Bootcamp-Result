@@ -5,30 +5,38 @@ namespace _9_lesson_OOP_polymorphizm.Medical
     public class Clinic
     {
         //Patient person = new Patient("Husnigul", "Ortiqboyeva", 1111, Gender.Famale);
-        private ArrayList Patients = new ArrayList();
-        private ArrayList Nurses = new ArrayList();
+        public static ArrayList Persons = new ArrayList();
+        public static ArrayList Doctors = new ArrayList();
         public Clinic()
         {
             
         }
 
-        public string AddPatient(Patient person) { 
-            Patients.Add(person);
+        public string AddPatient(Person person) { 
+            Persons.Add(person);
             return "Person added succesfully :)"; 
         }
 
-        public Patient? GetPatient(int Ssn) {
-            foreach (Patient person in Patients)
+        public Person? GetPatient(int Ssn) {
+            foreach (Person person in Persons)
             {
                 if (person.Ssn == Ssn) return person;
             }
             return null;
         }
 
-        public string AddPatient(Nurse nurse) 
+        public string AddDoctor(Doctor nurse) 
         {
-            Nurses.Add(nurse);
+            Doctors.Add(nurse);
             return "Added succesfully :)";
+        }
+        public Doctor? GetDoctor(int Id) 
+        {
+            foreach (Doctor nurse in Doctors)
+            {
+                if (nurse.Id == Id) return nurse;
+            }
+            return null;
         }
     }
 }
