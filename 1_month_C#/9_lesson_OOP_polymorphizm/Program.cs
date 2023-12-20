@@ -12,8 +12,24 @@
 #region Calculator
 using _9_lesson_OOP_polymorphizm;
 using _9_lesson_OOP_polymorphizm.Calculator;
+using _9_lesson_OOP_polymorphizm.Medical;
+using System.Collections;
 
-ICalculatorService calculator = new CalculatorService(2, 3);
+//CalculatorService<int> calculator = new CalculatorService<int>(2, 3);
+#endregion
+
+#region Clinic
+
+//Patient person = new Patient("name", "secondname", 2, Gender.Famale);
+////Console.WriteLine(person.Gender);
+//ArrayList Patients = new ArrayList();
+//Patients.Add(person);
+
+//foreach (Patient item in Patients)
+//{
+//    Console.WriteLine(item.Gender);
+//}
+
 #endregion
 
 #region Lesson files

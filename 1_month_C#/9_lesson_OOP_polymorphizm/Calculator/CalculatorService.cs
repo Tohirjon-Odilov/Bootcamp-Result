@@ -1,4 +1,6 @@
-﻿namespace _9_lesson_OOP_polymorphizm.Calculator
+﻿// Program.cs'da ishga tushadi
+
+namespace _9_lesson_OOP_polymorphizm.Calculator
 {
     public partial class CalculatorService<MyInt>
     {
