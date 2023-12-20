@@ -8,7 +8,10 @@
             Id = id;
             Expert = expert;
         }
+        // Doctor'ning yagona id'si
         private int id; 
+        public static List<Person> attachedPatients = new List<Person>();
+        // Id'ni olish va id'ga qiymat berish
         public int Id {
             get
             {
@@ -26,6 +29,13 @@
                 id = value;
             } 
         }
+        // Docotorninng mutahasisligi
         public string Expert {  get; set; }
+
+        // Shifokorga biriktirilgan bemorlar ro'yhatini olish
+        public List<Person> getPatients(Person person)
+        {
+            return attachedPatients;
+        }
     }
 }

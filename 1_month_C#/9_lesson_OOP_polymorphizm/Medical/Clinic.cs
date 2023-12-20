@@ -49,6 +49,8 @@ namespace _9_lesson_OOP_polymorphizm.Medical
                 if(nurse.Id == doctorId)
                 {
                     isDoctorFound = false;
+                    Person.PatientDoctor = nurse;
+                    //Person.GetDoctor(nurse);
                     Console.WriteLine("Done");
                 }
             }
@@ -56,6 +58,7 @@ namespace _9_lesson_OOP_polymorphizm.Medical
             {
                 if(item.Ssn == patientSsn)
                 {
+                    //Person.GetDoctor(item);
                     isPatientFound = false;
                     Console.WriteLine("Done");
                 }
@@ -69,6 +72,6 @@ namespace _9_lesson_OOP_polymorphizm.Medical
             //Random rand = new Random();
             //int randomIndex = rand.Next(0, Doctors.Count);
             //return Doctors[randomIndex].Name;
-        }
+        
     }
 }
