@@ -15,13 +15,13 @@
         public int Id {
             get
             {
-                foreach (Doctor item in Clinic.Doctors)
-                {
-                    if(item.Id == id)
-                    {
-                        return item.Id;
-                    }
-                }
+                //foreach (Doctor item in Clinic.Doctors)
+                //{
+                //    if(item.Id == id)
+                //    {
+                //        return item.Id;
+                //    }
+                //}
                 return id;
             }
             set
@@ -29,7 +29,7 @@
                 id = value;
             } 
         }
-        // Docotorninng mutahasisligi
+        // Doctorninng mutahasisligi
         public string Expert {  get; set; }
 
         // Shifokorga biriktirilgan bemorlar ro'yhatini olish
