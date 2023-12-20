@@ -5,8 +5,8 @@ namespace _9_lesson_OOP_polymorphizm.Medical
     public class Clinic
     {
         //Patient person = new Patient("Husnigul", "Ortiqboyeva", 1111, Gender.Famale);
-        public static ArrayList Persons = new ArrayList();
-        public static ArrayList Doctors = new ArrayList();
+        public static List<Person> Persons = new List<Person>();
+        public static List<Doctor> Doctors = new List<Doctor>();
         public Clinic()
         {
             
@@ -37,6 +37,38 @@ namespace _9_lesson_OOP_polymorphizm.Medical
                 if (nurse.Id == Id) return nurse;
             }
             return null;
+        }
+
+        public string? assignPatientToDoctor(int patientSsn, int doctorId)
+        {
+            //Doctor? doctor = GetDoctor(doctorId);
+            bool isDoctorFound = true;
+            bool isPatientFound  = true;
+            foreach (Doctor nurse in Doctors)
+            {
+                if(nurse.Id == doctorId)
+                {
+                    isDoctorFound = false;
+                    Console.WriteLine("Done");
+                }
+            }
+            foreach (Person item in Persons)
+            {
+                if(item.Ssn == patientSsn)
+                {
+                    isPatientFound = false;
+                    Console.WriteLine("Done");
+                }
+            }
+
+
+            if (isDoctorFound) { return "NoSuchDoctor"; }
+            else if (isPatientFound) { return "NoSuchPatient"; }
+            return "Assigned succesfully :)";
+        }
+            //Random rand = new Random();
+            //int randomIndex = rand.Next(0, Doctors.Count);
+            //return Doctors[randomIndex].Name;
         }
     }
 }

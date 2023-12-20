@@ -19,9 +19,38 @@ using System.Collections;
 #endregion
 
 #region Clinic
+Doctor doctor1 = new Doctor("Jamshid", "Jamshidov", 321, 333, Gender.Male, "Oculist");
+Doctor doctor2 = new Doctor("Muzaffar", "Jamshidov", 322, 334, Gender.Male, "Nurse");
+Doctor doctor3 = new Doctor("Alisher", "Jamshidov", 323, 335, Gender.Male, "Oculist");
+Doctor doctor4 = new Doctor("Jamshid", "Jamshidov", 324, 336, Gender.Male, "Nurse");
+Doctor doctor5 = new Doctor("Olima", "Jamshidova", 325, 337, Gender.Female, "Nurse");
+Doctor doctor6 = new Doctor("Moxira", "Mirpo'latova", 326, 338, Gender.Female, "Professor");
 
-Doctor person = new Doctor("name", "secondname", 2, 3, Gender.Famale, "Doctor");
-Console.WriteLine(person.Name);
+Person person1 = new Person("Odiljon", "Tohirov", 123, Gender.Male);
+Person person2 = new Person("Homidjon", "Sobirov", 124, Gender.Male);
+Person person3 = new Person("Alisher", "Husanov", 125, Gender.Male);
+Person person4 = new Person("Jabbor", "Husanov", 126, Gender.Male);
+Person person5 = new Person("Jolid", "Yigitaliyev", 127, Gender.Male);
+Person person6 = new Person("Jolida", "Yigitaliyeva", 128, Gender.Female);
+
+Clinic klinika = new Clinic();
+
+klinika.AddDoctor(doctor1);
+klinika.AddDoctor(doctor2);
+klinika.AddDoctor(doctor3);
+klinika.AddDoctor(doctor4);
+klinika.AddDoctor(doctor5);
+klinika.AddDoctor(doctor6);
+
+klinika.AddPatient(person1);
+klinika.AddPatient(person2);
+klinika.AddPatient(person3);
+klinika.AddPatient(person4);
+klinika.AddPatient(person5);
+klinika.AddPatient(person6);
+
+Console.WriteLine(klinika.assignPatientToDoctor(person1.Ssn, doctor5.Id));
+
 //ArrayList Patients = new ArrayList();
 //Patients.Add(person);
 
