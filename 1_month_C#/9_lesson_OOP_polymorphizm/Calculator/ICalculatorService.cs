@@ -1,10 +1,10 @@
 ﻿namespace _9_lesson_OOP_polymorphizm.Calculator
 {
-    public interface ICalculatorService
+    public interface ICalculatorService<MyInt>
     {
-        public void Multiply(int a, int b);
-        public void Divide(int a, int b);
-        public void Add(int a, int b);
-        public void Divorse(int a, int b);
+        public void Multiply(MyInt a, MyInt b);
+        public void Divide(MyInt a, MyInt b);
+        public void Add(MyInt a, MyInt b);
+        public void Divorse(MyInt a, MyInt b);
     }
 }

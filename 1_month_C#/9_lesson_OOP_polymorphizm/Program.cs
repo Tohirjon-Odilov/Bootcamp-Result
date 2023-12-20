@@ -13,12 +13,12 @@
 using _9_lesson_OOP_polymorphizm;
 using _9_lesson_OOP_polymorphizm.Calculator;
 
-//ICalculatorService calculator = new CalculatorService(2, 3);
+ICalculatorService calculator = new CalculatorService(2, 3);
 #endregion
 
 #region Lesson files
 
-MyGenerics<string, int> generics = new MyGenerics<string, int>("Tohirjon", 2003, 08, 19);
-Console.WriteLine(generics.About());
+//MyGenerics<string, int> generics = new MyGenerics<string, int>("Tohirjon", 2003, 08, 19);
+//Console.WriteLine(generics.About());
 
 #endregion

@@ -1,8 +1,8 @@
 ﻿namespace _9_lesson_OOP_polymorphizm.Calculator
 {
-    public partial class CalculatorService
+    public partial class CalculatorService<MyInt>
     {
-        public CalculatorService(int a, int b)
+        public CalculatorService(MyInt a, MyInt b)
         {
             this.a = a;
             this.b = b;
@@ -13,7 +13,7 @@
             Add(a,b);
         }
 
-        public int a { get; set; }
-        public int b { get; set; }
+        public MyInt a { get; set; }
+        public MyInt b { get; set; }
     }
 }
