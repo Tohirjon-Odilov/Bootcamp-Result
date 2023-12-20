@@ -17,12 +17,13 @@ namespace _9_lesson_OOP_polymorphizm.Medical
             return "Person added succesfully :)"; 
         }
 
-        public Person? GetPatient(int Ssn) {
+        public string GetPatient(int Ssn) {
+            Console.Clear();
             foreach (Person person in Persons)
             {
-                if (person.Ssn == Ssn) return person;
+                if (person.Ssn == Ssn) return $"Name: {person.Name}\nSurname: {person.Surname}\nGender: {person.Gender}\nSSN: {person.Ssn}";
             }
-            return null;
+            return "NoSuchPatient";
         }
 
         public string AddDoctor(Doctor nurse) 

@@ -6,6 +6,7 @@
         {
             addPersons();
             RunUi();
+            MainChoose();
         }
     }
 }
