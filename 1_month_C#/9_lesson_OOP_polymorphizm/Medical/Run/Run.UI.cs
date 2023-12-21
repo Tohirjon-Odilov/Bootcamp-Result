@@ -8,15 +8,17 @@ namespace _9_lesson_OOP_polymorphizm.Medical
         {
             while (isRun)
             {
-                Console.Clear();
+                //Console.Clear();
                 Console.WriteLine("<<1>> Bemor qo'shish.");
                 Console.WriteLine("<<2>> Bemor haqida ma'lumot olish.");
                 Console.WriteLine("<<3>> Doctor qo'shish.");
                 Console.WriteLine("<<4>> Doctor haqida ma'lumot olish.");
                 Console.WriteLine("<<5>> Shifokorga be'mor biriktirish.");
+                Console.WriteLine("<<6>> Clear console.");
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("<<0>> Dasturni to'xtatish.");
+                Console.WriteLine("<<0>> Dasturni to'xtatish.\n");
                 Console.ResetColor();
+                Console.Write(">>> ");
                 userSelect = Console.ReadLine().ToString();
 
                 if (userSelect == "1")
@@ -87,7 +89,7 @@ namespace _9_lesson_OOP_polymorphizm.Medical
                     Console.Write("<<1>> Male | <<2>> Female: ");
 
                     // agar ma'lumot kiritmasa ortga qaytaradi.
-                    if (name == "" || surname == "")
+                    if (name == "" || surname == "" || expert == "")
                     {
                         Console.Clear();
                         Console.ForegroundColor = ConsoleColor.Red;
@@ -95,7 +97,6 @@ namespace _9_lesson_OOP_polymorphizm.Medical
                         Console.ResetColor();
                         continue;
                     }
-
                     Enum gender;
                     var enteredGender = Console.ReadLine().ToString();
                     if (enteredGender == "1")
@@ -110,8 +111,7 @@ namespace _9_lesson_OOP_polymorphizm.Medical
                     {
                         gender = Gender.None;
                     }
-                    Doctor doctor = new Doctor(name, surname, doctorSsn++, id++, gender, expert);
-
+                    Doctor doctor = new Doctor(name, surname, doctorSsn++, id, gender, expert);
                     Console.Clear();
                     Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine(klinika.AddPatient(doctor));
@@ -136,6 +136,10 @@ namespace _9_lesson_OOP_polymorphizm.Medical
                 {
                     Console.Clear();
                 }
+                else if (userSelect == "6")
+                {
+                    Console.Clear();
+                }
                 else if (userSelect == "0")
                 {
                     Console.Clear();
@@ -147,8 +151,9 @@ namespace _9_lesson_OOP_polymorphizm.Medical
                 else
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("Enter unknown key!");
+                    Console.WriteLine("Enter unknown key! \n");
                     Console.ResetColor();
+                    //Console.Read();
                 }
             }
         }
