@@ -5,6 +5,9 @@
         Clinic klinika = new Clinic();
         public bool isRun = true;
         public string? userSelect;
+        public int id = 307;
+        private int doctorSsn = 107;
+        private int patientSsn = 207;
         public void addPersons()
         {
             klinika.AddDoctor(doctor1);
@@ -20,11 +23,6 @@
             klinika.AddPatient(person4);
             klinika.AddPatient(person5);
             klinika.AddPatient(person6);
-        }
-        private int ssn = 1001;
-        public void MainChoose() 
-        {
-            
         }
     }
 }

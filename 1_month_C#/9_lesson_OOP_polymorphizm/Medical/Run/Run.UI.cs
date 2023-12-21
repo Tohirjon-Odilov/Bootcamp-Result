@@ -1,4 +1,6 @@
-﻿namespace _9_lesson_OOP_polymorphizm.Medical
+﻿using System;
+
+namespace _9_lesson_OOP_polymorphizm.Medical
 {
     public partial class Run
     {
@@ -6,6 +8,7 @@
         {
             while (isRun)
             {
+                Console.Clear();
                 Console.WriteLine("<<1>> Bemor qo'shish.");
                 Console.WriteLine("<<2>> Bemor haqida ma'lumot olish.");
                 Console.WriteLine("<<3>> Doctor qo'shish.");
@@ -50,7 +53,7 @@
                     {
                         gender = Gender.None;
                     }
-                    Person person = new Person(name, surname, ssn++, gender);
+                    Person person = new Person(name, surname, patientSsn++, gender);
 
                     Console.Clear();
                     Console.ForegroundColor = ConsoleColor.Green;
@@ -63,16 +66,69 @@
                     Console.Clear();
                     Console.Write("Enter patient's ssn: ");
                     int ssn = Convert.ToInt32(Console.ReadLine());
-                    Console.WriteLine(klinika.GetPatient(ssn));
+                    Person? person = klinika.GetPatient(ssn);
+                    if(person != null)
+                    {
+                        Console.WriteLine($"Name: {person.Name}\nSurname: {person.Surname}\nGender: {person.Gender}\nSSN: {person.Ssn}");
+                    }else Console.WriteLine("NoSuchPatient");
                     Console.Read();
                 }
                 else if (userSelect == "3")
                 {
                     Console.Clear();
+                    Console.Write("Enter doctor's name: ");
+                    var name = Console.ReadLine();
+                    Console.Write("Enter doctor's surname: ");
+                    var surname = Console.ReadLine();
+                    Console.Write("Enter doctor's expert: ");
+                    var expert = Console.ReadLine();
+                    Console.WriteLine("Enter doctor's gender.");
+                    Console.Write("<<1>> Male | <<2>> Female: ");
+
+                    // agar ma'lumot kiritmasa ortga qaytaradi.
+                    if (name == "" || surname == "")
+                    {
+                        Console.Clear();
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("Please enter the information completely!");
+                        Console.ResetColor();
+                        continue;
+                    }
+
+                    Enum gender;
+                    var enteredGender = Console.ReadLine().ToString();
+                    if (enteredGender == "1")
+                    {
+                        gender = Gender.Male;
+                    }
+                    else if (enteredGender == "2")
+                    {
+                        gender = Gender.Male;
+                    }
+                    else
+                    {
+                        gender = Gender.None;
+                    }
+                    Doctor doctor = new Doctor(name, surname, doctorSsn++, id++, gender, expert);
+
+                    Console.Clear();
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine(klinika.AddPatient(doctor));
+                    Console.ResetColor();
+                    Console.WriteLine($"Your ID: <<{doctor.Id}>>\n");
                 }
                 else if (userSelect == "4")
                 {
                     Console.Clear();
+                    Console.Write("Enter doctor's id: ");
+                    int id = Convert.ToInt32(Console.ReadLine());
+                    Doctor? doctor = klinika.GetDoctor(id);
+                    if (doctor != null)
+                    {
+                        Console.WriteLine($"Name: {doctor.Name}\nSurname: {doctor.Surname}\nExpert: {doctor.Expert}\nGender: {doctor.Gender}\nSSN: {doctor.Ssn}\nID: {doctor.Id}");
+                    }
+                    else Console.WriteLine("NoSuchDoctor");
+                    Console.Read();
                 }
                 else if (userSelect == "5")
                 {
