@@ -23,9 +23,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "8_lesson_oop_advansed_seali
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "9_lesson_interfeys_partial_virtual_struct_enum", "9_lesson_OOP_polymorphizm\9_lesson_interfeys_partial_virtual_struct_enum.csproj", "{2547F259-7309-4DB7-B6C8-2603772C1BBF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "910_lesson_Collection_Array_ArrayList_List", "910_lesson_Collection_Array_ArrayList_List\910_lesson_Collection_Array_ArrayList_List.csproj", "{17C1DE20-F697-4BD6-A744-B4F091AED975}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "10_lesson_Collection_Array_ArrayList_List", "910_lesson_Collection_Array_ArrayList_List\10_lesson_Collection_Array_ArrayList_List.csproj", "{17C1DE20-F697-4BD6-A744-B4F091AED975}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "911_lesson_List_LinkedList_SortedList_HashTable", "911_lesson_List_LinkedList_SortedList_HashTable\911_lesson_List_LinkedList_SortedList_HashTable.csproj", "{F6D74019-4CB7-4572-A7C1-EA161C0F2B9F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "11_lesson_List_LinkedList_SortedList_HashTable", "911_lesson_List_LinkedList_SortedList_HashTable\11_lesson_List_LinkedList_SortedList_HashTable.csproj", "{F6D74019-4CB7-4572-A7C1-EA161C0F2B9F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

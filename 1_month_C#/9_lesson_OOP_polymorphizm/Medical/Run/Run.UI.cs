@@ -135,6 +135,8 @@ namespace _9_lesson_OOP_polymorphizm.Medical
                 else if (userSelect == "5")
                 {
                     Console.Clear();
+                    // Bemorga doctor biriktirish.
+                    
                 }
                 else if (userSelect == "6")
                 {
