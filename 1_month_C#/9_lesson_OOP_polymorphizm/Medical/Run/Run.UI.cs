@@ -8,7 +8,7 @@ namespace _9_lesson_OOP_polymorphizm.Medical
         {
             while (isRun)
             {
-                //Console.Clear();
+                Console.Clear();
                 Console.WriteLine("<<1>> Bemor qo'shish.");
                 Console.WriteLine("<<2>> Bemor haqida ma'lumot olish.");
                 Console.WriteLine("<<3>> Doctor qo'shish.");
@@ -62,7 +62,7 @@ namespace _9_lesson_OOP_polymorphizm.Medical
                     Console.WriteLine(klinika.AddPatient(person));
                     Console.ResetColor();
                     Console.WriteLine($"Your SSN: <<{person.Ssn}>>\n");
-                    Console.Read();
+                    Console.ReadLine();
                 }
                 else if (userSelect == "2")
                 {
@@ -74,7 +74,7 @@ namespace _9_lesson_OOP_polymorphizm.Medical
                     {
                         Console.WriteLine($"Name: {person.Name}\nSurname: {person.Surname}\nGender: {person.Gender}\nSSN: {person.Ssn}");
                     }else Console.WriteLine("NoSuchPatient");
-                    Console.Read();
+                    Console.ReadLine();
                 }
                 else if (userSelect == "3")
                 {
@@ -111,13 +111,13 @@ namespace _9_lesson_OOP_polymorphizm.Medical
                     {
                         gender = Gender.None;
                     }
-                    Doctor doctor = new Doctor(name, surname, doctorSsn++, id, gender, expert);
+                    Doctor doctor = new Doctor(name, surname, doctorSsn++, doctorId++, gender, expert);
                     Console.Clear();
                     Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine(klinika.AddPatient(doctor));
+                    Console.WriteLine(klinika.AddDoctor(doctor));
                     Console.ResetColor();
                     Console.WriteLine($"Your ID: <<{doctor.Id}>>\n");
-                    Console.Read();
+                    Console.ReadLine();
                 }
                 else if (userSelect == "4")
                 {
@@ -130,7 +130,7 @@ namespace _9_lesson_OOP_polymorphizm.Medical
                         Console.WriteLine($"Name: {doctor.Name}\nSurname: {doctor.Surname}\nExpert: {doctor.Expert}\nGender: {doctor.Gender}\nSSN: {doctor.Ssn}\nID: {doctor.Id}");
                     }
                     else Console.WriteLine("NoSuchDoctor");
-                    Console.Read();
+                    Console.ReadLine();
                 }
                 else if (userSelect == "5")
                 {
@@ -153,7 +153,7 @@ namespace _9_lesson_OOP_polymorphizm.Medical
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("Enter unknown key! \n");
                     Console.ResetColor();
-                    //Console.Read();
+                    //Console.ReadLine();
                 }
             }
         }

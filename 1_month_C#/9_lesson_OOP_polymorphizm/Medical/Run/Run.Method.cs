@@ -5,7 +5,7 @@
         Clinic klinika = new Clinic();
         public bool isRun = true;
         public string? userSelect;
-        public int id = 307;
+        public int doctorId = 307;
         private int doctorSsn = 107;
         private int patientSsn = 207;
         public void addPersons()
