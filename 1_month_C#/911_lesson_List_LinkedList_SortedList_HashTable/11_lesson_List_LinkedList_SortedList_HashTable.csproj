@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net8.0</TargetFramework>
-    <RootNamespace>_911_lesson_List_LinkedList_SortedList_HashTable</RootNamespace>
+    <RootNamespace>_11_lesson_List_LinkedList_SortedList_HashTable</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>

@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net8.0</TargetFramework>
-    <RootNamespace>_910_lesson_Collection_Array_ArrayList_List</RootNamespace>
+    <RootNamespace>_10_lesson_Collection_Array_ArrayList_List</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
