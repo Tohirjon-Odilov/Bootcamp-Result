@@ -1,7 +1,7 @@
 ﻿namespace _11_lesson_List_LinkedList_SortedList_HashTable
 {
     /// <summary>
-    /// 707. Design Linked List
+    /// 1381. Design a Stack With Increment Operation
     /// </summary>
     public class CustomStack
     {
