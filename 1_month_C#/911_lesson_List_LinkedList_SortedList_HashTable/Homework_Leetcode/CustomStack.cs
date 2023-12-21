@@ -1,5 +1,8 @@
 ﻿namespace _11_lesson_List_LinkedList_SortedList_HashTable
 {
+    /// <summary>
+    /// 707. Design Linked List
+    /// </summary>
     public class CustomStack
     {
         private int maxSize;
