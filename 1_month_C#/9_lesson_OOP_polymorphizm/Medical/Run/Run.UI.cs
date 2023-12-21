@@ -60,6 +60,7 @@ namespace _9_lesson_OOP_polymorphizm.Medical
                     Console.WriteLine(klinika.AddPatient(person));
                     Console.ResetColor();
                     Console.WriteLine($"Your SSN: <<{person.Ssn}>>\n");
+                    Console.Read();
                 }
                 else if (userSelect == "2")
                 {
@@ -116,6 +117,7 @@ namespace _9_lesson_OOP_polymorphizm.Medical
                     Console.WriteLine(klinika.AddPatient(doctor));
                     Console.ResetColor();
                     Console.WriteLine($"Your ID: <<{doctor.Id}>>\n");
+                    Console.Read();
                 }
                 else if (userSelect == "4")
                 {
