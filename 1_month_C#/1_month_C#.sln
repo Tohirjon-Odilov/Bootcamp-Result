@@ -27,6 +27,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "10_lesson_Collection_Array_
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "11_lesson_List_LinkedList_SortedList_HashTable", "911_lesson_List_LinkedList_SortedList_HashTable\11_lesson_List_LinkedList_SortedList_HashTable.csproj", "{F6D74019-4CB7-4572-A7C1-EA161C0F2B9F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12_lesson_collections_davomi", "12_lesson_collections_davomi\12_lesson_collections_davomi.csproj", "{71C7E7F7-E39E-4465-8DA6-33FC8B5F50C6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -77,6 +79,10 @@ Global
 		{F6D74019-4CB7-4572-A7C1-EA161C0F2B9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F6D74019-4CB7-4572-A7C1-EA161C0F2B9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F6D74019-4CB7-4572-A7C1-EA161C0F2B9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71C7E7F7-E39E-4465-8DA6-33FC8B5F50C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71C7E7F7-E39E-4465-8DA6-33FC8B5F50C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71C7E7F7-E39E-4465-8DA6-33FC8B5F50C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71C7E7F7-E39E-4465-8DA6-33FC8B5F50C6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -93,6 +99,7 @@ Global
 		{2547F259-7309-4DB7-B6C8-2603772C1BBF} = {894106DD-9FBD-484D-8267-2681D33AD46D}
 		{17C1DE20-F697-4BD6-A744-B4F091AED975} = {894106DD-9FBD-484D-8267-2681D33AD46D}
 		{F6D74019-4CB7-4572-A7C1-EA161C0F2B9F} = {894106DD-9FBD-484D-8267-2681D33AD46D}
+		{71C7E7F7-E39E-4465-8DA6-33FC8B5F50C6} = {894106DD-9FBD-484D-8267-2681D33AD46D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8481FDA6-E7E6-439F-837B-F1A319B0FC3A}

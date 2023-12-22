@@ -4,10 +4,10 @@ using _9_lesson_OOP_polymorphizm.Medical;
 using System.Collections;
 
 #region Klinika
-//Run run = new Run();
+Run run = new Run();
 #endregion
 #region Calculator
-CalculatorService<int> calculator = new CalculatorService<int>(2, 3);
+//CalculatorService<int> calculator = new CalculatorService<int>(2, 3);
 #endregion
 
 #region Lesson files
