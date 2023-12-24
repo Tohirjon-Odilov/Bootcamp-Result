@@ -33,6 +33,7 @@ public class BankAccount
                 Account account1 = Kredit.Ipoteka;
                 
                 Console.WriteLine(account1(sum, year));
+                Console.ReadKey();
             }
             #endregion
             #region Mashina kredit
@@ -48,6 +49,7 @@ public class BankAccount
                 Account account2 = Kredit.Mashina;
                 
                 Console.WriteLine(account2(sum, year));
+                Console.ReadKey();
             }
             #endregion
             #region Maqsadsiz kredit
@@ -62,7 +64,8 @@ public class BankAccount
                 int year = int.Parse(Console.ReadLine()!);
                 Account account3 = Kredit.Maqsadsiz;
                 
-                Console.WriteLine(account3(sum, year)); ;
+                Console.WriteLine(account3(sum, year));
+                Console.ReadKey();
             }
             #endregion
             #region Imtiyozli kredit
@@ -78,6 +81,7 @@ public class BankAccount
                 Account account4 = Kredit.Imtiyozli;
                 
                 Console.WriteLine(account4(sum, year));
+                Console.ReadKey();
             }
             #endregion
             #region Talim kredit
@@ -93,6 +97,7 @@ public class BankAccount
                 Account account5 = Kredit.Talim;
                 
                 Console.WriteLine(account5(sum, year));
+                Console.ReadKey();
             }
             #endregion
             #region
