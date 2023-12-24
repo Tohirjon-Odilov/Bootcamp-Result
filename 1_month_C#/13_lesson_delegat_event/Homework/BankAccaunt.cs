@@ -1,57 +1,110 @@
 ﻿using Bank;
 
-public class BankAccaunt
+public class BankAccount
 {
-    public delegate double MyBankAccaunt(double sum, int years);
+    public delegate double Account(double sum, int years);
     public static void Main(string[] args)
     {
+        Kredit Kredit = new Kredit();
+        while (true)
+        {
+            #region Tanlov qismi
+            Console.Clear();
+            Console.Write("Kredit tanlang: \n" +
+                "<<1>> Ipoteka kredit\n" +
+                "<<2>> Mahina kredit\n" +
+                "<<3>> Maqsadsiz kredit\n" +
+                "<<4>> Imtiyozli kredit\n" +
+                "<<5>> Ta'lim kredit\n" +
+                "<<6>> Dasturni tugatish.\n" +
+                ">> ");
+            string UserChoice = Console.ReadLine()!;
+            #endregion
+            #region Ipoteka kredit
+            if (UserChoice == "1")
+            {
+                Console.Clear();
+                Console.Write("Miqdor kiriting>> ");
+                
+                double sum = double.Parse(Console.ReadLine()!);
+                Console.Write("Necha yilga olmoqchisiz>> ");
+                
+                int year = int.Parse(Console.ReadLine()!);
+                Account account1 = Kredit.Ipoteka;
+                
+                Console.WriteLine(account1(sum, year));
+            }
+            #endregion
+            #region Mashina kredit
+            else if (UserChoice == "2")
+            {
+                Console.Clear();
+                Console.Write("Miqdor kiriting>> ");
+                
+                double sum = double.Parse(Console.ReadLine()!);
+                Console.Write("Necha yilga olmoqchisiz>> ");
+                
+                int year = int.Parse(Console.ReadLine()!);
+                Account account2 = Kredit.Mashina;
+                
+                Console.WriteLine(account2(sum, year));
+            }
+            #endregion
+            #region Maqsadsiz kredit
+            else if (UserChoice == "3")
+            {
+                Console.Clear();
+                Console.Write("Miqdor kiriting>> ");
 
-        Kredit kredit = new Kredit();
+                double sum = double.Parse(Console.ReadLine()!);
+                Console.Write("Necha yilga olmoqchisiz>> ");
+                
+                int year = int.Parse(Console.ReadLine()!);
+                Account account3 = Kredit.Maqsadsiz;
+                
+                Console.WriteLine(account3(sum, year)); ;
+            }
+            #endregion
+            #region Imtiyozli kredit
+            else if (UserChoice == "4")
+            {
+                Console.Clear();
+                Console.Write("Miqdor kiriting>> ");
+                
+                double sum = double.Parse(Console.ReadLine()!);
+                Console.Write("Necha yilga olmoqchisiz>> ");
+                
+                int year = int.Parse(Console.ReadLine()!);
+                Account account4 = Kredit.Imtiyozli;
+                
+                Console.WriteLine(account4(sum, year));
+            }
+            #endregion
+            #region Talim kredit
+            else if (UserChoice == "5")
+            {
+                Console.Clear();
+                Console.Write("Miqdor kiriting>> ");
+                
+                double sum = double.Parse(Console.ReadLine()!);
+                Console.Write("Necha yilga olmoqchisiz>> ");
 
-        #region Ipoteka
-        Console.WriteLine("Enter sum ipoteka ");
-        double sumipoteka = double.Parse(Console.ReadLine()!);
-        Console.WriteLine("Enter years ipoteka ");
-        int yearsipoteka = int.Parse(Console.ReadLine()!);
-        MyBankAccaunt account = kredit.Ipoteka;
-        Console.WriteLine(account(sumipoteka, yearsipoteka));
-        #endregion
-
-        #region Mashina
-        Console.WriteLine("Enter sum mashina ");
-        double summashina = double.Parse(Console.ReadLine()!);
-        Console.WriteLine("Enter years mashina ");
-        int yearsmashina = int.Parse(Console.ReadLine()!);
-        MyBankAccaunt account2 = kredit.Mashina;
-        Console.WriteLine(account2(summashina, yearsmashina));
-        #endregion
-
-        #region Maqsadsiz kridit
-        Console.WriteLine("Enter sum maqsadsiz kridit ");
-        double summaqsadsizkr = double.Parse(Console.ReadLine()!);
-        Console.WriteLine("Enter years maqsadsiz kridit ");
-        int yearsmaqsadsizkr = int.Parse(Console.ReadLine()!);
-        MyBankAccaunt account3 = kredit.Maqsadsizkr;
-        Console.WriteLine(account3(summaqsadsizkr, yearsmaqsadsizkr)); ;
-        #endregion
-
-        #region Imtiyozli kridit
-        Console.WriteLine("Enter sum imtiyozli kridit ");
-        double sumimtiyozli = double.Parse(Console.ReadLine()!);
-        Console.WriteLine("Enter years imtiyozli kridit ");
-        int yearsimtiyozli = int.Parse(Console.ReadLine()!);
-        MyBankAccaunt account4 = kredit.Imtiyozli;
-        Console.WriteLine(account4(sumimtiyozli, yearsimtiyozli));
-        #endregion
-
-        #region Talim kridit
-        Console.WriteLine("Enter sum talim kridit  ");
-        double sumtalim = double.Parse(Console.ReadLine()!);
-        Console.WriteLine("Enter years talim kridit ");
-        int yearstalim = int.Parse(Console.ReadLine()!);
-        MyBankAccaunt account5 = kredit.Talimkd;
-        Console.WriteLine(account5(sumtalim, yearstalim));
-        #endregion
+                int year = int.Parse(Console.ReadLine()!);
+                Account account5 = Kredit.Talim;
+                
+                Console.WriteLine(account5(sum, year));
+            }
+            #endregion
+            #region
+            else if (UserChoice == "6")
+            {
+                Console.Clear();
+                Console.WriteLine("Hizmatimizdan foydalanganingiz uchun rahmat!");
+                break;
+            }
+            #endregion
+            else { Console.WriteLine("Bunday tanlov yo'q!"); }
+        }
 
     }
 }
