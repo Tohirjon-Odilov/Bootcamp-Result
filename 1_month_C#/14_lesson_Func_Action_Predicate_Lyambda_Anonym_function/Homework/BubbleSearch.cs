@@ -12,36 +12,34 @@
 
             int[] array = [5, 6, 1, 2, 3, 10];
 
-            SortArray(array, func: Sort1);
+            SortArray(array, func: AscendingSort);
             Console.WriteLine("O'sish tartibda tartiblangan.");
 
             for (int i = 0; i < array.Length; i++)
             {
                 Console.Write(array[i] + " ");
             }
-
             Console.WriteLine();
 
-            SortArray(array, func: Sort2);
+            SortArray(array, func: DescendingSort);
             Console.WriteLine("Kamayish tartibda tartiblangan.");
             for (int i = 0; i < array.Length; i++)
             {
                 Console.Write(array[i] + " ");
             }
-
-
             Console.WriteLine();
-            SortArray(array, func: Sort3);
+
+            SortArray(array, func: AlphabeticalSort);
             Console.WriteLine("Alphabetic tartibda tartiblangan.");
 
             for (int i = 0; i < array.Length; i++)
             {
                 Console.Write(array[i] + " ");
             }
-
             Console.WriteLine();
+
         }
-        public static int[] Sort1(int[] array)
+        public static int[] AscendingSort(int[] array)
         {
             for (int i = 0; i < array.Length; i++)
             {
@@ -52,15 +50,13 @@
                         int box = array[i];
                         array[i] = array[j];
                         array[j] = box;
-
                     }
                 }
-
             }
             return array;
         }
 
-        public static int[] Sort2(int[] array)
+        public static int[] DescendingSort(int[] array)
         {
             for (int i = 0; i < array.Length; i++)
             {
@@ -74,12 +70,11 @@
 
                     }
                 }
-
             }
             return array;
         }
 
-        public static int[] Sort3(int[] array)
+        public static int[] AlphabeticalSort(int[] array)
         {
             string[] newArray = new string[array.Length];
             for (int i = 0; i < array.Length; i++)
@@ -92,7 +87,6 @@
             {
                 array[j] = Convert.ToInt32(newArray[j]);
             }
-
             return array;
         }
 
