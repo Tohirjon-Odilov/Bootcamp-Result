@@ -67,7 +67,6 @@
                         int box = array[i];
                         array[i] = array[j];
                         array[j] = box;
-
                     }
                 }
             }
