@@ -5,7 +5,13 @@ VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OOP Advenced", "OOP Advenced\OOP Advenced.csproj", "{3A641FB1-725A-469D-860F-EFD171BEB516}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOP", "OOP\OOP.csproj", "{27E9F3D1-265F-4577-A0EC-4FC6244AC84F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OOP", "OOP\OOP.csproj", "{27E9F3D1-265F-4577-A0EC-4FC6244AC84F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Najot Ta'lim", "Najot Ta'lim", "{80B8DDF3-498A-4DE6-8187-76DD2457BEDD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MohirDev", "MohirDev", "{2C5F9334-7BCD-42C7-8E83-5042F1C65D68}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1_Modul", "1_Modul\1_Modul.csproj", "{9582555E-5B9E-458C-AB91-BFFF382E6D00}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,9 +27,18 @@ Global
 		{27E9F3D1-265F-4577-A0EC-4FC6244AC84F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{27E9F3D1-265F-4577-A0EC-4FC6244AC84F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{27E9F3D1-265F-4577-A0EC-4FC6244AC84F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9582555E-5B9E-458C-AB91-BFFF382E6D00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9582555E-5B9E-458C-AB91-BFFF382E6D00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9582555E-5B9E-458C-AB91-BFFF382E6D00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9582555E-5B9E-458C-AB91-BFFF382E6D00}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3A641FB1-725A-469D-860F-EFD171BEB516} = {2C5F9334-7BCD-42C7-8E83-5042F1C65D68}
+		{27E9F3D1-265F-4577-A0EC-4FC6244AC84F} = {2C5F9334-7BCD-42C7-8E83-5042F1C65D68}
+		{9582555E-5B9E-458C-AB91-BFFF382E6D00} = {80B8DDF3-498A-4DE6-8187-76DD2457BEDD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2E0ED79E-13B8-4749-BBE3-7AACF244A219}
