@@ -2,26 +2,9 @@
 {
     public class Rectangle
     {
-        //public bool ISRectangle = false;
         public Rectangle(params int[] tomonlar)
         {
             ISRectangle(tomonlar);
-        }
-        public void IsRectangle(params int[] tomonlar)
-        {
-            if (tomonlar.Length == 2)
-            {
-                //ISRectangle = true;
-                Console.WriteLine("To'g'ri to'rtburchak");
-            }
-            else if (tomonlar.Length == 4)
-            {
-                Console.WriteLine("To'rtburchak");
-            }
-            else
-            {
-                Console.WriteLine("To'rtburchak emas");
-            }
         }
         Predicate<int[]> ISRectangle = delegate (int[] tomonlar)
         {
@@ -33,12 +16,13 @@
             else if (tomonlar.Length == 4)
             {
                 Console.WriteLine("To'rtburchak");
+                return false;
             }
             else
             {
                 Console.WriteLine("To'rtburchak emas");
+                return false;
             }
-            return false;
         };
 
         public void Perimetr(params int[] tomonlar)
