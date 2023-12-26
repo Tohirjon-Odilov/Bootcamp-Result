@@ -7,32 +7,30 @@
         {
             ISRectangle(tomonlar);
         }
-        //public void IsRectangle(params int[] tomonlar)
-        //{
-        //    if (tomonlar.Length == 2)
-        //    {
-        //        //ISRectangle = true;
-        //        Console.WriteLine("To'g'ri to'rtburchak");
-        //    }
-        //    else if (tomonlar.Length == 4)
-        //    {
-        //        Console.WriteLine("To'rtburchak");
-        //    }
-        //    else
-        //    {
-        //        Console.WriteLine("To'rtburchak emas");
-        //    }
-        //}
-        Predicate<Tuple<int[], int>> ISRectangle = delegate (Tuple<int[], int> tomonlar)
+        public void IsRectangle(params int[] tomonlar)
         {
-            Console.WriteLine(tomonlar.Item2);
-            if (tomonlar.Item1.Length
-            == 2)
+            if (tomonlar.Length == 2)
+            {
+                //ISRectangle = true;
+                Console.WriteLine("To'g'ri to'rtburchak");
+            }
+            else if (tomonlar.Length == 4)
+            {
+                Console.WriteLine("To'rtburchak");
+            }
+            else
+            {
+                Console.WriteLine("To'rtburchak emas");
+            }
+        }
+        Predicate<int[]> ISRectangle = delegate (int[] tomonlar)
+        {
+            if (tomonlar.Length == 2)
             {
                 Console.WriteLine("To'g'ri to'rtburchak");
                 return true;
             }
-            else if (tomonlar.Item1.Length == 4)
+            else if (tomonlar.Length == 4)
             {
                 Console.WriteLine("To'rtburchak");
             }
