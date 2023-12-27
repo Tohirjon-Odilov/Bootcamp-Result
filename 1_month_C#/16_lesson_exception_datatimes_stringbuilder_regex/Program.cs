@@ -41,17 +41,20 @@ namespace _16_lesson_exception_datatimes_stringbuilder_regex
             #endregion
 
             #region Homework task 3 Validation
-            while (true)
-            {
-                Console.Clear();
-                Console.Write("<<1>> Check email.\n"
-                + "<<2>> Check phone number.\n"
-                + "<<3>> Check password.\n"
-                + "<<4>> Check birthday.\n"
-                + "<<0>> Exit. \n>> ");
-                string userSelection = Console.ReadLine()!;
-                var validation = new Task3_Registration(userSelection);
-            }
+            //while (true)
+            //{
+            //    Console.Clear();
+            //    Console.Write("<<1>> Check email.\n"
+            //    + "<<2>> Check phone number.\n"
+            //    + "<<3>> Check password.\n"
+            //    + "<<4>> Check birthday.\n"
+            //    + "<<0>> Exit. \n>> ");
+            //    string userSelection = Console.ReadLine()!;
+            //    var validation = new Task3_Registration(userSelection);
+            //}
+            #endregion
+            #region Task 4
+            Task4 task4 = new Task4();
             #endregion
         }
     }
