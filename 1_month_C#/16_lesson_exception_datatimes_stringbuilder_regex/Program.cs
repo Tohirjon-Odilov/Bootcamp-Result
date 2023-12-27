@@ -1,10 +1,14 @@
-﻿using _16_lesson_exception_datatimes_stringbuilder_regex.Models.Students;
+﻿using _16_lesson_exception_datatimes_stringbuilder_regex.Homework;
+using _16_lesson_exception_datatimes_stringbuilder_regex.Models.Students;
 using _16_lesson_exception_datatimes_stringbuilder_regex.Models.Students.Exceptions;
+using System.Text.RegularExpressions;
 
 namespace _16_lesson_exception_datatimes_stringbuilder_regex
 {
-    internal class Program
+    public class Program
     {
+        #region Task Main
+        /*
         public static Student? InitStudent(string name, int age)
         {
             try
@@ -28,10 +32,27 @@ namespace _16_lesson_exception_datatimes_stringbuilder_regex
                 Console.WriteLine(ex.GetType());
                 return null;
             }
-        }
+        }*/
+        #endregion
         static void Main(string[] args)
         {
-            var student = InitStudent("John", 20);   
+            #region Task object
+            //var student = InitStudent("John", 20);
+            #endregion
+
+            #region Homework task 3 Validation
+            while (true)
+            {
+                Console.Clear();
+                Console.Write("<<1>> Check email.\n"
+                + "<<2>> Check phone number.\n"
+                + "<<3>> Check password.\n"
+                + "<<4>> Check birthday.\n"
+                + "<<0>> Exit. \n>> ");
+                string userSelection = Console.ReadLine()!;
+                var validation = new Task3_Registration(userSelection);
+            }
+            #endregion
         }
     }
 }

@@ -2,7 +2,7 @@
 
 namespace _16_lesson_exception_datatimes_stringbuilder_regex.Models.Students
 {
-    internal class Student
+    public class Student
     {
         public string Name { get; set; } = default!;
         public int Age { get; set; }
