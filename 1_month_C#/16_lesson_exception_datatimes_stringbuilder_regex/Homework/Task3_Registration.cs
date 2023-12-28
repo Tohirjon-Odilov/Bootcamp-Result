@@ -60,7 +60,7 @@ namespace _16_lesson_exception_datatimes_stringbuilder_regex.Homework
             bool isValidPassword = Regex.IsMatch(password, pattern);
             if (isValidPassword ) 
             {
-                Console.WriteLine();
+                Console.WriteLine("Success!");
                 Console.ReadKey();
             }
             else
