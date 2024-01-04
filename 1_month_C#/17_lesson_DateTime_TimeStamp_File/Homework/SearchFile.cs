@@ -2,39 +2,48 @@
 {
     internal class SearchFile
     {
-        public SearchFile() {
-            try
-            {
-                Console.Write("Katalog nomini kiriting: ");
-                string directoryPath = @"C:\Users\user\Desktop";
-
-                string[] filePaths = FindFiles(directoryPath);
-                Console.WriteLine(filePaths);
-                if (filePaths.Length > 0)
-                {
-                    Console.WriteLine($"Topilgan fayllar:");
-                    foreach (var filePath in filePaths)
-                    {
-                        Console.WriteLine(filePath);
-                    }
-                }
-                else
-                {
-                    Console.WriteLine("Fayllar topilmadi!");
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Xatolik yuz berdi: {ex.Message}");
-            }
-        }
-
-        static string[] FindFiles(string directoryPath)
+        public SearchFile()
         {
-            string[] files = Directory.GetFiles(directoryPath, "*", SearchOption.AllDirectories);
 
-            return files;
+            Console.Write("Enter file name: ");
+            string FileName = Console.ReadLine()!;
+
+            List<string> Result = new List<string>();
+            DriveInfo[] Disks = DriveInfo.GetDrives();
+            for (int i = 0; i < Disks.Length; i++)
+            {
+                Search(Result, Convert.ToString(Disks[i])!, FileName);
+            }
+
+            Console.WriteLine("Resoult: ");
+            foreach (string f in Result)
+                Console.WriteLine(f);
         }
+        public void Search(List<string> notFound, string Path, string FilesName)
+        {
+            string[] Files = Directory.GetFiles(Path);
+            foreach (string f in Files)
+            {
+                string[] filenomi = f.Split('\\');
+                if (filenomi[filenomi.Length - 1] == FilesName)
+                    notFound.Add(f);
+            }
+
+
+            string[] folders = Directory.GetDirectories(Path);
+            foreach (string f in folders)
+            {
+
+                try
+                {
+                    Search(notFound, f, FilesName);
+                }
+                catch { }
+            }
+
+        }
+
+
     }
 }
 
