@@ -58,7 +58,7 @@ Console.WriteLine(ModulToJson);
 */
 #endregion
 #region Task 2
-/*
+
 List<UserInfo> Users = new List<UserInfo>();
 
 UserInfo User1 = new UserInfo()
@@ -95,7 +95,14 @@ Users.Add(User2);
 Users.Add(User3);
 Users.Add(User4);
 
-string Array = JsonSerializer.Serialize(Users);
+string Array = JsonSerializer.Serialize(Users,options: new JsonSerializerOptions
+{
+    WriteIndented = true
+});
 Console.WriteLine(Array);
-*/
+
 #endregion
+/*
+Absolut path
+Relative path
+*/
