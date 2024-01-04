@@ -2,8 +2,8 @@
 {
     public class Mintaqa
     {
-        public string Hudud {  get; set; }
-        public string Manzil { get; set; }
+        public string Hudud { get; set; } = String.Empty;
+        public string Manzil { get; set; } = String.Empty;
         public Mahalla Mahalla { get; set; }
     }
 }

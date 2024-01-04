@@ -2,7 +2,7 @@
 {
     public class Magic
     {
-        public string Type {  get; set; }
-        public string Section { get; set; }
+        public string Type { get; set; } = String.Empty;
+        public string Section { get; set; } = String.Empty;
     }
 }

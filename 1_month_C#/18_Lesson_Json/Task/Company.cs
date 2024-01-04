@@ -2,8 +2,8 @@
 {
     public class Company
     {
-        public string Name { get; set; }
-        public string CatchPhrase { get; set; }
-        public string BS { get; set; }
+        public string Name { get; set; } = String.Empty;
+        public string CatchPhrase { get; set; } = String.Empty;
+        public string BS { get; set; } = String.Empty;
     }
 }
