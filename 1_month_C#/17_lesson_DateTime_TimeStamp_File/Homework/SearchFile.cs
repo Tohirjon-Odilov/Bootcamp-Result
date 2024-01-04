@@ -6,10 +6,10 @@
             try
             {
                 Console.Write("Katalog nomini kiriting: ");
-                string directoryPath = Console.ReadLine()!;
+                string directoryPath = @"C:\Users\user\Desktop";
 
                 string[] filePaths = FindFiles(directoryPath);
-
+                Console.WriteLine(filePaths);
                 if (filePaths.Length > 0)
                 {
                     Console.WriteLine($"Topilgan fayllar:");
