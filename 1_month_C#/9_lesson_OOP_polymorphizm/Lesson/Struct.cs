@@ -1,12 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace _9_lesson_OOP_polymorphizm
+﻿namespace _9_lesson_OOP_polymorphizm
 {
-    internal class Struct
+public class Struct
+{
+    public Struct()
     {
+        Talaba talaba = new Talaba() { age = 1, name = "Tohirjon" };
+        Talaba talaba1 = new Talaba() { age = 2, name = "Tohirjon1" };
+
     }
+    public struct Talaba
+    {
+        public string name;
+        public int age;
+    }
+}
 }
