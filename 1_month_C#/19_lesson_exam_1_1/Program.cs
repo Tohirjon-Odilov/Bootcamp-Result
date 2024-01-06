@@ -1,4 +1,6 @@
-﻿//void sum(int c, out int a, out int b)
+﻿using System;
+using System.Numerics;
+//void sum(int c, out int a, out int b)
 //{
 //    b = 2+5;
 //    a = 2+6;
@@ -20,8 +22,7 @@
 //    radius = a / 2;
 //}
 
-using System;
-
+/*
 namespace Struktura
 {
     internal class Program
@@ -43,6 +44,8 @@ namespace Struktura
 
             //private xususiyani Event orqali Consolega chiqarish
             talaba1.GetAge();
+
+            Console.WriteLine(BigInteger.Max);
 
         }
     }
@@ -70,3 +73,19 @@ namespace Struktura
         }
     }
 }
+*/
+
+Predicate<int> result = x =>{return x % 2 == 0;};
+//Console.WriteLine(result);
+Predicate<int> result1 = delegate (int x)
+{
+    return false;
+};
+bool Triangle (Tuple<int, int, int> value)
+{
+    return value.Item1 == value.Item2;
+}
+Predicate<Tuple<int, int, int>> isTriangle = Triangle;
+
+Console.WriteLine(isTriangle(new Tuple<int, int, int>(2,3,4)));
+
