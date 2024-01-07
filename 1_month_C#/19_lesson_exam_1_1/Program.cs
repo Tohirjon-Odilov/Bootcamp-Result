@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Numerics;
+using System.Text;
 //void sum(int c, out int a, out int b)
 //{
 //    b = 2+5;
@@ -75,17 +76,23 @@ namespace Struktura
 }
 */
 
-Predicate<int> result = x =>{return x % 2 == 0;};
-//Console.WriteLine(result);
-Predicate<int> result1 = delegate (int x)
-{
-    return false;
-};
-bool Triangle (Tuple<int, int, int> value)
-{
-    return value.Item1 == value.Item2;
-}
-Predicate<Tuple<int, int, int>> isTriangle = Triangle;
+//Predicate<int> result = x =>{return x % 2 == 0;};
+////Console.WriteLine(result);
+//Predicate<int> result1 = delegate (int x)
+//{
+//    return false;
+//};
+//bool Triangle (Tuple<int, int, int> value)
+//{
+//    return value.Item1 == value.Item2;
+//}
+//Predicate<Tuple<int, int, int>> isTriangle = Triangle;
 
-Console.WriteLine(isTriangle(new Tuple<int, int, int>(2,3,4)));
+//Console.WriteLine(isTriangle(new Tuple<int, int, int>(2,3,4)));
 
+//int a = 20;
+//int b = a >> 10;
+//Console.WriteLine(b);
+//var stringBuilder = new StringBuilder("Welcome to stringBuilder => ");
+//var test = stringBuilder.AppendFormat("{0:C}", 157);
+//Console.WriteLine(test);
