@@ -1,4 +1,4 @@
-﻿namespace _8_lesson_oop_advansed_sealid_static_class.Library
+﻿namespace _8_lesson_oop_advansed_sealid_static_class
 {
     internal class Book
     {

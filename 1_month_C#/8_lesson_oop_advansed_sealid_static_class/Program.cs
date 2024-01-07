@@ -1,4 +1,4 @@
-﻿using _8_lesson_oop_advansed_sealid_static_class.Shape;
+﻿/*using _8_lesson_oop_advansed_sealid_static_class.Shape;
 
 var uchburchak = new Triangle(3, 4, 5, 9, 7);
 Console.WriteLine(uchburchak.CalculateArea());
@@ -29,7 +29,7 @@ static void Main(string[] args)
     library.AddBook(book1, 1, 1, 1, 1);
     library.AddBook(book2, 2, 2, 2, 2);
 
-    Console.WriteLine(library.GetBooks());
+    /*Console.WriteLine(library.GetBooks());#1#
 
     Console.WriteLine("Floor: " + library.GetFloor(book1));
     Console.WriteLine("Closet: " + library.GetCloset(book1));
@@ -47,4 +47,6 @@ static void Main(string[] args)
         Console.WriteLine("Book not found.");
     }
     #endregion
-}
+}*/
+
+Console.WriteLine("hello");

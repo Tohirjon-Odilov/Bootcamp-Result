@@ -291,3 +291,5 @@ else
 //    Console.WriteLine("Noto'g'ri kiritilgan sanalar. Iltimos, qayta kiriting.");
 //}
 
+Console.WriteLine("Hello");
+

@@ -96,3 +96,4 @@ namespace Struktura
 //var stringBuilder = new StringBuilder("Welcome to stringBuilder => ");
 //var test = stringBuilder.AppendFormat("{0:C}", 157);
 //Console.WriteLine(test);
+Console.WriteLine(BigInteger.Max);
