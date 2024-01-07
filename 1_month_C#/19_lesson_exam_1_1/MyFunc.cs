@@ -4,6 +4,7 @@
     {
         public MyFunc()
         {
+            Console.Clear();
             Func<int, int, string> myFuncAdd = Add;
             Console.WriteLine(myFuncAdd(2,9));
         }

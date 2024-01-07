@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Numerics;
 using System.Text;
+using _19_lesson_exam_1_1;
+
 //void sum(int c, out int a, out int b)
 //{
 //    b = 2+5;
@@ -91,9 +93,22 @@ namespace Struktura
 //Console.WriteLine(isTriangle(new Tuple<int, int, int>(2,3,4)));
 
 //int a = 20;
-//int b = a >> 10;
-//Console.WriteLine(b);
-//var stringBuilder = new StringBuilder("Welcome to stringBuilder => ");
-//var test = stringBuilder.AppendFormat("{0:C}", 157);
-//Console.WriteLine(test);
-Console.WriteLine(BigInteger.Max);
+//int b = a >> 10; //Console.WriteLine(b);
+
+//var stringBuilder = new StringBuilder("Welcome to stringBuilder => "); //var test = stringBuilder.AppendFormat("{0:C}", 157); //Console.WriteLine(test); Console.WriteLine(BigInteger.Max);
+
+// int[1] myArray = {1, 2, 3};
+// int myArray = new int[3] {1, 2, 3};
+// int[] myArray = {1, 2, 3};
+// // int myArray = {1, 2, 3};
+//
+// string s = "Computer";
+// for(int i = 0; s.Length > i; i++)
+// {
+//     Console.WriteLine(s[i]);
+// }
+//
+
+
+//delegat test = new delegat();
+MyFunc myFunc = new MyFunc();
