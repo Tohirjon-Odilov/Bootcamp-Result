@@ -5,11 +5,11 @@
         // parameter class constructor
         public InvalidStudentNameException()
         : base()
-        {}
+        { }
 
         // message parametrli constructor
         public InvalidStudentNameException(string message)
         : base(message)
-        {}
+        { }
     }
 }

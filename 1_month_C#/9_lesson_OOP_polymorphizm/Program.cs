@@ -1,7 +1,4 @@
-﻿using _9_lesson_OOP_polymorphizm;
-using _9_lesson_OOP_polymorphizm.Calculator;
-using _9_lesson_OOP_polymorphizm.Medical;
-using System.Collections;
+﻿using _9_lesson_OOP_polymorphizm.Medical;
 
 #region Klinika
 Run run = new Run();

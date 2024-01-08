@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace _9_lesson_OOP_polymorphizm.Medical
+﻿namespace _9_lesson_OOP_polymorphizm.Medical
 {
     public partial class Run
     {
@@ -70,10 +68,11 @@ namespace _9_lesson_OOP_polymorphizm.Medical
                     Console.Write("Enter patient's ssn: ");
                     int ssn = Convert.ToInt32(Console.ReadLine());
                     Person? person = klinika.GetPatient(ssn);
-                    if(person != null)
+                    if (person != null)
                     {
                         Console.WriteLine($"Name: {person.Name}\nSurname: {person.Surname}\nGender: {person.Gender}\nSSN: {person.Ssn}");
-                    }else Console.WriteLine("NoSuchPatient");
+                    }
+                    else Console.WriteLine("NoSuchPatient");
                     Console.ReadLine();
                 }
                 else if (userSelect == "3")
@@ -136,7 +135,7 @@ namespace _9_lesson_OOP_polymorphizm.Medical
                 {
                     Console.Clear();
                     // Bemorga doctor biriktirish.
-                    
+
                 }
                 else if (userSelect == "6")
                 {

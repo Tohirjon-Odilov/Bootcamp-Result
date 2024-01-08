@@ -3,7 +3,7 @@
     public class Location
     {
         public string Adress { get; set; } = String.Empty;
-       public Mintaqa Mintaqa { get; set; }
+        public Mintaqa Mintaqa { get; set; }
 
     }
 }

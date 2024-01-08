@@ -4,8 +4,9 @@
     {
         public string[] Lessons;
         private decimal Salary;
-        public Teacher(string Name, DateOnly DateOfBirth, decimal Salary) : base(Name, DateOfBirth) {
-            Lessons = [ "matematika", "ingiliz-tili", "Ona-Tili" ];
+        public Teacher(string Name, DateOnly DateOfBirth, decimal Salary) : base(Name, DateOfBirth)
+        {
+            Lessons = ["matematika", "ingiliz-tili", "Ona-Tili"];
         }
         public void Teach()
         {

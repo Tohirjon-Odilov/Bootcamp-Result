@@ -6,7 +6,7 @@
         {
             Console.Clear();
             Func<int, int, string> myFuncAdd = Add;
-            Console.WriteLine(myFuncAdd(2,9));
+            Console.WriteLine(myFuncAdd(2, 9));
         }
 
         // oldin e'lon qilib olsa ham bo'ladi.

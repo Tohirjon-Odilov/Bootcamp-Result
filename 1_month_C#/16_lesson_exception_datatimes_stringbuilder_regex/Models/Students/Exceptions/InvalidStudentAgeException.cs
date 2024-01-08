@@ -4,7 +4,7 @@
     {
         public InvalidStudentAgeException(string message) : base(message)
         {
-            
+
         }
     }
 }

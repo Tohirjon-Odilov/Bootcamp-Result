@@ -1,5 +1,4 @@
 ﻿//List<int> values = new List<int>();
-using System.Collections;
 using _12_lesson_collections_davomi.Task;
 //using CollectionsPractice.Console;
 
@@ -65,7 +64,7 @@ public class Program
             var student = new Student
             {
                 Id = i,  //20, 19, .. 1
-                FirstName = studentFirstNames[i-1],
+                FirstName = studentFirstNames[i - 1],
                 LastName = studentLastNames[studentFirstNames.Length - 1]
             };
 
@@ -75,7 +74,7 @@ public class Program
             //student.FirstName = studentFirstNames[i - 1];
             //student.LastName = studentLastNames[studentFirstNames.Length - i];
 
-            unsortedStudents[i-1] = student;
+            unsortedStudents[i - 1] = student;
         }
 
         var sortedStudents = new SortedList<int, Student>();
@@ -95,7 +94,7 @@ public class Program
         #endregion
 
         #region TODO Consolega unsortedStudents elementlarini chiqaring (use for each loop)
-        foreach( Student student in unsortedStudents )
+        foreach (Student student in unsortedStudents)
         {
             //Console.WriteLine($"{student.Id} {student.FirstName} {student.LastName}");
         }
@@ -169,7 +168,8 @@ public class Program
 
         // TODO istalgan kursga qatnashayotgan studentlarni consolega chiqaring. (UnionWith)
         studentsEnrolledMathCourse.UnionWith(studentsEnrolledEnglishCourse);
-        foreach(var i in studentsEnrolledMathCourse) {
+        foreach (var i in studentsEnrolledMathCourse)
+        {
             //Console.WriteLine(i.FirstName);
         }
 

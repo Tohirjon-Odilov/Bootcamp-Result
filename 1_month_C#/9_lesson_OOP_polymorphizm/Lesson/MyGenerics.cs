@@ -1,6 +1,6 @@
 ﻿namespace _9_lesson_OOP_polymorphizm
 {
-    internal class MyGenerics <MyString, MyInt>
+    internal class MyGenerics<MyString, MyInt>
     {
         public MyString? name;
         public MyInt? year;

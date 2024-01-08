@@ -1,6 +1,4 @@
-﻿using System.Text;
-
-namespace _8_lesson_oop_advansed_sealid_static_class
+﻿namespace _8_lesson_oop_advansed_sealid_static_class
 {
 
     /*    public class Library

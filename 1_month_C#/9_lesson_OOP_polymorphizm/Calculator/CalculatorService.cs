@@ -9,10 +9,10 @@ namespace _9_lesson_OOP_polymorphizm.Calculator
             this.a = a;
             this.b = b;
 
-            Multiply(a,b);
-            Divide(a,b);
-            Divorse(a,b);
-            Add(a,b);
+            Multiply(a, b);
+            Divide(a, b);
+            Divorse(a, b);
+            Add(a, b);
         }
 
         public MyInt a { get; set; }

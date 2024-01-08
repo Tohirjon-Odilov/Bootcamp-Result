@@ -5,7 +5,8 @@
         public string[] Lessons;
         private bool isScholorShip = false;
         public string Name;
-        public Student(string name, DateOnly dateofbirth, bool isScholorShip) : base(name, dateofbirth) { 
+        public Student(string name, DateOnly dateofbirth, bool isScholorShip) : base(name, dateofbirth)
+        {
             Name = name;
             Lessons = ["matematika", "ingiliz-tili", "Ona-Tili"];
         }

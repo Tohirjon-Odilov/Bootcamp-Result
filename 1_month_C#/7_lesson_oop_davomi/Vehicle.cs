@@ -1,10 +1,8 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace _7_lesson_oop_davomi
+﻿namespace _7_lesson_oop_davomi
 {
     internal class Vehicle
     {
-        public string? Engine {  get; set; }
+        public string? Engine { get; set; }
         public DateOnly CreateDate { get; set; }
 
         public Vehicle(string engine, DateOnly createDate)

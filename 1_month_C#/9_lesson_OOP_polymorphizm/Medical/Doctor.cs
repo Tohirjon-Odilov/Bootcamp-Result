@@ -9,10 +9,11 @@
             Expert = expert;
         }
         // Doctor'ning yagona id'si
-        private int id; 
+        private int id;
         public static List<Person> attachedPatients = new List<Person>();
         // Id'ni olish va id'ga qiymat berish
-        public int Id {
+        public int Id
+        {
             get
             {
                 //foreach (Doctor item in Clinic.Doctors)
@@ -27,10 +28,10 @@
             set
             {
                 id = value;
-            } 
+            }
         }
         // Doctorninng mutahasisligi
-        public string Expert {  get; set; }
+        public string Expert { get; set; }
 
         // Shifokorga biriktirilgan bemorlar ro'yhatini olish
         public List<Person> getPatients(Person person)

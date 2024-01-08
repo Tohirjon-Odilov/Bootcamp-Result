@@ -4,17 +4,19 @@
     {
         public string Name;
         public DateOnly DateOfBirth;
-        public Person() {
+        public Person()
+        {
             Console.WriteLine("Men bu men!");
             Name = "Unknown";
         }
-        public Person(string Name, DateOnly DateOfBirth) {
+        public Person(string Name, DateOnly DateOfBirth)
+        {
             this.Name = Name;
             this.DateOfBirth = DateOfBirth;
         }
         public void Breath()
         {
-            Console.WriteLine($"{ Name } is breathing!");
+            Console.WriteLine($"{Name} is breathing!");
         }
     }
 }

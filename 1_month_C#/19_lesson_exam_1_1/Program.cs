@@ -1,7 +1,4 @@
-﻿using System;
-using System.Numerics;
-using System.Text;
-using _19_lesson_exam_1_1;
+﻿//namespace d;
 
 //void sum(int c, out int a, out int b)
 //{
@@ -111,4 +108,23 @@ namespace Struktura
 
 
 //delegat test = new delegat();
-MyFunc myFunc = new MyFunc();
+// MyFunc myFunc = new MyFunc();
+//Anonim myAnonim = new Anonim();
+//Out Out = new Out();
+//Ref Ref = new Ref();
+
+//ValueTuple<>
+using _19_lesson_exam_1_1;
+
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        //Console.WriteLine(4 + 5);
+    }
+
+    public static Out operator + (Out a, Out b) { return a - b; }
+}
+//public int operator +(int a, int b) { return a + b; }
+//public static void operator +(int a, int b) { return a + b; }
+//public static operator +(int a, int b) => a + b;

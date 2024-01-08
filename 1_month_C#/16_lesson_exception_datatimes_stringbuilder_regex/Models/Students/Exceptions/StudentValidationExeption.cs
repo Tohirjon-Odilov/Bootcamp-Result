@@ -2,7 +2,7 @@
 {
     public class StudentValidationExeption : Exception
     {
-        public StudentValidationExeption(string message, Exception innerException) 
+        public StudentValidationExeption(string message, Exception innerException)
         {
 
         }

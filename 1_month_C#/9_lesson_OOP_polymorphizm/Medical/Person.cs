@@ -5,10 +5,10 @@
         public string? Name { get; set; }
         public string? Surname { get; set; }
         public int Ssn { get; set; }
-        public Enum Gender {  get; set; }
+        public Enum Gender { get; set; }
         public static Doctor? PatientDoctor;
 
-        public static Doctor GetDoctor(Doctor doctor) 
+        public static Doctor GetDoctor(Doctor doctor)
         {
             return doctor;
         }

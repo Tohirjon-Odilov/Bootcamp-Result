@@ -6,25 +6,25 @@
         {
             PrintNum pt1 = new PrintNum(qosh);
             PrintNum pt2 = new PrintNum(ayir);
-            
+
             // multicase delegat'ga misol
             PrintNum multicase = pt1 + pt2;
-            
+
             // multicase delegat'ni bittasini o'chirish 
             multicase -= pt1;
 
-            multicase(2,3);
+            multicase(2, 3);
 
             // qiymat berishni yana bir usuli
             // multicase.Invoke(510,5);
 
         }
-        
+
         public delegate void PrintNum(int a, int b);
-        
+
         public void qosh(int a, int b)
         {
-            Console.WriteLine(a+b);
+            Console.WriteLine(a + b);
         }
 
         public void ayir(int a, int b)

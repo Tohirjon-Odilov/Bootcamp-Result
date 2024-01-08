@@ -1,6 +1,4 @@
-﻿
-using _18_Lesson_Json.Task;
-using _18_Lesson_Json.Task_2;
+﻿using _18_Lesson_Json.Task_2;
 using System.Text.Json;
 
 #region Task 1
@@ -74,14 +72,14 @@ UserInfo User2 = new UserInfo()
     Name = "Akramjon",
     LastName = "Abduvahobov",
     Age = 14
-}; 
+};
 UserInfo User3 = new UserInfo()
 {
     Id = 3,
     Name = "Eldor",
     LastName = "Azizov",
     Age = 17
-}; 
+};
 UserInfo User4 = new UserInfo()
 {
     Id = 4,
@@ -95,7 +93,7 @@ Users.Add(User2);
 Users.Add(User3);
 Users.Add(User4);
 
-string Array = JsonSerializer.Serialize(Users,options: new JsonSerializerOptions
+string Array = JsonSerializer.Serialize(Users, options: new JsonSerializerOptions
 {
     WriteIndented = true
 });

@@ -1,6 +1,4 @@
-﻿using System.Collections;
-
-namespace _9_lesson_OOP_polymorphizm.Medical
+﻿namespace _9_lesson_OOP_polymorphizm.Medical
 {
     public class Clinic
     {
@@ -9,15 +7,17 @@ namespace _9_lesson_OOP_polymorphizm.Medical
         public static List<Doctor> Doctors = new List<Doctor>();
         public Clinic()
         {
-            
+
         }
 
-        public string AddPatient(Person person) { 
+        public string AddPatient(Person person)
+        {
             Persons.Add(person);
-            return "Person added succesfully :)"; 
+            return "Person added succesfully :)";
         }
 
-        public Person? GetPatient(int Ssn) {
+        public Person? GetPatient(int Ssn)
+        {
             Console.Clear();
             foreach (Person person in Persons)
             {
@@ -26,12 +26,12 @@ namespace _9_lesson_OOP_polymorphizm.Medical
             return null;
         }
 
-        public string AddDoctor(Doctor nurse) 
+        public string AddDoctor(Doctor nurse)
         {
             Doctors.Add(nurse);
             return "Added succesfully :)";
         }
-        public Doctor? GetDoctor(int Id) 
+        public Doctor? GetDoctor(int Id)
         {
             foreach (Doctor nurse in Doctors)
             {
@@ -44,10 +44,10 @@ namespace _9_lesson_OOP_polymorphizm.Medical
         {
             //Doctor? doctor = GetDoctor(doctorId);
             bool isDoctorFound = true;
-            bool isPatientFound  = true;
+            bool isPatientFound = true;
             foreach (Doctor nurse in Doctors)
             {
-                if(nurse.Id == doctorId)
+                if (nurse.Id == doctorId)
                 {
                     isDoctorFound = false;
                     Person.PatientDoctor = nurse;
@@ -57,7 +57,7 @@ namespace _9_lesson_OOP_polymorphizm.Medical
             }
             foreach (Person item in Persons)
             {
-                if(item.Ssn == patientSsn)
+                if (item.Ssn == patientSsn)
                 {
                     //Person.GetDoctor(item);
                     isPatientFound = false;
@@ -70,9 +70,9 @@ namespace _9_lesson_OOP_polymorphizm.Medical
             else if (isPatientFound) { return "NoSuchPatient"; }
             return "Assigned succesfully :)";
         }
-            //Random rand = new Random();
-            //int randomIndex = rand.Next(0, Doctors.Count);
-            //return Doctors[randomIndex].Name;
-        
+        //Random rand = new Random();
+        //int randomIndex = rand.Next(0, Doctors.Count);
+        //return Doctors[randomIndex].Name;
+
     }
 }

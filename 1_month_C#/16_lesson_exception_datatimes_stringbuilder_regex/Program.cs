@@ -1,7 +1,4 @@
 ﻿using _16_lesson_exception_datatimes_stringbuilder_regex.Homework;
-using _16_lesson_exception_datatimes_stringbuilder_regex.Models.Students;
-using _16_lesson_exception_datatimes_stringbuilder_regex.Models.Students.Exceptions;
-using System.Text.RegularExpressions;
 
 namespace _16_lesson_exception_datatimes_stringbuilder_regex
 {
