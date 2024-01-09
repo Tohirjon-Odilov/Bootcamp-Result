@@ -13,7 +13,6 @@ namespace _20_lesson_exam_1_2
             string myfileName = typeof(T).Name + ".json";
             string Path = System.IO.Path.Combine(FilePath, myfileName);
             FullPath = Path;
-
             try
             {
                 if (!File.Exists(Path))
@@ -46,7 +45,7 @@ namespace _20_lesson_exam_1_2
             objects.Add(obj);
             Console.WriteLine("Added succesfully.");
 
-            UpdateDatas<T>(Serialize(objects));
+            WriteDatas<T>(Serialize(objects));
         }
 
         public void DeleteData<T>(int id)
@@ -58,7 +57,7 @@ namespace _20_lesson_exam_1_2
                 {
                     objects.RemoveAt(i);
                     Console.WriteLine("Deleted succesfully.");
-                    UpdateDatas<T>(Serialize(objects));
+                    WriteDatas<T>(Serialize(objects));
                     return;
                 }
             }
@@ -73,7 +72,7 @@ namespace _20_lesson_exam_1_2
                 if (GetId(objects[i]) == id)
                 {
                     objects[i] = obj;
-                    UpdateDatas<T>(Serialize(objects));
+                    WriteDatas<T>(Serialize(objects));
                 }
             }
         }
@@ -105,7 +104,7 @@ namespace _20_lesson_exam_1_2
             return JsonConvert.SerializeObject(vals, Formatting.Indented);
         }
 
-        public void UpdateDatas<T>(string json)
+        public void WriteDatas<T>(string json)
         {
             try
             {
