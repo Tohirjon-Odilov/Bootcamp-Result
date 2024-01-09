@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\source\\repos\\Bootcamp-Result\\1_month_C#\\2_lesson_data_type\\2_lesson_data_type.csproj": {}
+    "C:\\Users\\Admin\\source\\repos\\Bootcamp-Result\\1_month_C#\\2_lesson_data_type\\2_lesson_data_type.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\source\\repos\\Bootcamp-Result\\1_month_C#\\2_lesson_data_type\\2_lesson_data_type.csproj": {
+    "C:\\Users\\Admin\\source\\repos\\Bootcamp-Result\\1_month_C#\\2_lesson_data_type\\2_lesson_data_type.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\source\\repos\\Bootcamp-Result\\1_month_C#\\2_lesson_data_type\\2_lesson_data_type.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\source\\repos\\Bootcamp-Result\\1_month_C#\\2_lesson_data_type\\2_lesson_data_type.csproj",
         "projectName": "2_lesson_data_type",
-        "projectPath": "C:\\Users\\user\\source\\repos\\Bootcamp-Result\\1_month_C#\\2_lesson_data_type\\2_lesson_data_type.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\source\\repos\\Bootcamp-Result\\1_month_C#\\2_lesson_data_type\\obj\\",
+        "projectPath": "C:\\Users\\Admin\\source\\repos\\Bootcamp-Result\\1_month_C#\\2_lesson_data_type\\2_lesson_data_type.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Admin\\source\\repos\\Bootcamp-Result\\1_month_C#\\2_lesson_data_type\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

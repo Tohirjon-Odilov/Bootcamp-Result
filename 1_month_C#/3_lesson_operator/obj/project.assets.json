@@ -8,19 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\user\\.nuget\\packages\\": {}
+    "C:\\Users\\Admin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user\\Source\\Repos\\Bootcamp-Result\\1_month_C#\\3_lesson_operator\\3_lesson_operator.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\Source\\Repos\\Bootcamp-Result\\1_month_C#\\3_lesson_operator\\3_lesson_operator.csproj",
       "projectName": "3_lesson_operator",
-      "projectPath": "C:\\Users\\user\\Source\\Repos\\Bootcamp-Result\\1_month_C#\\3_lesson_operator\\3_lesson_operator.csproj",
-      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\user\\Source\\Repos\\Bootcamp-Result\\1_month_C#\\3_lesson_operator\\obj\\",
+      "projectPath": "C:\\Users\\Admin\\Source\\Repos\\Bootcamp-Result\\1_month_C#\\3_lesson_operator\\3_lesson_operator.csproj",
+      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Admin\\Source\\Repos\\Bootcamp-Result\\1_month_C#\\3_lesson_operator\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
