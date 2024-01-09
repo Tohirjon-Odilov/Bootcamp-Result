@@ -1,4 +1,6 @@
-﻿using System.Text.Json;
+﻿//using System.Text.Json;
+
+using Newtonsoft.Json;
 
 namespace _20_lesson_exam_1_2
 {
@@ -95,12 +97,12 @@ namespace _20_lesson_exam_1_2
 
         public List<T> SDeserialize<T>(string json)
         {
-            return JsonSerializer.Deserialize<List<T>>(json) ?? new List<T>();
+            return JsonConvert.DeserializeObject<List<T>>(json) ?? new List<T>();
         }
 
         public string Serialize<T>(List<T> vals)
         {
-            return JsonSerializer.Serialize(vals);
+            return JsonConvert.SerializeObject(vals, Formatting.Indented);
         }
 
         public void UpdateDatas<T>(string json)

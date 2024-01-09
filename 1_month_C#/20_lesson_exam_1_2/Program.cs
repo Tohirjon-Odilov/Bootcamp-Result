@@ -8,9 +8,9 @@
 
             Productname person = new Productname()
             {
-                Id = 1,
-                Product = "akjfsdljf a",
-                Title = "Title"
+                Id = 2,
+                Product = "Iphone 19",
+                Title = "nimadur"
             };
             user.Add(person);
         }
