@@ -1,0 +1,20 @@
+[
+  {
+    "Id": 2,
+    "FirstName": "Gulbahor",
+    "SecondName": "Sattarova",
+    "Subject": "English language"
+  },
+  {
+    "Id": 3,
+    "FirstName": "Akbarshox",
+    "SecondName": "Sattorov",
+    "Subject": "Bootcamp Foundation"
+  },
+  {
+    "Id": 4,
+    "FirstName": "Aziz",
+    "SecondName": "Shokirov",
+    "Subject": "Bootcamp Foundation"
+  }
+]

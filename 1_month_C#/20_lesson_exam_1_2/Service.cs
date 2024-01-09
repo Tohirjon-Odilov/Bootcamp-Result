@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 
 namespace _20_lesson_exam_1_2
 {
-    public class User
+    public class Service
     {
         private string FilePath = @"C:\Users\Admin\source\repos\Bootcamp-Result\1_month_C#\20_lesson_exam_1_2\Datas";
 
@@ -29,7 +29,7 @@ namespace _20_lesson_exam_1_2
         }
         private string FullPath = string.Empty;
 
-        public void Add<T>(T obj)
+        public void AddData<T>(T obj)
         {
             CreateFile<T>();
             List<T> objects = GetAllDatas<T>();
@@ -49,7 +49,7 @@ namespace _20_lesson_exam_1_2
             UpdateDatas<T>(Serialize(objects));
         }
 
-        public void Delete<T>(int id)
+        public void DeleteData<T>(int id)
         {
             List<T> objects = GetAllDatas<T>();
             for (int i = 0; i < objects.Count; i++)
@@ -64,7 +64,7 @@ namespace _20_lesson_exam_1_2
             }
             Console.WriteLine("Not found");
         }
-        public void Update<T>(int id, T obj)
+        public void UpdateData<T>(int id, T obj)
         {
             List<T> objects = GetAllDatas<T>();
 
@@ -119,7 +119,7 @@ namespace _20_lesson_exam_1_2
 
         private int GetId<T>(T item)
         {
-            string fName = typeof(T).Name;
+            string fileName = typeof(T).Name;
             var propId = typeof(T).GetProperty("Id")!;
             var propValue = propId.GetValue(item)!;
             return (int)propValue;

@@ -4,15 +4,16 @@
     {
         static void Main(string[] args)
         {
-            User user = new User();
+            Service teacher = new Service();
 
-            Productname person = new Productname()
+            Teacher person = new Teacher()
             {
-                Id = 2,
-                Product = "Iphone 19",
-                Title = "nimadur"
+                Id = 4,
+                FirstName = "Aziz",
+                SecondName = "Shokirov",
+                Subject = "Bootcamp Foundation"
             };
-            user.Add(person);
+            teacher.AddData(person);
         }
     }
 }
