@@ -6,7 +6,7 @@ namespace _20_lesson_exam_1_2
 {
     public class Service
     {
-        private string FilePath = @"C:\Users\Admin\source\repos\Bootcamp-Result\1_month_C#\20_lesson_exam_1_2\Datas";
+        private string FilePath = @"C:\Users\Admin\Desktop";
 
         public void CreateFile<T>()
         {
