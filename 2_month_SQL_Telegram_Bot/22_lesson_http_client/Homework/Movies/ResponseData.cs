@@ -2,8 +2,8 @@
 {
     public class ResponseData
     {
-        public List<MovieMadel> Search { get; set; }
-        public string totalResults { get; set; }
-        public string Response {  get; set; }
+        public List<MovieMadel> Search { get; set; } = new List<MovieMadel>();
+        public string totalResults { get; set; } = String.Empty;
+        public string Response { get; set; } = String.Empty;
     }
 }

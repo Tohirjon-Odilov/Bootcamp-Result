@@ -8,17 +8,10 @@ namespace _22_lesson_http_client.Homework
         public DataInfoMadel SingleData { get; set; }
         public Server()
         {
-            //Console.Write("Enter film name: ");
-            //    //var film = Console.ReadLine()!;
-            //    //Console.Write("Pagination: ");
-            //    //var pagination = Console.ReadLine()!;
-            //    Course("Spiderman", 1).Wait();
+            Console.Write("  Enter film name: ");
+            var film = Console.ReadLine()!;
 
-            //Result / await / Wait() ma'lumot yechadi
-
-            AllData = Omdbapi.GetAllData("Uncharted", 1).Result;
-            //var data1 = Omdbapi.GetAllData("Spiderman", 2).Result;
-
+            AllData = Omdbapi.GetAllData(film, 1).Result;
             int choose = 0;
             while (true)
             {
@@ -27,7 +20,7 @@ namespace _22_lesson_http_client.Homework
                     if (choose == i)
                     {
                         Console.ForegroundColor = ConsoleColor.Green;
-                        Console.WriteLine($"\n {i+1} {AllData.Search[choose].Title}");
+                        Console.WriteLine($"\n[{i+1} {AllData.Search[choose].Title}]");
                         Console.ResetColor();
                     }
                     else

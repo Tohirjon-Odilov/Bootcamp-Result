@@ -11,7 +11,6 @@
                 if (choose <= -1)
                 {
                     choose = AllData.Search.Count - 1;
-
                 }
                 else if (choose == 0) choose = AllData.Search.Count;
                 return --choose;
@@ -29,6 +28,7 @@
                 SingleData = Omdbapi.GetDataInfo(AllData.Search[choose].imdbID).Result;
                 SingleDataInfo(SingleData);
             }
+            Console.Clear();
             return choose;
         }
     }
