@@ -1,6 +1,6 @@
-﻿namespace _22_lesson_http_client.Homework.Movies
+﻿namespace _22_lesson_http_client.Homework
 {
-    public class FullData
+    public class ResponseData
     {
         public List<Movie> Search { get; set; }
         public string totalResults { get; set; }

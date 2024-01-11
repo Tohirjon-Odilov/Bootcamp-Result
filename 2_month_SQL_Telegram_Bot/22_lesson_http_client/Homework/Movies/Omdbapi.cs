@@ -1,27 +1,31 @@
-﻿using _22_lesson_http_client.Homework.Movies;
+﻿using _22_lesson_http_client.Homework;
 using System.Text.Json;
 
 //https://www.omdbapi.com/?apikey=6577cabc&s=Spiderman&page=1
 namespace _22_lesson_http_client.Homework
 {
-    internal class Omdbapi
+    public class Omdbapi
     {
-        public Omdbapi()
-        {
-            Console.Write("Enter film name: ");
-            var film = Console.ReadLine()!;
-            Course(film, 1).Wait();
-        }
-        public static async Task Course(string film, int value)
+        //public Omdbapi()
+        //{
+        //    //Console.Write("Enter film name: ");
+        //    //var film = Console.ReadLine()!;
+        //    //Console.Write("Pagination: ");
+        //    //var pagination = Console.ReadLine()!;
+        //    Course("Spiderman", 1).Wait();
+        //}
+        public static async Task<ResponseData> GetAllData(string film, int pagination)
         {
             HttpClient httpClient = new HttpClient(); 
-            var request = new HttpRequestMessage(HttpMethod.Get, $"http://www.omdbapi.com/?apikey=ed7b702d&s={film}&page=1");
+            var request = new HttpRequestMessage(HttpMethod.Get, $"http://www.omdbapi.com/?apikey=ed7b702d&s={film}&page={pagination}");
             var response = await httpClient.SendAsync(request);
             string Body = await response.Content.ReadAsStringAsync();
-            var courses = JsonSerializer.Deserialize<FullData>(Body)!;
+            ResponseData responseData = JsonSerializer.Deserialize<ResponseData>(Body)!;
+            //Console.WriteLine(responseData);
+            return responseData;
             //Console.WriteLine(JsonSerializer.Deserialize<List<List<Movie>>>(Body));
-            Console.WriteLine(courses.Search);
-            Console.WriteLine(courses.totalResults);
+            //Console.WriteLine(courses.Search);
+            //Console.WriteLine(courses.totalResults);
         }
     }
 }
