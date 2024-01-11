@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\source\\repos\\Bootcamp-Result\\1_month_C#\\2_lesson_data_type\\2_lesson_data_type.csproj": {}
+    "C:\\Users\\Tohirjon\\source\\repos\\Bootcamp-Result\\1_month_C#\\2_lesson_data_type\\2_lesson_data_type.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\source\\repos\\Bootcamp-Result\\1_month_C#\\2_lesson_data_type\\2_lesson_data_type.csproj": {
+    "C:\\Users\\Tohirjon\\source\\repos\\Bootcamp-Result\\1_month_C#\\2_lesson_data_type\\2_lesson_data_type.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\source\\repos\\Bootcamp-Result\\1_month_C#\\2_lesson_data_type\\2_lesson_data_type.csproj",
+        "projectUniqueName": "C:\\Users\\Tohirjon\\source\\repos\\Bootcamp-Result\\1_month_C#\\2_lesson_data_type\\2_lesson_data_type.csproj",
         "projectName": "2_lesson_data_type",
-        "projectPath": "C:\\Users\\Admin\\source\\repos\\Bootcamp-Result\\1_month_C#\\2_lesson_data_type\\2_lesson_data_type.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\source\\repos\\Bootcamp-Result\\1_month_C#\\2_lesson_data_type\\obj\\",
+        "projectPath": "C:\\Users\\Tohirjon\\source\\repos\\Bootcamp-Result\\1_month_C#\\2_lesson_data_type\\2_lesson_data_type.csproj",
+        "packagesPath": "C:\\Users\\Tohirjon\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Tohirjon\\source\\repos\\Bootcamp-Result\\1_month_C#\\2_lesson_data_type\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Tohirjon\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -55,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

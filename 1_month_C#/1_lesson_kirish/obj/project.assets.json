@@ -8,19 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Admin\\.nuget\\packages\\": {}
+    "C:\\Users\\Tohirjon\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\Source\\Repos\\Bootcamp-Result\\1_month_C#\\1_lesson_kirish\\1_lesson_kirish.csproj",
+      "projectUniqueName": "C:\\Users\\Tohirjon\\source\\repos\\Bootcamp-Result\\1_month_C#\\1_lesson_kirish\\1_lesson_kirish.csproj",
       "projectName": "1_lesson_kirish",
-      "projectPath": "C:\\Users\\Admin\\Source\\Repos\\Bootcamp-Result\\1_month_C#\\1_lesson_kirish\\1_lesson_kirish.csproj",
-      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\Source\\Repos\\Bootcamp-Result\\1_month_C#\\1_lesson_kirish\\obj\\",
+      "projectPath": "C:\\Users\\Tohirjon\\source\\repos\\Bootcamp-Result\\1_month_C#\\1_lesson_kirish\\1_lesson_kirish.csproj",
+      "packagesPath": "C:\\Users\\Tohirjon\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Tohirjon\\source\\repos\\Bootcamp-Result\\1_month_C#\\1_lesson_kirish\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Tohirjon\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -61,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

@@ -43,9 +43,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "18_Lesson_Json", "18_Lesson
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "19_lesson_exam_1_1", "19_lesson_exam_1_1\19_lesson_exam_1_1.csproj", "{3968D5A4-CAAC-42C8-90AF-C95EBD618A64}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "21_lesson_CRUD", "21_lesson_CRUD\21_lesson_CRUD.csproj", "{2281E31F-1597-44E0-A34E-26C9FEB46AEB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "21_lesson_CRUD", "21_lesson_CRUD\21_lesson_CRUD.csproj", "{2281E31F-1597-44E0-A34E-26C9FEB46AEB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "20_lesson_exam_1_2", "20_lesson_exam_1_2\20_lesson_exam_1_2.csproj", "{0BF47E23-DC97-4973-B308-00BAF5ADCBB5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "20_lesson_exam_1_2_CRUD", "20_lesson_exam_1_2\20_lesson_exam_1_2_CRUD.csproj", "{0BF47E23-DC97-4973-B308-00BAF5ADCBB5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
