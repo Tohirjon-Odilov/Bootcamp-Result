@@ -16,8 +16,8 @@ namespace _22_lesson_http_client.Homework
         //}
         public static async Task<ResponseData> GetAllData(string film, int pagination)
         {
-            HttpClient httpClient = new HttpClient(); 
-            var request = new HttpRequestMessage(HttpMethod.Get, $"http://www.omdbapi.com/?apikey=ed7b702d&s={film}&page={pagination}");
+            HttpClient httpClient = new HttpClient();
+            var request = new HttpRequestMessage(HttpMethod.Get, $"http://www.omdbapi.com/?apikey=6577cabc&s={film}&page={pagination}");
             var response = await httpClient.SendAsync(request);
             string Body = await response.Content.ReadAsStringAsync();
             ResponseData responseData = JsonSerializer.Deserialize<ResponseData>(Body)!;
@@ -26,6 +26,15 @@ namespace _22_lesson_http_client.Homework
             //Console.WriteLine(JsonSerializer.Deserialize<List<List<Movie>>>(Body));
             //Console.WriteLine(courses.Search);
             //Console.WriteLine(courses.totalResults);
+        }
+        public static async Task<DataInfoMadel> GetDataInfo(string imdbApi)
+        {
+            HttpClient httpClient = new HttpClient();
+            var request = new HttpRequestMessage(HttpMethod.Get, $"http://www.omdbapi.com/?i={imdbApi}&plot=full&apikey=6577cabc");
+            var response = await httpClient.SendAsync(request);
+            string body = await response.Content.ReadAsStringAsync();
+            DataInfoMadel responseData = JsonSerializer.Deserialize<DataInfoMadel>(body)!;
+            return responseData;
         }
     }
 }

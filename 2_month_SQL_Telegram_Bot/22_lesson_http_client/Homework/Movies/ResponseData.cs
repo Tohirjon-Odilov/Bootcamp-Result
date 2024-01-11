@@ -2,7 +2,7 @@
 {
     public class ResponseData
     {
-        public List<Movie> Search { get; set; }
+        public List<MovieMadel> Search { get; set; }
         public string totalResults { get; set; }
         public string Response {  get; set; }
     }

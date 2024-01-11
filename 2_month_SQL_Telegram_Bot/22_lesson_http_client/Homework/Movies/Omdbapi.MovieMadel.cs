@@ -1,6 +1,6 @@
 ﻿namespace _22_lesson_http_client.Homework
 {
-    public class Movie
+    public class MovieMadel
     {
         public string Title { get; set; } = String.Empty;
         public string Year { get; set; } = String.Empty;

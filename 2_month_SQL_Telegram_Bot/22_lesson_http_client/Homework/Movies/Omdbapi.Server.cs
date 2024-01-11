@@ -1,8 +1,11 @@
-﻿namespace _22_lesson_http_client.Homework
+﻿using System.ComponentModel.Design;
+
+namespace _22_lesson_http_client.Homework
 {
-    public class Server
+    public partial class Server
     {
         public ResponseData AllData { get; set; }
+        public DataInfoMadel SingleData { get; set; }
         public Server()
         {
             //Console.Write("Enter film name: ");
@@ -13,7 +16,7 @@
 
             //Result / await / Wait() ma'lumot yechadi
 
-            AllData = Omdbapi.GetAllData("Spiderman", 1).Result;
+            AllData = Omdbapi.GetAllData("Batman", 1).Result;
             //var data1 = Omdbapi.GetAllData("Spiderman", 2).Result;
 
             int choose = 0;
@@ -26,15 +29,6 @@
                         Console.ForegroundColor = ConsoleColor.Green;
                         Console.WriteLine(AllData.Search[choose].Title);
                         Console.ResetColor();
-                        if (choose == AllData.Search.Count - 1)
-                        {
-                            choose = -1;
-                        }
-                        //if (choose == -1)
-                        //{
-                        //    choose = AllData.Search.Count - i;
-                        //}
-                        //Console.WriteLine(i);
                     }
                     else
                     {
@@ -42,7 +36,6 @@
                     }
 
                 }
-                Console.WriteLine(choose);
                 choose = UserSelected(Console.ReadKey().Key,choose);
             }
         }
@@ -51,18 +44,29 @@
             Console.Clear();
             string ConvertedKey = Convert.ToString(key)!;
             if (ConvertedKey == "UpArrow")
-            {   if (choose <= -1)
+            {
+                if (choose <= -1)
                 {
-                    choose = AllData.Search.Count-1;
+                    choose = AllData.Search.Count - 1;
+
                 }
+                else if (choose == 0) choose = AllData.Search.Count;
                 return --choose;
             }
-            else if (ConvertedKey == "DownArrow") return ++choose;
-            //else if(ConvertedKey == "Enter")
-            //{
-
-            //}
-            else { return choose; }
+            else if (ConvertedKey == "DownArrow")
+            {
+                if (choose == AllData.Search.Count - 1)
+                {
+                    choose = -1;
+                }
+                return ++choose;
+            }
+            else if (ConvertedKey == "Enter")
+            {
+                SingleData = Omdbapi.GetDataInfo(AllData.Search[choose].imdbID).Result;
+                SingleDataInfo(SingleData);
+            }
+            return choose; 
         }
     }
 }
