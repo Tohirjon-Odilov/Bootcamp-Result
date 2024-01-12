@@ -10,16 +10,16 @@ namespace _22_lesson_httpclient_post_patch_delete_put
         {
             //var resultPost = UsersPost(httpClient).Result;
             //Console.WriteLine(resultPost);
-            //var result = UsersGetAll(httpClient).Result;
-            //Console.WriteLine(result);
+            var result = UsersGetAll(httpClient).Result;
+            Console.WriteLine(result);
             //var resultWithId = UsersGetById(httpClient).Result;
             //Console.WriteLine(resultWithId);
             //var resultPut = UsersPut(httpClient).Result;
             //Console.WriteLine(resultPut);
             //var resultPut = UsersPatch(httpClient).Result;
             //Console.WriteLine(resultPut);
-            var resultPut = UsersDelete(httpClient).Result;
-            Console.WriteLine(resultPut);
+            //var resultPut = UsersDelete(httpClient).Result;
+            //Console.WriteLine(resultPut);
         }
 
         private async ValueTask<string> UsersPost(HttpClient httpClient)

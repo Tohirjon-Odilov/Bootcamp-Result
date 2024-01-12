@@ -12,7 +12,7 @@ namespace _22_lesson_httpclient_post_patch_delete_put
             //Console.WriteLine(resultPost);
             //var result = AlbomsGetAll(httpClient).Result;
             //Console.WriteLine(result);
-            var resultWithId = AlbomsGetById(httpClient).Result;
+            var resultWithId = AlbomsDelete(httpClient).Result;
             Console.WriteLine(resultWithId);
             //var resultPut = AlbomsPut(httpClient).Result;
             //Console.WriteLine(resultPut);
@@ -35,14 +35,14 @@ namespace _22_lesson_httpclient_post_patch_delete_put
         }
         private static async ValueTask<string> AlbomsGetAll(HttpClient httpClient)
         {
-            var dataList = await httpClient.GetStringAsync("alboms");
+            var dataList = await httpClient.GetStringAsync("albums");
             return dataList;
         }
         private async Task<string> AlbomsGetById(HttpClient httpClient)
         {
             Console.Write("Enter comment id: ");
             int id = Convert.ToInt32(Console.ReadLine());
-            using HttpResponseMessage response = await httpClient.GetAsync($"alboms/{id}");
+            using HttpResponseMessage response = await httpClient.GetAsync($"albums/{id}");
 
             response.EnsureSuccessStatusCode().WriteRequestToConsole();
 
@@ -63,7 +63,7 @@ namespace _22_lesson_httpclient_post_patch_delete_put
                 }), Encoding.UTF8, "application/json"
             );
 
-            HttpResponseMessage response = await httpClient.PutAsync($"alboms/2", jsonContent);
+            HttpResponseMessage response = await httpClient.PutAsync($"albums/2", jsonContent);
 
             response.EnsureSuccessStatusCode().WriteRequestToConsole();
 
@@ -83,7 +83,7 @@ namespace _22_lesson_httpclient_post_patch_delete_put
                 "application/json"
             );
 
-            HttpResponseMessage response = await httpClient.PatchAsync("alboms/3", jsonContent);
+            HttpResponseMessage response = await httpClient.PatchAsync("albums/3", jsonContent);
 
             response.EnsureSuccessStatusCode().WriteRequestToConsole();
 
@@ -93,7 +93,7 @@ namespace _22_lesson_httpclient_post_patch_delete_put
         }
         public static async ValueTask<string> AlbomsDelete(HttpClient httpClient)
         {
-            HttpResponseMessage response = await httpClient.DeleteAsync("alboms/5");
+            HttpResponseMessage response = await httpClient.DeleteAsync("albums/5");
 
             response.EnsureSuccessStatusCode().WriteRequestToConsole();
 
