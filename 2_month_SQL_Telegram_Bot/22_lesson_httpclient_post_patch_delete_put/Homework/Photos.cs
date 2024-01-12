@@ -8,16 +8,16 @@ namespace _22_lesson_httpclient_post_patch_delete_put
     {
         public Photos(HttpClient httpClient)
         {
-            var resultPost = PhotosPost(httpClient).Result;
-            Console.WriteLine(resultPost);
+            //var resultPost = PhotosPost(httpClient).Result;
+            //Console.WriteLine(resultPost);
             //var result = PhotosGetAll(httpClient).Result;
             //Console.WriteLine(result);
-            //var resultWithId = PhotosGetById(httpClient);
+            //var resultWithId = PhotosGetById(httpClient).Result;
             //Console.WriteLine(resultWithId);
-            //var resultPut = PhotosPut(httpClient).Result;
-            //Console.WriteLine(resultPut)
+            var resultPut = PhotosPut(httpClient).Result;
+            Console.WriteLine(resultPut);
             //var resultPut = PhotosPatch(httpClient).Result;
-            //Console.WriteLine(resultPut
+            //Console.WriteLine(resultPut);
             //var resultPut = PhotosDelete(httpClient).Result;
             //Console.WriteLine(resultPut);
         }
@@ -38,7 +38,7 @@ namespace _22_lesson_httpclient_post_patch_delete_put
             var dataList = await httpClient.GetStringAsync("photos");
             return dataList;
         }
-        private async Task PhotosGetById(HttpClient httpClient)
+        private async Task<string> PhotosGetById(HttpClient httpClient)
         {
             Console.Write("Enter comment id: ");
             int id = Convert.ToInt32(Console.ReadLine());
@@ -48,8 +48,7 @@ namespace _22_lesson_httpclient_post_patch_delete_put
 
             var jsonResponse = await response.Content.ReadAsStringAsync();
 
-            Console.WriteLine($"{jsonResponse}\n");
-            //var result = await HttpMethods
+            return jsonResponse;
         }
         private async Task<string> PhotosPut(HttpClient httpClient)
         {

@@ -8,24 +8,24 @@ namespace _22_lesson_httpclient_post_patch_delete_put
     {
         public Users(HttpClient httpClient)
         {
-            var resultPost = UsersPost(httpClient).Result;
-            Console.WriteLine(resultPost);
+            //var resultPost = UsersPost(httpClient).Result;
+            //Console.WriteLine(resultPost);
             //var result = UsersGetAll(httpClient).Result;
             //Console.WriteLine(result);
-            //var resultWithId = UsersGetById(httpClient);
+            //var resultWithId = UsersGetById(httpClient).Result;
             //Console.WriteLine(resultWithId);
             //var resultPut = UsersPut(httpClient).Result;
-            //Console.WriteLine(resultPut)
-            //var resultPut = UsersPatch(httpClient).Result;
-            //Console.WriteLine(resultPut
-            //var resultPut = UsersDelete(httpClient).Result;
             //Console.WriteLine(resultPut);
+            //var resultPut = UsersPatch(httpClient).Result;
+            //Console.WriteLine(resultPut);
+            var resultPut = UsersDelete(httpClient).Result;
+            Console.WriteLine(resultPut);
         }
 
         private async ValueTask<string> UsersPost(HttpClient httpClient)
         {
 
-            using HttpResponseMessage response = await httpClient.PostAsJsonAsync("users", new UsersMadel(id: 9, name: "Tohirjon", username: "Coder", email: "coder@gmail.com", address: "Tashkent", phone: "99 899 88 99", company: "Najot ta'lim"));
+            using HttpResponseMessage response = await httpClient.PostAsJsonAsync("users", new UsersMadel(id: 9, name: "Tohirjon", username: "Coder", email: "coder@gmail.com", address: "Tashkent", phone: "99 899 88 99",website: "https://coder.uz", company: "Najot ta'lim"));
 
             response.EnsureSuccessStatusCode().WriteRequestToConsole();
 
@@ -38,7 +38,7 @@ namespace _22_lesson_httpclient_post_patch_delete_put
             var dataList = await httpClient.GetStringAsync("users");
             return dataList;
         }
-        private async Task UsersGetById(HttpClient httpClient)
+        private async Task<string> UsersGetById(HttpClient httpClient)
         {
             Console.Write("Enter comment id: ");
             int id = Convert.ToInt32(Console.ReadLine());
@@ -48,8 +48,7 @@ namespace _22_lesson_httpclient_post_patch_delete_put
 
             var jsonResponse = await response.Content.ReadAsStringAsync();
 
-            Console.WriteLine($"{jsonResponse}\n");
-            //var result = await HttpMethods
+            return jsonResponse;
         }
         private async Task<string> UsersPut(HttpClient httpClient)
         {

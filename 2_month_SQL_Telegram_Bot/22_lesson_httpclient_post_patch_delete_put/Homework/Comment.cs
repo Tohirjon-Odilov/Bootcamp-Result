@@ -12,14 +12,14 @@ namespace _22_lesson_httpclient_post_patch_delete_put
             //Console.WriteLine(resultPost);
             //var result = CommentGetAll(httpClient).Result;
             //Console.WriteLine(result);
-            //var resultWithId = CommentGetById(httpClient);
-            //Console.WriteLine(resultWithId);
+            var resultWithId = CommentGetById(httpClient).Result;
+            Console.WriteLine(resultWithId);
             //var resultPut = CommentPut(httpClient).Result;
-            //Console.WriteLine(resultPut)
+            //Console.WriteLine(resultPut);
             //var resultPut = CommentPatch(httpClient).Result;
-            //Console.WriteLine(resultPut
-            var resultPut = CommentDelete(httpClient).Result;
-            Console.WriteLine(resultPut);
+            //Console.WriteLine(resultPut);
+            //var resultPut = CommentDelete(httpClient).Result;
+            //Console.WriteLine(resultPut);
         }
 
         // _____init_____ faqatgina constructor vaqtida qiymat biriktira olamiz qolgan vaqt readonly bo'ladi.
@@ -54,7 +54,7 @@ namespace _22_lesson_httpclient_post_patch_delete_put
             var dataList = await httpClient.GetStringAsync("comments");
             return dataList;
         }
-        private async Task CommentGetById(HttpClient httpClient) 
+        private async Task<string> CommentGetById(HttpClient httpClient) 
         {
             Console.Write("Enter comment id: ");
             int id = Convert.ToInt32(Console.ReadLine());
@@ -64,8 +64,7 @@ namespace _22_lesson_httpclient_post_patch_delete_put
 
             var jsonResponse = await response.Content.ReadAsStringAsync();
 
-            Console.WriteLine($"{jsonResponse}\n");
-            //var result = await HttpMethods
+            return jsonResponse;
         }
         private async Task<string> CommentPut(HttpClient httpClient)
         {
@@ -111,6 +110,7 @@ namespace _22_lesson_httpclient_post_patch_delete_put
         }
         public static async ValueTask<string> CommentDelete(HttpClient httpClient)
         {
+
             HttpResponseMessage response = await httpClient.DeleteAsync("comments/5");
 
             response.EnsureSuccessStatusCode().WriteRequestToConsole();

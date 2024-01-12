@@ -8,16 +8,16 @@ namespace _22_lesson_httpclient_post_patch_delete_put
     {
         public Todos(HttpClient httpClient)
         {
-            var resultPost = TodosPost(httpClient).Result;
-            Console.WriteLine(resultPost);
+            //var resultPost = TodosPost(httpClient).Result;
+            //Console.WriteLine(resultPost);
             //var result = TodosGetAll(httpClient).Result;
             //Console.WriteLine(result);
-            //var resultWithId = TodosGetById(httpClient);
+            //var resultWithId = TodosGetById(httpClient).Result;
             //Console.WriteLine(resultWithId);
             //var resultPut = TodosPut(httpClient).Result;
-            //Console.WriteLine(resultPut)
-            //var resultPut = TodosPatch(httpClient).Result;
-            //Console.WriteLine(resultPut
+            //Console.WriteLine(resultPut);
+            var resultPut = TodosPatch(httpClient).Result;
+            Console.WriteLine(resultPut);
             //var resultPut = TodosDelete(httpClient).Result;
             //Console.WriteLine(resultPut);
         }
@@ -25,7 +25,7 @@ namespace _22_lesson_httpclient_post_patch_delete_put
         private async ValueTask<string> TodosPost(HttpClient httpClient)
         {
 
-            using HttpResponseMessage response = await httpClient.PostAsJsonAsync("todos", new TodosMadel(albumId: 9, id: 99, title: "Coder", url: "https://coder.uz"));
+            using HttpResponseMessage response = await httpClient.PostAsJsonAsync("todos", new TodosMadel(userId: 9, id: 99, title: "Coder", completed: false));
 
             response.EnsureSuccessStatusCode().WriteRequestToConsole();
 
@@ -38,7 +38,7 @@ namespace _22_lesson_httpclient_post_patch_delete_put
             var dataList = await httpClient.GetStringAsync("todos");
             return dataList;
         }
-        private async Task TodosGetById(HttpClient httpClient)
+        private async Task<string> TodosGetById(HttpClient httpClient)
         {
             Console.Write("Enter comment id: ");
             int id = Convert.ToInt32(Console.ReadLine());
@@ -48,8 +48,7 @@ namespace _22_lesson_httpclient_post_patch_delete_put
 
             var jsonResponse = await response.Content.ReadAsStringAsync();
 
-            Console.WriteLine($"{jsonResponse}\n");
-            //var result = await HttpMethods
+            return jsonResponse;
         }
         private async Task<string> TodosPut(HttpClient httpClient)
         {

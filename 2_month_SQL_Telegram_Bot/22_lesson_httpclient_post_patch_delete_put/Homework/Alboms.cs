@@ -8,16 +8,16 @@ namespace _22_lesson_httpclient_post_patch_delete_put
     {
         public Alboms(HttpClient httpClient)
         {
-            var resultPost = AlbomsPost(httpClient).Result;
-            Console.WriteLine(resultPost);
+            //var resultPost = AlbomsPost(httpClient).Result;
+            //Console.WriteLine(resultPost);
             //var result = AlbomsGetAll(httpClient).Result;
             //Console.WriteLine(result);
-            //var resultWithId = AlbomsGetById(httpClient);
-            //Console.WriteLine(resultWithId);
+            var resultWithId = AlbomsGetById(httpClient).Result;
+            Console.WriteLine(resultWithId);
             //var resultPut = AlbomsPut(httpClient).Result;
-            //Console.WriteLine(resultPut)
+            //Console.WriteLine(resultPut);
             //var resultPut = AlbomsPatch(httpClient).Result;
-            //Console.WriteLine(resultPut
+            //Console.WriteLine(resultPut);
             //var resultPut = AlbomsDelete(httpClient).Result;
             //Console.WriteLine(resultPut);
         }
@@ -38,7 +38,7 @@ namespace _22_lesson_httpclient_post_patch_delete_put
             var dataList = await httpClient.GetStringAsync("alboms");
             return dataList;
         }
-        private async Task AlbomsGetById(HttpClient httpClient)
+        private async Task<string> AlbomsGetById(HttpClient httpClient)
         {
             Console.Write("Enter comment id: ");
             int id = Convert.ToInt32(Console.ReadLine());
@@ -48,8 +48,7 @@ namespace _22_lesson_httpclient_post_patch_delete_put
 
             var jsonResponse = await response.Content.ReadAsStringAsync();
 
-            Console.WriteLine($"{jsonResponse}\n");
-            //var result = await HttpMethods
+            return jsonResponse;
         }
         private async Task<string> AlbomsPut(HttpClient httpClient)
         {
