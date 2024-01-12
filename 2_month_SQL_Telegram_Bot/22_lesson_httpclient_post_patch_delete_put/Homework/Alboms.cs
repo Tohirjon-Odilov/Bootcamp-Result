@@ -4,28 +4,28 @@ using System.Text.Json;
 
 namespace _22_lesson_httpclient_post_patch_delete_put
 {
-    internal class Posts
+    internal class Alboms
     {
-        public Posts(HttpClient httpClient)
+        public Alboms(HttpClient httpClient)
         {
-            var resultPost = PostsPost(httpClient).Result;
+            var resultPost = AlbomsPost(httpClient).Result;
             Console.WriteLine(resultPost);
-            //var result = PostsGetAll(httpClient).Result;
+            //var result = AlbomsGetAll(httpClient).Result;
             //Console.WriteLine(result);
-            //var resultWithId = PostsGetById(httpClient);
+            //var resultWithId = AlbomsGetById(httpClient);
             //Console.WriteLine(resultWithId);
-            //var resultPut = PostsPut(httpClient).Result;
+            //var resultPut = AlbomsPut(httpClient).Result;
             //Console.WriteLine(resultPut)
-            //var resultPut = PostsPatch(httpClient).Result;
+            //var resultPut = AlbomsPatch(httpClient).Result;
             //Console.WriteLine(resultPut
-            //var resultPut = PostsDelete(httpClient).Result;
+            //var resultPut = AlbomsDelete(httpClient).Result;
             //Console.WriteLine(resultPut);
         }
 
-        private async ValueTask<string> PostsPost(HttpClient httpClient)
+        private async ValueTask<string> AlbomsPost(HttpClient httpClient)
         {
 
-            using HttpResponseMessage response = await httpClient.PostAsJsonAsync("posts", new PostsMadel(userId: 9, id: 99, title: "Coder", body: "Nima gap bolla"));
+            using HttpResponseMessage response = await httpClient.PostAsJsonAsync("albums", new AlbomsMadel(userId: 9, id: 99, title: "Coder", body: "Nima gap bolla"));
 
             response.EnsureSuccessStatusCode().WriteRequestToConsole();
 
@@ -33,16 +33,16 @@ namespace _22_lesson_httpclient_post_patch_delete_put
 
             return jsonResult;
         }
-        private static async ValueTask<string> PostsGetAll(HttpClient httpClient)
+        private static async ValueTask<string> AlbomsGetAll(HttpClient httpClient)
         {
-            var dataList = await httpClient.GetStringAsync("posts");
+            var dataList = await httpClient.GetStringAsync("alboms");
             return dataList;
         }
-        private async Task PostsGetById(HttpClient httpClient)
+        private async Task AlbomsGetById(HttpClient httpClient)
         {
             Console.Write("Enter comment id: ");
             int id = Convert.ToInt32(Console.ReadLine());
-            using HttpResponseMessage response = await httpClient.GetAsync($"posts/{id}");
+            using HttpResponseMessage response = await httpClient.GetAsync($"alboms/{id}");
 
             response.EnsureSuccessStatusCode().WriteRequestToConsole();
 
@@ -51,7 +51,7 @@ namespace _22_lesson_httpclient_post_patch_delete_put
             Console.WriteLine($"{jsonResponse}\n");
             //var result = await HttpMethods
         }
-        private async Task<string> PostsPut(HttpClient httpClient)
+        private async Task<string> AlbomsPut(HttpClient httpClient)
         {
             using StringContent jsonContent = new
             (
@@ -64,7 +64,7 @@ namespace _22_lesson_httpclient_post_patch_delete_put
                 }), Encoding.UTF8, "application/json"
             );
 
-            HttpResponseMessage response = await httpClient.PutAsync($"posts/2", jsonContent);
+            HttpResponseMessage response = await httpClient.PutAsync($"alboms/2", jsonContent);
 
             response.EnsureSuccessStatusCode().WriteRequestToConsole();
 
@@ -72,7 +72,7 @@ namespace _22_lesson_httpclient_post_patch_delete_put
 
             return jsonResult;
         }
-        public static async ValueTask<string> PostsPatch(HttpClient httpClient)
+        public static async ValueTask<string> AlbomsPatch(HttpClient httpClient)
         {
             using StringContent jsonContent = new
             (
@@ -84,7 +84,7 @@ namespace _22_lesson_httpclient_post_patch_delete_put
                 "application/json"
             );
 
-            HttpResponseMessage response = await httpClient.PatchAsync("posts/3", jsonContent);
+            HttpResponseMessage response = await httpClient.PatchAsync("alboms/3", jsonContent);
 
             response.EnsureSuccessStatusCode().WriteRequestToConsole();
 
@@ -92,9 +92,9 @@ namespace _22_lesson_httpclient_post_patch_delete_put
 
             return jsonResult;
         }
-        public static async ValueTask<string> PostsDelete(HttpClient httpClient)
+        public static async ValueTask<string> AlbomsDelete(HttpClient httpClient)
         {
-            HttpResponseMessage response = await httpClient.DeleteAsync("posts/5");
+            HttpResponseMessage response = await httpClient.DeleteAsync("alboms/5");
 
             response.EnsureSuccessStatusCode().WriteRequestToConsole();
 

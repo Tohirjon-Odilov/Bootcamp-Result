@@ -41,7 +41,7 @@ namespace _22_lesson_httpclient_post_patch_delete_put
             //string jsonResult = await jsonContent.ReadAsStringAsync();
             #endregion
 
-            using HttpResponseMessage response = await httpClient.PostAsJsonAsync("todos", new CommentMadel(postId: 9, id: 99, name: "Coder", email: "coder@gmail.com", body: "Nima gap bolla"));
+            using HttpResponseMessage response = await httpClient.PostAsJsonAsync("comments", new CommentMadel(postId: 9, id: 99, name: "Coder", email: "coder@gmail.com", body: "Nima gap bolla"));
 
             response.EnsureSuccessStatusCode().WriteRequestToConsole();
 

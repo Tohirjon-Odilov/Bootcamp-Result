@@ -8,9 +8,14 @@
         };
         public static void Main(string[] args)
         {
-        
-        ////Lesson lesson = new Lesson();
-        var comment = new Posts(SharedClient);
+
+            ////Lesson lesson = new Lesson();
+            //var comment = new Comment(SharedClient);
+            //var post = new Posts(SharedClient);
+            var alboms = new Alboms(SharedClient);
+            //var post = new Posts(SharedClient);
+            //var post = new Posts(SharedClient);
+            //var post = new Posts(SharedClient);
         }
     }
 }

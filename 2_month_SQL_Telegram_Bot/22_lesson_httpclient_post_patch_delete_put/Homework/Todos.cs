@@ -4,28 +4,28 @@ using System.Text.Json;
 
 namespace _22_lesson_httpclient_post_patch_delete_put
 {
-    internal class Posts
+    internal class Todos
     {
-        public Posts(HttpClient httpClient)
+        public Todos(HttpClient httpClient)
         {
-            var resultPost = PostsPost(httpClient).Result;
+            var resultPost = TodosPost(httpClient).Result;
             Console.WriteLine(resultPost);
-            //var result = PostsGetAll(httpClient).Result;
+            //var result = TodosGetAll(httpClient).Result;
             //Console.WriteLine(result);
-            //var resultWithId = PostsGetById(httpClient);
+            //var resultWithId = TodosGetById(httpClient);
             //Console.WriteLine(resultWithId);
-            //var resultPut = PostsPut(httpClient).Result;
+            //var resultPut = TodosPut(httpClient).Result;
             //Console.WriteLine(resultPut)
-            //var resultPut = PostsPatch(httpClient).Result;
+            //var resultPut = TodosPatch(httpClient).Result;
             //Console.WriteLine(resultPut
-            //var resultPut = PostsDelete(httpClient).Result;
+            //var resultPut = TodosDelete(httpClient).Result;
             //Console.WriteLine(resultPut);
         }
 
-        private async ValueTask<string> PostsPost(HttpClient httpClient)
+        private async ValueTask<string> TodosPost(HttpClient httpClient)
         {
 
-            using HttpResponseMessage response = await httpClient.PostAsJsonAsync("posts", new PostsMadel(userId: 9, id: 99, title: "Coder", body: "Nima gap bolla"));
+            using HttpResponseMessage response = await httpClient.PostAsJsonAsync("todos", new TodosMadel(albumId: 9, id: 99, title: "Coder", url: "https://coder.uz"));
 
             response.EnsureSuccessStatusCode().WriteRequestToConsole();
 
@@ -33,16 +33,16 @@ namespace _22_lesson_httpclient_post_patch_delete_put
 
             return jsonResult;
         }
-        private static async ValueTask<string> PostsGetAll(HttpClient httpClient)
+        private static async ValueTask<string> TodosGetAll(HttpClient httpClient)
         {
-            var dataList = await httpClient.GetStringAsync("posts");
+            var dataList = await httpClient.GetStringAsync("todos");
             return dataList;
         }
-        private async Task PostsGetById(HttpClient httpClient)
+        private async Task TodosGetById(HttpClient httpClient)
         {
             Console.Write("Enter comment id: ");
             int id = Convert.ToInt32(Console.ReadLine());
-            using HttpResponseMessage response = await httpClient.GetAsync($"posts/{id}");
+            using HttpResponseMessage response = await httpClient.GetAsync($"todos/{id}");
 
             response.EnsureSuccessStatusCode().WriteRequestToConsole();
 
@@ -51,20 +51,21 @@ namespace _22_lesson_httpclient_post_patch_delete_put
             Console.WriteLine($"{jsonResponse}\n");
             //var result = await HttpMethods
         }
-        private async Task<string> PostsPut(HttpClient httpClient)
+        private async Task<string> TodosPut(HttpClient httpClient)
         {
             using StringContent jsonContent = new
             (
                 JsonSerializer.Serialize(new
                 {
-                    userId = 3,
+                    albumId = 3,
                     id = 2,
                     title = "Tohirjon",
-                    body = "Nima gaplar bu yer update bo'ldi"
+                    url = "Nima gaplar bu yer update bo'ldi",
+                    thumbnailUrl = "https://via.placeholder.com/160/4546546"
                 }), Encoding.UTF8, "application/json"
             );
 
-            HttpResponseMessage response = await httpClient.PutAsync($"posts/2", jsonContent);
+            HttpResponseMessage response = await httpClient.PutAsync($"todos/2", jsonContent);
 
             response.EnsureSuccessStatusCode().WriteRequestToConsole();
 
@@ -72,7 +73,7 @@ namespace _22_lesson_httpclient_post_patch_delete_put
 
             return jsonResult;
         }
-        public static async ValueTask<string> PostsPatch(HttpClient httpClient)
+        public static async ValueTask<string> TodosPatch(HttpClient httpClient)
         {
             using StringContent jsonContent = new
             (
@@ -84,7 +85,7 @@ namespace _22_lesson_httpclient_post_patch_delete_put
                 "application/json"
             );
 
-            HttpResponseMessage response = await httpClient.PatchAsync("posts/3", jsonContent);
+            HttpResponseMessage response = await httpClient.PatchAsync("todos/3", jsonContent);
 
             response.EnsureSuccessStatusCode().WriteRequestToConsole();
 
@@ -92,9 +93,9 @@ namespace _22_lesson_httpclient_post_patch_delete_put
 
             return jsonResult;
         }
-        public static async ValueTask<string> PostsDelete(HttpClient httpClient)
+        public static async ValueTask<string> TodosDelete(HttpClient httpClient)
         {
-            HttpResponseMessage response = await httpClient.DeleteAsync("posts/5");
+            HttpResponseMessage response = await httpClient.DeleteAsync("todos/5");
 
             response.EnsureSuccessStatusCode().WriteRequestToConsole();
 
