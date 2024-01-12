@@ -1,6 +1,6 @@
 ﻿using System.Text.Json;
 
-namespace _22_lesson_http_client.Homework.Currency
+namespace _22_lesson_http_client.Homework
 {
     public class NationalBankUzbekistan
     {
