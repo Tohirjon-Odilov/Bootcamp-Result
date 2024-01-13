@@ -2,7 +2,7 @@
 
 namespace _24_lesson_Takrorlash_Telegram_bot
 {
-    public class FirstTelegramBot
+    public partial class FirstTelegramBot
     {
         public async Task FirstMessage()
         {
