@@ -19,7 +19,7 @@ namespace _22_lesson_httpclient_post_patch_delete_put
             //var resultPut = UsersPatch(httpClient).Result;
             //Console.WriteLine(resultPut);
             //var resultPut = UsersDelete(httpClient).Result;
-            //Console.WriteLine(resultPut);
+            //Console.WriteLine(resultPut);d
         }
 
         private async ValueTask<string> UsersPost(HttpClient httpClient)
