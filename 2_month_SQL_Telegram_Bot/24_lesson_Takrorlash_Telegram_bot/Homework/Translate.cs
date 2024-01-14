@@ -53,77 +53,110 @@ public class Translate
 
             //if (target != null && source != null && text != null)
             //{
+            try
+            {
+                result = renderMessage(messageText.Split()[0], messageText.Split()[1], messageText.Split()[2]);
+                //    Message sentMessage = await botClient.SendTextMessageAsync(
+                //        chatId: chatId,
+                //        text: $"{result}",
+                //        cancellationToken: cancellationToken);
+                //}
+                //else if (target != null)
+                //{
+                //    target = messageText;
+                //}
+                //else if (source != null)
+                //{
+                //    source = messageText;
+                //}
+                //else if (text != null)
+                //{
+                //    text = messageText;
+                //}
+                //else if (messageText == "uz")
+                //{
+                //    Message sentMessage = await botClient.SendTextMessageAsync(
+                //        chatId: chatId,
+                //        text: $"o'xshadi",
+                //        cancellationToken: cancellationToken);
+                //}
 
-            result = renderMessage(messageText.Split()[0], messageText.Split()[1], messageText.Split()[2]);
-            //    Message sentMessage = await botClient.SendTextMessageAsync(
-            //        chatId: chatId,
-            //        text: $"{result}",
-            //        cancellationToken: cancellationToken);
-            //}
-            //else if (target != null)
-            //{
-            //    target = messageText;
-            //}
-            //else if (source != null)
-            //{
-            //    source = messageText;
-            //}
-            //else if (text != null)
-            //{
-            //    text = messageText;
-            //}
-            //else if (messageText == "uz")
-            //{
-            //    Message sentMessage = await botClient.SendTextMessageAsync(
-            //        chatId: chatId,
-            //        text: $"o'xshadi",
-            //        cancellationToken: cancellationToken);
-            //}
+                //Console.WriteLine($"Received '{messageText}' message in chat {chatId}.");
+                //Message sentMessage = await botClient.SendTextMessageAsync(
+                //    chatId: chatId,
+                //    text: result,
+                //    cancellationToken: cancellationToken);
 
-            Console.WriteLine($"Received '{messageText}' message in chat {chatId}.");
-            Message sentMessage = await botClient.SendTextMessageAsync(
-                chatId: chatId,
-                text: result,
-                cancellationToken: cancellationToken);
+                Message wordWithImg = await botClient.SendPhotoAsync(
+                    chatId: chatId,
+                    photo: InputFile.FromUri($"https://www.pexels.com/search/{result}/"),
+                    caption: $"<b>{message}</b>. <i>Source</i>: <a href=\"https://pixabay.com\">Pixabay</a>",
+                    //caption: $"<b></b>. <i>Source</i>: <a href=\"https://pixabay.com\">Pixabay</a>",
+                    parseMode: ParseMode.Html,
+                    cancellationToken: cancellationToken);
 
-            //Console.WriteLine(target, source, text);
-            //renderMessage();
-            // Echo received message text
-            //if (messageText == "about")
-            //{
-            //Message sentMessage1 = await botClient.SendTextMessageAsync(
-            //    chatId: chatId,
-            //    text: $"{target}{source}{text}",
-            //    cancellationToken: cancellationToken);
-            //}
-            //else if (messageText == "sticker")
-            //{
-            //    Message sentSticker = await botClient.SendStickerAsync(
-            //        chatId: chatId,
-            //        sticker: InputFile.FromUri("https://github.com/TelegramBots/book/raw/master/src/docs/sticker-dali.webp"),
-            //        cancellationToken: cancellationToken);
-            //}
-            //else if (messageText == "video")
-            //{
-            //    Message sentVideo = await botClient.SendVideoAsync(
-            //        chatId: chatId,
-            //        video: InputFile.FromUri("https://github.com/TelegramBots/book/raw/master/src/docs/video-bulb.mp4"),
-            //        cancellationToken: cancellationToken);
-            //}
-            //else if (messageText == "markdown")
-            //{
-            //    Message markDown = await botClient.SendTextMessageAsync(
-            //        chatId: chatId,
-            //        text: "Trying *all the parameters* of `sendMessage` method",
-            //        parseMode: ParseMode.MarkdownV2,
-            //        disableNotification: false,
-            //        replyToMessageId: update.Message.MessageId,
-            //        replyMarkup: new InlineKeyboardMarkup(
-            //            InlineKeyboardButton.WithUrl(
-            //                text: "Check sendMessage method",
-            //                url: "https://core.telegram.org/bots/api#sendmessage")),
-            //        cancellationToken: cancellationToken);
-            //}
+
+                //Console.WriteLine(target, source, text);
+                //renderMessage();
+                // Echo received message text
+                //if (messageText == "about")
+                //{
+                //Message sentMessage1 = await botClient.SendTextMessageAsync(
+                //    chatId: chatId,
+                //    text: $"{target}{source}{text}",
+                //    cancellationToken: cancellationToken);
+                //}
+                //else if (messageText == "sticker")
+                //{
+                //    Message sentSticker = await botClient.SendStickerAsync(
+                //        chatId: chatId,
+                //        sticker: InputFile.FromUri("https://github.com/TelegramBots/book/raw/master/src/docs/sticker-dali.webp"),
+                //        cancellationToken: cancellationToken);
+                //}
+                //else if (messageText == "video")
+                //{
+                //    Message sentVideo = await botClient.SendVideoAsync(
+                //        chatId: chatId,
+                //        video: InputFile.FromUri("https://github.com/TelegramBots/book/raw/master/src/docs/video-bulb.mp4"),
+                //        cancellationToken: cancellationToken);
+                //}
+                //else if (messageText == "markdown")
+                //{
+                //    Message markDown = await botClient.SendTextMessageAsync(
+                //        chatId: chatId,
+                //        text: "Trying *all the parameters* of `sendMessage` method",
+                //        parseMode: ParseMode.MarkdownV2,
+                //        disableNotification: false,
+                //        replyToMessageId: update.Message.MessageId,
+                //        replyMarkup: new InlineKeyboardMarkup(
+                //            InlineKeyboardButton.WithUrl(
+                //                text: "Check sendMessage method",
+                //                url: "https://core.telegram.org/bots/api#sendmessage")),
+                //        cancellationToken: cancellationToken);
+                //}
+            }
+            catch (IndexOutOfRangeException)
+            {
+                Message sentMessage = await botClient.SendTextMessageAsync(
+                    chatId: chatId,
+                    text: $"Ma'lumotni `en uz hello` shu ko'rinishda kiriting!",
+                    cancellationToken: cancellationToken);
+            }
+            catch (AggregateException)
+            {
+                Message wordWithImg = await botClient.SendPhotoAsync(
+                    chatId: chatId,
+                    photo: InputFile.FromUri($"https://www.pexels.com/search/{messageText.Split()[2]}/"),
+                    caption: $"<b>API'da limit tugadi. Shu sababli tarjima kelmadi.</b> <i>Source</i>: <a href=\"https://pixabay.com\"></a>",
+                    //caption: $"<b></b>. <i>Source</i>: <a href=\"https://pixabay.com\">Pixabay</a>",
+                    parseMode: ParseMode.Html,
+                    cancellationToken: cancellationToken);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("va xatolik chiqdi");
+                Console.WriteLine(ex);
+            }
         }
 
         Task HandlePollingErrorAsync(ITelegramBotClient botClient, Exception exception, CancellationToken cancellationToken)
@@ -141,7 +174,7 @@ public class Translate
 
     }
 
-    private string renderMessage(string target, string source, string text)
+    private string renderMessage(string source, string target, string text)
     {
         string? translatedData = Server.Translate(target, source, text).Result;
         Root data = JsonSerializer.Deserialize<Root>(translatedData)!;
