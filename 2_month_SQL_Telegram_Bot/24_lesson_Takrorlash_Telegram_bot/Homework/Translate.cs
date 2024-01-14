@@ -9,6 +9,11 @@ namespace _24_lesson_Takrorlash_Telegram_bot;
 
 public class Translate
 {
+    private string target { get; set; }
+    private string source { get; set; }
+    private string text { get; set; }
+    private string result { get; set; }
+
     public async Task FirstMessage()
     {
         var botClient = new TelegramBotClient("6602415427:AAG9kKH0HVIgZ3zliZP7_0sRqFMha4_uOLg");
@@ -35,7 +40,6 @@ public class Translate
 
         // Send cancellation request to stop bot
         cts.Cancel();
-
         async Task HandleUpdateAsync(ITelegramBotClient botClient, Update update, CancellationToken cancellationToken)
         {
             // Only process Message updates: https://core.telegram.org/bots/api#message
@@ -47,15 +51,50 @@ public class Translate
 
             var chatId = message.Chat.Id;
 
+            //if (target != null && source != null && text != null)
+            //{
+
+            result = renderMessage(messageText.Split()[0], messageText.Split()[1], messageText.Split()[2]);
+            //    Message sentMessage = await botClient.SendTextMessageAsync(
+            //        chatId: chatId,
+            //        text: $"{result}",
+            //        cancellationToken: cancellationToken);
+            //}
+            //else if (target != null)
+            //{
+            //    target = messageText;
+            //}
+            //else if (source != null)
+            //{
+            //    source = messageText;
+            //}
+            //else if (text != null)
+            //{
+            //    text = messageText;
+            //}
+            //else if (messageText == "uz")
+            //{
+            //    Message sentMessage = await botClient.SendTextMessageAsync(
+            //        chatId: chatId,
+            //        text: $"o'xshadi",
+            //        cancellationToken: cancellationToken);
+            //}
+
             Console.WriteLine($"Received '{messageText}' message in chat {chatId}.");
+            Message sentMessage = await botClient.SendTextMessageAsync(
+                chatId: chatId,
+                text: result,
+                cancellationToken: cancellationToken);
+
+            //Console.WriteLine(target, source, text);
             //renderMessage();
             // Echo received message text
             //if (messageText == "about")
             //{
-            //    Message sentMessage = await botClient.SendTextMessageAsync(
-            //        chatId: chatId,
-            //        text: $"Hello, {message.Chat.LastName}",
-            //        cancellationToken: cancellationToken);
+            //Message sentMessage1 = await botClient.SendTextMessageAsync(
+            //    chatId: chatId,
+            //    text: $"{target}{source}{text}",
+            //    cancellationToken: cancellationToken);
             //}
             //else if (messageText == "sticker")
             //{
@@ -102,19 +141,11 @@ public class Translate
 
     }
 
-    private Root renderMessage(string target, string source, string text)
+    private string renderMessage(string target, string source, string text)
     {
-        if (target != null && source != null && text != null)
-        {
-            string? translatedData = Server.Translate(target, source, text).Result;
-            Root data = JsonSerializer.Deserialize<Root>(translatedData);
-            return data;
-        }
-        else
-        {
-            return new Root();
-        }
-
+        string? translatedData = Server.Translate(target, source, text).Result;
+        Root data = JsonSerializer.Deserialize<Root>(translatedData)!;
+        return data.data.translations[0].translatedText;
 
         #region tez orada
         //var languageDetect = Server.DetectLanguage("nima gaplar").Result;
