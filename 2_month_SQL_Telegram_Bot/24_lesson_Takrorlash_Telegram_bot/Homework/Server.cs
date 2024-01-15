@@ -4,6 +4,7 @@
     {
         public static async Task<string> Translate(string target, string source, string text)
         {
+            #region eski api limi
             var client = new HttpClient();
             var request = new HttpRequestMessage
             {
@@ -27,6 +28,7 @@
                 var body = await response.Content.ReadAsStringAsync();
                 return body;
             }
+            #endregion
         }
 
         public static async Task<string> DetectLanguage(string text)
