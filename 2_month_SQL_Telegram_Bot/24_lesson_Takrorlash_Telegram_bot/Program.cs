@@ -11,9 +11,9 @@ try
 {
     result.FirstMessage().Wait();
 }
-catch (Exception ex)
+catch (Exception)
 {
-    throw new Exception("Nimadir xato qilding");
+    throw new Exception("Nimadir xato ketdi.");
 }
 
 //FirstTelegramBot bot = new FirstTelegramBot();

@@ -43,50 +43,36 @@ namespace _25_lesson_TelegramBot_Basic
 
             async Task HandleUpdateAsync(ITelegramBotClient botClient, Update update, CancellationToken cancellationToken)
             {
-                // Only process Message updates: https://core.telegram.org/bots/api#message
-                if (update.Message is not { } message)
-                    return;
-                // Only process text messages
-                if (message.Text is not { } messageText)
-                    return;
+                var handler = update.Type switch
+                {
+                    UpdateType.Message => HandleMessageAsync(botClient, update, cancellationToken),
+                    UpdateType.EditedMessage => HandleEditedMessageAsync(botClient, update, cancellationToken),
+                    _ => HandleUnknownUpdateType(botClient, update, cancellationToken),
+                };
 
-                var chatId = message.Chat.Id;
-
-                Console.WriteLine($"Received a '{messageText}' message in chat {chatId}.");
+                try
+                {
+                    await handler;
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error chiqdi:{ex.Message}");
+                }
 
                 // Echo received message text
 
-                if (messageText == "/start")
-                {
-                    ReplyKeyboardMarkup markup =
-                            new ReplyKeyboardMarkup
-                                    (KeyboardButton.WithRequestContact("Contact yuborish"));
-                    markup.ResizeKeyboard = true;
-                    Message test = await botClient.SendTextMessageAsync(
-                            chatId: 2016634633,
-                            text: "Contact",
-                            replyMarkup: markup
-                    );
-                }
-                else
-                {
-                    //Console.WriteLine($"username: {me.Username}");
-                    //Console.WriteLine($"lastname: {me.LastName}");
-                    //Console.WriteLine($"id: {me.Id}");
-                    Console.WriteLine();
-                    Console.WriteLine($"chatId: {chatId}");
-                    Console.WriteLine($"Bio: {message.Chat.Bio}");
-                    Console.WriteLine($"Description: {message.Chat.Description}");
-                    Console.WriteLine($"Username: {message.Chat.Username}");
-                    Console.WriteLine($"LastName: {message.Chat.LastName}");
-                    Console.WriteLine($"CanSetStickerSet: {message.Chat.CanSetStickerSet}");
-                    Console.WriteLine($"Bio: {message.Chat.Permissions}");
-                    Console.WriteLine($"joinrequest: {message.Chat.JoinByRequest}");
-                    //Console.WriteLine($"Bio: {message.Chat.Bio}");
-                    //Console.WriteLine($"Bio: {message.Chat.Bio}");
-                    Console.WriteLine(update.ChatMember);
-
-                }
+                //if (messageText == "/start")
+                //{
+                //    ReplyKeyboardMarkup markup =
+                //            new ReplyKeyboardMarkup
+                //                    (KeyboardButton.WithRequestContact("Contact yuborish"));
+                //    markup.ResizeKeyboard = true;
+                //    Message test = await botClient.SendTextMessageAsync(
+                //            chatId: 2016634633,
+                //            text: "Contact",
+                //            replyMarkup: markup
+                //    );
+                //}
             }
 
             Task HandlePollingErrorAsync(ITelegramBotClient botClient, Exception exception, CancellationToken cancellationToken)
@@ -101,6 +87,21 @@ namespace _25_lesson_TelegramBot_Basic
                 Console.WriteLine(ErrorMessage);
                 return Task.CompletedTask;
             }
+        }
+
+        private object HandleUnknownUpdateType(ITelegramBotClient botClient, Update update, CancellationToken cancellationToken)
+        {
+            throw new NotImplementedException();
+        }
+
+        private object HandleEditedMessageAsync(ITelegramBotClient botClient, Update update, CancellationToken cancellationToken)
+        {
+            throw new NotImplementedException();
+        }
+
+        private object HandleMessageAsync(ITelegramBotClient botClient, Update update, CancellationToken cancellationToken)
+        {
+            throw new NotImplementedException();
         }
     }
 }
