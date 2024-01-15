@@ -4,6 +4,17 @@
 
 
 // telegram bot "uz eng Hello" shu tartibda yoziladi
+//var result = 
 
 Translate result = new Translate();
-result.FirstMessage().Wait();
+try
+{
+    result.FirstMessage().Wait();
+}
+catch (Exception ex)
+{
+    throw new Exception("Nimadir xato qilding");
+}
+
+//FirstTelegramBot bot = new FirstTelegramBot();
+//bot.ReplayMessage().Wait();

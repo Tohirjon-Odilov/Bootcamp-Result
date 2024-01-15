@@ -4,7 +4,8 @@
     {
         public static async Task<string> Translate(string target, string source, string text)
         {
-            #region eski api limi
+            Console.WriteLine("ishladi");
+            #region eski api limit tugadi
             var client = new HttpClient();
             var request = new HttpRequestMessage
             {

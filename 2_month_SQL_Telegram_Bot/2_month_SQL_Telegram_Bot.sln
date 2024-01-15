@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "21_lesson_CRUD", "21_lesson
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "23_lesson_httpclient_post_patch_delete_put", "22_lesson_httpclient_post_patch_delete_put\23_lesson_httpclient_post_patch_delete_put.csproj", "{57A742FD-E3B2-41E0-8118-F5901A4A13B1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "24_lesson_Takrorlash_Telegram_bot", "24_lesson_Takrorlash_Telegram_bot\24_lesson_Takrorlash_Telegram_bot.csproj", "{54DF5A28-E21C-4D94-8C5B-3FACBC079374}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "24_lesson_Takrorlash_Telegram_bot", "24_lesson_Takrorlash_Telegram_bot\24_lesson_Takrorlash_Telegram_bot.csproj", "{54DF5A28-E21C-4D94-8C5B-3FACBC079374}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "25_lesson_TelegramBot_Basic", "25_lesson_TelegramBot_Basic\25_lesson_TelegramBot_Basic.csproj", "{1F802C7B-3166-4205-B01E-4F0048F03834}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{54DF5A28-E21C-4D94-8C5B-3FACBC079374}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{54DF5A28-E21C-4D94-8C5B-3FACBC079374}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{54DF5A28-E21C-4D94-8C5B-3FACBC079374}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F802C7B-3166-4205-B01E-4F0048F03834}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F802C7B-3166-4205-B01E-4F0048F03834}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F802C7B-3166-4205-B01E-4F0048F03834}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F802C7B-3166-4205-B01E-4F0048F03834}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

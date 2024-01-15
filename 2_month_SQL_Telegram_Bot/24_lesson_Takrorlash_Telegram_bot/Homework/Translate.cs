@@ -137,10 +137,7 @@ public class Translate
             }
             catch (IndexOutOfRangeException)
             {
-                Message sentMessage = await botClient.SendTextMessageAsync(
-                    chatId: chatId,
-                    text: $"Ma'lumotni `en uz hello` shu ko'rinishda kiriting!",
-                    cancellationToken: cancellationToken);
+
             }
             catch (AggregateException)
             {
