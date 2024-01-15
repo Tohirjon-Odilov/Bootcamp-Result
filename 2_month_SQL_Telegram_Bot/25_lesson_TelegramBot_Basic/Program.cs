@@ -1,7 +1,22 @@
 ﻿using _25_lesson_TelegramBot_Basic;
-string token = "6727219851:AAESLA1zoC3GMo-MvAVfoeqrjK438XoTf5g";
-Basic basic = new Basic(token);
-basic.MessageHandler().Wait();
+
+TelegramBot bot = new TelegramBot();
+try
+{
+    await bot.MainFunction();
+}
+catch (Exception)
+{
+    Console.WriteLine("Vay");
+}
 
 
 //MyConvert convert = new MyConvert();
+//try
+//{
+//    convert.ReplayMessage().Wait();
+//}
+//catch (Exception)
+//{
+//    throw new Exception("Voyey");
+//}
