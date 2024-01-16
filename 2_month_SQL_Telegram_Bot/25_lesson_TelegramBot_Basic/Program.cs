@@ -1,13 +1,17 @@
 ﻿using _25_lesson_TelegramBot_Basic;
 
-TelegramBot bot = new TelegramBot();
 try
 {
+    TelegramBot bot = new TelegramBot();
     await bot.MainFunction();
+}
+catch (NullReferenceException)
+{
+    throw new Exception("Vay vay vay");
 }
 catch (Exception)
 {
-    Console.WriteLine("Vay");
+    throw new Exception("Nima bo'ldi");
 }
 
 

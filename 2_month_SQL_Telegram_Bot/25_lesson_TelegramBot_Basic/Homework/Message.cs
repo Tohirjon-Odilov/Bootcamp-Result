@@ -5,7 +5,7 @@ using Telegram.Bot.Types.ReplyMarkups;
 
 namespace _25_lesson_TelegramBot_Basic
 {
-    public class Basic
+    public class Message
     {
         public static async Task MessageAsyncFunction(ITelegramBotClient botClient, Update update,
             CancellationToken cancellationToken, bool isEnter)
@@ -161,6 +161,16 @@ namespace _25_lesson_TelegramBot_Basic
                 chatId: message.Chat.Id,
                 replyToMessageId: message.MessageId,
                 text: "Nimadir xato ketdi.",
+                cancellationToken: cancellationToken);
+        }
+
+        public static async Task Unknown(ITelegramBotClient botClient, Update update, CancellationToken cancellationToken)
+        {
+            var message = update.Message;
+            await botClient.SendTextMessageAsync(
+                chatId: message.Chat.Id,
+                replyToMessageId: message.MessageId,
+                text: "Spam bosma",
                 cancellationToken: cancellationToken);
         }
     }

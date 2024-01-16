@@ -40,30 +40,32 @@ namespace _25_lesson_TelegramBot_Basic
 
             async Task HandleUpdateAsync(ITelegramBotClient botClient, Update update, CancellationToken cancellationToken)
             {
-                Contact contact = update.Message.Contact;
-                //userMadel.Add(contact);
-                List<Contact> dataList = new List<Contact>();
-                if (contact is not null)
-                {
-                    dataList.Add(contact);
-                    string jsonFilePath = "../../../users.json";
-                    IsEnter = true;
-                    string jsonToString = JsonConvert.SerializeObject(update.Message.Contact, Formatting.Indented);
-                    System.IO.File.WriteAllText(jsonFilePath, jsonToString);
-                }
-
-                var handler = update.Type switch
-                {
-                    UpdateType.Message => Basic.MessageAsyncFunction(botClient, update, cancellationToken, IsEnter),
-                    _ => Basic.MessageAsyncFunction(botClient, update, cancellationToken, IsEnter),
-                };
                 try
                 {
-                    await handler;
+                    //userMadel.Add(contact);
+                    List<Contact> dataList = new List<Contact>();
+                    if (update.Message.Contact is not null)
+                    {
+                        dataList.Add(update.Message.Contact);
+                        string jsonFilePath = "../../../users.json";
+                        IsEnter = true;
+                        string jsonToString = JsonConvert.SerializeObject(update.Message.Contact, Formatting.Indented);
+                        System.IO.File.WriteAllText(jsonFilePath, jsonToString);
+                    }
+
+                    var handler = update.Type switch
+                    {
+                        UpdateType.Message => Message.MessageAsyncFunction(botClient, update, cancellationToken, IsEnter),
+                        _ => Message.MessageAsyncFunction(botClient, update, cancellationToken, IsEnter),
+                    };
                 }
-                catch (Exception)
+                catch (Exception e)
                 {
-                    throw new Exception();
+                    var handler = update.Type switch
+                    {
+                        UpdateType.Message => Message.Unknown(botClient, update, cancellationToken),
+                        _ => Message.Unknown(botClient, update, cancellationToken),
+                    };
                 }
             }
 
