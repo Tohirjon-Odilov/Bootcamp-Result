@@ -44,8 +44,6 @@ public class MyConvert
             {
                 UpdateType.Message => HandleMessageAsync(botClient, update, cancellationToken),
                 UpdateType.CallbackQuery => HandleCallBackQueryAsync(botClient, update, cancellationToken),
-                UpdateType.EditedMessage => HandleEditedMessageAsync(botClient, update, cancellationToken),
-                //UpdateType.CallbackQuery =>HandleMessageAsync(botClient, update, cancellationToken),
                 _ => HandleUnknownUpdateType(botClient, update, cancellationToken),
             };
         }
@@ -57,7 +55,7 @@ public class MyConvert
             {
                 MessageType.Text => HandleTextMessageAsync(botClient, update, cancellationToken, user),
 
-                _ => HandleUnknownMessageTypeAsync(update, update, cancellationToken),
+                _ => HandleTextMessageAsync(botClient, update, cancellationToken, user),
             };
         }
         async Task HandleTextMessageAsync(ITelegramBotClient botClient, Update update, CancellationToken cancellationToken, string user)
@@ -73,51 +71,76 @@ public class MyConvert
             var body = await response.Content.ReadAsStringAsync();
 
             var courses = JsonConvert.DeserializeObject<List<Valyuta>>(body);
-            var buttons = new List<List<InlineKeyboardButton>>();
-            var button = new List<InlineKeyboardButton>();
-            var button1 = new List<InlineKeyboardButton>();
-            var button2 = new List<InlineKeyboardButton>();
-            var button3 = new List<InlineKeyboardButton>();
+            var buttons = new List<List<KeyboardButton>>();
+            var button = new List<KeyboardButton>();
+            var button1 = new List<KeyboardButton>();
+            var button2 = new List<KeyboardButton>();
+            var button3 = new List<KeyboardButton>();
             byte count = 1;
 
             foreach (Valyuta item in courses)
             {
                 if (button.Count != 6)
                 {
-                    button.Add(InlineKeyboardButton.WithCallbackData($"{item.code}", $"{item.cb_price}"));
+                    button.Add(new KeyboardButton($"{item.code}"));
                 }
                 else if (button1.Count != 6)
                 {
-                    button1.Add(InlineKeyboardButton.WithCallbackData($"{item.code}", $"{item.cb_price}"));
+                    button1.Add(new KeyboardButton($"{item.code}"));
                 }
                 else if (button2.Count != 6)
                 {
-                    button2.Add(InlineKeyboardButton.WithCallbackData($"{item.code}", $"{item.cb_price}"));
+                    button2.Add(new KeyboardButton($"{item.code}"));
                 }
                 else if (button3.Count != 6)
                 {
-                    button3.Add(InlineKeyboardButton.WithCallbackData($"{item.code}", $"{item.cb_price}"));
+                    button3.Add(new KeyboardButton(item.code));
                 }
+
             }
             buttons.Add(button);
             buttons.Add(button1);
             buttons.Add(button2);
             buttons.Add(button3);
 
+            bool isEnter = true;
+            foreach (var item in courses)
+            {
+                if (item.code == messageText)
+                {
+                    await botClient.SendTextMessageAsync(
+                        chatId: update.Message.Chat.Id,
+                        text: item.cb_price,
+                        replyMarkup: new ReplyKeyboardMarkup(buttons),
+                        cancellationToken: cancellationToken);
+                    isEnter = false;
+                }
+            }
+            if (isEnter)
+            {
+                await botClient.SendTextMessageAsync(
+                    chatId: update.Message.Chat.Id,
+                    text: "Valyuta nomini kiriting!",
+                    replyMarkup: new ReplyKeyboardMarkup(buttons),
+                    cancellationToken: cancellationToken);
+            }
+        }
+        async Task replyMessage(ITelegramBotClient botClient, Update update, CancellationToken cancellationToken, string callBackData)
+        {
             Telegram.Bot.Types.Message sentMessage = await botClient.SendTextMessageAsync(
                 chatId: update.Message.Chat.Id,
-                text: "Valyuta nomini tanlang!",
-                replyMarkup: new InlineKeyboardMarkup(buttons),
+                text: callBackData,
+                //replyMarkup: new ReplyKeyboardMarkup(buttons),
                 cancellationToken: cancellationToken);
         }
         async Task HandleCallBackQueryAsync(ITelegramBotClient botClient, Update update, CancellationToken cancellationToken)
         {
             if (update.CallbackQuery.Data != null)
             {
-                string a = update.CallbackQuery.Data.ToString();
+                string callBackValue = update.CallbackQuery.Data.ToString();
                 await botClient.SendTextMessageAsync(
                      chatId: update.CallbackQuery.From.Id,
-                     text: $"{a}",
+                     text: $"{callBackValue}",
                      cancellationToken: cancellationToken);
             }
         }
@@ -133,21 +156,17 @@ public class MyConvert
             Console.WriteLine(ErrorMessage);
             return Task.CompletedTask;
         }
+    }
 
-        Task HandleEditedMessageAsync(ITelegramBotClient botClient, Update update, CancellationToken cancellationToken)
-        {
-            throw new NotImplementedException();
-        }
-
-        async Task HandleUnknownMessageTypeAsync(Update update1, Update update2, CancellationToken cancellationToken)
-        {
-            throw new NotImplementedException();
-        }
-
-        async Task HandleUnknownUpdateType(ITelegramBotClient botClient, Update update, CancellationToken cancellationToken)
-        {
-            throw new NotImplementedException();
-        }
+    private async Task HandleUnknownUpdateType(ITelegramBotClient botClient, Update update, CancellationToken cancellationToken)
+    {
+        var message = update.Message;
+        await botClient.SendTextMessageAsync
+        (
+            chatId: message.Chat.Id,
+            text: message.Text,
+            replyToMessageId: message.MessageId
+        );
     }
 }
 

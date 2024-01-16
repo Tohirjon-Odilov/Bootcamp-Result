@@ -39,22 +39,26 @@ namespace _25_lesson_TelegramBot_Basic
         static async Task ContactAsyncFunction(ITelegramBotClient botClient, Update update, CancellationToken cancellationToken)
         {
             var message = update.Message;
-            await botClient.SendTextMessageAsync(
+            await botClient.SendTextMessageAsync
+            (
                 chatId: message.Chat.Id,
                 text: $"Hush kelibsiz {message.Chat.FirstName}!",
                 replyToMessageId: message.MessageId,
                 replyMarkup: new ReplyKeyboardRemove()
-                );
+            );
         }
 
         static async Task Contact(ITelegramBotClient botClient, Update update, bool isEnter)
         {
             Console.WriteLine(isEnter);
-            ReplyKeyboardMarkup markup =
-                        new ReplyKeyboardMarkup
-                                (KeyboardButton.WithRequestContact("Kontact yuborish uchun tegining"));
+            ReplyKeyboardMarkup markup = new ReplyKeyboardMarkup
+            (
+                KeyboardButton.WithRequestContact("Kontact yuborish uchun tegining")
+            );
+
             markup.ResizeKeyboard = true;
-            await botClient.SendTextMessageAsync(
+            await botClient.SendTextMessageAsync
+            (
                     chatId: update.Message.Chat.Id,
                     text: "Iltimos oldin telefon raqamingizni yuboring!",
                     replyMarkup: markup
@@ -64,11 +68,13 @@ namespace _25_lesson_TelegramBot_Basic
         static async Task TextAsyncFunction(ITelegramBotClient botClient, Update update, CancellationToken cancellationToken)
         {
             var message = update.Message;
-            await botClient.SendTextMessageAsync(
+            await botClient.SendTextMessageAsync
+            (
                 chatId: message.Chat.Id,
                 replyToMessageId: message.MessageId,
                 text: "Ehe salomlar",
-                cancellationToken: cancellationToken);
+                cancellationToken: cancellationToken
+            );
         }
         static async Task PhotoAsyncFunction(ITelegramBotClient botClient, Update update, CancellationToken cancellationToken)
         {
