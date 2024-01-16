@@ -1,5 +1,47 @@
-{
-  "phone_number": "+998998734975",
-  "first_name": "Tohirjon",
-  "user_id": 1633746526
-}
+[
+  {
+    "phone_number": "+998998734975",
+    "first_name": "Husan",
+    "user_id": 45454545454
+  },
+  {
+    "phone_number": "+998910590727",
+    "first_name": "Asadulloh",
+    "user_id": 5372384465
+  },
+  {
+    "phone_number": "+998910590727",
+    "first_name": "Asadulloh",
+    "user_id": 5372384465
+  },
+  {
+    "phone_number": "998908136252",
+    "first_name": "Dilshodbek",
+    "user_id": 1921207596
+  },
+  {
+    "phone_number": "998908136252",
+    "first_name": "Dilshodbek",
+    "user_id": 1921207596
+  },
+  {
+    "phone_number": "+998992270611",
+    "first_name": "</ATOM>",
+    "user_id": 1417765739
+  },
+  {
+    "phone_number": "+998992270611",
+    "first_name": "</ATOM>",
+    "user_id": 1417765739
+  },
+  {
+    "phone_number": "+998998734975",
+    "first_name": "Tohirjon",
+    "user_id": 1633746526
+  },
+  {
+    "phone_number": "+998998734975",
+    "first_name": "Tohirjon",
+    "user_id": 1633746526
+  }
+]

@@ -1,10 +1,10 @@
-﻿using _25_lesson_TelegramBot_Basic.Homework;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using Telegram.Bot;
 using Telegram.Bot.Exceptions;
 using Telegram.Bot.Polling;
 using Telegram.Bot.Types;
 using Telegram.Bot.Types.Enums;
+using io = System.IO;
 
 namespace _25_lesson_TelegramBot_Basic
 
@@ -13,7 +13,6 @@ namespace _25_lesson_TelegramBot_Basic
     {
         TelegramBotClient botClient = new TelegramBotClient("6727219851:AAESLA1zoC3GMo-MvAVfoeqrjK438XoTf5g");
         public bool IsEnter { get; set; } = false;
-        public List<UserMadel>? userMadel { get; set; }
         public async Task MainFunction()
         {
             using CancellationTokenSource cts = new();
@@ -33,24 +32,80 @@ namespace _25_lesson_TelegramBot_Basic
 
             Console.WriteLine($"Start listening for @{me.Username}");
             Console.ReadLine();
-            var data = System.IO.File.ReadAllText("../../../users.json");
-            List<UserMadel> list = JsonConvert.DeserializeObject<List<UserMadel>>(data);
-            userMadel = list;
+
             cts.Cancel();
 
             async Task HandleUpdateAsync(ITelegramBotClient botClient, Update update, CancellationToken cancellationToken)
             {
                 try
                 {
-                    //userMadel.Add(contact);
-                    List<Contact> dataList = new List<Contact>();
-                    if (update.Message.Contact is not null)
+                    string jsonFilePath = "../../../users.json";
+                    var dataList = io.File.ReadAllText(jsonFilePath);
+
+                    List<Contact> list = JsonConvert.DeserializeObject<List<Contact>>(dataList);
+
+                    foreach (var item in list)
                     {
-                        dataList.Add(update.Message.Contact);
-                        string jsonFilePath = "../../../users.json";
-                        IsEnter = true;
-                        string jsonToString = JsonConvert.SerializeObject(update.Message.Contact, Formatting.Indented);
-                        System.IO.File.WriteAllText(jsonFilePath, jsonToString);
+
+                        if (item.UserId == update.Message.Chat.Id)
+                        {
+                            IsEnter = true;
+                            break;
+                        }
+                        else
+                        {
+                            IsEnter = false;
+                            if (update.Message.Contact is not null && item.PhoneNumber != update.Message.Contact.PhoneNumber)
+                            {
+                                list.Add(update.Message.Contact);
+
+                                var data = io.File.ReadAllText(jsonFilePath);
+
+                                list.Add(update.Message.Contact);
+
+                                using (StreamWriter sw = new StreamWriter(jsonFilePath))
+                                {
+                                    sw.WriteLine(JsonConvert.SerializeObject(list, Formatting.Indented));
+                                }
+                                IsEnter = true;
+                                break;
+                            }
+                        }
+                    }
+                    string allData = "";
+                    HashSet<string> dublicateData = new HashSet<string>();
+                    if (update.Message.Text == "/getall")
+                    {
+                        for (var i = 0; i < list.Count - 1; i++)
+                        {
+                            dublicateData.Add($"First Name: {list[i].FirstName}\nPhone Number: {list[i].PhoneNumber}\n\n");
+                        }
+                        foreach (var item in dublicateData)
+                        {
+                            allData += item;
+                        }
+                        var message = update.Message;
+                        await botClient.SendTextMessageAsync(
+                            chatId: message.Chat.Id,
+                            replyToMessageId: message.MessageId,
+                            text: allData,
+                            cancellationToken: cancellationToken);
+                    }
+                    else if (update.Message.Text == "/getme")
+                    {
+                        foreach (var item in list)
+                        {
+                            if (item.UserId == update.Message.Chat.Id)
+                            {
+                                var message = update.Message;
+                                await botClient.SendTextMessageAsync(
+                                    chatId: message.Chat.Id,
+                                    replyToMessageId: message.MessageId,
+                                    text: $"First Name: {item.FirstName}\nPhone Number: {item.PhoneNumber}",
+                                    cancellationToken: cancellationToken);
+                                break;
+                            }
+                        }
                     }
 
                     var handler = update.Type switch

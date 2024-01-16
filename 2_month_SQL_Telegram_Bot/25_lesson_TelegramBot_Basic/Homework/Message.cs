@@ -11,7 +11,7 @@ namespace _25_lesson_TelegramBot_Basic
             CancellationToken cancellationToken, bool isEnter)
         {
             var message = update.Message;
-
+            Console.WriteLine($"You said: {message.Text}\nData: {DateTime.Now}\n");
             if (isEnter == true)
             {
                 var handler = message.Type switch
@@ -32,7 +32,7 @@ namespace _25_lesson_TelegramBot_Basic
             }
             else
             {
-                Contact(botClient, update).Wait();
+                Contact(botClient, update, isEnter).Wait();
             }
         }
 
@@ -47,8 +47,9 @@ namespace _25_lesson_TelegramBot_Basic
                 );
         }
 
-        static async Task Contact(ITelegramBotClient botClient, Update update)
+        static async Task Contact(ITelegramBotClient botClient, Update update, bool isEnter)
         {
+            Console.WriteLine(isEnter);
             ReplyKeyboardMarkup markup =
                         new ReplyKeyboardMarkup
                                 (KeyboardButton.WithRequestContact("Kontact yuborish uchun tegining"));
@@ -58,6 +59,7 @@ namespace _25_lesson_TelegramBot_Basic
                     text: "Iltimos oldin telefon raqamingizni yuboring!",
                     replyMarkup: markup
             );
+
         }
         static async Task TextAsyncFunction(ITelegramBotClient botClient, Update update, CancellationToken cancellationToken)
         {

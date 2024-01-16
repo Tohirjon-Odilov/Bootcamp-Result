@@ -1,2 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using _26_lesson_Telegram_Bot_Group_Channel;
+
+var bot = new LinkGroupChannel();
+bot.ReplayMessage().Wait();
