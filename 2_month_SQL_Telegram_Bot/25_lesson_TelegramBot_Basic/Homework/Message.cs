@@ -11,7 +11,7 @@ namespace _25_lesson_TelegramBot_Basic
             CancellationToken cancellationToken, bool isEnter)
         {
             var message = update.Message;
-            Console.WriteLine($"You said: {message.Text}\nData: {DateTime.Now}\n");
+            Console.WriteLine($"User Name: {message.Chat.Username}\nYou said: {message.Text}\nData: {DateTime.Now}\n");
             if (isEnter == true)
             {
                 var handler = message.Type switch
