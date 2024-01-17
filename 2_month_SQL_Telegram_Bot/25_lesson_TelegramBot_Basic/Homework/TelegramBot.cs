@@ -116,6 +116,7 @@ namespace _25_lesson_TelegramBot_Basic
                 }
                 catch (Exception e)
                 {
+                    Console.WriteLine(e);
                     var handler = update.Type switch
                     {
                         UpdateType.Message => Message.Unknown(botClient, update, cancellationToken),

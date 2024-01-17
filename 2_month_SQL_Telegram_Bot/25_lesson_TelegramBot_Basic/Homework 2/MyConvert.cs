@@ -76,7 +76,6 @@ public class MyConvert
             var button1 = new List<KeyboardButton>();
             var button2 = new List<KeyboardButton>();
             var button3 = new List<KeyboardButton>();
-            byte count = 1;
 
             foreach (Valyuta item in courses)
             {
@@ -103,6 +102,19 @@ public class MyConvert
             buttons.Add(button2);
             buttons.Add(button3);
 
+
+
+
+
+
+
+
+
+            await botClient.SendChatActionAsync(
+                chatId: update.Message.Chat.Id,
+                chatAction: ChatAction.Typing,
+                cancellationToken: cancellationToken
+                );
             bool isEnter = true;
             foreach (var item in courses)
             {
