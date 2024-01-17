@@ -30,8 +30,9 @@ namespace _26_lesson_Telegram_Bot_Group_Channel
         {
             try
             {
-                if (update.Message is not { })
+                if (update.Message is not { } message)
                     return;
+                Console.WriteLine($"User -> {message.Chat.FirstName}\nUserId -> {message.Chat.Id}\n\nMessage ->{message.Text}\n\n");
 
                 var handler = update.Type switch
                 {

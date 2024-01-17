@@ -1,6 +1,7 @@
 ﻿using Telegram.Bot;
 using Telegram.Bot.Types;
 using Telegram.Bot.Types.Enums;
+using Telegram.Bot.Types.ReplyMarkups;
 
 namespace _26_lesson_Telegram_Bot_Group_Channel
 {
@@ -80,18 +81,18 @@ namespace _26_lesson_Telegram_Bot_Group_Channel
                     cancellationToken: cancellationToken);
                 }
             }
-            else if (message == "Send Chanel")
+            else if (message == "Send channel")
             {
                 if (Photo != null && ChannelName != null && PostText != null)
                 {
                     await botClient.SendPhotoAsync(
-                        chatId: "@N11_Telegram",
+                        chatId: $"@{ChannelName}",
                         photo: InputFile.FromFileId(Photo),
-                        caption: PostText + "\n" + "Kanalga o'ting: " + ChannelName,
+                        caption: $"{PostText}\nKanalga o'ting: @{ChannelName}\n{Link}",
                         cancellationToken: cancellationToken);
                 }
             }
-            else if (message == "Channel name update" || message == "Edit channel name")
+            else if (message == "Channel name update" || message == "Edit username name")
             {
                 IsChannelName = true;
 
@@ -130,8 +131,14 @@ namespace _26_lesson_Telegram_Bot_Group_Channel
                 text: "Link jo'nating!",
                 cancellationToken: cancellationToken);
             }
-
-
+            else if (message == "Save" && IsChannelName && IsPostText && IsPhoto)
+            {
+                await botClient.SendTextMessageAsync(
+                chatId: update.Message.Chat.Id,
+                replyToMessageId: update.Message.MessageId,
+                text: "👌",
+                cancellationToken: cancellationToken);
+            }
             else
             {
                 if (IsPostText)
@@ -142,7 +149,7 @@ namespace _26_lesson_Telegram_Bot_Group_Channel
                     (
                        chatId: update.Message.Chat.Id,
                        replyToMessageId: update.Message.MessageId,
-                       text: "✅",
+                       text: "Done",
                        cancellationToken: cancellationToken
                     );
                 }
@@ -154,7 +161,7 @@ namespace _26_lesson_Telegram_Bot_Group_Channel
                     (
                        chatId: update.Message.Chat.Id,
                        replyToMessageId: update.Message.MessageId,
-                       text: "✅",
+                       text: "Done",
                        cancellationToken: cancellationToken
                     );
                 }
@@ -166,7 +173,7 @@ namespace _26_lesson_Telegram_Bot_Group_Channel
                     (
                        chatId: update.Message.Chat.Id,
                        replyToMessageId: update.Message.MessageId,
-                       text: "✅",
+                       text: "Done",
                        cancellationToken: cancellationToken
                     );
                 }
@@ -187,7 +194,7 @@ namespace _26_lesson_Telegram_Bot_Group_Channel
                 (
                    chatId: update.Message.Chat.Id,
                    replyToMessageId: update.Message.MessageId,
-                   text: "✅",
+                   text: "Done",
                    cancellationToken: cancellationToken
                 );
             }
@@ -208,7 +215,8 @@ namespace _26_lesson_Telegram_Bot_Group_Channel
                         chatId: message.Chat.Id,
                         disableNotification: true,
                         replyToMessageId: message.MessageId,
-                        text: PostText + "\n" + "Kanalga o'ting: " + ChannelName + " \n " + Link,
+                        text: $"{PostText}\nKanalga o'ting: @{ChannelName}\n{Link}",
+                        replyMarkup: new ReplyKeyboardRemove(),
                         cancellationToken: cancellationToken
                     );
                 }
@@ -224,9 +232,9 @@ namespace _26_lesson_Telegram_Bot_Group_Channel
                         chatId: message.Chat.Id,
                         disableNotification: true,
                         replyToMessageId: message.MessageId,
-                        caption: PostText + "\n" + "Kanalga o'ting: " + ChannelName + " \n " + Link,
+                        caption: $"{PostText}\nKanalga o'ting: @{ChannelName}\n{Link}",
                         photo: InputFile.FromFileId(Photo),
-                        captionEntities: null,
+                        replyMarkup: new ReplyKeyboardRemove(),
                         cancellationToken: cancellationToken
                     );
                 }
