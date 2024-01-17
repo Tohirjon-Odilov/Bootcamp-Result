@@ -102,14 +102,6 @@ public class MyConvert
             buttons.Add(button2);
             buttons.Add(button3);
 
-
-
-
-
-
-
-
-
             await botClient.SendChatActionAsync(
                 chatId: update.Message.Chat.Id,
                 chatAction: ChatAction.Typing,
