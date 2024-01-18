@@ -15,9 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "25_lesson_TelegramBot_Basic
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "26_lesson_Telegram_Bot_Group_Channel", "26_lesson_Telegram_Bot_Group_Channel\26_lesson_Telegram_Bot_Group_Channel.csproj", "{AE1D4B14-DFC4-48CF-883B-E0BA530676C1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "27_lesson_TelegramBot_keyboard_inlineKeyboard", "27_lesson_TelegramBot_keyboard_inlineKeyboard\27_lesson_TelegramBot_keyboard_inlineKeyboard.csproj", "{AD729C42-D1A4-4461-BBCE-92C129E5FC8E}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "28_lesson_TelegramBot_forward", "28_lesson_TelegramBot_forward\28_lesson_TelegramBot_forward.csproj", "{448647F1-8E45-40DF-BBDE-7CD413D761C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "27_lesson_TelegramBot_keyboard_inlineKeyboard", "27_lesson_TelegramBot_keyboard_inlineKeyboard\27_lesson_TelegramBot_keyboard_inlineKeyboard.csproj", "{AE35C6FD-CFC8-4518-BAEA-9784ED4F1573}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,14 +49,14 @@ Global
 		{AE1D4B14-DFC4-48CF-883B-E0BA530676C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AE1D4B14-DFC4-48CF-883B-E0BA530676C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AE1D4B14-DFC4-48CF-883B-E0BA530676C1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AD729C42-D1A4-4461-BBCE-92C129E5FC8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AD729C42-D1A4-4461-BBCE-92C129E5FC8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AD729C42-D1A4-4461-BBCE-92C129E5FC8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AD729C42-D1A4-4461-BBCE-92C129E5FC8E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{448647F1-8E45-40DF-BBDE-7CD413D761C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{448647F1-8E45-40DF-BBDE-7CD413D761C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{448647F1-8E45-40DF-BBDE-7CD413D761C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{448647F1-8E45-40DF-BBDE-7CD413D761C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE35C6FD-CFC8-4518-BAEA-9784ED4F1573}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE35C6FD-CFC8-4518-BAEA-9784ED4F1573}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE35C6FD-CFC8-4518-BAEA-9784ED4F1573}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE35C6FD-CFC8-4518-BAEA-9784ED4F1573}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
