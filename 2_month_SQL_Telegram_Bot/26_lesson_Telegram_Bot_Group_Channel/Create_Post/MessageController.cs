@@ -55,7 +55,7 @@ namespace _26_lesson_Telegram_Bot_Group_Channel
             {
                 await ButtonController.CreateButton(botClient, update, cancellationToken);
             }
-            else if (message == "<-")
+            else if (message == "⬅️")
             {
                 IsChannelName = false;
                 IsPostText = false;
@@ -92,7 +92,7 @@ namespace _26_lesson_Telegram_Bot_Group_Channel
                         cancellationToken: cancellationToken);
                 }
             }
-            else if (message == "Channel name update" || message == "Edit username name")
+            else if (message == "Channel username update" || message == "Edit username name")
             {
                 IsChannelName = true;
 
@@ -131,8 +131,9 @@ namespace _26_lesson_Telegram_Bot_Group_Channel
                 text: "Link jo'nating!",
                 cancellationToken: cancellationToken);
             }
-            else if (message == "Save" && IsChannelName && IsPostText && IsPhoto)
+            else if (message == "Save")
             {
+                Console.WriteLine($"{IsChannelName} {IsPostText} {IsPhoto}");
                 await botClient.SendTextMessageAsync(
                 chatId: update.Message.Chat.Id,
                 replyToMessageId: update.Message.MessageId,
