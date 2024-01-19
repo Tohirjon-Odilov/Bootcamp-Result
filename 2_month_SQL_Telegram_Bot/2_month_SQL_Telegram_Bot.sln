@@ -15,9 +15,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "25_lesson_TelegramBot_Basic
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "26_lesson_Telegram_Bot_Group_Channel", "26_lesson_Telegram_Bot_Group_Channel\26_lesson_Telegram_Bot_Group_Channel.csproj", "{AE1D4B14-DFC4-48CF-883B-E0BA530676C1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "28_lesson_TelegramBot_forward", "28_lesson_TelegramBot_forward\28_lesson_TelegramBot_forward.csproj", "{448647F1-8E45-40DF-BBDE-7CD413D761C5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "27_lesson_TelegramBot_keyboard_inlineKeyboard", "27_lesson_TelegramBot_keyboard_inlineKeyboard\27_lesson_TelegramBot_keyboard_inlineKeyboard.csproj", "{AE35C6FD-CFC8-4518-BAEA-9784ED4F1573}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "27_lesson_TelegramBot_keyboard_inlineKeyboard", "27_lesson_TelegramBot_keyboard_inlineKeyboard\27_lesson_TelegramBot_keyboard_inlineKeyboard.csproj", "{AE35C6FD-CFC8-4518-BAEA-9784ED4F1573}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "29_lesson_subscriber_bot", "29_lesson_subscriber_bot\29_lesson_subscriber_bot.csproj", "{B000B4BC-42C7-488D-B0B6-3694511B24A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "28_lesson_instagram_downloader_bot_zipper_send_bot", "28_lesson_instagram_downloader_bot_zipper_send_bot\28_lesson_instagram_downloader_bot_zipper_send_bot.csproj", "{329909E1-CF33-4A10-9F98-A889859475A7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,14 +51,18 @@ Global
 		{AE1D4B14-DFC4-48CF-883B-E0BA530676C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AE1D4B14-DFC4-48CF-883B-E0BA530676C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AE1D4B14-DFC4-48CF-883B-E0BA530676C1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{448647F1-8E45-40DF-BBDE-7CD413D761C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{448647F1-8E45-40DF-BBDE-7CD413D761C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{448647F1-8E45-40DF-BBDE-7CD413D761C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{448647F1-8E45-40DF-BBDE-7CD413D761C5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AE35C6FD-CFC8-4518-BAEA-9784ED4F1573}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{AE35C6FD-CFC8-4518-BAEA-9784ED4F1573}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AE35C6FD-CFC8-4518-BAEA-9784ED4F1573}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AE35C6FD-CFC8-4518-BAEA-9784ED4F1573}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B000B4BC-42C7-488D-B0B6-3694511B24A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B000B4BC-42C7-488D-B0B6-3694511B24A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B000B4BC-42C7-488D-B0B6-3694511B24A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B000B4BC-42C7-488D-B0B6-3694511B24A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{329909E1-CF33-4A10-9F98-A889859475A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{329909E1-CF33-4A10-9F98-A889859475A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{329909E1-CF33-4A10-9F98-A889859475A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{329909E1-CF33-4A10-9F98-A889859475A7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

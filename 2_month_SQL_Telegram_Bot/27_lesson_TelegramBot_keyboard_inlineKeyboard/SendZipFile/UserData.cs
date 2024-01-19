@@ -9,6 +9,7 @@
         public DateOnly? LastUsed { get; set; }
         public string? UserStartPath { get; set; }
         public string? UserZipPath { get; set; }
+        public bool IsEnter { get; set; }
     }
 }
 

