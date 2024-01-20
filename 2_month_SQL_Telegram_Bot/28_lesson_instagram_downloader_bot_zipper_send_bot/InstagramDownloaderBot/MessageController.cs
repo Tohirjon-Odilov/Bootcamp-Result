@@ -49,13 +49,13 @@ namespace _28_lesson_instagram_downloader_bot_zipper_send_bot
                     foreach (var item in body)
                     {
                         Console.WriteLine($"\n{item.url}\n");
-                        await botClient.SendChatActionAsync(
-                            chatId: update.Message.Chat.Id,
-                            chatAction: ChatAction.UploadDocument,
-                            cancellationToken: cancellationToken
-                        );
                         if (item.type == "video")
                         {
+                            await botClient.SendChatActionAsync(
+                                chatId: update.Message.Chat.Id,
+                                chatAction: ChatAction.UploadVideo,
+                                cancellationToken: cancellationToken
+                            );
                             await botClient.SendVideoAsync(
                                chatId: chatId,
                                video: $"{item.url}",
@@ -64,6 +64,11 @@ namespace _28_lesson_instagram_downloader_bot_zipper_send_bot
                         }
                         else if (item.type == "photo")
                         {
+                            await botClient.SendChatActionAsync(
+                                chatId: update.Message.Chat.Id,
+                                chatAction: ChatAction.UploadPhoto,
+                                cancellationToken: cancellationToken
+                            );
                             await botClient.SendPhotoAsync(
                                chatId: chatId,
                                photo: $"{item.url}",
