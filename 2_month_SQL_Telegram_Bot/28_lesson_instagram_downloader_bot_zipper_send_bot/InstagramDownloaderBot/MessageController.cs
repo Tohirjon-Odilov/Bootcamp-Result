@@ -33,13 +33,17 @@ namespace _28_lesson_instagram_downloader_bot_zipper_send_bot
             var chatId = update.Message.Chat.Id;
 
             Console.WriteLine($"Received a '{message.Text}' message in chat {chatId}. UserName =>  {message.Chat.Username}");
+
+            #region mock
             //await botClient.SendVideoAsync(
             //           chatId: chatId,
-            //           video: "https://smvd-videos-downloader.ugo-code-studio.workers.dev/download?t=aHR0cHM6Ly9zY29udGVudC5jZG5pbnN0YWdyYW0uY29tL3YvdDY2LjMwMTAwLTE2LzQzOTQ4MjEwXzE0MDE3MDM0NDc0NDI1NzdfNzMxNjcyMzk0OTUyMTgxMjkwNV9uLm1wND9lZmc9ZTMwJl9uY19odD1zY29udGVudC5jZG5pbnN0YWdyYW0uY29tJl9uY19jYXQ9MTA5Jl9uY19vaGM9VWNsMVVnRkVpNlFBWDg0Ti1hQiZlZG09QVBzMTdDVUJBQUFBJmNjYj03LTUmb2g9MDBfQWZDR1ZTQjlKS0lQYVViY1BsQTE2c3R6S3pWMGRMVTFzNl8zQkNBZmZqSGh3dyZvZT02NUIxNkNBOCZfbmNfc2lkPTEwZDEzYiZkbD0x&filename=text+video",
+            //           video: "https://proxy.mediadownloader.app/get?__sig=fDMRYmKdY3rLDMVdgxHL4w&__expires=1705751778&uri=https%3A%2F%2Finstagram.frec5-1.fna.fbcdn.net%2Fv%2Ft66.30100-16%2F10000000_935668731326906_3384503107326209606_n.mp4%3Fefg%3De30%26_nc_ht%3Dinstagram.frec5-1.fna.fbcdn.net%26_nc_cat%3D102%26_nc_ohc%3DMb0EwWEmKQEAX96YX17%26edm%3DAP_V10EBAAAA%26ccb%3D7-5%26oh%3D00_AfCb-B5_V-vZur-qIVb43Zfy7azzeJ_gTxT9ITzjHZFA5A%26oe%3D65B121F5%26_nc_sid%3D2999b8%26dl%3D1&filename=Check+out+everything+%40sydney_sweeney+loves+about+her+newest+project%2C+a+vintage+Ford+Mustang%C2%AE+named+Britney..mp4&ua=-&referer=https%3A%2F%2Fwww.instagram.com%2F&__srvid=instagram&__cid=mTY2wLHa1yPMcXBdrchsqQ",
             //           replyToMessageId: message.MessageId,
             //           //supportsStreaming: true,
             //           cancellationToken: cancellationToken);
             //return;
+            #endregion
+
             if (messageText.StartsWith("https://www.instagram.com"))
                 try
                 {
