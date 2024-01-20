@@ -61,7 +61,7 @@ namespace _29_lesson_subscriber_bot
 
                 // Foydalanuvchini tekshirish
                 var chatMember1 = await botClient.GetChatMemberAsync(channelUsername1, userId);
-                var chatMember2 = await botClient.GetChatMemberAsync($"{channelUsername2}", userId);
+                var chatMember2 = await botClient.GetChatMemberAsync(channelUsername2, userId);
                 Console.WriteLine(chatMember1.ToString());
                 Console.WriteLine(chatMember2.ToString());
 
@@ -77,12 +77,6 @@ namespace _29_lesson_subscriber_bot
                         //UpdateType.D=> messageController.EssentialAsyncMessage(botClient, update, cancellationToken),
                         _ => messageController.OtherMessage(botClient, update, cancellationToken),
                     };
-
-                    await botClient.SendTextMessageAsync(
-                        chatId: userId,
-                        text: "Siz kanalga obuna bo'lgansiz. Bot ishga tushiriladi.",
-                        cancellationToken: cancellationToken
-                    );
                 }
                 else
                 {
@@ -106,7 +100,7 @@ namespace _29_lesson_subscriber_bot
                 _ => exception.ToString()
             };
 
-            Console.WriteLine(ErrorMessage);
+            await Console.Out.WriteLineAsync(ErrorMessage);
             return Task.CompletedTask;
         }
     }

@@ -16,21 +16,30 @@ namespace _29_lesson_subscriber_bot
             chat = message.Chat;
             userId = chat.Id;
 
-            var handler = message.Type switch
-            {
-                MessageType.Text => TextAsyncFunction(botClient, update, cancellationToken),
-                _ => OtherMessage(botClient, update, cancellationToken),
-            };
+            await botClient.SendChatActionAsync
+            (
+                chatId: userId,
+                chatAction: ChatAction.Typing,
+                cancellationToken: cancellationToken
+            );
 
-        }
-
-        private void TextAsyncFunction(ITelegramBotClient botClient, Update update, CancellationToken cancellationToken)
-        {
-            throw new NotImplementedException();
+            await botClient.SendTextMessageAsync
+            (
+                chatId: userId,
+                text: "Tabriklar siz kanallardan muvafaqqiyatli ro'yhatdan o'tdingiz!",
+                cancellationToken: cancellationToken
+            );
         }
 
         public async Task OtherMessage(ITelegramBotClient botClient, Update update, CancellationToken cancellationToken)
         {
+            await botClient.SendChatActionAsync
+            (
+                chatId: userId,
+                chatAction: ChatAction.Typing,
+                cancellationToken: cancellationToken
+            );
+
             await botClient.SendTextMessageAsync
             (
                 chatId: userId,
