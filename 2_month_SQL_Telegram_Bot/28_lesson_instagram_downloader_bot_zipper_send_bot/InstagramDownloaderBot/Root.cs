@@ -1,4 +1,4 @@
-﻿namespace _28_lesson_instagram_downloader_bot_zipper_send_bot.InstagramDownloaderBot
+﻿namespace _28_lesson_instagram_downloader_bot_zipper_send_bot
 {
     public class Root
     {

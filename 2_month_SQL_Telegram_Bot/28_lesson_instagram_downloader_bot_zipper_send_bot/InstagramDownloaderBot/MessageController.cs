@@ -1,5 +1,4 @@
-﻿using _28_lesson_instagram_downloader_bot_zipper_send_bot.InstagramDownloaderBot;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using Telegram.Bot;
 using Telegram.Bot.Types;
 using Telegram.Bot.Types.Enums;
@@ -8,8 +7,6 @@ namespace _28_lesson_instagram_downloader_bot_zipper_send_bot
 {
     public class MessageController
     {
-        public bool isEnter = false;
-
         public string VideoLink { get; set; }
 
         public async Task HandleMessageAsync(ITelegramBotClient botClient, Update update, CancellationToken cancellationToken)
@@ -47,9 +44,10 @@ namespace _28_lesson_instagram_downloader_bot_zipper_send_bot
 
                     IList<Root> body = JsonConvert.DeserializeObject<IList<Root>>(root.RunApi(messageText).Result);
 
+                    Console.WriteLine(body.Count);
+
                     foreach (var item in body)
                     {
-                        isEnter = true;
                         Console.WriteLine($"\n{item.url}\n");
                         await botClient.SendChatActionAsync(
                             chatId: update.Message.Chat.Id,
@@ -72,20 +70,19 @@ namespace _28_lesson_instagram_downloader_bot_zipper_send_bot
                                cancellationToken: cancellationToken);
                         }
                     }
-                    if (!isEnter)
-                    {
-                        string replasemessage = messageText.Replace("www.", "dd");
-                        await botClient.SendVideoAsync
-                        (
-                               chatId: chatId,
-                               video: $"{replasemessage}",
-                               supportsStreaming: true,
-                               cancellationToken: cancellationToken
-                        );
-                    }
-
                 }
-                catch (Exception ex) { Console.WriteLine(ex.Message); }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"{ex.Message}");
+                    string replasemessage = messageText.Replace("www.", "dd");
+                    await botClient.SendVideoAsync
+                    (
+                           chatId: chatId,
+                           video: $"{replasemessage}",
+                           supportsStreaming: true,
+                           cancellationToken: cancellationToken
+                    );
+                }
             else
             {
                 Console.WriteLine("Foydalanuvchi boshqa narsa jo'natdi!");

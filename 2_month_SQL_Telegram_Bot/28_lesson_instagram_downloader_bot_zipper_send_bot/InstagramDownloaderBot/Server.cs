@@ -13,12 +13,11 @@ namespace _28_lesson_instagram_downloader_bot_zipper_send_bot
 
         public Server(string token)
         {
-            this.Token = token;
+            Token = token;
         }
         public async Task Run()
         {
-
-            var botClient = new TelegramBotClient($"{this.Token}");
+            var botClient = new TelegramBotClient($"{Token}");
 
             using CancellationTokenSource cts = new();
 
@@ -42,7 +41,6 @@ namespace _28_lesson_instagram_downloader_bot_zipper_send_bot
 
             // Send cancellation request to stop bot
             cts.Cancel();
-
         }
 
         public async Task HandleUpdateAsync(ITelegramBotClient botClient, Update update, CancellationToken cancellationToken)
