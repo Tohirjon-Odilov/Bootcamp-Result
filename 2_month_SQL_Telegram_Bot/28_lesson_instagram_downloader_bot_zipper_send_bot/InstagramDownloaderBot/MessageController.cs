@@ -35,16 +35,21 @@ namespace _28_lesson_instagram_downloader_bot_zipper_send_bot
             Console.WriteLine($"Received a '{message.Text}' message in chat {chatId}. UserName =>  {message.Chat.Username}");
 
             #region mock
-            //await botClient.SendVideoAsync(
+            //Console.WriteLine("Boshi");
+            //await botClient.SendAudioAsync(
             //           chatId: chatId,
-            //           video: "https://proxy.mediadownloader.app/get?__sig=fDMRYmKdY3rLDMVdgxHL4w&__expires=1705751778&uri=https%3A%2F%2Finstagram.frec5-1.fna.fbcdn.net%2Fv%2Ft66.30100-16%2F10000000_935668731326906_3384503107326209606_n.mp4%3Fefg%3De30%26_nc_ht%3Dinstagram.frec5-1.fna.fbcdn.net%26_nc_cat%3D102%26_nc_ohc%3DMb0EwWEmKQEAX96YX17%26edm%3DAP_V10EBAAAA%26ccb%3D7-5%26oh%3D00_AfCb-B5_V-vZur-qIVb43Zfy7azzeJ_gTxT9ITzjHZFA5A%26oe%3D65B121F5%26_nc_sid%3D2999b8%26dl%3D1&filename=Check+out+everything+%40sydney_sweeney+loves+about+her+newest+project%2C+a+vintage+Ford+Mustang%C2%AE+named+Britney..mp4&ua=-&referer=https%3A%2F%2Fwww.instagram.com%2F&__srvid=instagram&__cid=mTY2wLHa1yPMcXBdrchsqQ",
+            //           audio: messageText,
             //           replyToMessageId: message.MessageId,
             //           //supportsStreaming: true,
             //           cancellationToken: cancellationToken);
+            //Console.WriteLine("Oxiri");
             //return;
             #endregion
-
-            if (messageText.StartsWith("https://www.instagram.com"))
+            if (messageText == "/start")
+            {
+                Console.WriteLine($"Xush kelibsiz {message.Chat.Username}! Instagram link yuborishingiz mumkin.");
+            }
+            else if (messageText.StartsWith("https://www.instagram.com"))
                 try
                 {
                     Console.WriteLine($"Message Type: {message.Type} Username=> {message.Chat.Username} Text => {message.Text} ");
@@ -62,11 +67,8 @@ namespace _28_lesson_instagram_downloader_bot_zipper_send_bot
                         Console.WriteLine($"\n{item.url}\n");
                         if (item.type == "video")
                         {
-                            await botClient.SendChatActionAsync(
-                                chatId: update.Message.Chat.Id,
-                                chatAction: ChatAction.UploadVideo,
-                                cancellationToken: cancellationToken
-                            );
+                            MyChatAction.Uploading(botClient, update, cancellationToken);
+
                             await botClient.SendVideoAsync(
                                chatId: chatId,
                                video: $"{item.url}",
@@ -92,11 +94,9 @@ namespace _28_lesson_instagram_downloader_bot_zipper_send_bot
                 catch (Exception ex)
                 {
                     Console.WriteLine($"{ex.Message}");
-                    await botClient.SendChatActionAsync(
-                        chatId: message.Chat.Id,
-                        chatAction: ChatAction.Typing,
-                        cancellationToken: cancellationToken
-                    );
+
+                    MyChatAction.Typing(botClient, update, cancellationToken);
+
                     await botClient.SendTextMessageAsync(
                         chatId: message.Chat.Id,
                         text: ex.Message,
@@ -115,11 +115,8 @@ namespace _28_lesson_instagram_downloader_bot_zipper_send_bot
                 }
             else if (messageText.StartsWith("https://"))
             {
-                await botClient.SendChatActionAsync(
-                    chatId: message.Chat.Id,
-                    chatAction: ChatAction.Typing,
-                    cancellationToken: cancellationToken
-                );
+                MyChatAction.Typing(botClient, update, cancellationToken);
+
                 await botClient.SendTextMessageAsync(
                     chatId: message.Chat.Id,
                     text: "Iltimos instagram link kiriting!",
@@ -129,11 +126,8 @@ namespace _28_lesson_instagram_downloader_bot_zipper_send_bot
             }
             else
             {
-                await botClient.SendChatActionAsync(
-                     chatId: message.Chat.Id,
-                     chatAction: ChatAction.Typing,
-                     cancellationToken: cancellationToken
-                 );
+                MyChatAction.Typing(botClient, update, cancellationToken);
+
                 await botClient.SendTextMessageAsync(
                     chatId: message.Chat.Id,
                     text: "Siz boshqa narsa kiritishga harakat qilyapsiz bloklanasiz!",
@@ -145,11 +139,8 @@ namespace _28_lesson_instagram_downloader_bot_zipper_send_bot
 
         public async Task OtherMessage(ITelegramBotClient botClient, Update update, CancellationToken cancellationToken)
         {
-            await botClient.SendChatActionAsync(
-                     chatId: update.Message.Chat.Id,
-                     chatAction: ChatAction.Typing,
-                     cancellationToken: cancellationToken
-                 );
+            MyChatAction.Typing(botClient, update, cancellationToken);
+
             await botClient.SendTextMessageAsync(
                 chatId: update.Message.Chat.Id,
                 text: "Siz boshqa narsa kiritib bug 🐞 chiqaradigan \nkimsalardek harakat qilyapsiz! 😡 \nIltimos instagram link tashlang!!!",
