@@ -52,3 +52,37 @@
 
 select * from customers
 where id in (select customer_id from orders)
+
+-- varchar => oshgan joyiga bo'shliq olmaydi
+-- char => oshgan joyiga bo'shliq oladi
+
+-- select * from course
+-- where dept_name = 'Mech. Eng.'
+
+-- select count(*) from course
+-- where dept_name = 'Mech. Eng.'
+
+---- select, from, where ichida sub query yozsa bo'ladi
+
+-- select dept_name, count(*) from course
+-- group by dept_name
+
+-- ctrl+shift+k format qilish
+
+-- SELECT DISTINCT DEPT_NAME,
+-- 	(SELECT COUNT(*)
+-- 		FROM COURSE C2
+-- 		WHERE C2.DEPT_NAME = C1.DEPT_NAME)
+-- FROM COURSE C1
+
+-- SELECT *
+-- FROM INSTRUCTOR
+-- WHERE SALARY >
+-- 		(SELECT AVG(SALARY)
+-- 			FROM INsTRUCTOR)
+
+select * from instructor f 
+where salary > (select avg(salary) from instructor f2 where dept_name = f.dept_name)
+
+
+
