@@ -84,5 +84,3 @@ where id in (select customer_id from orders)
 select * from instructor f 
 where salary > (select avg(salary) from instructor f2 where dept_name = f.dept_name)
 
-
-
