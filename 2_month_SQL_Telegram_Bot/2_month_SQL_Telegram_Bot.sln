@@ -23,7 +23,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "28_lesson_instagram_downloa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "30_lesson_PostGreSQL_Kirish_PgAdmin_Install", "30_lesson_PostGreSQL_Kirish_PgAdmin_Install\30_lesson_PostGreSQL_Kirish_PgAdmin_Install.csproj", "{54D6B706-8707-407E-B3FF-98EEACBA5FF9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "31_lesson_PostgreSQL_2", "31_lesson_PostgreSQL_2\31_lesson_PostgreSQL_2.csproj", "{8395DDDD-6114-49E1-9BA6-AC3E50CAFAAE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "31_lesson_PostgreSQL_2", "31_lesson_PostgreSQL_2\31_lesson_PostgreSQL_2.csproj", "{8395DDDD-6114-49E1-9BA6-AC3E50CAFAAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "32_lesson_Join_Having_All_Any", "32_lesson_Join_Having_All_Any\32_lesson_Join_Having_All_Any.csproj", "{5A4D6EC7-BC28-40ED-B7A8-6731F2C4BD69}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +77,10 @@ Global
 		{8395DDDD-6114-49E1-9BA6-AC3E50CAFAAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8395DDDD-6114-49E1-9BA6-AC3E50CAFAAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8395DDDD-6114-49E1-9BA6-AC3E50CAFAAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A4D6EC7-BC28-40ED-B7A8-6731F2C4BD69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A4D6EC7-BC28-40ED-B7A8-6731F2C4BD69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A4D6EC7-BC28-40ED-B7A8-6731F2C4BD69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A4D6EC7-BC28-40ED-B7A8-6731F2C4BD69}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
