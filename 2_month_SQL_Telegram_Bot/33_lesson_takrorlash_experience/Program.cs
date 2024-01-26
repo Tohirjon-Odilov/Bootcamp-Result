@@ -7,5 +7,4 @@ Console.WriteLine(a.Equals(b));
 
 
 // natija: False (chunki default reference bilan tekshiradi)
-
 // Vazifa. a.Equals(b) -> true bo'ladigan qiling ya'ni ismlari bir xil bo'lgan Person lar teng.
