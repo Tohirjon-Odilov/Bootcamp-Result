@@ -1,33 +1,76 @@
 --Task-1
 
 --a) 
-select title from course where dept_name = 'Comp. Sci.' and credits = 3;
+SELECT TITLE
+FROM COURSE
+WHERE DEPT_NAME = 'Comp. Sci.'
+	AND CREDITS = 3;
 
 --b)
-select distinct student.ID from student join takes using(ID) join teaches using(course_id,sec_id,semester,year)  join instructor on teaches.id = instructor.id where instructor.name != 'Einstein'
+SELECT DISTINCT STUDENT.ID
+FROM STUDENT
+JOIN TAKES USING(ID)
+JOIN TEACHES USING(COURSE_ID,
+	SEC_ID,
+	SEMESTER,
+	YEAR)
+JOIN INSTRUCTOR ON TEACHES.ID = INSTRUCTOR.ID
+WHERE INSTRUCTOR.NAME != 'Einstein'
 
 --c) 
-select salary from instructor where salary >= (select max(salary) from instructor)
-
+SELECT SALARY
+FROM INSTRUCTOR
+WHERE SALARY >=
+		(SELECT MAX(SALARY)
+			FROM INSTRUCTOR)
 --d) 
-select * from instructor where salary >= (select max(salary) from instructor)
-
+SELECT *
+FROM INSTRUCTOR
+WHERE SALARY >=
+		(SELECT MAX(SALARY)
+			FROM INSTRUCTOR)
 --e)
-select course_id || ', ' || sec_id as "course_id, sec_id",  count(*) from takes where year = 2007 and semester ='Fall'
-group by (course_id, sec_id);
-
+SELECT COURSE_ID || ', ' || SEC_ID AS "course_id, sec_id",
+	COUNT(*)
+FROM TAKES
+WHERE YEAR = 2007
+	AND SEMESTER = 'Fall'
+GROUP BY (COURSE_ID,
+			SEC_ID);
 --f)
-select max(enrollment) from (select count(ID) as enrollment from section join takes using(course_id,sec_id,semester,year)where section.semester = 'Autumn' and section.year = 2007 group by course_id,sec_id)
-
+SELECT MAX(ENROLLMENT)
+FROM
+	(SELECT COUNT(ID) AS ENROLLMENT
+		FROM SECTION
+		JOIN TAKES USING(COURSE_ID,
+							SEC_ID,
+							SEMESTER,
+							YEAR)
+		WHERE SECTION.SEMESTER = 'Autumn'
+			AND SECTION.YEAR = 2007
+		GROUP BY COURSE_ID,
+			SEC_ID)
 --Task-2
 
 --a) 
-update instructor 
-set salary = salary+(salary/100*10)
-where dept_name = 'Comp. Sci.' 
+UPDATE INSTRUCTOR
+SET SALARY = SALARY + (SALARY / 100 * 10)
+WHERE DEPT_NAME = 'Comp. Sci.'
 
 --b)
-delete from course where course_id not in (select course_id from section)
-
+DELETE
+FROM COURSE
+WHERE COURSE_ID NOT IN
+		(SELECT COURSE_ID
+			FROM SECTION)
 --c) 
-insert into instructor (ID,name,dept_name, salary) select ID,name,dept_name, 10000 from student where tot_cred > 100
+INSERT INTO INSTRUCTOR (ID,
+	NAME,
+	DEPT_NAME,
+	SALARY)
+SELECT ID,
+	NAME,
+	DEPT_NAME,
+	10000
+FROM STUDENT
+WHERE TOT_CRED > 100
