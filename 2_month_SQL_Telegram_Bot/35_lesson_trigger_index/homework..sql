@@ -2,8 +2,7 @@
 --     "student_id" BIGINT NOT NULL,
 --     "subject_id" BIGINT NOT NULL
 -- );
--- ALTER TABLE
---     "student_access" ADD PRIMARY KEY("student_id");
+
 -- CREATE TABLE "student"(
 --     "id" bigserial NOT NULL,
 --     "full_name" VARCHAR(255) NOT NULL,
@@ -48,8 +47,8 @@
 
 --------------- add data --------------
 ---------------- group ---------------------
--- insert into student_of_group (name, count) values ('Universidad CuauhtÈmoc', 25);
--- insert into student_of_group (name, count) values ('Pontificia Universidade CatÛlica do Paran·', 33);
+-- insert into student_of_group (name, count) values ('Universidad Cuauht√©moc', 25);
+-- insert into student_of_group (name, count) values ('Pontificia Universidade Cat√≥lica do Paran√°', 33);
 -- insert into student_of_group (name, count) values ('Physical Education Academy "Jozef Pilsudski" in Warsaw', 24);
 -- insert into student_of_group (name, count) values ('Ural State Forestry Technical Academy', 25);
 -- insert into student_of_group (name, count) values ('Fourah Bay College, University of Sierra Leone', 26);
