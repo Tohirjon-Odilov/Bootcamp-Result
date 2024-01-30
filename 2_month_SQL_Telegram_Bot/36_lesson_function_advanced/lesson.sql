@@ -57,4 +57,26 @@
 
 --select my_function_return_table('Mers', 'G56', 2024)
 
+------------------------ create table -----------------------------
 
+-- create table cars(
+-- 	brand varchar, model varchar, year int
+-- )
+
+------------------------ table'dagi oxirgi row'ni olish --------------------------
+
+-- CREATE OR REPLACE FUNCTION my_function_return_table(brand1 varchar, model1 varchar, year1 int)
+-- RETURNS TABLE(brand varchar, model varchar, year int) AS $$
+-- BEGIN
+-- 	-- ma'lumotlarni cars jadvaliga qo'shish
+-- 	INSERT INTO cars(brand, model, year)
+--     VALUES (brand1, model1, year1);
+
+-- 	-- table'ni qaytaryapmiz
+--     RETURN QUERY 
+--     SELECT * FROM cars
+-- 	offset (select count(*) -1 from cars);
+-- END;
+-- $$ LANGUAGE plpgsql;
+
+-- select my_function_return_table('nima', 'G33', 2020)
