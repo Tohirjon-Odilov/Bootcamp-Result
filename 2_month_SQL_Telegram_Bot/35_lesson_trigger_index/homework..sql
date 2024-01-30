@@ -2,7 +2,10 @@
 --     "student_id" BIGINT NOT NULL,
 --     "subject_id" BIGINT NOT NULL
 -- );
-
+--ALTER TABLE
+--    "student_access" ADD PRIMARY KEY("student_id");
+--ALTER TABLE
+--    "student_access" ADD PRIMARY KEY("subject_id");
 -- CREATE TABLE "student"(
 --     "id" bigserial NOT NULL,
 --     "full_name" VARCHAR(255) NOT NULL,

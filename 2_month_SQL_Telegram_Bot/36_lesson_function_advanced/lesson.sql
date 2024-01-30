@@ -98,7 +98,3 @@
 --$$ LANGUAGE plpgsql;
 
 --select my_function_return_table('nimadir', 'G33', 2020)
-
-
-
-
