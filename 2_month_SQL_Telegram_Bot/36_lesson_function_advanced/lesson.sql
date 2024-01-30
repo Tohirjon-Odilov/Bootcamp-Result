@@ -98,3 +98,18 @@
 --$$ LANGUAGE plpgsql;
 
 --select my_function_return_table('nimadir', 'G33', 2020)
+
+
+-------------------------------- O'RTACHA QIYMAT CHIQARADI -------------------
+--CREATE FUNCTION AVARAGE_SALARY() 
+--RETURNS REAL 
+--LANGUAGE PLPGSQL
+--AS $$
+--DECLARE AVERAGE REAL;
+--BEGIN
+--	SELECT AVG(SALARY) INTO AVARAGE FROM MY_PERSON;
+--	RETURN AVARAGE;
+--END;
+--$$;
+
+--SELECT * FROM AVARAGE_SALARY() AS AVARAGE_SALARY;
