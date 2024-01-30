@@ -53,6 +53,7 @@ BEGIN
 END
 $$;
 
+
 -- 2 func
 create or replace procedure pets_count_of_adopter(adopter_id int)
 language plpgsql
@@ -75,12 +76,10 @@ $$;
 
 SELECT * FROM generate_medical_records_of_pet2(2);
 
-select * from animals
-
 
 --This home task create by 
 --Tohirjon Odilov, 
 --Muhammadabdulloh Ummataliev,
 --Asadulloh Tojiev,
 --Akramjon Abduvahobov,
---Hayotulla Tursunboyev
+--Hayotilla Tursunboyev
