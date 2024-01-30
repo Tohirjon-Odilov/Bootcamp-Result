@@ -80,3 +80,25 @@
 -- $$ LANGUAGE plpgsql;
 
 -- select my_function_return_table('nima', 'G33', 2020)
+
+------------------------- ctid orqali oxirgi row'ni olish ------------------------
+
+--CREATE OR REPLACE FUNCTION my_function_return_table(brand1 varchar, model1 varchar, year1 int)
+--RETURNS TABLE(brand varchar, model varchar, year int) AS $$
+--BEGIN
+--	-- ma'lumotlarni cars jadvaliga qo'shish
+--	INSERT INTO cars(brand, model, year)
+--    VALUES (brand1, model1, year1);
+
+--	-- table'ni qaytaryapmiz
+--    RETURN QUERY 
+--    SELECT * FROM cars
+--	order by ctid desc limit 1;
+--END;
+--$$ LANGUAGE plpgsql;
+
+--select my_function_return_table('nimadir', 'G33', 2020)
+
+
+
+
