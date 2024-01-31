@@ -33,9 +33,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "34_lesson_Postgresql_Relati
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "35_lesson_trigger_index", "35_lesson_trigger_index\35_lesson_trigger_index.csproj", "{4E8C8149-B849-486E-A144-91DDBDC4513E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "36_lesson_function_advanced", "36_lesson_function_advanced\36_lesson_function_advanced.csproj", "{5F688B6A-1077-4EB7-A6BD-A23CF616A0E4}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "37_lesson_index_switch_loop", "37_lesson_index_switch_loop\37_lesson_index_switch_loop.csproj", "{CA0F539B-062F-4866-8FD9-57549D83DD0A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "36_lesson_function_advanced", "36_lesson_function_advanced\36_lesson_function_advanced.csproj", "{5F688B6A-1077-4EB7-A6BD-A23CF616A0E4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -107,10 +105,6 @@ Global
 		{5F688B6A-1077-4EB7-A6BD-A23CF616A0E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F688B6A-1077-4EB7-A6BD-A23CF616A0E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F688B6A-1077-4EB7-A6BD-A23CF616A0E4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CA0F539B-062F-4866-8FD9-57549D83DD0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CA0F539B-062F-4866-8FD9-57549D83DD0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CA0F539B-062F-4866-8FD9-57549D83DD0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CA0F539B-062F-4866-8FD9-57549D83DD0A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
