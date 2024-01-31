@@ -65,16 +65,16 @@ $$;
 
 
 -- 3 func
-CREATE OR REPLACE FUNCTION generate_medical_records_of_pet2(mel bigint)
+CREATE OR REPLACE FUNCTION generate_medical_records_of_pet(med_id bigint)
 RETURNS TABLE (vac_status varchar,Last_v_Date date,med_con varchar,pet_id bigint)
 LANGUAGE plpgsql
 AS $$
 BEGIN
-    RETURN QUERY SELECT m.vac_status,m.Last_v_Date,m.med_con,m.pet_id  FROM Medical_Records as m WHERE m.pet_id = mel limit 1;
+    RETURN QUERY SELECT m.vac_status,m.Last_v_Date,m.med_con,m.pet_id  FROM Medical_Records as m WHERE m.pet_id = med_id;
 END;
 $$;
 
-SELECT * FROM generate_medical_records_of_pet2(2);
+SELECT * FROM generate_medical_records_of_pet(1);
 
 
 --This home task create by 
