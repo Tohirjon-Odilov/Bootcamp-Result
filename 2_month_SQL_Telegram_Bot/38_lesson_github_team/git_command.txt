@@ -1,0 +1,27 @@
+git config --list //git haqidagi ma'lumotlarni olish
+git config --global user.name "your username" //git username'ni o'zgartirish
+git config --global user.email "your email" //git email'ni o'zgartirish
+
+git add . // barcha fayllarni qo'shish
+git add * // faqatgina eski fayllarni update bo'lganlarini qo'shadi. Yangi yaratilganlar qo'shilmaydi.
+git add fileName // faqat shunigina qo'shadi
+
+git log // barcha qilingan commit'larni ko'rish
+git log --pretty // git log
+git reflog // id'lari bilan chiqarish
+
+git checkout --<file> // faylda bo'lgan o'zgarishlarni bekor qiladi
+git checkout --. // barcha fayllarni bekor qiladi
+
+git revert [commit_id] //
+
+git remote -v // github project manzilini bilish
+git switch branchname // branch'ni almashtirish
+
+git branch -b users/tohirjon-odilov/create-product-table //
+git branch -a //
+git branch -m users/tohirjon-odilov/test1 //
+git branch -d users/tohirjon-odilov/test1 //
+git checkout users/tohirjon-odilov/test1 //
+
+closes #1 close issue
