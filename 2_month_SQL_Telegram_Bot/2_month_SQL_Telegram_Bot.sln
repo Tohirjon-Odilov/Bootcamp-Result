@@ -37,7 +37,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "36_lesson_function_advanced
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "37_lesson_index_switch_lop", "37_lesson_index_switch_lop\37_lesson_index_switch_lop.csproj", "{ADBF6EC1-ABB8-460A-8D46-22BB2130DBE9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "38_lesson_github_team", "38_lesson_github_team\38_lesson_github_team.csproj", "{270FF3C5-48D0-4943-BC4C-166A474D7F2E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "38_lesson_github_team", "38_lesson_github_team\38_lesson_github_team.csproj", "{270FF3C5-48D0-4943-BC4C-166A474D7F2E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "39_lesson_exam_1_kun_telegram_bt", "39_lesson_exam_1_kun_telegram_bt\39_lesson_exam_1_kun_telegram_bt.csproj", "{88AAC64B-2D39-48D8-AA5A-E84BD9C3DB87}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -117,6 +119,10 @@ Global
 		{270FF3C5-48D0-4943-BC4C-166A474D7F2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{270FF3C5-48D0-4943-BC4C-166A474D7F2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{270FF3C5-48D0-4943-BC4C-166A474D7F2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88AAC64B-2D39-48D8-AA5A-E84BD9C3DB87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88AAC64B-2D39-48D8-AA5A-E84BD9C3DB87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88AAC64B-2D39-48D8-AA5A-E84BD9C3DB87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88AAC64B-2D39-48D8-AA5A-E84BD9C3DB87}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
