@@ -61,8 +61,6 @@ namespace _25_lesson_TelegramBot_Basic
 
                                 var data = io.File.ReadAllText(jsonFilePath);
 
-                                list.Add(update.Message.Contact);
-
                                 using (StreamWriter sw = new StreamWriter(jsonFilePath))
                                 {
                                     sw.WriteLine(JsonConvert.SerializeObject(list, Formatting.Indented));

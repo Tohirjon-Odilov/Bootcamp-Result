@@ -25,26 +25,6 @@
     "user_id": 1921207596
   },
   {
-    "phone_number": "+998992270611",
-    "first_name": "</ATOM>",
-    "user_id": 1417765739
-  },
-  {
-    "phone_number": "+998992270611",
-    "first_name": "</ATOM>",
-    "user_id": 1417765739
-  },
-  {
-    "phone_number": "+998998734975",
-    "first_name": "Tohirjon",
-    "user_id": 1633746526
-  },
-  {
-    "phone_number": "+998998734975",
-    "first_name": "Tohirjon",
-    "user_id": 1633746526
-  },
-  {
     "phone_number": "+998916800819",
     "first_name": "Tohirjon",
     "last_name": "Odilov",
@@ -119,5 +99,15 @@
     "phone_number": "998940217012",
     "first_name": "Mr.Otabek",
     "user_id": 5091219046
+  },
+  {
+    "phone_number": "+998992270611",
+    "first_name": "</ATOM>",
+    "user_id": 1417765739
+  },
+  {
+    "phone_number": "+998998734975",
+    "first_name": "Tohirjon",
+    "user_id": 1633746526
   }
 ]
