@@ -198,6 +198,15 @@ ALTER TABLE ONLY public.supermarket_locations
 --  END AS type
 --FROM  shop_products;
 
+--19-savol
+--select supermarket_id,supermarket_name,count(distinct product_id)
+--from supermarkets
+--join supermarket_locations using(supermarket_id)
+--join customer_orders using(supermarket_location_id)
+--join customer_order_details using(customer_order_id)
+--group by(supermarket_id)
+
+
 --20
 --CREATE or replace FUNCTION GETPRODUCTLISTBYOPERATIONDATE11(OPERATIONDATE date) RETURNS TABLE (P VARCHAR(255)) LANGUAGE PlpgSql AS $$
 --begin
@@ -207,6 +216,26 @@ ALTER TABLE ONLY public.supermarket_locations
 --where DATE(operation_time)=operationDate;
 --end;$$;
 --select * from GETPRODUCTLISTBYOPERATIONDATE11('2011-03-24');
+
+--21
+--CREATE or replace FUNCTION getCustomerListForManufacturer1(manufacturer_name1 varchar) RETURNS TABLE (P VARCHAR(255)) LANGUAGE PlpgSql AS $$
+--begin
+--return query select product_titles.product_title from product_manufacturers
+--inner join shop_products on product_manufacturer_id=manufacturer_id
+--inner join product_titles on shop_products.product_title_id=product_titles.product_title_id
+--where manufacturer_name=manufacturer_name1;
+--end;$$;
+
+--select * from getCustomerListForManufacturer1('OFS Capital Corporation');
+
+--23
+--create view Checkout as
+--select pe.person_first_name|| ' ' || pe.person_last_name as customer_full_name, pt.product_title, cos.price_with_discount, 
+--cos.product_amount, cos.price_with_discount/cos.product_amount as for_per_product from customer_order_details as 
+--cos inner join customer_orders as co on cos.customer_order_id = co.customer_order_id
+--inner join persons as pe on pe.person_id = co.customer_id 
+--inner join shop_products as sp on sp.product_id=cos.product_id
+--inner join product_titles as pt on pt.product_title_id = sp.product_title_id where cos.product_amount > 1
 
 --24
 --create view product_details  as
