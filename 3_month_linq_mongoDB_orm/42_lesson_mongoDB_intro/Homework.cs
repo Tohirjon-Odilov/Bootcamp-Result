@@ -1,4 +1,5 @@
 ﻿using Npgsql;
+using System.Xml.Linq;
 
 namespace _42_lesson_mongoDB_intro
 {
@@ -6,9 +7,28 @@ namespace _42_lesson_mongoDB_intro
     {
         public Homework()
         {
-            GetByName(Console.ReadLine()!);
+            //GetByName(Console.ReadLine()!);
+            //Insert("Alimardon");
+            //Delete("Alimardon");
+            GetAll();
+            //Update("Alimardon", "Alijon");
+
         }
 
+        public static void Update(string v1, string v2)
+        {
+            string connectionString = "Host=localhost;Port=5432;Database=PgConnect;User Id=postgres;Password=coder;";
+
+            using NpgsqlConnection connection = new NpgsqlConnection(connectionString);
+            connection.Open();
+
+            string query = $"update testtable set Name = '{v2}' where Name = '{v1}';";
+            using NpgsqlCommand cmd = new NpgsqlCommand(query, connection);
+
+            var countRow = cmd.ExecuteNonQuery();
+
+            Console.WriteLine(countRow + " qator yangilandi");
+        }
 
         public static void GetAll()
         {
@@ -18,7 +38,7 @@ namespace _42_lesson_mongoDB_intro
             {
                 connection.Open();
 
-                string query = "select * from TestTable1;";
+                string query = "select * from TestTable;";
                 using NpgsqlCommand cmd = new NpgsqlCommand(query, connection);
 
                 var result = cmd.ExecuteReader();
@@ -57,7 +77,7 @@ namespace _42_lesson_mongoDB_intro
             using NpgsqlConnection connection = new NpgsqlConnection(connectionString);
             connection.Open();
 
-            string query = $"insert into Testtable1(Name) values('{name}');insert into Testtable1(Name) values('{name}');";
+            string query = $"insert into testtable(Name) values('{name}');";
             using NpgsqlCommand cmd = new NpgsqlCommand(query, connection);
 
             var countRow = cmd.ExecuteNonQuery();
@@ -72,7 +92,7 @@ namespace _42_lesson_mongoDB_intro
             using NpgsqlConnection connection = new NpgsqlConnection(connectionString);
             connection.Open();
 
-            string query = $"delete from TestTable1 where Name='{name}'";
+            string query = $"delete from testtable where Name='{name}'";
             using NpgsqlCommand cmd = new NpgsqlCommand(query, connection);
 
             var rowCount = cmd.ExecuteNonQuery();
