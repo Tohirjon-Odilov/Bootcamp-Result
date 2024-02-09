@@ -5,7 +5,9 @@ VisualStudioVersion = 17.8.34511.84
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "41_lesson_partition_qanday_qilib_samarali_organish_mumkin", "41_lesson_partition_qanday_qilib_samarali_organish_mumkin\41_lesson_partition_qanday_qilib_samarali_organish_mumkin.csproj", "{3481F0D2-55FB-414A-9E97-952DF52F2E08}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "42_lesson_mongoDB_intro", "42_lesson_mongoDB_intro\42_lesson_mongoDB_intro.csproj", "{7D04AAD7-4A9A-4344-AC2B-7672733193AD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "42_lesson_mongoDB_intro", "42_lesson_mongoDB_intro\42_lesson_mongoDB_intro.csproj", "{7D04AAD7-4A9A-4344-AC2B-7672733193AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "43_lesson_mongoDb_connect_c#", "43_lesson_mongoDb_connect_c#\43_lesson_mongoDb_connect_c#.csproj", "{3AC9AF95-3CEA-4DD4-A484-5CAC1ABF3FBA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{7D04AAD7-4A9A-4344-AC2B-7672733193AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7D04AAD7-4A9A-4344-AC2B-7672733193AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7D04AAD7-4A9A-4344-AC2B-7672733193AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AC9AF95-3CEA-4DD4-A484-5CAC1ABF3FBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AC9AF95-3CEA-4DD4-A484-5CAC1ABF3FBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AC9AF95-3CEA-4DD4-A484-5CAC1ABF3FBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AC9AF95-3CEA-4DD4-A484-5CAC1ABF3FBA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
