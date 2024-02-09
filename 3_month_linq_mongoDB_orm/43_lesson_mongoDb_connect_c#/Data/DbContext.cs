@@ -1,5 +1,5 @@
-﻿using MongoDB.Driver;
-using System.Security.Cryptography.X509Certificates;
+﻿using MongoDB.Bson;
+using MongoDB.Driver;
 
 namespace _43_lesson_mongoDb_connect_c_;
 
@@ -15,22 +15,42 @@ public class DbContext
         //    Console.WriteLine(item);
         //}
 
-
-
-
     }
+
+    public List<BsonDocument> GetDatabaseAsList()
+    {
+        return mongoClient.ListDatabases().ToList();
+    }
+
     public IMongoDatabase GetDatbaseByName(string databaseName)
     {
         return mongoClient.GetDatabase(databaseName);
     }
 
-    //public async Task CreateNewCollection(IMongoDatabase database, string collectionName)
-    //{
-    //    await database.CreateCollectionAsync();
-    //}
-
-    public IMongoDatabase GetDatabaseByName(string v)
+    public async Task CreateNewCollectionAsync(IMongoDatabase database, string collectionName)
     {
-        throw new NotImplementedException();
+        await database.CreateCollectionAsync(collectionName);
+    }
+
+    public async Task CreateNewCollectionAsync(string databaseName, string collectionName)
+    {
+        IMongoDatabase database = this.GetDatbaseByName(databaseName);
+        await database.CreateCollectionAsync(collectionName);
+    }
+
+    public IMongoCollection<BsonDocument> GetMongoCollection(IMongoDatabase database, string collectionName)
+    {
+        return database.GetCollection<BsonDocument>(name: collectionName);
+    }
+
+    public IMongoCollection<BsonDocument> GetMongoCollection(string databaseName, string collectionName)
+    {
+        IMongoDatabase database = GetDatbaseByName(databaseName);
+        return database.GetCollection<BsonDocument>(collectionName);
+    }
+
+    public async Task InsertDocumentAsync(IMongoCollection<BsonDocument> collection, BsonDocument document)
+    {
+        await collection.InsertOneAsync(document);
     }
 }
