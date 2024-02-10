@@ -6,9 +6,9 @@ namespace _43_lesson_mongoDb_connect_c_
     {
         public Lesson()
         {
-            const string CONNECTIONSTRING = "Server=127.0.0.1;Port=5432;Database=PgConnect;username=postgres;Password=coder;";
+            const string connectionstring = "Server=127.0.0.1;Port=5432;Database=PgConnect;username=postgres;Password=coder;";
 
-            NpgsqlConnection connection = new NpgsqlConnection(CONNECTIONSTRING);
+            NpgsqlConnection connection = new NpgsqlConnection(connectionstring);
 
             connection.Open();
 
@@ -17,8 +17,7 @@ namespace _43_lesson_mongoDb_connect_c_
             Console.WriteLine(command.ExecuteNonQuery());
 
             // logic
-            Console.Write("Database'ga muvaffaqiyatli ulandi!\n\n");
-
+            Console.Write("Database'ga muvaffaqiyatli ulandi.\n\n");
 
             connection.Close();
         }
