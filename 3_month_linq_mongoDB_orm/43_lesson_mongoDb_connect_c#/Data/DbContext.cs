@@ -9,12 +9,6 @@ public class DbContext
     public DbContext()
     {
         mongoClient = new MongoClient("mongodb://localhost:27017/");
-
-        //foreach (var item in mongoClient.ListDatabases().ToList())
-        //{
-        //    Console.WriteLine(item);
-        //}
-
     }
 
     public List<BsonDocument> GetDatabaseAsList()
