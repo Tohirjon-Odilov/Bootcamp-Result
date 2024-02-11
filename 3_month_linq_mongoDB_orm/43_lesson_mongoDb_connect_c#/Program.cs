@@ -33,9 +33,10 @@
 
 var homework = new Homework();
 // 4. GetAll
-homework.GetAll(tableName: "users");
-//homework.CreateTable(tableName: "Students",column1: "Id serial", column2: "Name varchar(50)", column3: "Age int");
-//homework.InsertTable();
-//homework.GetLike("%o%");
-
+//homework.GetAll(tableName: "users");
+// 5. GetByID
+//homework.GetById(tableName: "users", id: 3);
+// 6. Delete
+//homework.Delete(tableName: "users", id: 12);
+// 7. Update by id
 #endregion

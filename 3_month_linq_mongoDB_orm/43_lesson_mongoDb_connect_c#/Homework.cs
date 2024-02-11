@@ -61,12 +61,12 @@ namespace _43_lesson_mongoDb_connect_c_
             Open();
             query = $"select * from {tableName}";
             command = new NpgsqlCommand(query, connection);
-            var data = command.ExecuteReader();
-            var tableCount = data.FieldCount;
+            NpgsqlDataReader? data = command.ExecuteReader();
+            int tableCount = data.FieldCount;
             while(data.Read())
             {
-                var columnName = string.Empty;
-                for(var i = 0; i < tableCount; i++)
+                string? columnName = string.Empty;
+                for(int i = 0; i < tableCount; i++)
                 {
                     columnName += $"{data[i]} ";
                 }
@@ -75,22 +75,32 @@ namespace _43_lesson_mongoDb_connect_c_
             Close();
         }
         //5.GetById qilib qaysidur Id siga tengini topib kelish
-        public void GetById(int id)
+        public void GetById(string tableName, int id)
         {
             Open();
-            query = $"select * from users where id = {id}";
+            query = $"select * from {tableName}\nwhere id = 2";
             command = new NpgsqlCommand(query, connection);
-            Console.WriteLine(command.ExecuteNonQuery());
+            NpgsqlDataReader? data = command.ExecuteReader();
+            int tableCount = data.FieldCount;
+            string? columnName = string.Empty;
+            for(int i =0; i<tableCount; i++)
+            {
+                columnName += $"{data[i]} ";
+            }
+            Console.WriteLine(columnName);
             Close();
         }
         //6.Delete qilish.
-        public void Delete(int id)
+        public void Delete(string tableName, int id)
         {
             Open();
-            query = $"delete from users where id = {id}";
+            query = $"delete from {tableName} where id = {id}";
             command = new NpgsqlCommand(query, connection);
-            Console.WriteLine(command.ExecuteNonQuery());
-            Close();
+            if(command.ExecuteNonQuery() == 0)
+            {
+                Console.WriteLine("Bunday Id yo'q!");
+            }
+            Close();    
         }
         //7.Update for id column.
         public void UpdateById(int id, string name, int age)
@@ -124,10 +134,10 @@ namespace _43_lesson_mongoDb_connect_c_
             Close();
         }
         //10.yangi column qo'shish
-        public void AddColumn(string columnName)
+        public void AddColumn(string tableName, string columnNameWithType)
         {
             Open();
-            query = $"alter table users add column {columnName} varchar(50)";
+            query = $"alter table {tableName} add column {columnNameWithType}";
             command = new NpgsqlCommand(query, connection);
             Console.WriteLine(command.ExecuteNonQuery());
             Close();
