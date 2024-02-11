@@ -26,17 +26,18 @@
 //var insertData
 
 #endregion
-
+#region lesson
 //var lesson = new Lesson();
-
+#endregion
 #region Homework
-
 var homework = new Homework();
+#endregion
+
+#region chorniy
 // 4. GetAll
 //homework.GetAll(tableName: "users");
 // 5. GetByID
 //homework.GetById(tableName: "users", id: 3);
 // 6. Delete
 //homework.Delete(tableName: "users", id: 12);
-// 7. Update by id
 #endregion
