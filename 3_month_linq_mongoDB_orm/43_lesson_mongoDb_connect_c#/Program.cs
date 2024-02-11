@@ -1,11 +1,11 @@
 ﻿using _43_lesson_mongoDb_connect_c_;
 #region Amaliyot
-using MongoDB.Bson;
-using MongoDB.Driver;
+//using MongoDB.Bson;
+//using MongoDB.Driver;
 
-var client = new MongoClient("mongodb://localhost:27017");
+//var client = new MongoClient("mongodb://localhost:27017");
 
-var dbContext = new DbContext();
+//var dbContext = new DbContext();
 //IMongoDatabase database = dbContext.GetDatbaseByName("Lesson");
 //IAsyncCursor<BsonDocument>? collections = database.ListCollections();
 //Console.WriteLine(collections);
@@ -28,3 +28,14 @@ var dbContext = new DbContext();
 #endregion
 
 //var lesson = new Lesson();
+
+#region Homework
+
+var homework = new Homework();
+// 4. GetAll
+homework.GetAll(tableName: "users");
+//homework.CreateTable(tableName: "Students",column1: "Id serial", column2: "Name varchar(50)", column3: "Age int");
+//homework.InsertTable();
+//homework.GetLike("%o%");
+
+#endregion
