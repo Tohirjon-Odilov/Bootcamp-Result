@@ -1,14 +1,24 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Driver;
+using System.Security.Cryptography;
+using System.Text;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace _44_lesson_linq
 {
     public partial class Service
     {
+        const int keySize = 64;
+        const int iterations = 350000;
+        HashAlgorithmName hashAlgorithm = HashAlgorithmName.SHA512;
         private ConsoleKeyInfo key;
+        public object currentUser = null;
+        public object otherUser = null;
 
         public Task<bool> isLogin { get; private set; }
+        public int back { get; private set; }
+        public string? newMessage { get; private set; }
+
         public void UI() 
         {
             var isExit = true;
@@ -21,16 +31,17 @@ namespace _44_lesson_linq
                 Console.Write("Enter password >> ");
                 string password = Console.ReadLine()!;
 
-                IMongoCollection<BsonDocument>? collection = GetMongoCollection
-                (
-                    databaseName: "Lesson",
-                    collectionName: "Messanger"
-                );
+                var hashPassword = HashPasword(password, out byte[]? salt);
 
+                Console.WriteLine($"Password hash: {hashPassword}");
+                Console.WriteLine($"Generated salt: {Convert.ToHexString(salt)}");
+                Console.ReadKey();
                 BsonDocument document = new BsonDocument
                 {
                     {"username", username},
-                    {"password", password}
+                    {"password", hashPassword},
+                    {"sendMessage", "" },
+                    {"receiveMessage", "" }
                 };
 
                 var filter = Builders<BsonDocument>.Filter.JsonSchema(document);
@@ -61,7 +72,8 @@ namespace _44_lesson_linq
 
                     while (true)
                     {
-                        Console.WriteLine("User list");
+                        Console.Clear();
+                        Console.WriteLine("User list\n");
                         for (int j = 0; j < data.Count; j++)
                         {
                             if (j == i)
@@ -78,26 +90,67 @@ namespace _44_lesson_linq
                         {
                             ConsoleKey.UpArrow => up(i, data.Count),
                             ConsoleKey.DownArrow => down(i, data.Count),
+                            ConsoleKey.Enter => Enter(i, data.Count, data),
                             _ => myReturn(i, data.Count),
                         };
-                        Console.Clear();
+                        if(back == 1)
+                        {
+                            break;
+                        }
                     }
                 }
             }
         }
 
+        private int Enter(int i, int count, List<BsonDocument> data)
+        {
+            Console.Write("Enter message >> ");
+            newMessage = Console.ReadLine();
+            // Define filter to specify which documents to update
+            FilterDefinition<BsonDocument>? filter = Builders<BsonDocument>.Filter.Eq("username", data[i]["username"]);
+            // Define update operation
+            UpdateDefinition<BsonDocument>? update = Builders<BsonDocument>.Update.Set("sendMessage", newMessage);
+            // Execute update operation
+            UpdateResult? result = collection.UpdateOne(filter, update);
+            // Check if the update was successfully
+            if (result.ModifiedCount > 0)
+            {
+                Console.WriteLine("Update successful.");
+            }
+            else
+            {
+                Console.WriteLine("No documents matched the filter.");
+            }
+            return i;
+        }
+
         private int myReturn(int i, int count)
         {
+            back = 1;
             return i;
         }
         private int up(int i, int count)
         {
-            if (i <= 0) return count;
+            if (i <= 0) return count-1;
             return (i - 1) % count;
         }
         private int down(int i, int count)
         {
             return (i + 1) % count;
+        }
+
+        public string HashPasword(string password, out byte[] salt)
+        {
+            salt = RandomNumberGenerator.GetBytes(keySize);
+
+            var hash = Rfc2898DeriveBytes.Pbkdf2(
+                Encoding.UTF8.GetBytes(password),
+                salt,
+                iterations,
+                hashAlgorithm,
+                keySize);
+
+            return Convert.ToHexString(hash);
         }
 
     }
