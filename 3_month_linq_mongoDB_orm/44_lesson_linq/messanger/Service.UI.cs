@@ -14,11 +14,12 @@ namespace _44_lesson_linq
         private ConsoleKeyInfo key;
         public object currentUser = null;
         public object otherUser = null;
+        public string username = string.Empty;
+        //private bool isUserList = true;
 
         public Task<bool> isLogin { get; private set; }
         public int back { get; private set; }
         public string? newMessage { get; private set; }
-
         public void UI() 
         {
             var isExit = true;
@@ -27,7 +28,7 @@ namespace _44_lesson_linq
                 Console.Clear();
                 Console.WriteLine("Welcome to my Messanger!");
                 Console.Write("Enter username >> ");
-                string username = Console.ReadLine()!;
+                username = Console.ReadLine()!;
                 Console.Write("Enter password >> ");
                 string password = Console.ReadLine()!;
 
@@ -44,7 +45,7 @@ namespace _44_lesson_linq
                     {"receiveMessage", "" }
                 };
 
-                var filter = Builders<BsonDocument>.Filter.JsonSchema(document);
+                //var filter = Builders<BsonDocument>.Filter.JsonSchema(document);
 
                 if(!string.IsNullOrWhiteSpace(username) && !string.IsNullOrWhiteSpace(password))
                 {
@@ -70,12 +71,13 @@ namespace _44_lesson_linq
                     var data = collection.Find(dataFilter).ToList();
                     int i = 0;
 
-                    while (true)
+                    while (back != 2)
                     {
                         Console.Clear();
                         Console.WriteLine("User list\n");
                         for (int j = 0; j < data.Count; j++)
                         {
+                            if (data[j]["username"] == username) continue;
                             if (j == i)
                             {
                                 Console.ForegroundColor = ConsoleColor.Green;
@@ -85,18 +87,16 @@ namespace _44_lesson_linq
                             else
                                 Console.WriteLine($@"{data[j]["username"]}");
                         }
+                        Console.WriteLine("\nPress ESC for back");
                         key = Console.ReadKey();
                         i = key.Key switch
                         {
                             ConsoleKey.UpArrow => up(i, data.Count),
                             ConsoleKey.DownArrow => down(i, data.Count),
                             ConsoleKey.Enter => Enter(i, data.Count, data),
-                            _ => myReturn(i, data.Count),
+                            ConsoleKey.Escape => myReturn(i, "escape"),
+                            _ => myReturn(i, "back"),
                         };
-                        if(back == 1)
-                        {
-                            break;
-                        }
                     }
                 }
             }
@@ -104,29 +104,86 @@ namespace _44_lesson_linq
 
         private int Enter(int i, int count, List<BsonDocument> data)
         {
-            Console.Write("Enter message >> ");
-            newMessage = Console.ReadLine();
-            // Define filter to specify which documents to update
-            FilterDefinition<BsonDocument>? filter = Builders<BsonDocument>.Filter.Eq("username", data[i]["username"]);
-            // Define update operation
-            UpdateDefinition<BsonDocument>? update = Builders<BsonDocument>.Update.Set("sendMessage", newMessage);
-            // Execute update operation
-            UpdateResult? result = collection.UpdateOne(filter, update);
-            // Check if the update was successfully
-            if (result.ModifiedCount > 0)
+            int j = 0;
+            string[]? contextChoice = { "Send Message", "Receive Message" };
+            while (true)
             {
-                Console.WriteLine("Update successful.");
+                Console.Clear();
+                for (int k = 0; k < contextChoice.Length; k++)
+                {
+                    if (k == j)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.WriteLine($@"{contextChoice[k]}");
+                        Console.ForegroundColor = ConsoleColor.DarkGray;
+                    }
+                    else
+                        Console.WriteLine(contextChoice[k]);
+                }
+                key = Console.ReadKey();
+                if (key.KeyChar == '\u000d')
+                    break;
+                j = (j + 1) % contextChoice.Length;
             }
+            if (j == 0)
+                SendMessage(i, count, data);
             else
-            {
-                Console.WriteLine("No documents matched the filter.");
-            }
+                RecieveMessage(i, count, data);
             return i;
         }
 
-        private int myReturn(int i, int count)
+        private void RecieveMessage(int i, int count, List<BsonDocument> data)
         {
-            back = 1;
+            FilterDefinition<BsonDocument>? filter = Builders<BsonDocument>.Filter.Eq("sender", username);
+            var find = usersMessages.Find(filter).ToList();
+            foreach (var item in find)
+            {
+                Console.WriteLine($"{item["reciever"]}:\n\t{item["message"]}");
+            }
+            Console.ReadKey();
+        }
+
+        private int SendMessage(int i, int count, List<BsonDocument> data)
+        {
+            Console.Clear();
+            //newMessage += $"{data[i]["_id"]} ";
+            Console.Write("Enter message >> ");
+            //newMessage += Console.ReadLine();
+            newMessage = Console.ReadLine();
+            BsonDocument document = new BsonDocument
+            {
+                {"sender", username},
+                {"reciever", data[i]["username"]},
+                {"message", newMessage},
+            };
+            InsertDocumentAsync(usersMessages, document);
+            // Define filter to specify which documents to update
+            //FilterDefinition<BsonDocument>? filter = Builders<BsonDocument>.Filter.Eq("username", data[i]["username"]);
+            //var find = usersMessages.Find(filter).ToList();
+            //foreach (var item in find)
+            //{
+            //    Console.WriteLine(item);
+            //}
+            Console.ReadKey();
+            //// Define update operation
+            //UpdateDefinition<BsonDocument>? update = Builders<BsonDocument>.Update.Set("sendMessage", newMessage);
+            //// Execute update operation
+            //UpdateResult? result = collection.UpdateOne(filter, update);
+            //// Check if the update was successfully
+            //if (result.ModifiedCount > 0)
+            //{
+            //    Console.WriteLine("Update successful.");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("No documents matched the filter.");
+            //}
+            return i;
+        }
+
+        private int myReturn(int i, string status)
+        {
+            back = 2;
             return i;
         }
         private int up(int i, int count)
@@ -138,20 +195,5 @@ namespace _44_lesson_linq
         {
             return (i + 1) % count;
         }
-
-        public string HashPasword(string password, out byte[] salt)
-        {
-            salt = RandomNumberGenerator.GetBytes(keySize);
-
-            var hash = Rfc2898DeriveBytes.Pbkdf2(
-                Encoding.UTF8.GetBytes(password),
-                salt,
-                iterations,
-                hashAlgorithm,
-                keySize);
-
-            return Convert.ToHexString(hash);
-        }
-
     }
 }

@@ -1,5 +1,7 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Driver;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace _44_lesson_linq
 {
@@ -23,6 +25,19 @@ namespace _44_lesson_linq
         public List<BsonDocument> GetDatabasesAsList()
         {
             return mongoClient.ListDatabases().ToList();
+        }
+        public string HashPasword(string password, out byte[] salt)
+        {
+            salt = RandomNumberGenerator.GetBytes(keySize);
+
+            var hash = Rfc2898DeriveBytes.Pbkdf2(
+                Encoding.UTF8.GetBytes(password),
+                salt,
+                iterations,
+                hashAlgorithm,
+                keySize);
+
+            return Convert.ToHexString(hash);
         }
     }
 }
