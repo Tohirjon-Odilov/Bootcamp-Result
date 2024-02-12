@@ -7,7 +7,6 @@ namespace _44_lesson_linq
         public MongoClient mongoClient { get; }
         public Service()
         {
-            Console.WriteLine("Welcome to my Messanger!");
             mongoClient = new MongoClient("mongodb://localhost:27017/");
         }
         public void Run()
