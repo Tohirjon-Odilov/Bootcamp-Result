@@ -17,6 +17,8 @@ namespace _44_lesson_linq
         public string username = string.Empty;
         //private bool isUserList = true;
         public bool isExit = true;
+        private List<BsonDocument> filterUser;
+
         public bool isLogin { get; set; } = false;
         public int back { get; private set; }
         public string? newMessage { get; private set; }
@@ -53,7 +55,12 @@ namespace _44_lesson_linq
                     Console.Clear();
                     continue;
                 }
-                Console.WriteLine(VerifyPassword(password, hashPassword, salt));
+                int iterations = 350_000;
+                int keySize = 64;
+                var hashAlgorithm = HashAlgorithmName.SHA512;
+                Console.WriteLine(check("username"));
+                Console.WriteLine(VerifyPassword(password, filterUser[0]["password"].ToString(), filterUser[0]["salt"].ToString(), keySize, iterations, hashAlgorithm));
+                Console.ReadKey();
                 if(check(username))
                 {
                     Console.Clear();
@@ -73,7 +80,7 @@ namespace _44_lesson_linq
                     Console.Write("Press any key to continue...");
                     Console.ReadKey();
                 }
-                if (VerifyPassword(password, hashPassword, salt))
+                if (VerifyPassword(password, filterUser[0]["password"].ToString(), filterUser[0]["salt"].ToString(), keySize, iterations, hashAlgorithm))
                 {
                     var dataFilter = Builders<BsonDocument>.Filter.Empty;
                     var data = collection.Find(dataFilter).ToList();
@@ -95,6 +102,7 @@ namespace _44_lesson_linq
                             else
                                 Console.WriteLine($@"{data[j]["username"]}");
                         }
+
                         Console.WriteLine("\nPress ESC for exit");
                         Console.WriteLine("Press BackSpace for back");
                         key = Console.ReadKey();
@@ -122,13 +130,14 @@ namespace _44_lesson_linq
 
         private bool check(string username)
         {
-            var filter = Builders<BsonDocument>.Filter.Eq("username", username);
             var allUser = Builders<BsonDocument>.Filter.Empty;
             var allData = collection.Find(allUser).ToList();
-            var data = collection.Find(filter).ToList();
+
+            var filter = Builders<BsonDocument>.Filter.Eq("username", "Tohirjon");
+            filterUser = collection.Find(filter).ToList();
             if(allData.Count == 0)
-                HasUser = true;
-            if (data.Count == 0)
+                HasUser = false;
+            if (filterUser.Count == 0)
                 return false;
             return true;
         }
@@ -165,7 +174,7 @@ namespace _44_lesson_linq
 
         private void RecieveMessage(int i, int count, List<BsonDocument> data)
         {
-            FilterDefinition<BsonDocument>? filter = Builders<BsonDocument>.Filter.Eq("sender", username);
+            FilterDefinition<BsonDocument>? filter = Builders<BsonDocument>.Filter.Eq("reciever", username);
             var find = usersMessages.Find(filter).ToList();
             foreach (var item in find)
             {
@@ -210,11 +219,24 @@ namespace _44_lesson_linq
         {
             return (i + 1) % count;
         }
-        private bool VerifyPassword(string password, string hash, byte[] salt)
+        private bool VerifyPassword(
+            string passwordFromUser,
+            string hashFromDB,
+            string saltAsStringFromDB,
+            int keySizeFromProgram,
+            int iterationsFromProgram,
+            HashAlgorithmName hashAlgorithmFromProgram)
         {
-            var hashToCompare = Rfc2898DeriveBytes.Pbkdf2(password, salt, iterations, hashAlgorithm, keySize);
+            byte[] salt = Convert.FromHexString(saltAsStringFromDB);
 
-            return CryptographicOperations.FixedTimeEquals(hashToCompare, Convert.FromHexString(hash));
+            var hashToCompare = Rfc2898DeriveBytes.Pbkdf2(
+                password: passwordFromUser,
+                salt,
+                iterations: iterationsFromProgram,
+                hashAlgorithm: hashAlgorithmFromProgram,
+                outputLength: keySizeFromProgram);
+
+            return CryptographicOperations.FixedTimeEquals(hashToCompare, Convert.FromHexString(hashFromDB));
         }
     }
 }
