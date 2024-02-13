@@ -10,6 +10,7 @@ namespace _44_lesson_linq
         public IMongoCollection<BsonDocument>? usersMessages;
         public Service()
         {
+            Console.ForegroundColor = ConsoleColor.DarkGray;
             mongoClient = new MongoClient("mongodb://localhost:27017/");
             collection = GetMongoCollection
             (

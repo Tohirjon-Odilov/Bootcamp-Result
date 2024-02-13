@@ -7,9 +7,9 @@ namespace _44_lesson_linq
 {
     public partial class Service
     {
-        public async Task<bool> InsertDocumentAsync(IMongoCollection<BsonDocument> collection, BsonDocument document)
+        public bool InsertDocumentAsync(IMongoCollection<BsonDocument> collection, BsonDocument document)
         {
-            await collection.InsertOneAsync(document);
+            collection.InsertOneAsync(document);
             return true;
         }
         public IMongoDatabase GetDatabaseByName(string databaseName)

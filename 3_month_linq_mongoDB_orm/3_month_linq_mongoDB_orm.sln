@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "42_lesson_mongoDB_intro", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "43_lesson_mongoDb_connect_c#", "43_lesson_mongoDb_connect_c#\43_lesson_mongoDb_connect_c#.csproj", "{3AC9AF95-3CEA-4DD4-A484-5CAC1ABF3FBA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "44_lesson_linq", "44_lesson_linq\44_lesson_linq.csproj", "{9B59CB28-196D-4E82-9FBF-EC5D8BF1DEC8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "44_lesson_linq", "44_lesson_linq\44_lesson_linq.csproj", "{9B59CB28-196D-4E82-9FBF-EC5D8BF1DEC8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "45_lesson_WebApplication", "45_lesson_WebApplication\45_lesson_WebApplication.csproj", "{FA9F5E35-A153-4B28-B44F-2672C07F043C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{9B59CB28-196D-4E82-9FBF-EC5D8BF1DEC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B59CB28-196D-4E82-9FBF-EC5D8BF1DEC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B59CB28-196D-4E82-9FBF-EC5D8BF1DEC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA9F5E35-A153-4B28-B44F-2672C07F043C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA9F5E35-A153-4B28-B44F-2672C07F043C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA9F5E35-A153-4B28-B44F-2672C07F043C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA9F5E35-A153-4B28-B44F-2672C07F043C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

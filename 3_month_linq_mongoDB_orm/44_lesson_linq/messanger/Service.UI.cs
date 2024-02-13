@@ -16,42 +16,36 @@ namespace _44_lesson_linq
         public object otherUser = null;
         public string username = string.Empty;
         //private bool isUserList = true;
-
-        public Task<bool> isLogin { get; private set; }
+        public bool isExit = true;
+        public bool isLogin { get; set; } = false;
         public int back { get; private set; }
         public string? newMessage { get; private set; }
+        public BsonDocument document { get; private set; }
+        public bool HasUser { get; private set; } = false;
+
         public void UI() 
         {
-            var isExit = true;
+            isExit = true;
             while (isExit) 
             {
+                isLogin = false;
+                back = 0;
                 Console.Clear();
-                Console.WriteLine("Welcome to my Messanger!");
+                Console.WriteLine(" Welcome to my Messanger!");
                 Console.Write("Enter username >> ");
                 username = Console.ReadLine()!;
                 Console.Write("Enter password >> ");
                 string password = Console.ReadLine()!;
 
                 var hashPassword = HashPasword(password, out byte[]? salt);
-
-                Console.WriteLine($"Password hash: {hashPassword}");
-                Console.WriteLine($"Generated salt: {Convert.ToHexString(salt)}");
-                Console.ReadKey();
-                BsonDocument document = new BsonDocument
+                document = new BsonDocument
                 {
                     {"username", username},
                     {"password", hashPassword},
-                    {"sendMessage", "" },
-                    {"receiveMessage", "" }
+                    {"salt", Convert.ToHexString(salt)}
                 };
 
-                //var filter = Builders<BsonDocument>.Filter.JsonSchema(document);
-
-                if(!string.IsNullOrWhiteSpace(username) && !string.IsNullOrWhiteSpace(password))
-                {
-                    isLogin = InsertDocumentAsync(collection, document);
-                }
-                else
+                if(string.IsNullOrWhiteSpace(username) && string.IsNullOrWhiteSpace(password))
                 {
                     Console.WriteLine("Failed. Please try again");
                     Console.WriteLine("Press any key to continue...");
@@ -59,14 +53,28 @@ namespace _44_lesson_linq
                     Console.Clear();
                     continue;
                 }
-
-                if(isLogin.Result == true)
+                Console.WriteLine(VerifyPassword(password, hashPassword, salt));
+                if(check(username))
                 {
+                    Console.Clear();
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Username already exists");
+                    Console.ForegroundColor = ConsoleColor.DarkGray;
+                    Console.Write("Press any key to continue...");
+                    Console.ReadKey();
+                }
+                else
+                {
+                    isLogin = InsertDocumentAsync(collection, document);
                     Console.Clear();
                     Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine("Login successfully\n");
                     Console.ForegroundColor = ConsoleColor.DarkGray;
-
+                    Console.Write("Press any key to continue...");
+                    Console.ReadKey();
+                }
+                if (VerifyPassword(password, hashPassword, salt))
+                {
                     var dataFilter = Builders<BsonDocument>.Filter.Empty;
                     var data = collection.Find(dataFilter).ToList();
                     int i = 0;
@@ -87,7 +95,8 @@ namespace _44_lesson_linq
                             else
                                 Console.WriteLine($@"{data[j]["username"]}");
                         }
-                        Console.WriteLine("\nPress ESC for back");
+                        Console.WriteLine("\nPress ESC for exit");
+                        Console.WriteLine("Press BackSpace for back");
                         key = Console.ReadKey();
                         i = key.Key switch
                         {
@@ -95,11 +104,33 @@ namespace _44_lesson_linq
                             ConsoleKey.DownArrow => down(i, data.Count),
                             ConsoleKey.Enter => Enter(i, data.Count, data),
                             ConsoleKey.Escape => myReturn(i, "escape"),
-                            _ => myReturn(i, "back"),
+                            ConsoleKey.Backspace => myReturn(i, "back"),
+                            _ => myReturn(i, "any"),
                         };
+                    
                     }
                 }
+                else
+                {
+                    Console.Clear();
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Invalid password or login");
+                    Console.ForegroundColor = ConsoleColor.DarkGray;
+                }
             }
+        }
+
+        private bool check(string username)
+        {
+            var filter = Builders<BsonDocument>.Filter.Eq("username", username);
+            var allUser = Builders<BsonDocument>.Filter.Empty;
+            var allData = collection.Find(allUser).ToList();
+            var data = collection.Find(filter).ToList();
+            if(allData.Count == 0)
+                HasUser = true;
+            if (data.Count == 0)
+                return false;
+            return true;
         }
 
         private int Enter(int i, int count, List<BsonDocument> data)
@@ -138,7 +169,8 @@ namespace _44_lesson_linq
             var find = usersMessages.Find(filter).ToList();
             foreach (var item in find)
             {
-                Console.WriteLine($"{item["reciever"]}:\n\t{item["message"]}");
+                if (data[i]["username"] == item["reciever"])
+                    Console.WriteLine($"{item["sender"]}:\n\t{item["message"]}");
             }
             Console.ReadKey();
         }
@@ -146,9 +178,7 @@ namespace _44_lesson_linq
         private int SendMessage(int i, int count, List<BsonDocument> data)
         {
             Console.Clear();
-            //newMessage += $"{data[i]["_id"]} ";
             Console.Write("Enter message >> ");
-            //newMessage += Console.ReadLine();
             newMessage = Console.ReadLine();
             BsonDocument document = new BsonDocument
             {
@@ -157,32 +187,17 @@ namespace _44_lesson_linq
                 {"message", newMessage},
             };
             InsertDocumentAsync(usersMessages, document);
-            // Define filter to specify which documents to update
-            //FilterDefinition<BsonDocument>? filter = Builders<BsonDocument>.Filter.Eq("username", data[i]["username"]);
-            //var find = usersMessages.Find(filter).ToList();
-            //foreach (var item in find)
-            //{
-            //    Console.WriteLine(item);
-            //}
+
             Console.ReadKey();
-            //// Define update operation
-            //UpdateDefinition<BsonDocument>? update = Builders<BsonDocument>.Update.Set("sendMessage", newMessage);
-            //// Execute update operation
-            //UpdateResult? result = collection.UpdateOne(filter, update);
-            //// Check if the update was successfully
-            //if (result.ModifiedCount > 0)
-            //{
-            //    Console.WriteLine("Update successful.");
-            //}
-            //else
-            //{
-            //    Console.WriteLine("No documents matched the filter.");
-            //}
             return i;
         }
 
         private int myReturn(int i, string status)
         {
+            if (status == "escape")
+                isExit = false;
+            else if (status == "back")
+                back = 1;
             back = 2;
             return i;
         }
@@ -194,6 +209,12 @@ namespace _44_lesson_linq
         private int down(int i, int count)
         {
             return (i + 1) % count;
+        }
+        private bool VerifyPassword(string password, string hash, byte[] salt)
+        {
+            var hashToCompare = Rfc2898DeriveBytes.Pbkdf2(password, salt, iterations, hashAlgorithm, keySize);
+
+            return CryptographicOperations.FixedTimeEquals(hashToCompare, Convert.FromHexString(hash));
         }
     }
 }
