@@ -58,9 +58,6 @@ namespace _44_lesson_linq
                 int iterations = 350_000;
                 int keySize = 64;
                 var hashAlgorithm = HashAlgorithmName.SHA512;
-                //Console.WriteLine(check("username"));
-                //Console.WriteLine(VerifyPassword(password, filterUser[0]["password"].ToString(), filterUser[0]["salt"].ToString(), keySize, iterations, hashAlgorithm));
-                //Console.ReadKey();
                 if(check(username))
                 {
                     Console.Clear();
@@ -72,7 +69,6 @@ namespace _44_lesson_linq
                 }
                 else
                 {
-
                     isLogin = InsertDocumentAsync(collection, document);
                     Console.Clear();
                     Console.ForegroundColor = ConsoleColor.Green;
@@ -175,12 +171,15 @@ namespace _44_lesson_linq
 
         private void RecieveMessage(int i, int count, List<BsonDocument> data)
         {
+            Console.Clear();
             FilterDefinition<BsonDocument>? filter = Builders<BsonDocument>.Filter.Eq("reciever", username);
             var find = usersMessages.Find(filter).ToList();
             foreach (var item in find)
             {
                 if (data[i]["username"] == item["sender"])
                     Console.WriteLine($"{item["sender"]}:\n\t{item["message"]}");
+                else if (data[i]["username"] == item["reciever"])
+                    Console.WriteLine($"{item["message"]}:\n\t{item["reciever"]}");
             }
             Console.ReadKey();
         }
