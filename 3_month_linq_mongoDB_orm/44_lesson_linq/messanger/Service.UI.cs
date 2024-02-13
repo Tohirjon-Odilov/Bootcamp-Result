@@ -33,7 +33,7 @@ namespace _44_lesson_linq
                 isLogin = false;
                 back = 0;
                 Console.Clear();
-                Console.WriteLine(" Welcome to my Messanger!");
+                Console.WriteLine("Welcome to my Messanger!");
                 Console.Write("Enter username >> ");
                 username = Console.ReadLine()!;
                 Console.Write("Enter password >> ");
@@ -58,9 +58,9 @@ namespace _44_lesson_linq
                 int iterations = 350_000;
                 int keySize = 64;
                 var hashAlgorithm = HashAlgorithmName.SHA512;
-                Console.WriteLine(check("username"));
-                Console.WriteLine(VerifyPassword(password, filterUser[0]["password"].ToString(), filterUser[0]["salt"].ToString(), keySize, iterations, hashAlgorithm));
-                Console.ReadKey();
+                //Console.WriteLine(check("username"));
+                //Console.WriteLine(VerifyPassword(password, filterUser[0]["password"].ToString(), filterUser[0]["salt"].ToString(), keySize, iterations, hashAlgorithm));
+                //Console.ReadKey();
                 if(check(username))
                 {
                     Console.Clear();
@@ -72,6 +72,7 @@ namespace _44_lesson_linq
                 }
                 else
                 {
+
                     isLogin = InsertDocumentAsync(collection, document);
                     Console.Clear();
                     Console.ForegroundColor = ConsoleColor.Green;
@@ -80,7 +81,7 @@ namespace _44_lesson_linq
                     Console.Write("Press any key to continue...");
                     Console.ReadKey();
                 }
-                if (VerifyPassword(password, filterUser[0]["password"].ToString(), filterUser[0]["salt"].ToString(), keySize, iterations, hashAlgorithm))
+                if (isLogin || VerifyPassword(password, filterUser[0]["password"].ToString(), filterUser[0]["salt"].ToString(), keySize, iterations, hashAlgorithm))
                 {
                     var dataFilter = Builders<BsonDocument>.Filter.Empty;
                     var data = collection.Find(dataFilter).ToList();
@@ -133,7 +134,7 @@ namespace _44_lesson_linq
             var allUser = Builders<BsonDocument>.Filter.Empty;
             var allData = collection.Find(allUser).ToList();
 
-            var filter = Builders<BsonDocument>.Filter.Eq("username", "Tohirjon");
+            var filter = Builders<BsonDocument>.Filter.Eq("username", username);
             filterUser = collection.Find(filter).ToList();
             if(allData.Count == 0)
                 HasUser = false;
@@ -178,7 +179,7 @@ namespace _44_lesson_linq
             var find = usersMessages.Find(filter).ToList();
             foreach (var item in find)
             {
-                if (data[i]["username"] == item["reciever"])
+                if (data[i]["username"] == item["sender"])
                     Console.WriteLine($"{item["sender"]}:\n\t{item["message"]}");
             }
             Console.ReadKey();
