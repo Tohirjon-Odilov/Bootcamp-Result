@@ -1,0 +1,6 @@
+@_46_lesson_controller_routes_HostAddress = http://localhost:5245
+
+GET {{_46_lesson_controller_routes_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
