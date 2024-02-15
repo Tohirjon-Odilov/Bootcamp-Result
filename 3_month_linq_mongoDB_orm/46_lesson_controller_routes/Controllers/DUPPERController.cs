@@ -48,7 +48,7 @@ namespace _46_lesson_controller_routes.Controllers
                 string query = $"update products set name = @name, description = @description, photopath = @photopath where id = @id";
                 int status = connection.Execute(query, new
                 {
-                    id = id,
+                    id,
                     name = products.Name,
                     description = products.Description,
                     photopath = products.PhotoPath
@@ -62,7 +62,7 @@ namespace _46_lesson_controller_routes.Controllers
             using (NpgsqlConnection connection = new NpgsqlConnection(CONNECTIONSTRING))
             {
                 string query = $"update products set name = @name where id = @id";
-                int status = connection.Execute(query, new { id = id, name = Name });
+                int status = connection.Execute(query, new { id, name = Name });
 
                 return $"Patch status [=> {status}";
             }
@@ -73,7 +73,7 @@ namespace _46_lesson_controller_routes.Controllers
             using (NpgsqlConnection connection = new NpgsqlConnection(CONNECTIONSTRING))
             {
                 string query = $"delete from products where id = @id";
-                int status = connection.Execute(query, id);
+                int status = connection.Execute(query, new {id});
                 return $"Delete status [=> {status}";
             }
         }
