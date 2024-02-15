@@ -1,14 +1,10 @@
 ﻿using Npgsql;
-using static Npgsql.Replication.PgOutput.Messages.RelationMessage;
-using static System.Runtime.InteropServices.JavaScript.JSType;
-using System;
-using ZstdSharp.Unsafe;
 
 namespace _43_lesson_mongoDb_connect_c_
 {
     public class Homework
     {
-        public NpgsqlConnection connection {  get; set; }
+        public NpgsqlConnection connection { get; set; }
         public string query { get; set; }
         public NpgsqlCommand command { get; set; }
         public Homework()
@@ -36,7 +32,7 @@ namespace _43_lesson_mongoDb_connect_c_
             {
                 query += $"{item},";
             }
-            query += query.Remove(query.Length - 1)+")";
+            query += query.Remove(query.Length - 1) + ")";
             command = new NpgsqlCommand(query, connection);
             Console.WriteLine(command.ExecuteNonQuery());
             Close();
@@ -63,10 +59,10 @@ namespace _43_lesson_mongoDb_connect_c_
             command = new NpgsqlCommand(query, connection);
             NpgsqlDataReader? data = command.ExecuteReader();
             int tableCount = data.FieldCount;
-            while(data.Read())
+            while (data.Read())
             {
                 string? columnName = string.Empty;
-                for(int i = 0; i < tableCount; i++)
+                for (int i = 0; i < tableCount; i++)
                 {
                     columnName += $"{data[i]} ";
                 }
@@ -83,7 +79,7 @@ namespace _43_lesson_mongoDb_connect_c_
             NpgsqlDataReader? data = command.ExecuteReader();
             int tableCount = data.FieldCount;
             string? columnName = string.Empty;
-            for(int i =0; i<tableCount; i++)
+            for (int i = 0; i < tableCount; i++)
             {
                 columnName += $"{data[i]} ";
             }
@@ -96,11 +92,11 @@ namespace _43_lesson_mongoDb_connect_c_
             Open();
             query = $"delete from {tableName} where id = {id}";
             command = new NpgsqlCommand(query, connection);
-            if(command.ExecuteNonQuery() == 0)
+            if (command.ExecuteNonQuery() == 0)
             {
                 Console.WriteLine("Bunday Id yo'q!");
             }
-            Close();    
+            Close();
         }
         //7.Update for id column.
         public void UpdateById(int id, string name, int age)
@@ -213,7 +209,7 @@ namespace _43_lesson_mongoDb_connect_c_
             {
                 query += $"{item},";
             }
-            query += query.Remove(query.Length - 1)+")";
+            query += query.Remove(query.Length - 1) + ")";
             command = new NpgsqlCommand(query, connection);
             Console.WriteLine(command.ExecuteNonQuery());
             Close();

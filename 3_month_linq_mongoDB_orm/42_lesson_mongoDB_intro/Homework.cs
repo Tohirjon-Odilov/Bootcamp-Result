@@ -1,5 +1,4 @@
 ﻿using Npgsql;
-using System.Xml.Linq;
 
 namespace _42_lesson_mongoDB_intro
 {

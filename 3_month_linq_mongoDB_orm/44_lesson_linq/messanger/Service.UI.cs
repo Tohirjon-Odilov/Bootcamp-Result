@@ -1,34 +1,31 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Driver;
 using System.Security.Cryptography;
-using System.Text;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace _44_lesson_linq
 {
     public partial class Service
     {
-        const int keySize = 64;
-        const int iterations = 350000;
-        HashAlgorithmName hashAlgorithm = HashAlgorithmName.SHA512;
+        private const int keySize = 64;
+        private const int iterations = 350000;
+        private HashAlgorithmName hashAlgorithm = HashAlgorithmName.SHA512;
         private ConsoleKeyInfo key;
         public object currentUser = null;
         public object otherUser = null;
         public string username = string.Empty;
-        //private bool isUserList = true;
         public bool isExit = true;
-        private List<BsonDocument> filterUser;
+        private List<BsonDocument> filterUser = new List<BsonDocument>();
 
         public bool isLogin { get; set; } = false;
         public int back { get; private set; }
         public string? newMessage { get; private set; }
-        public BsonDocument document { get; private set; }
+        public BsonDocument document { get; private set; } = new BsonDocument();
         public bool HasUser { get; private set; } = false;
 
-        public void UI() 
+        public void UI()
         {
             isExit = true;
-            while (isExit) 
+            while (isExit)
             {
                 isLogin = false;
                 back = 0;
@@ -47,7 +44,7 @@ namespace _44_lesson_linq
                     {"salt", Convert.ToHexString(salt)}
                 };
 
-                if(string.IsNullOrWhiteSpace(username) && string.IsNullOrWhiteSpace(password))
+                if (string.IsNullOrWhiteSpace(username) && string.IsNullOrWhiteSpace(password))
                 {
                     Console.WriteLine("Failed. Please try again");
                     Console.WriteLine("Press any key to continue...");
@@ -55,10 +52,8 @@ namespace _44_lesson_linq
                     Console.Clear();
                     continue;
                 }
-                int iterations = 350_000;
-                int keySize = 64;
-                var hashAlgorithm = HashAlgorithmName.SHA512;
-                if(check(username))
+
+                if (check(username))
                 {
                     Console.Clear();
                     Console.ForegroundColor = ConsoleColor.Red;
@@ -69,7 +64,7 @@ namespace _44_lesson_linq
                 }
                 else
                 {
-                    isLogin = InsertDocumentAsync(collection, document);
+                    isLogin = InsertDocumentAsync(collection!, document);
                     Console.Clear();
                     Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine("Login successfully\n");
@@ -77,10 +72,10 @@ namespace _44_lesson_linq
                     Console.Write("Press any key to continue...");
                     Console.ReadKey();
                 }
-                if (isLogin || VerifyPassword(password, filterUser[0]["password"].ToString(), filterUser[0]["salt"].ToString(), keySize, iterations, hashAlgorithm))
+                if (isLogin || VerifyPassword(password, filterUser[0]["password"].ToString()!, filterUser[0]["salt"].ToString()!, keySize, iterations, hashAlgorithm))
                 {
-                    var dataFilter = Builders<BsonDocument>.Filter.Empty;
-                    var data = collection.Find(dataFilter).ToList();
+                    FilterDefinition<BsonDocument>? dataFilter = Builders<BsonDocument>.Filter.Empty;
+                    List<BsonDocument>? data = collection.Find(dataFilter).ToList();
                     int i = 0;
 
                     while (back != 2)
@@ -112,7 +107,7 @@ namespace _44_lesson_linq
                             ConsoleKey.Backspace => myReturn(i, "back"),
                             _ => myReturn(i, "any"),
                         };
-                    
+
                     }
                 }
                 else
@@ -132,7 +127,7 @@ namespace _44_lesson_linq
 
             var filter = Builders<BsonDocument>.Filter.Eq("username", username);
             filterUser = collection.Find(filter).ToList();
-            if(allData.Count == 0)
+            if (allData.Count == 0)
                 HasUser = false;
             if (filterUser.Count == 0)
                 return false;
@@ -195,7 +190,7 @@ namespace _44_lesson_linq
                 {"reciever", data[i]["username"]},
                 {"message", newMessage},
             };
-            InsertDocumentAsync(usersMessages, document);
+            InsertDocumentAsync(usersMessages!, document);
 
             Console.ReadKey();
             return i;
@@ -212,7 +207,7 @@ namespace _44_lesson_linq
         }
         private int up(int i, int count)
         {
-            if (i <= 0) return count-1;
+            if (i <= 0) return count - 1;
             return (i - 1) % count;
         }
         private int down(int i, int count)

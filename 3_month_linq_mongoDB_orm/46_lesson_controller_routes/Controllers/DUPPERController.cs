@@ -73,7 +73,7 @@ namespace _46_lesson_controller_routes.Controllers
             using (NpgsqlConnection connection = new NpgsqlConnection(CONNECTIONSTRING))
             {
                 string query = $"delete from products where id = @id";
-                int status = connection.Execute(query, new {id});
+                int status = connection.Execute(query, new { id });
                 return $"Delete status [=> {status}";
             }
         }
