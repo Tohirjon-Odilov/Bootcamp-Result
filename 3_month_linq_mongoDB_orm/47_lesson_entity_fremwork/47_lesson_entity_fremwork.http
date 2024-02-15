@@ -1,0 +1,6 @@
+@_47_lesson_entity_fremwork_HostAddress = http://localhost:5255
+
+GET {{_47_lesson_entity_fremwork_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
