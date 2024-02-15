@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "45_lesson_WebApplication", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "46_lesson_controller_routes", "46_lesson_controller_routes\46_lesson_controller_routes.csproj", "{E23AAA73-A751-4BE3-8231-B5A42EFE254C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "47_lesson_entity_fremwork", "47_lesson_entity_fremwork\47_lesson_entity_fremwork.csproj", "{A542AD9A-1EBC-4C31-8E23-B5589AD6E7FB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "47_lesson_entity_fremwork", "47_lesson_entity_fremwork\47_lesson_entity_fremwork.csproj", "{A542AD9A-1EBC-4C31-8E23-B5589AD6E7FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "48_lesson_course_api", "48_lesson_course_api\48_lesson_course_api.csproj", "{27FA8197-5AFE-43E7-A5F2-A879C49C19EC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{A542AD9A-1EBC-4C31-8E23-B5589AD6E7FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A542AD9A-1EBC-4C31-8E23-B5589AD6E7FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A542AD9A-1EBC-4C31-8E23-B5589AD6E7FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27FA8197-5AFE-43E7-A5F2-A879C49C19EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27FA8197-5AFE-43E7-A5F2-A879C49C19EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27FA8197-5AFE-43E7-A5F2-A879C49C19EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27FA8197-5AFE-43E7-A5F2-A879C49C19EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

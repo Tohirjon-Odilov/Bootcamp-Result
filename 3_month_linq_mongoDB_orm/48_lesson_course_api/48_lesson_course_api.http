@@ -1,0 +1,6 @@
+@_48_lesson_course_api_HostAddress = http://localhost:5170
+
+GET {{_48_lesson_course_api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
