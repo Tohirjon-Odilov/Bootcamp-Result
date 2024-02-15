@@ -1,5 +1,6 @@
 ﻿using _47_lesson_entity_fremwork.Entities;
 using _47_lesson_entity_fremwork.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace _47_lesson_entity_fremwork.MyPattern
 {
@@ -8,8 +9,8 @@ namespace _47_lesson_entity_fremwork.MyPattern
         public string CreateTeacher(Teacher teacherDTO);
         public IEnumerable<Teacher> GetAllTeachers();
         public Teacher GetByIdTeacher(int id);
-        public bool DeleteTeacher(int id);
-        public Teacher UpdateTeacher(int id, Teacher teacherDTO);
+        public IActionResult DeleteTeacher(int id);
+        public IActionResult UpdateTeacher(int id, Teacher teacherDTO);
 
     }
 }

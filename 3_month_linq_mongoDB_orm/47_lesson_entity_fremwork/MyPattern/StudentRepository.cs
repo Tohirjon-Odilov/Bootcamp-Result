@@ -1,6 +1,8 @@
 ﻿using _47_lesson_entity_fremwork.Entities;
 using _47_lesson_entity_fremwork.Models;
 using Dapper;
+using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.AspNetCore.Mvc;
 using Npgsql;
 
 namespace _47_lesson_entity_fremwork.MyPattern
@@ -31,10 +33,7 @@ namespace _47_lesson_entity_fremwork.MyPattern
                         parent_phone = studentDTO.parent_phone,
                         shot_number = studentDTO.shot_number
                     };
-
-
                     connection.Execute(query, parameters);
-
                 }
 
                 return "malumot yaratildi";
@@ -76,7 +75,12 @@ namespace _47_lesson_entity_fremwork.MyPattern
             throw new NotImplementedException();
         }
 
-        public Student UpdateStudent(int id, StudentDTO studentDTO)
+        public IActionResult UpdateStudent(int id, StudentDTO studentDTO)
+        {
+            throw new NotImplementedException();
+        }
+
+        IActionResult IStudentRepository.DeleteStudent(int id)
         {
             throw new NotImplementedException();
         }
