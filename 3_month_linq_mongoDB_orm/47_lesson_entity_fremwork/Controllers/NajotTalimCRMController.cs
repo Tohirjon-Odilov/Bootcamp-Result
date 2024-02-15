@@ -45,5 +45,65 @@ namespace _47_lesson_entity_fremwork.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
+        [HttpPut]
+        public IActionResult UpdateStudent(StudentDTO model)
+        {
+            return Ok(model);
+        }
+
+        [HttpDelete]
+        public IActionResult DeleteStudent(int id)
+        {
+            return Ok(id);
+        }
+
+        [HttpPost]
+        public IActionResult CreateTeacher(TeacherDTO model)
+        {
+            return Ok(model);
+        }
+
+        [HttpGet]
+        public IActionResult GetAllTeachers()
+        {
+            return Ok(new TeacherDTO());
+        }
+
+        [HttpPut]
+        public IActionResult UpdateTeacher(TeacherDTO model)
+        {
+            return Ok(model);
+        }
+
+        [HttpDelete]
+        public IActionResult DeleteTeacher(int id)
+        {
+            return Ok(id);
+        }
+
+        [HttpPost]
+        public IActionResult CreateGroup(Course model)
+        {
+            return Ok(model);
+        }
+
+        [HttpGet]
+        public IActionResult GetAllCourse()
+        {
+            return Ok(new Course());
+        }
+
+        [HttpPut]
+        public IActionResult UpdateGroup(Course model)
+        {
+            return Ok(model);
+        }
+
+        [HttpDelete]
+        public IActionResult DeleteGroup(int id)
+        {
+            return Ok(id);
+        }
     }
 }
