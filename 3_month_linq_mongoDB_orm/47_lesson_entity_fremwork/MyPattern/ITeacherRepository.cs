@@ -9,8 +9,8 @@ namespace _47_lesson_entity_fremwork.MyPattern
         public string CreateTeacher(Teacher teacherDTO);
         public IEnumerable<Teacher> GetAllTeachers();
         public Teacher GetByIdTeacher(int id);
-        public IActionResult DeleteTeacher(int id);
-        public IActionResult UpdateTeacher(int id, Teacher teacherDTO);
+        public string DeleteTeacher(int id);
+        public string UpdateTeacher(int id, Teacher teacherDTO);
 
     }
 }

@@ -20,7 +20,7 @@ namespace _47_lesson_entity_fremwork.MyPattern
         {
             try
             {
-                using (var connection = new NpgsqlConnection(_configuration.GetConnectionString("DefaultConnection")))
+                using (var connection = new NpgsqlConnection(_configuration.GetConnectionString("Postgres")))
                 {
                     string query = "insert into students(full_name, age, course_id, phone, parent_phone, shot_number) VALUES (@full_name, @age, @course_id, @phone, @parent_phone, @shot_number)";
 
@@ -44,25 +44,25 @@ namespace _47_lesson_entity_fremwork.MyPattern
             }
         }
 
-        public bool DeleteStudent(int id)
+        public string DeleteStudent(int id)
         {
-            using (var connection = new NpgsqlConnection(_configuration.GetConnectionString("DefaultConnection")))
+            using (var connection = new NpgsqlConnection(_configuration.GetConnectionString("Postgres")))
             {
                 string query = "delete from students where id = @id";
 
                 var result = connection.Query<Student>(query, new { id });
                 if (result != null)
                 {
-                    return true;
+                    return "Not found";
                 }
-                return false;
+                return "Ok";
             }
         }
 
         public IEnumerable<Student> GetAllStudents()
         {
 
-            using (var connection = new NpgsqlConnection(_configuration.GetConnectionString("DefaultConnection")))
+            using (var connection = new NpgsqlConnection(_configuration.GetConnectionString("Postgres")))
             {
                 string query = "select * from students";
 
@@ -72,17 +72,32 @@ namespace _47_lesson_entity_fremwork.MyPattern
 
         public Student GetByIdStudent(int id)
         {
-            throw new NotImplementedException();
+            using (var connection = new NpgsqlConnection(_configuration.GetConnectionString("Postgres")))
+            {
+                string query = "select * from students where id = @id";
+                return connection.QueryFirstOrDefault<Student>(query, new { id })!;
+            }
         }
 
-        public IActionResult UpdateStudent(int id, StudentDTO studentDTO)
+        public string UpdateStudent(int id, StudentDTO studentDTO)
         {
-            throw new NotImplementedException();
-        }
+            using (var connection = new NpgsqlConnection(_configuration.GetConnectionString("Postgres")))
+            {
+                string query = "update students set full_name = @full_name, age = @age, course_id = @course_id, phone = @phone, parent_phone = @parent_phone, shot_number = @shot_number where id = @id";
 
-        IActionResult IStudentRepository.DeleteStudent(int id)
-        {
-            throw new NotImplementedException();
+                var parameters = new StudentDTO
+                {
+                    full_name = studentDTO.full_name,
+                    age = studentDTO.age,
+                    course_id = studentDTO.course_id,
+                    phone = studentDTO.phone,
+                    parent_phone = studentDTO.parent_phone,
+                    shot_number = studentDTO.shot_number
+                };
+                connection.Execute(query, parameters);
+            }
+
+            return "Ok";
         }
     }
 }
