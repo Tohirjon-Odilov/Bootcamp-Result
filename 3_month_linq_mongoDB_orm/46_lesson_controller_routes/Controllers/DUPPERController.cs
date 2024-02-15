@@ -16,7 +16,7 @@ namespace _46_lesson_controller_routes.Controllers
         }
 
         [HttpGet]
-        public List<Products> GetDapper()
+        public List<Products> Get()
         {
             using (NpgsqlConnection connection = new NpgsqlConnection(CONNECTIONSTRING))
             {
@@ -26,7 +26,7 @@ namespace _46_lesson_controller_routes.Controllers
         }
 
         [HttpPost]
-        public string PostDapper(string Name, string Description, string PhotoPath)
+        public string Post(string Name, string Description, string PhotoPath)
         {
             using (NpgsqlConnection connection = new NpgsqlConnection(CONNECTIONSTRING))
             {
@@ -41,7 +41,7 @@ namespace _46_lesson_controller_routes.Controllers
             }
         }
         [HttpPut]
-        public string PutDapper(int id, Products products)
+        public string Put(int id, Products products)
         {
             using (NpgsqlConnection connection = new NpgsqlConnection(CONNECTIONSTRING))
             {
@@ -57,7 +57,7 @@ namespace _46_lesson_controller_routes.Controllers
             }
         }
         [HttpPatch]
-        public string PatchDapper(int id, string Name)
+        public string Patch(int id, string Name)
         {
             using (NpgsqlConnection connection = new NpgsqlConnection(CONNECTIONSTRING))
             {
@@ -68,12 +68,12 @@ namespace _46_lesson_controller_routes.Controllers
             }
         }
         [HttpDelete]
-        public string DeleteDapper(int id)
+        public string Delete(int id)
         {
             using (NpgsqlConnection connection = new NpgsqlConnection(CONNECTIONSTRING))
             {
                 string query = $"delete from products where id = @id";
-                int status = connection.Execute(query, new { id = id });
+                int status = connection.Execute(query, id);
                 return $"Delete status [=> {status}";
             }
         }
