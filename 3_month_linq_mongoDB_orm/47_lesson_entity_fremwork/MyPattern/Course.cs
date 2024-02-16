@@ -17,7 +17,7 @@ namespace _47_lesson_entity_fremwork.MyPattern
         {
             using(var connection = new NpgsqlConnection(_configuration.GetConnectionString("Postgres")))
             {
-                var query = "INSERT INTO courses (name, description, price) VALUES (@name, @description, @price)";
+                var query = "INSERT INTO courses (course_name, teacher_id, duration, price, description, students_count) VALUES (@course_name, @teacher_id, @duration, @price, @description, @students_count)";
 
                 var data = new CourseDTO
                 {
