@@ -21,7 +21,7 @@ namespace _47_lesson_entity_fremwork.Controllers
         }
 
         [HttpPost]
-        public IActionResult CreateStudentwejrqeoruyqe(StudentDTO model)
+        public IActionResult CreateStudent(StudentDTO model)
         {
             try
             {
@@ -36,7 +36,7 @@ namespace _47_lesson_entity_fremwork.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetAllStudentsFromMyDatabse()
+        public IActionResult GetAllStudents()
         {
             try
             {
@@ -137,7 +137,7 @@ namespace _47_lesson_entity_fremwork.Controllers
         }
 
         [HttpPost]
-        public IActionResult CreateCourse(Course model)
+        public IActionResult CreateCourse(CourseDTO model)
         {
             try
             {
