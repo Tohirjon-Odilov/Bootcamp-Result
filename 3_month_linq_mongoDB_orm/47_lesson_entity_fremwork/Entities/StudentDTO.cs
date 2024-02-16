@@ -2,7 +2,8 @@
 {
     public class StudentDTO
     {
-        public string full_name { get; set; }
+        public string first_name { get; set; }
+        public string second_name { get; set; }
         public int age { get; set; }
         public int course_id { get; set; }
         public string phone { get; set; }

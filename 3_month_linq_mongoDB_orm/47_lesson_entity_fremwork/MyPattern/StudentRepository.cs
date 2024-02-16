@@ -22,11 +22,12 @@ namespace _47_lesson_entity_fremwork.MyPattern
             {
                 using (var connection = new NpgsqlConnection(_configuration.GetConnectionString("Postgres")))
                 {
-                    string query = "insert into students(full_name, age, course_id, phone, parent_phone, shot_number) VALUES (@full_name, @age, @course_id, @phone, @parent_phone, @shot_number)";
+                    string query = "insert into student(first_name, second_name, age, course_id, phone, parent_phone, shot_number) VALUES (@first_name, @second_name @age, @course_id, @phone, @parent_phone, @shot_number)";
 
                     var parameters = new StudentDTO
                     {
-                        full_name = studentDTO.full_name,
+                        first_name = studentDTO.first_name,
+                        second_name = studentDTO.second_name,
                         age = studentDTO.age,
                         course_id = studentDTO.course_id,
                         phone = studentDTO.phone,
@@ -40,7 +41,7 @@ namespace _47_lesson_entity_fremwork.MyPattern
             }
             catch (Exception ex)
             {
-                return ex.Message;
+                return ex.ToString();
             }
         }
 
@@ -83,11 +84,12 @@ namespace _47_lesson_entity_fremwork.MyPattern
         {
             using (var connection = new NpgsqlConnection(_configuration.GetConnectionString("Postgres")))
             {
-                string query = "update students set full_name = @full_name, age = @age, course_id = @course_id, phone = @phone, parent_phone = @parent_phone, shot_number = @shot_number where id = @id";
+                string query = "update student set full_name = @full_name, age = @age, course_id = @course_id, phone = @phone, parent_phone = @parent_phone, shot_number = @shot_number where id = @id";
 
                 var parameters = new StudentDTO
                 {
-                    full_name = studentDTO.full_name,
+                    first_name = studentDTO.first_name,
+                    second_name = studentDTO.second_name,
                     age = studentDTO.age,
                     course_id = studentDTO.course_id,
                     phone = studentDTO.phone,
