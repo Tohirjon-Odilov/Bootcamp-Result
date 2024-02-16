@@ -17,10 +17,20 @@ namespace _47_lesson_entity_fremwork.MyPattern
         {
             using(var connection = new NpgsqlConnection(_configuration.GetConnectionString("Postgres")))
             {
-                string query = "INSERT INTO teacher (name, surname, age, gender) VALUES (@name, @surname, @age, @gender)";
+                string query = "INSERT INTO teacher (full_name, age, salary, phone, groups_count, experience) VALUES (@full_name, @age, @salary, @phone, @groups_count, @experience)";
 
-                var result = connection.Execute(query, teacherDTO);
-                return "ok";
+                var data = new TeacherDTO
+                {
+                    full_name = teacherDTO.full_name,
+                    age = teacherDTO.age,
+                    salary = teacherDTO.salary,
+                    phone = teacherDTO.phone,
+                    groups_count = teacherDTO.groups_count,
+                    experience = teacherDTO.experience,
+                };
+
+                var result = connection.Execute(query, data);
+                return $"ok {result}";
             }
         }
 

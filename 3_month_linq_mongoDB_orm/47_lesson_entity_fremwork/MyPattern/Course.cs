@@ -19,8 +19,18 @@ namespace _47_lesson_entity_fremwork.MyPattern
             {
                 var query = "INSERT INTO courses (name, description, price) VALUES (@name, @description, @price)";
 
-                var result = connection.Query(query, courseDTO);
-                return "ok";
+                var data = new CourseDTO
+                {
+                    course_name = courseDTO.course_name,
+                    teacher_id = courseDTO.teacher_id,
+                    duration = courseDTO.duration,
+                    price = courseDTO.price,
+                    description = courseDTO.description,
+                    students_count = courseDTO.students_count,
+                };
+
+                var result = connection.Query(query, data);
+                return $"ok {result}";
             }
         }
 
