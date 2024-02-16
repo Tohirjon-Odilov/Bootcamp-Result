@@ -1,6 +1,5 @@
 ﻿using _47_lesson_entity_fremwork.Entities;
 using _47_lesson_entity_fremwork.MyPattern;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace _47_lesson_entity_fremwork.Controllers
@@ -194,3 +193,4 @@ namespace _47_lesson_entity_fremwork.Controllers
         }
     }
 }
+  

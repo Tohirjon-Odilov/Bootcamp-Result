@@ -14,8 +14,4 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\46_lesson_controller_routes\46_lesson_controller_routes.csproj" />
-  </ItemGroup>
-
 </Project>

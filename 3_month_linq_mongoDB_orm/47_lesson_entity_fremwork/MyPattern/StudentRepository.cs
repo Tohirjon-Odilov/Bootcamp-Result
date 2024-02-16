@@ -1,8 +1,6 @@
 ﻿using _47_lesson_entity_fremwork.Entities;
 using _47_lesson_entity_fremwork.Models;
 using Dapper;
-using Microsoft.AspNetCore.Http.HttpResults;
-using Microsoft.AspNetCore.Mvc;
 using Npgsql;
 
 namespace _47_lesson_entity_fremwork.MyPattern
@@ -22,7 +20,7 @@ namespace _47_lesson_entity_fremwork.MyPattern
             {
                 using (var connection = new NpgsqlConnection(_configuration.GetConnectionString("Postgres")))
                 {
-                    string query = "insert into student(first_name, second_name, age, course_id, phone, parent_phone, shot_number) VALUES (@first_name, @second_name @age, @course_id, @phone, @parent_phone, @shot_number)";
+                    string query = "insert into student(first_name, second_name, age, course_id, phone, parent_phone, shot_number) VALUES (@first_name, @second_name, @age, @course_id, @phone, @parent_phone, @shot_number)";
 
                     var parameters = new StudentDTO
                     {
@@ -49,7 +47,7 @@ namespace _47_lesson_entity_fremwork.MyPattern
         {
             using (var connection = new NpgsqlConnection(_configuration.GetConnectionString("Postgres")))
             {
-                string query = "delete from students where id = @id";
+                string query = "delete from student where id = @id";
 
                 var result = connection.Query<Student>(query, new { id });
                 if (result != null)
@@ -65,7 +63,7 @@ namespace _47_lesson_entity_fremwork.MyPattern
 
             using (var connection = new NpgsqlConnection(_configuration.GetConnectionString("Postgres")))
             {
-                string query = "select * from students";
+                string query = "select * from student";
 
                 return connection.Query<Student>(query);
             }
@@ -75,7 +73,7 @@ namespace _47_lesson_entity_fremwork.MyPattern
         {
             using (var connection = new NpgsqlConnection(_configuration.GetConnectionString("Postgres")))
             {
-                string query = "select * from students where id = @id";
+                string query = "select * from student where id = @id";
                 return connection.QueryFirstOrDefault<Student>(query, new { id })!;
             }
         }

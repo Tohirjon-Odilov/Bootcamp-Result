@@ -17,7 +17,7 @@ namespace _47_lesson_entity_fremwork.MyPattern
         {
             using(var connection = new NpgsqlConnection(_configuration.GetConnectionString("Postgres")))
             {
-                var query = "INSERT INTO courses (course_name, teacher_id, duration, price, description, students_count) VALUES (@course_name, @teacher_id, @duration, @price, @description, @students_count)";
+                var query = "INSERT INTO course (course_name, teacher_id, duration, price, description, students_count) VALUES (@course_name, @teacher_id, @duration, @price, @description, @students_count)";
 
                 var data = new CourseDTO
                 {
@@ -38,8 +38,8 @@ namespace _47_lesson_entity_fremwork.MyPattern
         {
             using(var connection = new NpgsqlConnection(_configuration.GetConnectionString("Postgres")))
             {
-                var query = "DELETE FROM courses WHERE id = @id";
-                var result = connection.Query(query, new { id });
+                var query = "DELETE FROM course WHERE id = @id";
+                connection.Query(query, new { id });
 
                 return "ok";
             }
@@ -49,7 +49,7 @@ namespace _47_lesson_entity_fremwork.MyPattern
         {
             using(var connection = new NpgsqlConnection(_configuration.GetConnectionString("Postgres")))
             {
-                var query = "SELECT * FROM courses";
+                var query = "SELECT * FROM course";
                 var results = connection.Query<Course>(query);
 
                 return results;
@@ -60,7 +60,7 @@ namespace _47_lesson_entity_fremwork.MyPattern
         {
             using(var connection = new NpgsqlConnection(_configuration.GetConnectionString("Postgres")))
             {
-                var query = "SELECT * FROM courses WHERE id = @id";
+                var query = "SELECT * FROM course WHERE id = @id";
                 var result = connection.QueryFirstOrDefault<Course>(query, new { id });
 
                 return result!;
@@ -71,7 +71,7 @@ namespace _47_lesson_entity_fremwork.MyPattern
         {
             using(var connection = new NpgsqlConnection(_configuration.GetConnectionString("Postgres")))
             {
-                var query = "UPDATE courses SET name = @name, description = @description, price = @price WHERE id = @id";
+                var query = "UPDATE course SET name = @name, description = @description, price = @price WHERE id = @id";
                 var result = connection.Query(query, courseDTO);
 
                 return "ok";
