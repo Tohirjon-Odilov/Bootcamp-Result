@@ -9,6 +9,5 @@ namespace _47_lesson_entity_fremwork.MyPattern
         public Student GetByIdStudent(int id);
         public string DeleteStudent(int id);
         public string UpdateStudent(int id, StudentDTO studentDTO);
-
     }
 }

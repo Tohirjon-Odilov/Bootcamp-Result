@@ -10,10 +10,14 @@ namespace _47_lesson_entity_fremwork.Controllers
     public class NajotTalimCRMController : ControllerBase
     {
         private readonly IStudentRepository _studentRepo;
+        private readonly ITeacherRepository _teacherRepo;
+        private readonly ICourse _courseRepo;
 
-        public NajotTalimCRMController(IStudentRepository studentRepo)
+        public NajotTalimCRMController(IStudentRepository studentRepo, ITeacherRepository teacherRepo, ICourse courseRepo)
         {
             _studentRepo = studentRepo;
+            _teacherRepo = teacherRepo;
+            _courseRepo = courseRepo;
         }
 
         [HttpPost]
@@ -47,63 +51,146 @@ namespace _47_lesson_entity_fremwork.Controllers
         }
 
         [HttpPut]
-        public IActionResult UpdateStudent(StudentDTO model)
+        public IActionResult UpdateStudent(int id, StudentDTO model)
         {
-            return Ok(model);
+            try
+            {
+                var response = _studentRepo.UpdateStudent(id, model);
+
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex);
+            }
         }
 
         [HttpDelete]
         public IActionResult DeleteStudent(int id)
         {
-            return Ok(id);
+            try
+            {
+                var response = _studentRepo.DeleteStudent(id);
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex);
+            }
         }
 
         [HttpPost]
         public IActionResult CreateTeacher(TeacherDTO model)
         {
-            return Ok(model);
+            try
+            {
+                var response = _teacherRepo.CreateTeacher(model);
+                return Ok(response);
+
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex);
+            }
         }
 
         [HttpGet]
         public IActionResult GetAllTeachers()
         {
-            return Ok(new TeacherDTO());
+            try
+            {
+                var response = _teacherRepo.GetAllTeachers();
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex);
+            }
         }
 
         [HttpPut]
-        public IActionResult UpdateTeacher(TeacherDTO model)
+        public IActionResult UpdateTeacher(int id, TeacherDTO model)
         {
-            return Ok(model);
+            try
+            {
+                var response = _teacherRepo.UpdateTeacher(id, model);
+                return Ok(response);
+            }
+            catch (Exception ex) 
+            {
+                return BadRequest(ex);
+            }
         }
 
         [HttpDelete]
         public IActionResult DeleteTeacher(int id)
         {
-            return Ok(id);
+            try
+            {
+                var response = _teacherRepo.DeleteTeacher(id);
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex);
+            }
         }
 
         [HttpPost]
-        public IActionResult CreateGroup(Course model)
+        public IActionResult CreateCourse(Course model)
         {
-            return Ok(model);
+            try
+            {
+                var response = _courseRepo.CreateCourse(model);
+                return BadRequest(response);
+            }
+            catch (Exception ex) 
+            {
+                return BadRequest(ex);
+            }
         }
 
         [HttpGet]
         public IActionResult GetAllCourse()
         {
-            return Ok(new Course());
+            try
+            {
+                var response = _courseRepo.GetAllCourses();
+
+                return Ok(response);
+            }
+            catch(Exception ex)
+            {
+                return BadRequest(ex);
+            }
         }
 
         [HttpPut]
-        public IActionResult UpdateGroup(Course model)
+        public IActionResult UpdateCourse(int id, CourseDTO model)
         {
-            return Ok(model);
+            try
+            {
+                var response = _courseRepo.UpdateCourse(id, model);
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex);
+            }
         }
 
         [HttpDelete]
-        public IActionResult DeleteGroup(int id)
+        public IActionResult DeleteCourse(int id)
         {
-            return Ok(id);
+            try
+            {
+                var response = _courseRepo.DeleteCourse(id);
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex);
+            }
         }
     }
 }

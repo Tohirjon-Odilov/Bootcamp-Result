@@ -1,4 +1,5 @@
-﻿using _47_lesson_entity_fremwork.Models;
+﻿using _47_lesson_entity_fremwork.Entities;
+using _47_lesson_entity_fremwork.Models;
 using Dapper;
 using Npgsql;
 
@@ -12,7 +13,7 @@ namespace _47_lesson_entity_fremwork.MyPattern
         {
             _configuration = configuration;
         }
-        public string CreateTeacher(Teacher teacherDTO)
+        public string CreateTeacher(TeacherDTO teacherDTO)
         {
             using(var connection = new NpgsqlConnection(_configuration.GetConnectionString("Postgres")))
             {
@@ -56,7 +57,7 @@ namespace _47_lesson_entity_fremwork.MyPattern
             }
         }
 
-        public string UpdateTeacher(int id, Teacher teacherDTO)
+        public string UpdateTeacher(int id, TeacherDTO teacherDTO)
         {
             using(var connection = new NpgsqlConnection(_configuration.GetConnectionString("Postgres")))
             {

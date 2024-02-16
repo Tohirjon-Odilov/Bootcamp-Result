@@ -1,4 +1,5 @@
 ﻿
+using _47_lesson_entity_fremwork.Entities;
 using Dapper;
 using Npgsql;
 
@@ -12,7 +13,7 @@ namespace _47_lesson_entity_fremwork.MyPattern
         {
             _configuration = configuration;
         }
-        public string CreateCourse(Course courseDTO)
+        public string CreateCourse(CourseDTO courseDTO)
         {
             using(var connection = new NpgsqlConnection(_configuration.GetConnectionString("Postgres")))
             {
@@ -56,7 +57,7 @@ namespace _47_lesson_entity_fremwork.MyPattern
             }
         }
 
-        public string UpdateCourse(int id, Course courseDTO)
+        public string UpdateCourse(int id, CourseDTO courseDTO)
         {
             using(var connection = new NpgsqlConnection(_configuration.GetConnectionString("Postgres")))
             {
