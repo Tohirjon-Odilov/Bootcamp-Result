@@ -1,5 +1,8 @@
 ﻿using _47_lesson_entity_fremwork.Entities;
 using _47_lesson_entity_fremwork.MyPattern;
+using _47_lesson_entity_fremwork.Service.CourseService;
+using _47_lesson_entity_fremwork.Service.StudentService;
+using _47_lesson_entity_fremwork.Service.TeacherService;
 using Microsoft.AspNetCore.Mvc;
 
 namespace _47_lesson_entity_fremwork.Controllers
@@ -8,11 +11,11 @@ namespace _47_lesson_entity_fremwork.Controllers
     [ApiController]
     public class NajotTalimCRMController : ControllerBase
     {
-        private readonly IStudentRepository _studentRepo;
-        private readonly ITeacherRepository _teacherRepo;
-        private readonly ICourse _courseRepo;
+        private readonly IStudentSerivce _studentRepo;
+        private readonly ITeacherService _teacherRepo;
+        private readonly ICourseService _courseRepo;
 
-        public NajotTalimCRMController(IStudentRepository studentRepo, ITeacherRepository teacherRepo, ICourse courseRepo)
+        public NajotTalimCRMController(IStudentSerivce studentRepo, ITeacherService teacherRepo, ICourseService courseRepo)
         {
             _studentRepo = studentRepo;
             _teacherRepo = teacherRepo;

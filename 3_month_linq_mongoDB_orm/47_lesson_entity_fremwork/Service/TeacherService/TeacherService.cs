@@ -1,32 +1,46 @@
-﻿using _47_lesson_entity_fremwork.Models;
+﻿using _47_lesson_entity_fremwork.Entities;
+using _47_lesson_entity_fremwork.Models;
+using _47_lesson_entity_fremwork.MyPattern;
 
 namespace _47_lesson_entity_fremwork.Service.TeacherService
 {
     public class TeacherService : ITeacherService
     {
-        public string CreateTeacher(Teacher teacher)
+        private ITeacherRepository _teacherRepository;
+
+        public TeacherService(ITeacherRepository teacherRepository)
         {
-            throw new NotImplementedException();
+            _teacherRepository = teacherRepository;
+        }
+        public string CreateTeacher(TeacherDTO teacher)
+        {
+            var result = _teacherRepository.CreateTeacher(teacher);
+
+            return result;
         }
 
         public string DeleteTeacher(int id)
         {
-            throw new NotImplementedException();
+            var result = _teacherRepository.DeleteTeacher(id);
+            return result;
         }
 
-        public List<Teacher> GetAllTeacher()
+        public IEnumerable<Teacher> GetAllTeachers()
         {
-            throw new NotImplementedException();
+            IEnumerable<Teacher>? result = _teacherRepository.GetAllTeachers();
+            return result; 
         }
 
         public Teacher GetByIdTeacher(int id)
         {
-            throw new NotImplementedException();
+            Teacher? result = _teacherRepository.GetByIdTeacher(id);
+            return result; 
         }
 
-        public string UpdateTeacher(int id, Teacher teacher)
+        public string UpdateTeacher(int id, TeacherDTO teacher)
         {
-            throw new NotImplementedException();
+            var result = _teacherRepository.UpdateTeacher(id, teacher);
+            return result; 
         }
     }
 }

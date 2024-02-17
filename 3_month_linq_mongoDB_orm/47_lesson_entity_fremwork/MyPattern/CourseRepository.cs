@@ -1,15 +1,16 @@
 ﻿
 using _47_lesson_entity_fremwork.Entities;
+using _47_lesson_entity_fremwork.Models;
 using Dapper;
 using Npgsql;
 
 namespace _47_lesson_entity_fremwork.MyPattern
 {
-    public class Course : ICourse
+    public class CourseRepository : ICourseRepository
     {
         public IConfiguration _configuration;
 
-        public Course(IConfiguration configuration)
+        public CourseRepository(IConfiguration configuration)
         {
             _configuration = configuration;
         }

@@ -1,4 +1,7 @@
 using _47_lesson_entity_fremwork.MyPattern;
+using _47_lesson_entity_fremwork.Service.CourseService;
+using _47_lesson_entity_fremwork.Service.StudentService;
+using _47_lesson_entity_fremwork.Service.TeacherService;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,7 +13,11 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IStudentRepository, StudentRepository>();
 builder.Services.AddScoped<ITeacherRepository, TeacherRepository>();
-builder.Services.AddScoped<ICourse, Course>();
+builder.Services.AddScoped<ICourseRepository, CourseRepository>();
+
+builder.Services.AddScoped<IStudentSerivce, StudentService>();
+builder.Services.AddScoped<ITeacherService, TeacherService>();
+builder.Services.AddScoped<ICourseService, CourseService>();
 
 var app = builder.Build();
 

@@ -1,8 +1,9 @@
 ﻿using _47_lesson_entity_fremwork.Entities;
+using _47_lesson_entity_fremwork.Models;
 
 namespace _47_lesson_entity_fremwork.MyPattern
 {
-    public interface ICourse
+    public interface ICourseRepository
     {
         public string CreateCourse(CourseDTO courseDTO);
         public IEnumerable<Course> GetAllCourses();
