@@ -20,7 +20,8 @@ namespace LINQLess.LinqMethods
                 new List<Student>() {
                     new Student() { Id = 1, Age = 30, StudyType = "Kontrakt", FirstName = "Akramjon Mohirdev", LastName = "Abduvahobov Mohirdev" },
                     new Student() { Id = 2, Age = 17, StudyType = "Byudjet", FirstName = "Abduxoliq Mohirdev", LastName = "Abduxoliqov Mohirdev" },
-                    new Student() { Id = 3, Age = 20, StudyType = "Kontrakt", FirstName = "Muhammad Abdulloh Mohirdev", LastName = "Muhammad Abdullohov Mohirdev" },
+                    new Student() { Id = 3, Age = 20, StudyType = "Byudjet" +
+                    "", FirstName = "Muhammad Abdulloh Mohirdev", LastName = "Muhammad Abdullohov Mohirdev" },
                     new Student() { Id = 4, Age = 31, StudyType = "Kontrakt", FirstName = "Ikromjon Mohirdev", LastName = "Ikromjon Mohirdev" },
                 } },
             };
@@ -29,7 +30,7 @@ namespace LINQLess.LinqMethods
         }
         public IEnumerable<Student> GetCenterByNameWithExperience()
         {
-            var result = GetAll().Where(y => y.Name == "Najot Ta'lim").SelectMany(x => x.Students).Where(z => z.StudyType == "Kontrakt");
+            var result = GetAll().Where(y => y.Name == "Mohir Dev").SelectMany(x => x.Students).Where(z => z.StudyType == "Kontrakt").OrderBy(y => y.Age > 20);
 
             return result;
         }

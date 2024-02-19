@@ -1,6 +1,7 @@
 ﻿using static System.Formats.Asn1.AsnWriter;
 using System.Linq;
 using LINQLess.LinqMethods;
+using Linq.LinqMethods;
 
 namespace LINQLess
 {
@@ -9,7 +10,7 @@ namespace LINQLess
         static void Main(string[] args)
         {
 
-            LINQForEduCenter data = new LINQForEduCenter();
+            //LINQForEduCenter data = new LINQForEduCenter();
             //foreach (var item in data.GetCenterByName("Najot Ta'lim"))
             //{
             //    var empoyees = item.Employees.Select(x => x).Where(z => z.Experience > 5);
@@ -20,11 +21,12 @@ namespace LINQLess
             //    }
             //}
 
-            foreach (var item in data.GetCenterByNameWithExperience())
-            {
-                Console.WriteLine(item.FirstName + " " + item.StudyType);
-            }
+            //foreach (var item in data.GetCenterByNameWithExperience())
+            //{
+            //    Console.WriteLine(item.FirstName + " " + item.StudyType);
+            //}
 
+            var test = new Lesson();
 
         }
     }
