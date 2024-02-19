@@ -7,13 +7,13 @@ using LINQLess.LinqMethods;
 
 namespace Linq.Models
 {
-    public class EduCenter
+    public class University
     {
         public int Id { get; set; }
         public string Name { get; set; }
 
         public string Location { get; set; }
 
-        public List<Employee> Employees { get; set; }
+        public List<Student> Students { get; set; }
     }
 }

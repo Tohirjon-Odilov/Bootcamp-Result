@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace LINQLess.LinqMethods
 {
-    public class Employee
+    public class Student
     {
         public int Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public int Age { get; set; }
-        public int Experience { get; set; }
+        public string StudyType { get; set; }
 
     }
 }

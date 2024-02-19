@@ -22,7 +22,7 @@ namespace LINQLess
 
             foreach (var item in data.GetCenterByNameWithExperience())
             {
-                Console.WriteLine(item.FirstName + " " + item.Experience);
+                Console.WriteLine(item.FirstName + " " + item.StudyType);
             }
 
 
