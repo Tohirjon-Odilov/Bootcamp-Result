@@ -19,8 +19,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "47_lesson_entity_fremwork",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "48_lesson_CRM_continue", "48_lesson_CRM_continue\48_lesson_CRM_continue.csproj", "{AC88A968-5693-4EC8-BC60-6FFFF0E13D8C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "49_lesson_linq_continue", "49_lesson_linq_continue\49_lesson_linq_continue.csproj", "{A758DD0C-C132-4369-BDB1-224D8981E8E1}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -59,10 +57,6 @@ Global
 		{AC88A968-5693-4EC8-BC60-6FFFF0E13D8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AC88A968-5693-4EC8-BC60-6FFFF0E13D8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AC88A968-5693-4EC8-BC60-6FFFF0E13D8C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A758DD0C-C132-4369-BDB1-224D8981E8E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A758DD0C-C132-4369-BDB1-224D8981E8E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A758DD0C-C132-4369-BDB1-224D8981E8E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A758DD0C-C132-4369-BDB1-224D8981E8E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
