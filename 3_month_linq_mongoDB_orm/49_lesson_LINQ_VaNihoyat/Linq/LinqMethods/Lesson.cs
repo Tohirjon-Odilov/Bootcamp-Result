@@ -10,7 +10,7 @@ namespace Linq.LinqMethods
     {
         public Lesson()
         {
-            var numbers = new List<int>() { 1, 3, 4, 5, 6};  
+            var numbers = new List<int>() { 1, 3, 4, 5, 6};
             var evenNumQuery =
                 from num in numbers
                 where (num % 2) == 0
@@ -24,6 +24,8 @@ namespace Linq.LinqMethods
             }
 
             Console.WriteLine(evenNumCount);
+
+
         }
     }
 }

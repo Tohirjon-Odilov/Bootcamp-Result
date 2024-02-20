@@ -19,9 +19,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "47_lesson_entity_fremwork",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "48_lesson_CRM_continue", "48_lesson_CRM_continue\48_lesson_CRM_continue.csproj", "{AC88A968-5693-4EC8-BC60-6FFFF0E13D8C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Linq", "49_lesson_LINQ_VaNihoyat\Linq\Linq.csproj", "{43274685-8923-4B0F-9733-786B778DF035}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Linq", "49_lesson_LINQ_VaNihoyat\Linq\Linq.csproj", "{43274685-8923-4B0F-9733-786B778DF035}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FullstackWeb", "49_lesson_LINQ_VaNihoyat\FullstackWeb\FullstackWeb.csproj", "{332BFF0A-0E9C-41E3-B2A3-B12716064F32}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FullstackWeb", "49_lesson_LINQ_VaNihoyat\FullstackWeb\FullstackWeb.csproj", "{332BFF0A-0E9C-41E3-B2A3-B12716064F32}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "49_lesson_linq", "49_lesson_linq", "{EC1E2CD2-F6F5-4922-93C7-451079E2CA3E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Linq_Task", "Linq_Task\Linq_Task.csproj", "{9F8D1DD5-28A8-4932-A35F-F0EA121C7391}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,9 +73,16 @@ Global
 		{332BFF0A-0E9C-41E3-B2A3-B12716064F32}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{332BFF0A-0E9C-41E3-B2A3-B12716064F32}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{332BFF0A-0E9C-41E3-B2A3-B12716064F32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F8D1DD5-28A8-4932-A35F-F0EA121C7391}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F8D1DD5-28A8-4932-A35F-F0EA121C7391}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F8D1DD5-28A8-4932-A35F-F0EA121C7391}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F8D1DD5-28A8-4932-A35F-F0EA121C7391}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9F8D1DD5-28A8-4932-A35F-F0EA121C7391} = {EC1E2CD2-F6F5-4922-93C7-451079E2CA3E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {58F22495-AE1F-45FB-B451-E29DF8900E75}
