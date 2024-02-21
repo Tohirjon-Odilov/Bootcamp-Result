@@ -19,9 +19,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "47_lesson_entity_fremwork",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "48_lesson_CRM_continue", "48_lesson_CRM_continue\48_lesson_CRM_continue.csproj", "{AC88A968-5693-4EC8-BC60-6FFFF0E13D8C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "49_lesson_linq_intro", "49_lesson_linq_intro\49_lesson_linq_intro.csproj", "{A53706C5-34BB-4521-8E9E-8B56A06DBBAC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "49_lesson_linq_intro", "49_lesson_linq_intro\49_lesson_linq_intro.csproj", "{A53706C5-34BB-4521-8E9E-8B56A06DBBAC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "50_lesson_linq_funct_end", "50_lesson_linq_funct_end\50_lesson_linq_funct_end.csproj", "{1BD84637-2CC1-4EC5-9077-41BD960B7219}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "50_lesson_linq_funct_end", "50_lesson_linq_funct_end\50_lesson_linq_funct_end.csproj", "{1BD84637-2CC1-4EC5-9077-41BD960B7219}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "51_lesson_EntityFramework_Intro", "51_lesson_EntityFramework_Intro\51_lesson_EntityFramework_Intro.csproj", "{6E94B1E8-BD08-4CFF-B081-7C3463BC6DF6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,10 @@ Global
 		{1BD84637-2CC1-4EC5-9077-41BD960B7219}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1BD84637-2CC1-4EC5-9077-41BD960B7219}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1BD84637-2CC1-4EC5-9077-41BD960B7219}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E94B1E8-BD08-4CFF-B081-7C3463BC6DF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E94B1E8-BD08-4CFF-B081-7C3463BC6DF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E94B1E8-BD08-4CFF-B081-7C3463BC6DF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E94B1E8-BD08-4CFF-B081-7C3463BC6DF6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

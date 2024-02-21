@@ -1,0 +1,6 @@
+@_51_lesson_EntityFramework_Intro_HostAddress = http://localhost:5084
+
+GET {{_51_lesson_EntityFramework_Intro_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
