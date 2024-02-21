@@ -7,6 +7,7 @@ namespace _51_lesson_EntityFramework_Intro.Models
         public int Id { get; set; }
         public int PhoneId { get; set; }
         public string Name { get; set; } = string.Empty;
+        [Phone]
         public string PhoneNumber { get; set; } = string.Empty;
         [EmailAddress]
         public string Email { get; set; } = string.Empty;

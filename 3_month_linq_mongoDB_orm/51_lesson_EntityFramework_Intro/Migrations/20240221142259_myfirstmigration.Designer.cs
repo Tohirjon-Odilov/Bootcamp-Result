@@ -11,8 +11,8 @@ using _51_lesson_EntityFramework_Intro.Infrasture;
 namespace _51_lesson_EntityFramework_Intro.Migrations
 {
     [DbContext(typeof(ApplicationDBContext))]
-    [Migration("20240221090445_MyMigration")]
-    partial class MyMigration
+    [Migration("20240221142259_myfirstmigration")]
+    partial class myfirstmigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -50,6 +50,38 @@ namespace _51_lesson_EntityFramework_Intro.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Phones");
+                });
+
+            modelBuilder.Entity("_51_lesson_EntityFramework_Intro.Models.PhoneStore", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int>("PhoneId")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Saller")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("PhoneStores");
                 });
 #pragma warning restore 612, 618
         }
