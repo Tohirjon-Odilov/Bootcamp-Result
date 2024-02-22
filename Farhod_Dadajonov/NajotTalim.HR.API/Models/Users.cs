@@ -1,4 +1,6 @@
-﻿namespace NajotTalim.HR.API.Models
+﻿using System;
+
+namespace NajotTalim.HR.API.Models
 {
     public class Users
     {

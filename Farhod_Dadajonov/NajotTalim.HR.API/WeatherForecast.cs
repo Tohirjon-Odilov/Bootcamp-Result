@@ -1,3 +1,5 @@
+using System;
+
 namespace NajotTalim.HR.API
 {
     public class WeatherForecast
