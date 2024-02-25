@@ -28,4 +28,11 @@ Console.WriteLine(allowedhosts);
 var hosts = app.Configuration.GetValue<string>("Kestrel:Endpoints:Http:Url", "Unknown url");
 Console.WriteLine(hosts);
 
+app.Use(async (context, next) =>
+{
+    Console.WriteLine("Middleware'dan salom!");
+    await next();
+    Console.WriteLine("Middleware'dan xayr!");
+});
+
 app.Run();
