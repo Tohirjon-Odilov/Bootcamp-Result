@@ -48,6 +48,17 @@
       },
       "publishAllPorts": true,
       "useSSL": true
+    },
+    "Test uchun ochib ko'rdim": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "test",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Menda"
+      }
+    },
+    "Bu ham test uchun": {
+      "commandName": "Executable"
     }
   },
   "$schema": "http://json.schemastore.org/launchsettings.json",

@@ -22,4 +22,10 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+var allowedhosts = app.Configuration.GetValue<string>("AllowedHosts", string.Empty);
+Console.WriteLine(allowedhosts);
+
+var hosts = app.Configuration.GetValue<string>("Kestrel:Endpoints:Http:Url", "Unknown url");
+Console.WriteLine(hosts);
+
 app.Run();
