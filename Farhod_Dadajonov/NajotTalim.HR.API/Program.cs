@@ -35,4 +35,6 @@ app.Use(async (context, next) =>
     Console.WriteLine("Middleware'dan xayr!");
 });
 
+app.MapGet("/users", () => "Bu yerda nimadir chiqishi kerak edi!");
+
 app.Run();
