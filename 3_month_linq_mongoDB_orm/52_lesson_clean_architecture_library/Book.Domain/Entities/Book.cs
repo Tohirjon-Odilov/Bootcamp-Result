@@ -16,5 +16,6 @@ namespace Book.Domain.Entities
         public required string Author { get; set; }
         public required int Price { get; set; }
         public required Ganre Ganre { get; set; }
+
     }
 }
