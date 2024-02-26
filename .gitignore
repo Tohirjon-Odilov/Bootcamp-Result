@@ -361,3 +361,4 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/3_month_linq_mongoDB_orm/52_lesson_clean_architectore
