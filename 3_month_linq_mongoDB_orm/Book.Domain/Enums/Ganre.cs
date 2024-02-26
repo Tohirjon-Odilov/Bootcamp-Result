@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Book.Domain.Enums
+﻿namespace Book.Domain.Enums
 {
-    internal class Ganre
+    public enum Ganre
     {
+        Drama,
+        Tragediya,
+        Komediya,
+        Action,
+        Fantastika
     }
 }

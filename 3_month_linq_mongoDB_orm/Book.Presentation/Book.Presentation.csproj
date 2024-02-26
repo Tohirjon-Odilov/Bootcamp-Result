@@ -10,7 +10,16 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
 
+<ItemGroup>
+	<Folder Include="ViewModels\" />
+	<Folder Include="wwwroot\images\" />
+</ItemGroup>
+
   <ItemGroup>
+	<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.2">
+		<PrivateAssets>all</PrivateAssets>
+		<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+	</PackageReference>
     <ProjectReference Include="..\Book.Application\Book.Application.csproj" />
     <ProjectReference Include="..\Book.Infrastructure\Book.Infrastructure.csproj" />
   </ItemGroup>
