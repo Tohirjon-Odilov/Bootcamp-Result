@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace SenderEmail.Api.Controllers
+namespace Login.EmailSender.Api.Controllers
 {
     [ApiController]
     [Route("[controller]")]

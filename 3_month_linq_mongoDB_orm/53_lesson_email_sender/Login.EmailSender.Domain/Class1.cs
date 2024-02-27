@@ -1,4 +1,4 @@
-﻿namespace SenderEmail.Application
+﻿namespace Login.EmailSender.Domain
 {
     public class Class1
     {

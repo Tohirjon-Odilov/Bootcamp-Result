@@ -1,4 +1,4 @@
-namespace SenderEmail.Api
+namespace Login.EmailSender.Api
 {
     public class WeatherForecast
     {
