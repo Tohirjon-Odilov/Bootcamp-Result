@@ -14,7 +14,6 @@ namespace Login.EmailSender.Infrastucture
                 options.UseNpgsql(configuration.GetConnectionString("DefaultConnection"));
             });
 
-
             return services;
         }
     }
