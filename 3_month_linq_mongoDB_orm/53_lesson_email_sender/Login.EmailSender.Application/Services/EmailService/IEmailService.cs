@@ -1,11 +1,11 @@
-﻿using Login.EmailSender.Domain.Entity;
+﻿using Login.EmailSender.Application.DataTransferObject;
 
 namespace Login.EmailSender.Application.Services.EmailService
 {
     public interface IEmailService
     {
-        public Task SignUp(SignUpModel model);
-        public Task LogIn(LogInModel model, string path);
-        public string CheckSendedCode(CheckSendedCode model);
+        public Task SignUp(SignUpDTO model);
+        public Task LogIn(LoginDTO model, string path);
+        public Task<string> CheckSendedCode(LoginDTO model);
     }
 }

@@ -11,7 +11,6 @@ namespace Login.EmailSender.Infrastucture.Persistence
             Database.Migrate();
         }
 
-        public virtual DbSet<SignUpModel> Library { get; set; }
-        public virtual DbSet<CheckSendedCode> Books { get; set; }
+        public DbSet<UserData> UserDatas { get; set; }
     }
 }

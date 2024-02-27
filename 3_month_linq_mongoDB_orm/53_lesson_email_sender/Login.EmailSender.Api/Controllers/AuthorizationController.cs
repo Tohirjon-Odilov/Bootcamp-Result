@@ -1,5 +1,5 @@
+using Login.EmailSender.Application.DataTransferObject;
 using Login.EmailSender.Application.Services.EmailService;
-using Login.EmailSender.Domain.Entity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Login.EmailSender.API.Controllers
@@ -12,7 +12,7 @@ namespace Login.EmailSender.API.Controllers
         private readonly IWebHostEnvironment webHostEnvironment;
 
         [HttpPost]
-        public async Task<IActionResult> SignUpAsync([FromBody] SignUpModel model)
+        public async Task<IActionResult> SignUpAsync([FromBody] SignUpDTO model)
         {
             await _emailService.SignUp(model);
 
@@ -26,16 +26,16 @@ namespace Login.EmailSender.API.Controllers
 
 
         [HttpPost]
-        public async Task<IActionResult> LoginAsync([FromBody] LogInModel model)
+        public async Task<IActionResult> LoginAsync([FromBody] LoginDTO model)
         {
             string path = Path.Combine(webHostEnvironment.WebRootPath, "index.html");
 
             await _emailService.LogIn(model, path);
 
-            return Ok("Kod yuborildi");
+            return Ok("Emailingiz'ga kod yuborildi!");
         }
 
         [HttpPost]
-        public IActionResult CheckSendedCode(CheckSendedCode model) => Ok(_emailService.CheckSendedCode(model));
+        public IActionResult CheckSendedCode(LoginDTO model) => Ok(_emailService.CheckSendedCode(model));
     }
 }

@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Login.EmailSender.Domain\Login.EmailSender.Domain.csproj" />
+    <ProjectReference Include="..\Login.EmailSender.Infrastucture\Login.EmailSender.Infrastucture.csproj" />
   </ItemGroup>
 
 </Project>

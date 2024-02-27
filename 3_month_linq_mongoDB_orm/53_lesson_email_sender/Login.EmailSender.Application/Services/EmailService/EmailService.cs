@@ -1,4 +1,7 @@
+using Login.EmailSender.Application.DataTransferObject;
 using Login.EmailSender.Domain.Entity;
+using Login.EmailSender.Infrastucture.Persistence;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using System.Net;
 using System.Net.Mail;
@@ -8,38 +11,54 @@ namespace Login.EmailSender.Application.Services.EmailService
     public class EmailService : IEmailService
     {
         private readonly IConfiguration _config;
+        private readonly ApplicationDbContext _context;
         private int _createCode = new int();
-        public string _userEmail = String.Empty;
-        public string _userPassword = String.Empty;
 
-        public EmailService(IConfiguration config)
+        public EmailService(IConfiguration config, ApplicationDbContext context)
         {
             _config = config;
+            _context = context;
         }
 
-        public async Task SignUp(SignUpModel model)
+        public async Task SignUp(SignUpDTO model)
         {
-            //var emailSettings = _config.GetSection("EmailSettings");
+            if (await _context.UserDatas.AnyAsync(x => x.Email == model.Email))
+            {
+                throw new Exception("Email already exists");
+            }
+            else if (model.Password != model.ConfirmPassword)
+            {
+                throw new Exception("Passwords do not match");
+            }
 
-            _userEmail = model.Email;
-            _userPassword = model.Password;
+            var newModel = new UserData()
+            {
+                Email = model.Email,
+                Password = model.Password,
+            };
+
+            await _context.UserDatas.AddAsync(newModel);
+            await _context.SaveChangesAsync();
         }
 
-        public async Task LogIn(LogInModel model, string path)
+        public async Task LogIn(LoginDTO model, string path)
         {
             _createCode = new Random().Next(1000, 9999);
 
-            //using (var stream = new StreamReader(path))
-            //{
-            //    model.Body = await stream.ReadToEndAsync();
-            //}
+            UserData? data = await _context.UserDatas
+                .FirstOrDefaultAsync(x => x.Email == model.Email);
+
+            if (data.VerificationPassword != null)
+            {
+                throw new Exception("It mustn't be an empty row");
+            }
 
             var emailSettings = _config.GetSection("EmailSettings");
             var mailMessage = new MailMessage
             {
                 From = new MailAddress(emailSettings["Sender"]!, emailSettings["SenderName"]),
-                Subject = model.Password,
-                Body = @$"<h1>Assalomu alaykum</h1> <h2>Hurmatli mijoz!</h2><h3>Sizning kodingiz: <code>{_createCode} </code></h3><p>Sizning passwordingiz: {model.Password} </p><p>Sizning emailingiz: {model.Email}>",
+                Subject = _createCode.ToString(),
+                Body = @$"<h1>Assalomu alaykum, <br/>Hurmatli mijoz!</h1> <h3>Sizning kodingiz: <code style='color: green'>{_createCode} </code></h3><p>Sizning passwordingiz: {model.Password} </p><p>Sizning emailingiz: {model.Email}>",
                 IsBodyHtml = true,
             };
             mailMessage.To.Add(model.Email);
@@ -52,18 +71,18 @@ namespace Login.EmailSender.Application.Services.EmailService
                 EnableSsl = true,
             };
 
-            //smtpClient.UseDefaultCredentials = true;
+            smtpClient.UseDefaultCredentials = true;
 
             await smtpClient.SendMailAsync(mailMessage);
         }
 
-        public string CheckSendedCode(CheckSendedCode model)
+        public async Task<string> CheckSendedCode(LoginDTO model)
         {
-            if (_createCode == Convert.ToInt32(model.SendedCode))
+            if (await _context.UserDatas.AnyAsync(x => x.VerificationPassword == model.Password))
             {
-                return "Login successfully";
+                return "Success";
             }
-            return "Invalid password";
+            throw new Exception("Code is incorrect!");
         }
     }
 }
