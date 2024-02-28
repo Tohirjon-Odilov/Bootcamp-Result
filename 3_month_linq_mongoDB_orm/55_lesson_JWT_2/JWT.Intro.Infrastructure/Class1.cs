@@ -1,4 +1,4 @@
-﻿namespace JWT.Infrastructure
+﻿namespace JWT.Intro.Infrastructure
 {
     public class Class1
     {

@@ -1,4 +1,4 @@
-﻿namespace JWT.Intro.Application
+﻿namespace JWT.Intro.Domain
 {
     public class Class1
     {
