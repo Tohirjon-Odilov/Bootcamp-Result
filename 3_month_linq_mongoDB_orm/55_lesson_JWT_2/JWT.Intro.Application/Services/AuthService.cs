@@ -35,7 +35,7 @@ namespace JWT.Intro.Application.Services
                 }
                 else if (user.Role == "Student")
                 {
-                    permissions = new List<int>() { 5, 7, 3, 4 };
+                    permissions = new List<int>() { 4 };
                 }
                 else if (user.Role == "Admin")
                 {

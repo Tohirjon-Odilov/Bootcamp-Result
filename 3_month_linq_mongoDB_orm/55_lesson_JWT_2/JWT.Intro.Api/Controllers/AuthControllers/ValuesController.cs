@@ -31,13 +31,13 @@ namespace JWT.Intro.Api.Controllers.AuthControllers
         [HasPermission(Permission.GetStudentById)] //permissionBase
         public IActionResult GetStudents()
         {
-            return Ok(Students);
+            return Ok("Tohirjon");
         }
 
         [HttpGet]
         //[Authorize(Roles = "Teacher")] // => rollbase
         [HasPermission(Permission.GetAllTeachers)] //permissionBase
-        public IActionResult GetTeachers()
+        public IActionResult GetAllTeachers()
         {
             return Ok(Teachers);
         }
