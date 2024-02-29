@@ -37,5 +37,17 @@ namespace JWT.Intro.Api.Controllers.AuthControllers
         {
             return Ok(Teachers);
         }
+
+        [HttpPost]
+        public IActionResult CreateStudent()
+        {
+            return Ok("Create bo'ldi");
+        }
+
+        [HttpDelete]
+        public IActionResult DeleteStudent()
+        {
+            return Ok("Delete bo'ldi");
+        }
     }
 }
