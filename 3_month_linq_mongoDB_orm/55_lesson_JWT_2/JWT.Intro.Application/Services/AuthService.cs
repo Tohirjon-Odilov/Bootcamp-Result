@@ -5,6 +5,7 @@ using System.Globalization;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using System.Text.Json;
 
 namespace JWT.Intro.Application.Services
 {
@@ -26,13 +27,30 @@ namespace JWT.Intro.Application.Services
 
             if (UserExist(user))
             {
+                var permissions = new List<int>();
+
+                if (user.Role == "Teacher")
+                {
+                    permissions = new List<int>() { 1, 2, 3, 4 };
+                }
+                else if (user.Role == "Student")
+                {
+                    permissions = new List<int>() { 5, 7, 3, 4 };
+                }
+                else if (user.Role == "Admin")
+                {
+                    permissions = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+                }
+
+                var permissionToJson = JsonSerializer.Serialize(permissions);
+
                 List<Claim> claims = new List<Claim>()
                 {
                     new Claim(ClaimTypes.Role, user.Role),
                     new Claim("UserName", user.UserName),
                     new Claim("UserId", user.Id.ToString()),
                     new Claim("CreatedDate", DateTime.UtcNow.ToString()),
-                    //new Claim("Permissions", jsonContent)
+                    new Claim("Permissions", permissionToJson)
                 };
                 return await GenerateToken(claims);
             }
