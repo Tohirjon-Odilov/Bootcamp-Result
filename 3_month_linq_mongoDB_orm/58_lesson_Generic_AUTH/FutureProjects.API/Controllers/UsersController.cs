@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace FutureProjects.API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
     [ApiController]
     [Authorize]
     public class UsersController : ControllerBase

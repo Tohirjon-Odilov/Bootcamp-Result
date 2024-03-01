@@ -18,6 +18,12 @@ namespace FutureProjects.Application.Services.UserServices
 
         public async Task<User> Create(UserDTO userDTO)
         {
+            var hasUser = await _userRepository.GetByAny(x => x.Login == userDTO.Login);
+            if (hasUser != null)
+            {
+                throw new Exception("Already exist");
+            }
+
             var user = new User()
             {
                 Name = userDTO.Name,
