@@ -19,6 +19,7 @@ namespace FutureProjects.Application
 
 //bir hil danniy kesa save qimaslik kerak
 //birxil emaildan 2 kishi ro'yhatdan o'tmasligi kerak
+
 //login unique bo'lishi kerak
 
 //groupBy qo'shamiz name ga qarab

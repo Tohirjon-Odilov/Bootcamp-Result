@@ -3,6 +3,7 @@ using FutureProjects.Application.Abstractions.IServices;
 using FutureProjects.Domain.Entities.DTOs;
 using FutureProjects.Domain.Entities.Models;
 using FutureProjects.Domain.Entities.ViewModels;
+using FutureProjects.Domain.Exceptions;
 using System.Linq.Expressions;
 
 namespace FutureProjects.Application.Services.UserServices
@@ -21,7 +22,7 @@ namespace FutureProjects.Application.Services.UserServices
             var hasUser = await _userRepository.GetByAny(x => x.Login == userDTO.Login);
             if (hasUser != null)
             {
-                throw new Exception("Already exist");
+                throw new UserAlreadyExistException();
             }
 
             var user = new User()
