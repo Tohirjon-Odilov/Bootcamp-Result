@@ -19,13 +19,14 @@ namespace FutureProjects.Application.Services.UserServices
 
         public async Task<User> Create(UserDTO userDTO)
         {
-            var hasUser = await _userRepository.GetByAny(x => x.Login == userDTO.Login);
-            if (hasUser != null)
+            User? hasLogin = await _userRepository.GetByAny(x => x.Login == userDTO.Login);
+            var hasEmail = await _userRepository.GetByAny(x => x.Email == userDTO.Email);
+            if (hasLogin != null && hasEmail != null)
             {
-                throw new UserAlreadyExistException();
+                throw new AlreadyExistException();
             }
 
-            var user = new User()
+            User? user = new User()
             {
                 Name = userDTO.Name,
                 Email = userDTO.Email,
@@ -34,7 +35,7 @@ namespace FutureProjects.Application.Services.UserServices
                 Role = userDTO.Role,
             };
 
-            var result = await _userRepository.Create(user);
+            User? result = await _userRepository.Create(user);
 
             return result;
         }

@@ -1,6 +1,5 @@
 ﻿using FutureProjects.Application.Abstractions.IServices;
 using FutureProjects.Domain.Entities.DTOs;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FutureProjects.API.Controllers.Identity
@@ -21,7 +20,7 @@ namespace FutureProjects.API.Controllers.Identity
         {
             var result = await _authService.GenerateToken(model);
 
-            return Ok(result);
+            return Ok(result.Token);
         }
     }
 }

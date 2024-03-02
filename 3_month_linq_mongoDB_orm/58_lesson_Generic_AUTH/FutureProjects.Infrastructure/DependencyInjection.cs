@@ -1,4 +1,6 @@
-﻿using FutureProjects.Application.Abstractions;
+﻿using System.Dynamic;
+
+using FutureProjects.Application.Abstractions;
 using FutureProjects.Infrastructure.BaseRepositories;
 using FutureProjects.Infrastructure.Persistance;
 using Microsoft.EntityFrameworkCore;
@@ -15,7 +17,6 @@ namespace FutureProjects.Infrastructure
             {
                 options.UseNpgsql(conf.GetConnectionString("FutureProjectsConnectionString"));
             });
-
 
             services.AddScoped<IUserRepository, UserRepository>();
             //services.AddScoped<IBaseRepository<User>, BaseRepository<User>>();
