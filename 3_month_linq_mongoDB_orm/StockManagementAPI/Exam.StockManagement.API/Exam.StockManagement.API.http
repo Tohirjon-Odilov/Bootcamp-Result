@@ -1,0 +1,6 @@
+@Exam.StockManagement.API_HostAddress = http://localhost:5152
+
+GET {{Exam.StockManagement.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

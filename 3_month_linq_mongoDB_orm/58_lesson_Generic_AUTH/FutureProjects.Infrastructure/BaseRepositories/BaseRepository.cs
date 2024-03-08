@@ -51,8 +51,7 @@ namespace FutureProjects.Infrastructure.BaseRepositories
             {
                 var result = await _dbSet.FirstOrDefaultAsync(expression);
                 return result;
-            }
-            catch (Exception ex)
+            } catch (Exception ex)
             {
                 throw;
             }
@@ -64,6 +63,16 @@ namespace FutureProjects.Infrastructure.BaseRepositories
             await _context.SaveChangesAsync();
 
             return result.Entity;
+        }
+
+        public async Task<T> GroupByName(Expression<Func<T, bool>> expression)
+        {
+            var group = await _dbSet.FirstOrDefaultAsync(expression);
+            if (group == null)
+            {
+                return null;
+            }
+            return group;
         }
     }
 }

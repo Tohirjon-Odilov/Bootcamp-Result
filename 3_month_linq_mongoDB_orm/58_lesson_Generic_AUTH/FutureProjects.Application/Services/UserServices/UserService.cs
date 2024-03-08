@@ -21,6 +21,7 @@ namespace FutureProjects.Application.Services.UserServices
         {
             User? hasLogin = await _userRepository.GetByAny(x => x.Login == userDTO.Login);
             var hasEmail = await _userRepository.GetByAny(x => x.Email == userDTO.Email);
+
             if (hasLogin != null && hasEmail != null)
             {
                 throw new AlreadyExistException();

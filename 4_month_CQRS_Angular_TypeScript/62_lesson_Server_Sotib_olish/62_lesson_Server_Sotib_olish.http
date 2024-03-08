@@ -1,0 +1,6 @@
+@_62_lesson_Server_Sotib_olish_HostAddress = http://localhost:5133
+
+GET {{_62_lesson_Server_Sotib_olish_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
