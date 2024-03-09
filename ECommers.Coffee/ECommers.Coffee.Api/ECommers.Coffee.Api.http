@@ -1,0 +1,6 @@
+@ECommers.Coffee.Api_HostAddress = http://localhost:5229
+
+GET {{ECommers.Coffee.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
