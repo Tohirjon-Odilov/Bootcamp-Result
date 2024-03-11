@@ -11,11 +11,21 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "62_lesson_Server_Sotib_olis
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Main.Api", "63_lesson_AutoMapper_FluentApi\Main.Api\Main.Api.csproj", "{B1C46482-6144-4539-AD0E-A0A1B39B23FE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Main.Domain", "63_lesson_AutoMapper_FluentApi\Main.Domain\Main.Domain.csproj", "{5627564A-9BBF-44E2-8D9E-13F091B17059}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Main.Domain", "63_lesson_AutoMapper_FluentApi\Main.Domain\Main.Domain.csproj", "{5627564A-9BBF-44E2-8D9E-13F091B17059}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Main.Infrastuct", "63_lesson_AutoMapper_FluentApi\Main.Infrastuct\Main.Infrastuct.csproj", "{505EC5CF-D76C-4564-B1D5-B47B8E9E3D27}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Main.Infrastuct", "63_lesson_AutoMapper_FluentApi\Main.Infrastuct\Main.Infrastuct.csproj", "{505EC5CF-D76C-4564-B1D5-B47B8E9E3D27}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Main.Applicatio", "63_lesson_AutoMapper_FluentApi\Main.Applicatio\Main.Applicatio.csproj", "{C6A3C89B-6B40-450D-8410-D8BD45389EDB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Main.Applicatio", "63_lesson_AutoMapper_FluentApi\Main.Applicatio\Main.Applicatio.csproj", "{C6A3C89B-6B40-450D-8410-D8BD45389EDB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "64_lesson_CQRS_pattern", "64_lesson_CQRS_pattern", "{BCC0484D-2A2B-456D-ABC0-49F7B04DB53F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CQRS.Medium.Api", "64_lesson_SQRS_Medium\CQRS.Medium.Api\CQRS.Medium.Api.csproj", "{F6DF79B2-051D-46D2-B67A-B5600FEACF7F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQRS.Medium.Infrastruct", "64_lesson_SQRS_Medium\SQRS.Medium.Infrastruct\SQRS.Medium.Infrastruct.csproj", "{C4E4F3B3-4E80-4733-9359-65643278ADB2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQRS.Medium.Domain", "64_lesson_SQRS_Medium\SQRS.Medium.Domain\SQRS.Medium.Domain.csproj", "{8360776E-B929-4EBE-A545-81704701C865}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQRS.Medium.Application", "64_lesson_SQRS_Medium\SQRS.Medium.Application\SQRS.Medium.Application.csproj", "{E908D252-6D28-480F-BCF5-1797D58BDB72}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,12 +57,32 @@ Global
 		{C6A3C89B-6B40-450D-8410-D8BD45389EDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C6A3C89B-6B40-450D-8410-D8BD45389EDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C6A3C89B-6B40-450D-8410-D8BD45389EDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6DF79B2-051D-46D2-B67A-B5600FEACF7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6DF79B2-051D-46D2-B67A-B5600FEACF7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6DF79B2-051D-46D2-B67A-B5600FEACF7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6DF79B2-051D-46D2-B67A-B5600FEACF7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4E4F3B3-4E80-4733-9359-65643278ADB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4E4F3B3-4E80-4733-9359-65643278ADB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4E4F3B3-4E80-4733-9359-65643278ADB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4E4F3B3-4E80-4733-9359-65643278ADB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8360776E-B929-4EBE-A545-81704701C865}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8360776E-B929-4EBE-A545-81704701C865}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8360776E-B929-4EBE-A545-81704701C865}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8360776E-B929-4EBE-A545-81704701C865}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E908D252-6D28-480F-BCF5-1797D58BDB72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E908D252-6D28-480F-BCF5-1797D58BDB72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E908D252-6D28-480F-BCF5-1797D58BDB72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E908D252-6D28-480F-BCF5-1797D58BDB72}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{9966BA96-4DF4-469F-9B3A-327B408BB29A} = {90E3BCDC-1C40-4367-AF94-21BA631C538B}
+		{F6DF79B2-051D-46D2-B67A-B5600FEACF7F} = {BCC0484D-2A2B-456D-ABC0-49F7B04DB53F}
+		{C4E4F3B3-4E80-4733-9359-65643278ADB2} = {BCC0484D-2A2B-456D-ABC0-49F7B04DB53F}
+		{8360776E-B929-4EBE-A545-81704701C865} = {BCC0484D-2A2B-456D-ABC0-49F7B04DB53F}
+		{E908D252-6D28-480F-BCF5-1797D58BDB72} = {BCC0484D-2A2B-456D-ABC0-49F7B04DB53F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {24538C6C-6E4C-43D9-921B-CF71332F20CD}
