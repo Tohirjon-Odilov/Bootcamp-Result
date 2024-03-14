@@ -1,0 +1,1 @@
+"Cook spaghetti according to package instructions.", "Fry bacon until crispy, then chop into small pieces.", "Whisk eggs and Parmesan cheese together.", "Mix cooked spaghetti with egg mixture and bacon, toss until well coated.", "Serve with a sprinkle of black pepper."

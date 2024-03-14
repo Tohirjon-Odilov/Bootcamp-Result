@@ -1,0 +1,7 @@
+"Cook spaghetti according to package instructions until al dente.",
+    "In a separate pan, cook pancetta or guanciale over medium heat until crispy.",
+    "In a bowl, whisk together eggs and grated Pecorino Romano cheese.",
+    "Once spaghetti is cooked, drain and add it to the pan with the pancetta or guanciale. Remove from heat.",
+    "Quickly pour the egg and cheese mixture over the hot spaghetti, stirring continuously to coat the pasta evenly and create a creamy sauce.",
+    "Season generously with freshly ground black pepper.",
+    "Serve immediately, garnished with extra grated cheese if desired."
