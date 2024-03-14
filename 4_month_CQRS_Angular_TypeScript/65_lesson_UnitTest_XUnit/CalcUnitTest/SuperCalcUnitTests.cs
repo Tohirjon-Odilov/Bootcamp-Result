@@ -4,6 +4,13 @@ namespace CalcUnitTest
 {
     public class SuperCalcUnitTests
     {
+        private readonly SuperCalculator _calculator;
+
+        public SuperCalcUnitTests(SuperCalculator calculator)
+        {
+            _calculator = calculator;
+        }
+
         [Fact]
         public void Add()
         {
@@ -11,7 +18,7 @@ namespace CalcUnitTest
             int y = 45;
             int exeptedValue = 60;
 
-            int res = SuperCalculator.Add(x, y);
+            int res = _calculator.Add(x, y);
 
             Assert.Equal(exeptedValue, res);
         }
@@ -22,7 +29,7 @@ namespace CalcUnitTest
         [InlineData(21, 99, 120)]
         public void AddWithTheory(int x, int y, int exVal)
         {
-            int res = SuperCalculator.Add(x, y);
+            int res = _calculator.Add(x, y);
             Assert.Equal(res, exVal);
         }
 
@@ -33,7 +40,7 @@ namespace CalcUnitTest
             int y = 10;
             int exval = 10;
 
-            int res = SuperCalculator.Substract(x, y);
+            int res = _calculator.Substract(x, y);
 
             Assert.Equal(exval, res);
         }
@@ -45,7 +52,7 @@ namespace CalcUnitTest
         [InlineData(0, 2, -2)]
         public void SubstractWithTheory(int x, int y, int exVal)
         {
-            int res = SuperCalculator.Substract(x, y);
+            int res = _calculator.Substract(x, y);
 
             Assert.Equal(exVal, res);
         }
@@ -57,7 +64,7 @@ namespace CalcUnitTest
             int y = 5;
             int exval = 50;
 
-            int res = SuperCalculator.Multiple(x, y);
+            int res = _calculator.Multiple(x, y);
 
             Assert.Equal(exval, res);
         }
@@ -68,7 +75,7 @@ namespace CalcUnitTest
         [InlineData(4, 1, 4)]
         public void MultipleWithTheory(int x, int y, int exVal)
         {
-            int res = SuperCalculator.Multiple(x, y);
+            int res = _calculator.Multiple(x, y);
 
             Assert.Equal(exVal, res);
         }
@@ -80,7 +87,7 @@ namespace CalcUnitTest
             int y = 5;
             int exval = 2;
 
-            int res = SuperCalculator.Devide(x, y);
+            int res = _calculator.Devide(x, y);
 
             Assert.Equal(exval, res);
         }
@@ -93,10 +100,10 @@ namespace CalcUnitTest
         {
             if (y == 0)
             {
-                Assert.Throws<DivideByZeroException>(() => SuperCalculator.Devide(x, y));
+                Assert.Throws<DivideByZeroException>(() => _calculator.Devide(x, y));
             } else
             {
-                var res = SuperCalculator.Devide(x, y);
+                var res = _calculator.Devide(x, y);
                 Assert.Equal(exVal, res);
             }
         }

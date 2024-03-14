@@ -1,26 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Calculator
+﻿namespace Calculator
 {
-    public static class SuperCalculator
+    public class SuperCalculator
     {
-        public static int Add(int x, int y)
+        public int Add(int x, int y)
         {
             return x + y;
         }
-        public static int Devide(int x, int y)
+        public int Devide(int x, int y)
         {
             return x / y;
         }
-        public static int Substract(int x, int y)
+        public int Substract(int x, int y)
         {
             return x - y;
         }
-        public static int Multiple(int x, int y)
+        public int Multiple(int x, int y)
         {
             return x * y;
         }
