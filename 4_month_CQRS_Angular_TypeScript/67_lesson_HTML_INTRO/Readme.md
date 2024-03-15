@@ -1,6 +1,4 @@
-# Loyihani ko'rish uchun tegining
-
-[Bosing](https://lesson67html.netlify.app)
+# [Loyihani ko'rish uchun tegining](https://lesson67html.netlify.app)
 
 Intro qismi
 <br/>
