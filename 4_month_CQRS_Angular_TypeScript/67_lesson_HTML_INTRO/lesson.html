@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table</title>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 10px 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tbody>
+        <tr>
+          <td colspan="2" rowspan="2" >41</td>
+          <td colspan="">42</td>
+        </tr>
+        
+        <tr>
+          <td rowspan="">41</td>
+          <td rowspan="2">42</td>
+        </tr>
+        <tr>
+          <td colspan="3">41</td>
+          <td colspan="">42</td>
+        </tr>
+        <tr>
+          <td colspan="4">42</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework 6</title>
+    <style>
+      body {
+        height: 90vh;
+        color: red;
+      }
+      .flex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .wrapper {
+        display: flex;
+        gap: 10px;
+        column-gap: 30px;
+        flex-wrap: wrap;
+        width: 400px;
+      }
+      .box {
+        background-color: #999;
+        width: 400px;
+        height: 100px;
+      }
+      .inner-box {
+        background-color: #999;
+        width: 30%;
+        height: 300px;
+      }
+      .inner-box:last-child {
+        width: 70%;
+      }
+      .inner-row {
+        max-width: 400px;
+        width: 100%;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body class="flex">
+    <div class="wrapper">
+      <div class="box flex">Header</div>
+      <div class="inner-row">
+        <div class="inner-box flex">Sidebar</div>
+        <div class="inner-box flex">Main Content</div>
+      </div>
+      <div class="box flex">Footer</div>
+    </div>
+  </body>
+</html>
