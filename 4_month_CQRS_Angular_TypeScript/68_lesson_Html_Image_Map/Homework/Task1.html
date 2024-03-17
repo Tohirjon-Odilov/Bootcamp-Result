@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 1</title>
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 97vh;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 10px 50px;
+        text-align: center;
+      }
+      .row2 {
+        background-color: #ffe699;
+      }
+      .row5 {
+        background-color: #01b0f1;
+      }
+      .row6 {
+        background-color: #c55911;
+      }
+      .row7 {
+        background-color: #8caadb;
+      }
+      .row8 {
+        background-color: #a5a5a5;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tbody>
+        <tr>
+          <td style="background-color: #92d14f">Row 1</td>
+          <td style="background-color: #92d14f"></td>
+          <td style="background-color: #92d14f" colspan="2">ColSpan 2</td>
+          <td style="background-color: #92d14f" colspan="2">ColSpan 2</td>
+        </tr>
+        <tr>
+          <td class="row2">Row 2</td>
+          <td class="row2"></td>
+          <td class="row2" colspan="2" rowspan="3">
+            RowSpan 3 <br />ColumnSpan 2
+          </td>
+          <td class="row2" colspan="2" rowspan="5">
+            RowSpan 5 <br />ColumnSpan 2
+          </td>
+        </tr>
+        <tr>
+          <td style="background-color: crimson">Row 3</td>
+          <td style="background-color: crimson"></td>
+        </tr>
+        <tr>
+          <td style="background-color: #ffc000">Row 4</td>
+          <td rowspan="5" style="background-color: #ffc000">RowSpan 5</td>
+        </tr>
+        <tr>
+          <td class="row5">Row 5</td>
+          <td class="row5" colspan="2">ColumnSpan 2</td>
+        </tr>
+        <tr>
+          <td class="row6">Row 6</td>
+          <td class="row6" colspan="2">ColumnSpan 2</td>
+        </tr>
+        <tr>
+          <td class="row7">Row 7</td>
+          <td class="row7"></td>
+          <td class="row7" colspan="2">ColumnSpan 2</td>
+          <td class="row7"></td>
+        </tr>
+        <tr>
+          <td class="row8">Row 8</td>
+          <td class="row8"></td>
+          <td class="row8" colspan="2">ColumnSpan 2</td>
+          <td class="row8"></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
