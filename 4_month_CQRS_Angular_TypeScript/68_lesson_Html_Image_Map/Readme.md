@@ -1,5 +1,5 @@
 # Loyihani ko'rinishi
-Ko'rish uchun => [link](html-intro-2.netlify.app)
+Ko'rish uchun => [link](https://html-intro-2.netlify.app/)
 
 Main
 
