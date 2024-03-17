@@ -1,5 +1,10 @@
 # Loyihani ko'rinishi
-Ko'rish uchun => [link]()
+Ko'rish uchun => [link](html-intro-2.netlify.app)
+
+Main
+
+![image](https://github.com/Tohirjon-Odilov/Bootcamp-Result/assets/82634626/133a00df-af05-40a1-af89-4b9cfca7c8f3)
+
 
 Task 1
 
