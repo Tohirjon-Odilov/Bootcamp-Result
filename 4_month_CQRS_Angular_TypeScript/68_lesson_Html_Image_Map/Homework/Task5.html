@@ -10,6 +10,27 @@
         align-items: center;
         justify-content: center;
         height: 97vh;
+        flex-direction: column;
+        gap: 20px;
+        font-family: cursive;
+      }
+      .flex {
+        display: flex;
+        gap: 20px;
+      }
+      .flex a {
+        border-radius: 5px;
+        transition: 0.3s all;
+        text-decoration: none;
+        background-color: #01b0f1;
+        color: white;
+        border: solid 1px transparent;
+        padding: 10px 15px;
+      }
+      .flex a:hover {
+        border: solid 1px #01b0f1;
+        color: #01b0f1;
+        background-color: white;
       }
       table,
       th,
@@ -18,7 +39,7 @@
         padding: 10px 10px;
         text-align: center;
       }
-      .time{
+      .time {
         width: 25px;
         text-wrap: wrap;
       }
@@ -51,8 +72,7 @@
           <td rowspan="2" class="time">12-22 pm</td>
           <td rowspan="2" class="time">12-22 pm</td>
         </tr>
-        <tr>
-        </tr>
+        <tr></tr>
         <tr>
           <td colspan="2" rowspan="2">Work</td>
           <td colspan="3">Monday</td>
@@ -82,11 +102,14 @@
           <td colspan="3" rowspan="2">Thursday</td>
           <td colspan="3" rowspan="2">MAM200</td>
           <td rowspan="2"></td>
-          <td colspan="3" rowspan="2">Tutorials <br> for <br> MAM200</td>
+          <td colspan="3" rowspan="2">
+            Tutorials <br />
+            for <br />
+            MAM200
+          </td>
           <td colspan="5" rowspan="2">Free</td>
         </tr>
-        <tr>
-        </tr>
+        <tr></tr>
         <tr>
           <td colspan="2">Research</td>
           <td colspan="3">Friday</td>
@@ -96,5 +119,9 @@
         </tr>
       </tbody>
     </table>
+    <div class="flex">
+      <a href="/Homework/Task4.html">Back</a>
+      <a href="/Homework/Task1.html">Next</a>
+    </div>
   </body>
 </html>

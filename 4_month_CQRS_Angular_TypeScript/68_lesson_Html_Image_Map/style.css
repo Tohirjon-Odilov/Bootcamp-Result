@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+  transition: 0.3s all;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+}
+div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+a {
+  text-decoration: none;
+  padding: 10px 15px;
+  color: white;
+  font-family: cursive;
+  border-radius: 10px;
+  background-color: royalblue;
+  border: 1px transparent solid;
+}
+a:hover {
+  color: royalblue;
+  background-color: white;
+  border: 1px royalblue solid;
+  transform: scale(1.1);
+}
