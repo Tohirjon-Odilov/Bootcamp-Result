@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="Task1.css" />
+		<title>Form 1</title>
+	</head>
+	<body>
+		<form method="post" class="flex" action="htmlacademy.com">
+			<div class="head">Sign Up</div>
+			<div class="main flex">
+				<div>
+					<label for="firstName">First Name </label>
+					<input type="text" placeholder="Enter First Name" />
+				</div>
+				<div>
+					<label for="secondName">Last Name </label>
+					<input type="text" placeholder="Enter Last Name" />
+				</div>
+				<div class="date">
+					<label for="date">Date of Birth </label>
+					<div class="selectWrapper">
+						<select name="Date" id="">
+							<option hidden>Date</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="">...</option>
+						</select>
+						<select name="Month" id="" style="width: 80px">
+							<option hidden>Month</option>
+							<option value="Yanvar">Yanvar</option>
+							<option value="Fevral">Fevral</option>
+							<option value="Mart">Mart</option>
+							<option value="Aprel">Aprel</option>
+							<option value="May">May</option>
+							<option value="">...</option>
+						</select>
+						<select name="Year" id="">
+							<option hidden>Year</option>
+							<option value="2003">2003</option>
+							<option value="2004">2004</option>
+							<option value="2005">2005</option>
+							<option value="2006">2006</option>
+							<option value="2007">2007</option>
+							<option value="2008">2008</option>
+							<option value="2009">2009</option>
+						</select>
+					</div>
+				</div>
+				<div class="gender">
+					<label>Gender</label>
+					<div class="genderWrapper">
+						<div>
+							<input type="radio" />
+							<label for="gender"> Male </label>
+						</div>
+						<div>
+							<input type="radio" />
+							<label for="gender"> Female </label>
+						</div>
+					</div>
+				</div>
+				<div class="countryWrapper">
+					<label for="county"> Country </label>
+					<div class="country">
+						<select name="country">
+							<option hidden>Country</option>
+							<option value="Uzbekistan">Uzbekistan</option>
+							<option value="Russia">Russia</option>
+						</select>
+					</div>
+				</div>
+				<div>
+					<label>E-mail </label>
+					<input type="email" placeholder="Enter E-mail" />
+				</div>
+				<div>
+					<label>Phone</label>
+					<input type="tel" placeholder="Enter Phone" />
+				</div>
+				<div>
+					<label>Password </label>
+					<input type="text" />
+				</div>
+				<div>
+					<label>Confirm Password </label>
+					<input type="text" />
+				</div>
+				<div class="checkbox">
+					<div>
+						
+					</div>
+					<label><input type="checkbox" /> I Agree to the Terms of use</label>
+				</div>
+			</div>
+			<div class="footer">
+				<input type="submit" />
+				<input type="submit" value="Cancel" />
+			</div>
+		</form>
+	</body>
+</html>

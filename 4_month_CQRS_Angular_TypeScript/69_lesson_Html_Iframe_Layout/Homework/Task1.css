@@ -1,0 +1,128 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	vertical-align: middle;
+}
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+}
+
+form {
+	width: 700px;
+}
+
+.flex {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.head {
+	width: 100%;
+	padding: 20px 20px;
+	text-align: left;
+	font-size: 20px;
+	color: #e7b811;
+	background-color: #de8704;
+}
+.gender {
+	display: flex;
+	gap: 20px;
+}
+.gender label {
+	width: auto;
+}
+.gender > label {
+	width: 120px;
+}
+.gender input {
+	width: auto;
+	margin: 0;
+	margin-left: 5px;
+}
+.country {
+	width: 165px;
+	margin-left: 20px;
+}
+.countryWrapper {
+	display: flex;
+}
+.genderWrapper {
+	display: flex;
+	width: 165px;
+}
+.main {
+	background-color: #222536;
+	width: 100%;
+	color: #e7b811;
+	padding: 30px;
+	gap: 30px;
+}
+
+.footer {
+	width: 100%;
+	padding: 20px 20px;
+	text-align: right;
+	background-color: #de8704;
+}
+
+.footer input {
+	background-color: #222536;
+	outline: none;
+	border: none;
+	font-size: 18px;
+	background-color: #62af5e;
+	color: white;
+	padding: 10px 20px;
+}
+
+.footer input:last-child {
+	background-color: #d9544f;
+}
+
+label {
+	display: inline-block;
+	text-align: right;
+	width: 120px;
+}
+
+input {
+	margin-left: 15px;
+	width: 165px;
+}
+
+.selectWrapper {
+	width: 165px;
+	display: flex;
+}
+.date {
+	display: flex;
+	gap: 15px;
+}
+
+.checkbox {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.checkbox label {
+	margin: 0;
+	text-align: left;
+	width: auto;
+}
+.checkbox > div {
+	width: 165px;
+	display: flex;
+	margin-right: 20px;
+}
+.checkbox input {
+	width: auto;
+	text-align: right;
+}
