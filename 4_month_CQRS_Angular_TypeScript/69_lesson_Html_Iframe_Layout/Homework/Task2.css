@@ -1,5 +1,59 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: cursive;
+}
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 97vh;
+}
+
 table,
 th,
 td {
 	border: 1px solid;
+}
+
+tr th h1 {
+	color: red;
+}
+
+thead {
+	background-color: #ffffaa;
+}
+
+tbody {
+	background-color: #00ccff;
+}
+
+tr > td {
+	padding: 10px 25px;
+}
+
+.flex {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+
+.flex input {
+	margin-right: 5px;
+}
+
+textarea,
+input[type="text"] {
+	width: 230px;
+}
+
+tbody tr:last-child {
+	text-align: center;
+}
+
+tbody input[type="button"] {
+	padding: 15px 35px;
+	font-size: 18px;
 }
