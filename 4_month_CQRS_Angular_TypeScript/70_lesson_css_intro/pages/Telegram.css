@@ -1,0 +1,129 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+		Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+		sans-serif;
+	transition: 0.3s all ease;
+	-webkit-transition: 0.3s all ease;
+	-moz-transition: 0.3s all ease;
+	-ms-transition: 0.3s all ease;
+	-o-transition: 0.3s all ease;
+}
+
+body {
+	flex-direction: column;
+	background-color: #212121;
+	height: 96vh;
+}
+
+.container {
+	width: 408px;
+}
+
+.flex {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.test {
+	color: #8774e1;
+	color: #212121;
+}
+
+.login-header {
+	text-align: center;
+}
+
+img {
+	width: 120px;
+	margin: 28px 128px;
+}
+
+.login-header h1 {
+	color: white;
+}
+
+.login-header p {
+	color: #aaa;
+	padding: 20px;
+}
+
+form {
+	color: white;
+}
+
+fieldset {
+	padding: 11px 13.4px;
+	border-radius: 0.75em;
+	-webkit-border-radius: 0.75em;
+	-moz-border-radius: 0.75em;
+	-ms-border-radius: 0.75em;
+	-o-border-radius: 0.75em;
+	border-color: rgb(91, 91, 90);
+	justify-content: flex-start !important;
+	margin-bottom: 20px;
+}
+
+legend {
+	color: #a2acb4;
+	font-size: 0.8rem;
+}
+
+fieldset select,
+fieldset input {
+	color: white;
+	font-size: 0.875rem;
+	font-weight: 500;
+	padding-bottom: 5px;
+	width: 100%;
+}
+
+fieldset:hover,
+fieldset:hover legend {
+	border-color: #8774e1;
+	color: #8774e1;
+}
+
+select,
+input {
+	border: none;
+	outline: none;
+	background-color: transparent;
+	position: relative;
+}
+
+.keep-signed input {
+	margin: 0 20px 0 15px;
+	color: #8774e1;
+}
+
+.keep-signed input:checked {
+	accent-color: #8774e1;
+}
+
+form div:last-child {
+	margin-top: 44px;
+}
+
+button {
+	padding: 20px 10px;
+	color: #8774e1;
+	background-color: transparent;
+	outline: none;
+	border: none;
+	cursor: pointer;
+	font-size: 16px;
+	width: 100%;
+	border-radius: 15px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	-ms-border-radius: 15px;
+	-o-border-radius: 15px;
+}
+
+button:hover {
+	background-color: #8674e11d;
+}

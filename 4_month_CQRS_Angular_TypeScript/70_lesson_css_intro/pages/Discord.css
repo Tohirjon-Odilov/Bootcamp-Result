@@ -1,0 +1,24 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+		Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+		sans-serif;
+}
+
+body {
+    flex-direction: column;
+	height: 96vh;
+}
+
+.flex {
+    display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+a {
+    text-decoration: none;
+    color: #8774e1;
+}
