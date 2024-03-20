@@ -105,9 +105,9 @@ h1 {
 .logo-wrapper {
 	display: flex;
 	position: relative;
-	width: 180px;
-	margin-bottom: 50px;
-	padding: 10px;
+	width: 176px;
+	margin-bottom: 45px;
+	padding: 8px;
 	background-color: white;
 	border-radius: 5px;
 	-webkit-border-radius: 5px;
@@ -145,8 +145,8 @@ h1 {
 
 img:first-child {
 	position: absolute;
-	top: 65px;
-	right: 65px;
+	top: 64px;
+	right: 64px;
 	width: 50px;
 }
 
