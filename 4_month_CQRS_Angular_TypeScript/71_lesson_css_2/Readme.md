@@ -4,7 +4,7 @@
 
 [Main page](https://display-position.netlify.app)
 
-![image](https://github.com/Tohirjon-Odilov/Bootcamp-Result/assets/82634626/5d72e639-406e-491f-8b84-b6fbab8ba966)
+![image](https://github.com/Tohirjon-Odilov/Bootcamp-Result/assets/82634626/7c8f9380-8006-445e-a599-a7272ca0b513)
 
 [Tasks](https://display-position.netlify.app/pages/task)
 
