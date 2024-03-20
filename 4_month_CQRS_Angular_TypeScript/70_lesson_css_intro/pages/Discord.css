@@ -33,46 +33,87 @@ label {
 
 .container {
 	background-color: #313338;
-	justify-content: space-betw een;
+	justify-content: space-between;
 	padding: 32px;
 	gap: 60px;
 	color: white;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
 }
 
-.header{
+.header {
 	margin-bottom: 20px;
+	text-align: center;
+}
+
+.header p {
+	margin-top: 8px;
+	color: #b5bac1;
 }
 
 input {
 	background-color: #1e1f22;
+	color: white;
 	border: none;
 	outline: none;
 	width: 415px;
+	padding: 10px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
 }
 
 form .flex {
 	flex-direction: column !important;
 }
 
-h1{
+h1 {
 	font-size: 24px;
 }
 
 .input-wrapper {
 	display: flex;
 	flex-direction: column;
+	gap: 8px;
+}
+
+.email {
+	margin-bottom: 20px;
+}
+
+.input-wrapper label:after {
+	content: "*";
+	color: red;
+	margin-left: 5px;
 }
 
 .register-link {
 	display: flex;
-	/* flex-direction: wrap !important; */
+	gap: 5px;
+}
+
+.register-link p {
+	color: #949ba4;
+	font-size: 14px;
 }
 
 .logo-wrapper {
 	display: flex;
 	position: relative;
-	width: 160px;
+	width: 180px;
 	margin-bottom: 50px;
+	padding: 10px;
+	background-color: white;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
 }
 
 .password-wrapper {
@@ -80,10 +121,30 @@ h1{
 	flex-direction: column;
 }
 
+.password-wrapper a {
+	margin: 4px 0 20px 0;
+	font-size: 14px;
+}
+
+.password-wrapper button {
+	margin: 0 0 8px 0;
+	padding: 2px 16px;
+	height: 40px;
+	color: white;
+	background-color: #4752c4;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+}
+
 img:first-child {
 	position: absolute;
-	top: 60px;
-	right: 55px;
+	top: 65px;
+	right: 65px;
 	width: 50px;
 }
 
@@ -97,8 +158,15 @@ img:first-child {
 
 .right-block h2 {
 	margin-bottom: 8px;
+	font-size: 22px;
+	font-weight: 500;
 }
 
 .right-block div:last-child {
 	width: 250px;
+}
+
+.right-block div:last-child p {
+	color: #b5bac1;
+	font-size: 15px;
 }
