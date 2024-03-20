@@ -8,6 +8,7 @@
 	padding: 10px;
 	background-color: royalblue;
 	color: white;
+	height: 200px;
 }
 .task3 .box {
 	border-radius: 5px;
@@ -80,12 +81,13 @@
 	border: solid 2px rgb(8, 81, 169) !important;
 }
 
-.task8{
+.task8 {
 	margin-top: 20px;
 
-    flex-direction: column;
+	flex-direction: column;
 }
 
-.task8 .box{
-    width: 500px;
+.task8 .box {
+	width: 500px;
+	height: auto;
 }
