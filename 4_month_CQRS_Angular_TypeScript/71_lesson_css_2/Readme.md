@@ -1,1 +1,1 @@
-[Main page](https://display-postion.netlify.app)
+[Main page](https://display-position.netlify.app)
