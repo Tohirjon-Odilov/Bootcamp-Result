@@ -131,7 +131,9 @@ h1 {
 	padding: 2px 16px;
 	height: 40px;
 	color: white;
-	background-color: #4752c4;
+	font-weight: 500;
+	font-size: 14px;
+	background-color: #5865f2;
 	border: none;
 	outline: none;
 	border-radius: 5px;
