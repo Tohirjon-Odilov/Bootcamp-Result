@@ -1,0 +1,28 @@
+.contact {
+	margin-top: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+}
+
+.contact i {
+	font-size: 60px;
+}
+
+.contact a:first-child i {
+	color: royalblue;
+}
+.contact a:last-child i {
+	color: crimson;
+}
+
+.contact a img {
+	border: none;
+	border-radius: 0;
+	width: 45px;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	-ms-border-radius: 0;
+	-o-border-radius: 0;
+}

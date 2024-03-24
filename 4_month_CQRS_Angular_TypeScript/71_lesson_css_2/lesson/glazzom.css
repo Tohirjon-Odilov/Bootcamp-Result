@@ -20,6 +20,9 @@
 	padding: 0 20px;
 }
 
+body {
+}
+
 .flex {
 	display: flex;
 }
@@ -93,9 +96,21 @@ header {
 	width: 400px;
 }
 
-.cog {
-    margin: 0 auto;
+main {
+	background-image: url(../assets/discord-bg.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 0px 10px;
+	background-attachment: fixed;
+}
 
+.cog-section {
+	background-color: white;
+	padding: 50px 0;
+}
+
+.cog {
+	margin: 0 auto;
 	width: 1000px;
 }
 
@@ -105,6 +120,13 @@ header {
 	margin-right: 20px;
 }
 
-.cog i{
-    font-size: 70px;
+.cog i {
+	font-size: 60px;
+}
+
+.started-section {
+	color: white;
+}
+
+.started {
 }
