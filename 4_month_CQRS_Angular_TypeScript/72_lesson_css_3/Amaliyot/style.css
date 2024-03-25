@@ -1,0 +1,80 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+		Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+		sans-serif;
+	transition: all 0.3s ease;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+}
+
+.container {
+	max-width: 1440px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+.landing-section {
+	background-color: #e4e5e0;
+}
+
+.landing {
+	display: flex;
+	align-items: center;
+	height: 100vh;
+	justify-content: space-between;
+}
+
+.landing .left {
+	width: 650px;
+}
+
+.landing h1 {
+	font-size: 65px;
+	margin-bottom: 30px;
+}
+
+.landing a {
+	display: inline-block;
+	background-color: black;
+	text-decoration: none;
+	color: white;
+	text-transform: capitalize;
+	font-size: 110%;
+	padding: 15px 20px;
+	border-radius: 30px;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	-ms-border-radius: 30px;
+	-o-border-radius: 30px;
+	width: 184px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: solid 1px transparent;
+}
+
+.landing a:hover {
+	background-color: #e4e5e0;
+	border: solid 1px;
+	color: black;
+}
+
+.img {
+	display: flex;
+	height: 450px;
+	gap: 20px;
+}
+
+.img img {
+	width: 300px;
+	height: 450px;
+}
+
+.img img:first-child {
+	margin-top: 50px;
+}
