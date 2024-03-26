@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<link
+			rel="stylesheet"
+			href="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.4/css/boxicons.min.css"
+			integrity="sha512-cn16Qw8mzTBKpu08X0fwhTSv02kK/FojjNLz0bwp2xJ4H+yalwzXKFw/5cLzuBZCxGWIA+95X4skzvo8STNtSg=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<title>Online shop</title>
+	</head>
+	<body>
+		<div class="bg-white">
+			<header class="absolute inset-x-0 top-0 z-50 position-fixed">
+				<nav
+					class="flex items-center justify-between p-6 lg:px-8"
+					aria-label="Global"
+				>
+					<div class="flex lg:flex-1">
+						<a href="#" class="-m-1.5 p-1.5">
+							<span class="sr-only">Your Company</span>
+							<img
+								class="h-8 w-auto"
+								src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+								alt=""
+							/>
+						</a>
+					</div>
+					<div class="flex lg:hidden">
+						<button
+							type="button"
+							class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+						>
+							<span class="sr-only">Open main menu</span>
+							<svg
+								class="h-6 w-6"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke-width="1.5"
+								stroke="currentColor"
+								aria-hidden="true"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+								/>
+							</svg>
+						</button>
+					</div>
+					<div class="hidden lg:flex lg:gap-x-12">
+						<a
+							href="#product"
+							class="text-sm font-semibold leading-6 text-gray-900"
+							>Product</a
+						>
+						<a
+							href="#feature"
+							class="text-sm font-semibold leading-6 text-gray-900"
+							>Features</a
+						>
+						<a
+							href="#marketplace"
+							class="text-sm font-semibold leading-6 text-gray-900"
+							>Marketplace</a
+						>
+						<a
+							href="#company"
+							class="text-sm font-semibold leading-6 text-gray-900"
+							>Company</a
+						>
+					</div>
+					<div class="hidden lg:flex lg:flex-1 lg:justify-end">
+						<a
+							href="login.html"
+							class="text-sm font-semibold leading-6 text-gray-900"
+							>Log in <span aria-hidden="true">&rarr;</span></a
+						>
+					</div>
+				</nav>
+				<!-- Mobile menu, show/hide based on menu open state. -->
+				<div class="lg:hidden" role="dialog" aria-modal="true">
+					<!-- Background backdrop, show/hide based on slide-over state. -->
+					<div class="fixed inset-0 z-50"></div>
+					<div
+						class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
+					>
+						<div class="flex items-center justify-between">
+							<a href="#" class="-m-1.5 p-1.5">
+								<span class="sr-only">Your Company</span>
+								<img
+									class="h-8 w-auto"
+									src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+									alt=""
+								/>
+							</a>
+							<button
+								type="button"
+								class="-m-2.5 rounded-md p-2.5 text-gray-700"
+							>
+								<span class="sr-only">Close menu</span>
+								<svg
+									class="h-6 w-6"
+									fill="none"
+									viewBox="0 0 24 24"
+									stroke-width="1.5"
+									stroke="currentColor"
+									aria-hidden="true"
+								>
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										d="M6 18L18 6M6 6l12 12"
+									/>
+								</svg>
+							</button>
+						</div>
+						<div class="mt-6 flow-root">
+							<div class="-my-6 divide-y divide-gray-500/10">
+								<div class="space-y-2 py-6">
+									<a
+										href="#"
+										class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+										>Product</a
+									>
+									<a
+										href="#"
+										class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+										>Features</a
+									>
+									<a
+										href="#"
+										class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+										>Marketplace</a
+									>
+									<a
+										href="#"
+										class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+										>Company</a
+									>
+								</div>
+								<div class="py-6">
+									<a
+										href="#"
+										class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+										>Log in</a
+									>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+
+			<div class="relative isolate px-6 pt-14 lg:px-8">
+				<div
+					class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+					aria-hidden="true"
+				>
+					<div
+						class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
+						style="
+							clip-path: polygon(
+								74.1% 44.1%,
+								100% 61.6%,
+								97.5% 26.9%,
+								85.5% 0.1%,
+								80.7% 2%,
+								72.5% 32.5%,
+								60.2% 62.4%,
+								52.4% 68.1%,
+								47.5% 58.3%,
+								45.2% 34.5%,
+								27.5% 76.7%,
+								0.1% 64.9%,
+								17.9% 100%,
+								27.6% 76.8%,
+								76.1% 97.7%,
+								74.1% 44.1%
+							);
+						"
+					></div>
+				</div>
+				<div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+					<div class="hidden sm:mb-8 sm:flex sm:justify-center">
+						<div
+							class="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20"
+						>
+							Announcing our next round of funding.
+							<a href="#" class="font-semibold text-indigo-600"
+								><span
+									class="absolute inset-0"
+									aria-hidden="true"
+								></span
+								>Read more
+								<span aria-hidden="true">&rarr;</span></a
+							>
+						</div>
+					</div>
+					<div class="text-center">
+						<h1
+							class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl"
+						>
+							Online shop
+						</h1>
+						<p class="mt-6 text-lg leading-8 text-gray-600">
+							Anim aute id magna aliqua ad ad non deserunt sunt.
+							Qui irure qui lorem cupidatat commodo. Elit sunt
+							amet fugiat veniam occaecat fugiat aliqua.
+						</p>
+						<div
+							class="mt-10 flex items-center justify-center gap-x-6"
+						>
+							<a
+								href="#"
+								class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+								>Get started</a
+							>
+							<a
+								href="#"
+								class="text-sm font-semibold leading-6 text-gray-900"
+								>Learn more <span aria-hidden="true">→</span></a
+							>
+						</div>
+					</div>
+				</div>
+				<div
+					class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
+					aria-hidden="true"
+				>
+					<div
+						class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
+						style="
+							clip-path: polygon(
+								74.1% 44.1%,
+								100% 61.6%,
+								97.5% 26.9%,
+								85.5% 0.1%,
+								80.7% 2%,
+								72.5% 32.5%,
+								60.2% 62.4%,
+								52.4% 68.1%,
+								47.5% 58.3%,
+								45.2% 34.5%,
+								27.5% 76.7%,
+								0.1% 64.9%,
+								17.9% 100%,
+								27.6% 76.8%,
+								76.1% 97.7%,
+								74.1% 44.1%
+							);
+						"
+					></div>
+				</div>
+			</div>
+		</div>
+
+		<main>
+			<div class="bg-white" id="product">
+				<div
+					class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8"
+				>
+					<h2 class="text-2xl font-bold tracking-tight text-gray-900">
+						Customers also purchased
+					</h2>
+
+					<div
+						class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8"
+					>
+						<div class="group relative">
+							<div
+								class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80"
+							>
+								<img
+									src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg"
+									alt="Front of men&#039;s Basic Tee in black."
+									class="h-full w-full object-cover object-center lg:h-full lg:w-full"
+								/>
+							</div>
+							<div class="mt-4 flex justify-between">
+								<div>
+									<h3 class="text-sm text-gray-700">
+										<a href="singlePage.html">
+											<span
+												aria-hidden="true"
+												class="absolute inset-0"
+											></span>
+											Basic Tee
+										</a>
+									</h3>
+									<p class="mt-1 text-sm text-gray-500">
+										Black
+									</p>
+								</div>
+								<p class="text-sm font-medium text-gray-900">
+									$35
+								</p>
+							</div>
+						</div>
+						<div class="group relative">
+							<div
+								class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80"
+							>
+								<img
+									src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-04.jpg"
+									alt="Front of men&#039;s Basic Tee in black."
+									class="h-full w-full object-cover object-center lg:h-full lg:w-full"
+								/>
+							</div>
+							<div class="mt-4 flex justify-between">
+								<div>
+									<h3 class="text-sm text-gray-700">
+										<a href="singlePage.html">
+											<span
+												aria-hidden="true"
+												class="absolute inset-0"
+											></span>
+											Basic Tee
+										</a>
+									</h3>
+									<p class="mt-1 text-sm text-gray-500">
+										Black
+									</p>
+								</div>
+								<p class="text-sm font-medium text-gray-900">
+									$39
+								</p>
+							</div>
+						</div>
+						<div class="group relative">
+							<div
+								class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80"
+							>
+								<img
+									src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-03.jpg"
+									alt="Front of men&#039;s Basic Tee in black."
+									class="h-full w-full object-cover object-center lg:h-full lg:w-full"
+								/>
+							</div>
+							<div class="mt-4 flex justify-between">
+								<div>
+									<h3 class="text-sm text-gray-700">
+										<a href="singlePage.html">
+											<span
+												aria-hidden="true"
+												class="absolute inset-0"
+											></span>
+											Basic Tee
+										</a>
+									</h3>
+									<p class="mt-1 text-sm text-gray-500">
+										Black
+									</p>
+								</div>
+								<p class="text-sm font-medium text-gray-900">
+									$45
+								</p>
+							</div>
+						</div>
+						<div class="group relative">
+							<div
+								class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80"
+							>
+								<img
+									src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-02.jpg"
+									alt="Front of men&#039;s Basic Tee in black."
+									class="h-full w-full object-cover object-center lg:h-full lg:w-full"
+								/>
+							</div>
+							<div class="mt-4 flex justify-between">
+								<div>
+									<h3 class="text-sm text-gray-700">
+										<a href="singlePage.html">
+											<span
+												aria-hidden="true"
+												class="absolute inset-0"
+											></span>
+											Basic Tee
+										</a>
+									</h3>
+									<p class="mt-1 text-sm text-gray-500">
+										Black
+									</p>
+								</div>
+								<p class="text-sm font-medium text-gray-900">
+									$350
+								</p>
+							</div>
+						</div>
+
+						<!-- More products... -->
+					</div>
+				</div>
+			</div>
+
+			<div class="bg-white">
+				<div
+					class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8"
+				>
+					<h2 class="sr-only">Products</h2>
+
+					<div
+						class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8"
+					>
+						<a href="#" class="group">
+							<div
+								class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7"
+							>
+								<img
+									src="https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-01.jpg"
+									alt="Tall slender porcelain bottle with natural clay textured body and cork stopper."
+									class="h-full w-full object-cover object-center group-hover:opacity-75"
+								/>
+							</div>
+							<h3 class="mt-4 text-sm text-gray-700">
+								Earthen Bottle
+							</h3>
+							<p class="mt-1 text-lg font-medium text-gray-900">
+								$48
+							</p>
+						</a>
+						<a href="#" class="group">
+							<div
+								class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7"
+							>
+								<img
+									src="https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-02.jpg"
+									alt="Olive drab green insulated bottle with flared screw lid and flat top."
+									class="h-full w-full object-cover object-center group-hover:opacity-75"
+								/>
+							</div>
+							<h3 class="mt-4 text-sm text-gray-700">
+								Nomad Tumbler
+							</h3>
+							<p class="mt-1 text-lg font-medium text-gray-900">
+								$35
+							</p>
+						</a>
+						<a href="#" class="group">
+							<div
+								class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7"
+							>
+								<img
+									src="https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-03.jpg"
+									alt="Person using a pen to cross a task off a productivity paper card."
+									class="h-full w-full object-cover object-center group-hover:opacity-75"
+								/>
+							</div>
+							<h3 class="mt-4 text-sm text-gray-700">
+								Focus Paper Refill
+							</h3>
+							<p class="mt-1 text-lg font-medium text-gray-900">
+								$89
+							</p>
+						</a>
+						<a href="#" class="group">
+							<div
+								class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7"
+							>
+								<img
+									src="https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-04.jpg"
+									alt="Hand holding black machined steel mechanical pencil with brass tip and top."
+									class="h-full w-full object-cover object-center group-hover:opacity-75"
+								/>
+							</div>
+							<h3 class="mt-4 text-sm text-gray-700">
+								Machined Mechanical Pencil
+							</h3>
+							<p class="mt-1 text-lg font-medium text-gray-900">
+								$35
+							</p>
+						</a>
+
+						<a href="#" class="group">
+							<div
+								class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7"
+							>
+								<img
+									src="https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-05.jpg"
+									alt="Tall slender porcelain bottle with natural clay textured body and cork stopper."
+									class="h-full w-full object-cover object-center group-hover:opacity-75"
+								/>
+							</div>
+							<h3 class="mt-4 text-sm text-gray-700">
+								Earthen Bottle
+							</h3>
+							<p class="mt-1 text-lg font-medium text-gray-900">
+								$48
+							</p>
+						</a>
+						<a href="#" class="group">
+							<div
+								class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7"
+							>
+								<img
+									src="https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-06.jpg"
+									alt="Olive drab green insulated bottle with flared screw lid and flat top."
+									class="h-full w-full object-cover object-center group-hover:opacity-75"
+								/>
+							</div>
+							<h3 class="mt-4 text-sm text-gray-700">
+								Nomad Tumbler
+							</h3>
+							<p class="mt-1 text-lg font-medium text-gray-900">
+								$35
+							</p>
+						</a>
+						<a href="#" class="group">
+							<div
+								class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7"
+							>
+								<img
+									src="https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-07.jpg"
+									alt="Person using a pen to cross a task off a productivity paper card."
+									class="h-full w-full object-cover object-center group-hover:opacity-75"
+								/>
+							</div>
+							<h3 class="mt-4 text-sm text-gray-700">
+								Focus Paper Refill
+							</h3>
+							<p class="mt-1 text-lg font-medium text-gray-900">
+								$89
+							</p>
+						</a>
+						<a href="#" class="group">
+							<div
+								class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7"
+							>
+								<img
+									src="https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-08.jpg"
+									alt="Hand holding black machined steel mechanical pencil with brass tip and top."
+									class="h-full w-full object-cover object-center group-hover:opacity-75"
+								/>
+							</div>
+							<h3 class="mt-4 text-sm text-gray-700">
+								Machined Mechanical Pencil
+							</h3>
+							<p class="mt-1 text-lg font-medium text-gray-900">
+								$35
+							</p>
+						</a>
+
+						<!-- More products... -->
+					</div>
+				</div>
+			</div>
+
+			<div class="bg-white" id="feature">
+				<div
+					class="mx-auto grid max-w-2xl grid-cols-1 items-center gap-x-8 gap-y-16 px-4 py-24 sm:px-6 sm:py-32 lg:max-w-7xl lg:grid-cols-2 lg:px-8"
+				>
+					<div>
+						<h2
+							class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
+						>
+							Technical Specifications
+						</h2>
+						<p class="mt-4 text-gray-500">
+							The walnut wood card tray is precision milled to
+							perfectly fit a stack of Focus cards. The powder
+							coated steel divider separates active cards from new
+							ones, or can be used to archive important task
+							lists.
+						</p>
+
+						<dl
+							class="mt-16 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:gap-x-8"
+						>
+							<div class="border-t border-gray-200 pt-4">
+								<dt class="font-medium text-gray-900">
+									Origin
+								</dt>
+								<dd class="mt-2 text-sm text-gray-500">
+									Designed by Good Goods, Inc.
+								</dd>
+							</div>
+							<div class="border-t border-gray-200 pt-4">
+								<dt class="font-medium text-gray-900">
+									Material
+								</dt>
+								<dd class="mt-2 text-sm text-gray-500">
+									Solid walnut base with rare earth magnets
+									and powder coated steel card cover
+								</dd>
+							</div>
+							<div class="border-t border-gray-200 pt-4">
+								<dt class="font-medium text-gray-900">
+									Dimensions
+								</dt>
+								<dd class="mt-2 text-sm text-gray-500">
+									6.25&quot; x 3.55&quot; x 1.15&quot;
+								</dd>
+							</div>
+							<div class="border-t border-gray-200 pt-4">
+								<dt class="font-medium text-gray-900">
+									Finish
+								</dt>
+								<dd class="mt-2 text-sm text-gray-500">
+									Hand sanded and finished with natural oil
+								</dd>
+							</div>
+							<div class="border-t border-gray-200 pt-4">
+								<dt class="font-medium text-gray-900">
+									Includes
+								</dt>
+								<dd class="mt-2 text-sm text-gray-500">
+									Wood card tray and 3 refill packs
+								</dd>
+							</div>
+							<div class="border-t border-gray-200 pt-4">
+								<dt class="font-medium text-gray-900">
+									Considerations
+								</dt>
+								<dd class="mt-2 text-sm text-gray-500">
+									Made from natural materials. Grain and color
+									vary with each item.
+								</dd>
+							</div>
+						</dl>
+					</div>
+					<div
+						class="grid grid-cols-2 grid-rows-2 gap-4 sm:gap-6 lg:gap-8"
+					>
+						<img
+							src="https://tailwindui.com/img/ecommerce-images/product-feature-03-detail-01.jpg"
+							alt="Walnut card tray with white powder coated steel divider and 3 punchout holes."
+							class="rounded-lg bg-gray-100"
+						/>
+						<img
+							src="https://tailwindui.com/img/ecommerce-images/product-feature-03-detail-02.jpg"
+							alt="Top down view of walnut card tray with embedded magnets and card groove."
+							class="rounded-lg bg-gray-100"
+						/>
+						<img
+							src="https://tailwindui.com/img/ecommerce-images/product-feature-03-detail-03.jpg"
+							alt="Side of walnut card tray with card groove and recessed card area."
+							class="rounded-lg bg-gray-100"
+						/>
+						<img
+							src="https://tailwindui.com/img/ecommerce-images/product-feature-03-detail-04.jpg"
+							alt="Walnut card tray filled with cards and card angled in dedicated groove."
+							class="rounded-lg bg-gray-100"
+						/>
+					</div>
+				</div>
+			</div>
+
+			<div class="bg-white py-24 sm:py-32" id="marketplace">
+				<div class="mx-auto max-w-7xl px-6 lg:px-8">
+					<div class="mx-auto max-w-2xl sm:text-center">
+						<h2
+							class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
+						>
+							Simple no-tricks pricing
+						</h2>
+						<p class="mt-6 text-lg leading-8 text-gray-600">
+							Distinctio et nulla eum soluta et neque labore
+							quibusdam. Saepe et quasi iusto modi velit ut non
+							voluptas in. Explicabo id ut laborum.
+						</p>
+					</div>
+					<div
+						class="mx-auto mt-16 max-w-2xl rounded-3xl ring-1 ring-gray-200 sm:mt-20 lg:mx-0 lg:flex lg:max-w-none"
+					>
+						<div class="p-8 sm:p-10 lg:flex-auto">
+							<h3
+								class="text-2xl font-bold tracking-tight text-gray-900"
+							>
+								Lifetime membership
+							</h3>
+							<p class="mt-6 text-base leading-7 text-gray-600">
+								Lorem ipsum dolor sit amet consect etur
+								adipisicing elit. Itaque amet indis perferendis
+								blanditiis repellendus etur quidem assumenda.
+							</p>
+							<div class="mt-10 flex items-center gap-x-4">
+								<h4
+									class="flex-none text-sm font-semibold leading-6 text-indigo-600"
+								>
+									What’s included
+								</h4>
+								<div class="h-px flex-auto bg-gray-100"></div>
+							</div>
+							<ul
+								role="list"
+								class="mt-8 grid grid-cols-1 gap-4 text-sm leading-6 text-gray-600 sm:grid-cols-2 sm:gap-6"
+							>
+								<li class="flex gap-x-3">
+									<svg
+										class="h-6 w-5 flex-none text-indigo-600"
+										viewBox="0 0 20 20"
+										fill="currentColor"
+										aria-hidden="true"
+									>
+										<path
+											fill-rule="evenodd"
+											d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+											clip-rule="evenodd"
+										/>
+									</svg>
+									Private forum access
+								</li>
+								<li class="flex gap-x-3">
+									<svg
+										class="h-6 w-5 flex-none text-indigo-600"
+										viewBox="0 0 20 20"
+										fill="currentColor"
+										aria-hidden="true"
+									>
+										<path
+											fill-rule="evenodd"
+											d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+											clip-rule="evenodd"
+										/>
+									</svg>
+									Member resources
+								</li>
+								<li class="flex gap-x-3">
+									<svg
+										class="h-6 w-5 flex-none text-indigo-600"
+										viewBox="0 0 20 20"
+										fill="currentColor"
+										aria-hidden="true"
+									>
+										<path
+											fill-rule="evenodd"
+											d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+											clip-rule="evenodd"
+										/>
+									</svg>
+									Entry to annual conference
+								</li>
+								<li class="flex gap-x-3">
+									<svg
+										class="h-6 w-5 flex-none text-indigo-600"
+										viewBox="0 0 20 20"
+										fill="currentColor"
+										aria-hidden="true"
+									>
+										<path
+											fill-rule="evenodd"
+											d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+											clip-rule="evenodd"
+										/>
+									</svg>
+									Official member t-shirt
+								</li>
+							</ul>
+						</div>
+						<div
+							class="-mt-2 p-2 lg:mt-0 lg:w-full lg:max-w-md lg:flex-shrink-0"
+						>
+							<div
+								class="rounded-2xl bg-gray-50 py-10 text-center ring-1 ring-inset ring-gray-900/5 lg:flex lg:flex-col lg:justify-center lg:py-16"
+							>
+								<div class="mx-auto max-w-xs px-8">
+									<p
+										class="text-base font-semibold text-gray-600"
+									>
+										Pay once, own it forever
+									</p>
+									<p
+										class="mt-6 flex items-baseline justify-center gap-x-2"
+									>
+										<span
+											class="text-5xl font-bold tracking-tight text-gray-900"
+											>$349</span
+										>
+										<span
+											class="text-sm font-semibold leading-6 tracking-wide text-gray-600"
+											>USD</span
+										>
+									</p>
+									<a
+										href="#"
+										class="mt-10 block w-full rounded-md bg-indigo-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+										>Get access</a
+									>
+									<p
+										class="mt-6 text-xs leading-5 text-gray-600"
+									>
+										Invoices and receipts available for easy
+										company reimbursement
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="bg-white py-24 sm:py-32">
+				<div class="mx-auto max-w-7xl px-6 lg:px-8">
+					<dl
+						class="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3"
+					>
+						<div class="mx-auto flex max-w-xs flex-col gap-y-4">
+							<dt class="text-base leading-7 text-gray-600">
+								Transactions every 24 hours
+							</dt>
+							<dd
+								class="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl"
+							>
+								44 million
+							</dd>
+						</div>
+						<div class="mx-auto flex max-w-xs flex-col gap-y-4">
+							<dt class="text-base leading-7 text-gray-600">
+								Assets under holding
+							</dt>
+							<dd
+								class="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl"
+							>
+								$119 trillion
+							</dd>
+						</div>
+						<div class="mx-auto flex max-w-xs flex-col gap-y-4">
+							<dt class="text-base leading-7 text-gray-600">
+								New users annually
+							</dt>
+							<dd
+								class="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl"
+							>
+								46,000
+							</dd>
+						</div>
+					</dl>
+				</div>
+			</div>
+
+			<div class="bg-white py-24 sm:py-32" id="company">
+				<div class="mx-auto max-w-7xl px-6 lg:px-8">
+					<h2
+						class="text-center text-lg font-semibold leading-8 text-gray-900"
+					>
+						Trusted by the world’s most innovative teams
+					</h2>
+					<div
+						class="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5"
+					>
+						<img
+							class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+							src="https://tailwindui.com/img/logos/158x48/transistor-logo-gray-900.svg"
+							alt="Transistor"
+							width="158"
+							height="48"
+						/>
+						<img
+							class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+							src="https://tailwindui.com/img/logos/158x48/reform-logo-gray-900.svg"
+							alt="Reform"
+							width="158"
+							height="48"
+						/>
+						<img
+							class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
+							src="https://tailwindui.com/img/logos/158x48/tuple-logo-gray-900.svg"
+							alt="Tuple"
+							width="158"
+							height="48"
+						/>
+						<img
+							class="col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1"
+							src="https://tailwindui.com/img/logos/158x48/savvycal-logo-gray-900.svg"
+							alt="SavvyCal"
+							width="158"
+							height="48"
+						/>
+						<img
+							class="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1"
+							src="https://tailwindui.com/img/logos/158x48/statamic-logo-gray-900.svg"
+							alt="Statamic"
+							width="158"
+							height="48"
+						/>
+					</div>
+				</div>
+			</div>
+		</main>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.4/dist/boxicons.js"
+			integrity="sha512-kWH92pHUC/rcjpSMu19lT+H6TlZwZCAftg9AuSw+AVYSdEKSlXXB8o6g12mg5f+Pj5xO40A7ju2ot/VdodCthw=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+	</body>
+</html>
