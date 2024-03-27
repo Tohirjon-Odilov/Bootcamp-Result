@@ -1,0 +1,28 @@
+.hero {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+}
+
+.puzzle-section {
+	position: relative;
+}
+
+.puzzle {
+	height: 70vh;
+}
+
+.puzzle-item {
+	font-size: 20px;
+	width: 70px;
+	border-radius: 0;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	-ms-border-radius: 0;
+	-o-border-radius: 0;
+}
+
+.button {
+	top: 30px;
+}
