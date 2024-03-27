@@ -90,7 +90,6 @@ puzzleParent.addEventListener("click", (e) => {
 		return;
 	}
 	let clickedIndex = puzzleItemsArray.indexOf(e.target);
-	console.log(clickedIndex, emptyIndex);
 	if (
 		clickedIndex == emptyIndex - 1 ||
 		clickedIndex == emptyIndex + 1 ||
