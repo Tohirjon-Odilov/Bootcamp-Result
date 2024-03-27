@@ -7,15 +7,21 @@
 
 .puzzle-section {
 	position: relative;
+	margin-bottom: 100px;
 }
-
-.puzzle {
+.flex {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	height: 70vh;
 }
 
 .puzzle-item {
+	padding: 10px 20px;
 	font-size: 20px;
-	width: 70px;
+	width: 100px;
+	font-family: cursive;
+	font-size: 62px;
 	border-radius: 0;
 	-webkit-border-radius: 0;
 	-moz-border-radius: 0;

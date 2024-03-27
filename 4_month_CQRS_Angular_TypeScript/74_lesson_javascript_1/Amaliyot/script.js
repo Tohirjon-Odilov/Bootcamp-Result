@@ -7,6 +7,7 @@ let check = document.querySelector(".check");
 
 let puzzleParent = document.querySelector(".puzzle");
 let refreshPuzzle = document.querySelector(".refreshPuzzle");
+let hack = document.querySelector(".hack");
 
 raund1.textContent = Math.floor(Math.random() * 100);
 raund3.textContent = Math.floor(Math.random() * 100);
@@ -52,34 +53,44 @@ let puzzleItems = [
 	"15",
 	" ",
 ];
+
+let purePuzzle = puzzleItems.map((a) => a);
+
 shuffle(puzzleItems);
 for (let index = 0; index < 16; index++) {
-	puzzle.innerHTML += `<button class="puzzle-item btn btn-primary p-4">${puzzleItems[index]}</button>`;
+	puzzle.innerHTML += `<button class="puzzle-item btn btn-primary">${puzzleItems[index]}</button>`;
 	if (index % 4 == 3) {
 		puzzle.innerHTML += `<br>`;
 	}
 }
 
+let puzzleItemsArray = Array.from(puzzle.children);
+
+let emptyIndex = puzzleItemsArray.indexOf(
+	puzzleItemsArray.find((item) => item.textContent == " ")
+);
+
 refreshPuzzle.addEventListener("click", () => {
 	shuffle(puzzleItems);
 	puzzle.innerHTML = "";
 	for (let index = 0; index < 16; index++) {
-		puzzle.innerHTML += `<button class="puzzle-item btn btn-primary p-4">${puzzleItems[index]}</button>`;
+		puzzle.innerHTML += `<button class="puzzle-item btn btn-primary">${puzzleItems[index]}</button>`;
 		if (index % 4 == 3) {
 			puzzle.innerHTML += `<br>`;
 		}
 	}
+	puzzleItemsArray = Array.from(puzzle.children);
+	emptyIndex = puzzleItemsArray.indexOf(
+		puzzleItemsArray.find((item) => item.textContent == " ")
+	);
 });
 
-let puzzleItemsArray = Array.from(puzzle.children);
-let emptyIndex = puzzleItemsArray.indexOf(
-	puzzleItemsArray.find((item) => item.textContent == " ")
-);
 puzzleParent.addEventListener("click", (e) => {
 	if (e.target.textContent == " ") {
 		return;
 	}
 	let clickedIndex = puzzleItemsArray.indexOf(e.target);
+	console.log(clickedIndex, emptyIndex);
 	if (
 		clickedIndex == emptyIndex - 1 ||
 		clickedIndex == emptyIndex + 1 ||
@@ -95,4 +106,18 @@ puzzleParent.addEventListener("click", (e) => {
 		];
 		emptyIndex = clickedIndex;
 	}
+});
+
+hack.addEventListener("click", () => {
+	puzzle.innerHTML = "";
+	for (let index = 0; index < 16; index++) {
+		puzzle.innerHTML += `<button class="puzzle-item btn btn-primary">${purePuzzle[index]}</button>`;
+		if (index % 4 == 3) {
+			puzzle.innerHTML += `<br>`;
+		}
+	}
+	puzzleItemsArray = Array.from(puzzle.children);
+	emptyIndex = puzzleItemsArray.indexOf(
+		puzzleItemsArray.find((item) => item.textContent == " ")
+	);
 });
