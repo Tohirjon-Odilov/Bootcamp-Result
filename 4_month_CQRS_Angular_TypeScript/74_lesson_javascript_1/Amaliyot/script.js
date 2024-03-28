@@ -85,6 +85,16 @@ refreshPuzzle.addEventListener("click", () => {
 	);
 });
 
+function checkWin() {
+	if (
+		Array(...puzzleItemsArray.map((item) => item.textContent))
+			.filter((item) => item != "")
+			.every((item, index) => item == purePuzzle[index])
+	) {
+		alert("You win");
+	}
+}
+
 puzzleParent.addEventListener("click", (e) => {
 	if (e.target.textContent == " ") {
 		return;
@@ -105,6 +115,7 @@ puzzleParent.addEventListener("click", (e) => {
 		];
 		emptyIndex = clickedIndex;
 	}
+	checkWin();
 });
 
 hack.addEventListener("click", () => {
@@ -119,4 +130,5 @@ hack.addEventListener("click", () => {
 	emptyIndex = puzzleItemsArray.indexOf(
 		puzzleItemsArray.find((item) => item.textContent == " ")
 	);
+	checkWin();
 });
