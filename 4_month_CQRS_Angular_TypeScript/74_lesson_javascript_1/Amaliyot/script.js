@@ -132,3 +132,5 @@ hack.addEventListener("click", () => {
 	);
 	checkWin();
 });
+
+console.log(window.location)
