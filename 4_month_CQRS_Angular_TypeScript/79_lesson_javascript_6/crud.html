@@ -68,9 +68,10 @@
 						<button
 							type="button"
 							class="btn btn-secondary"
+							id="updateCardBtn"
 							data-bs-dismiss="modal"
 						>
-							Close
+							Update
 						</button>
 						<button
 							type="button"
@@ -91,12 +92,13 @@
 				data-bs-toggle="modal"
 				data-bs-target="#exampleModal"
 				data-bs-whatever="@getbootstrap"
+                id="add"
 			>
 				Add
 			</button>
 
-			<div class="row">
-				<div class="col-6">
+			<div class="row d-none">
+				<div class="col-6 d-none">
 					<div class="form-group">
 						<label for="titleInput">Title:</label>
 						<input
@@ -114,11 +116,11 @@
 							placeholder="Enter content"
 						></textarea>
 					</div>
-					<button id="updateCardBtn" class="btn btn-success">
+					<button id="updateCardBtn" class="btn btn-success d-none">
 						Update
 					</button>
 				</div>
-				<div class="col-6">
+				<div class="col-6 d-none">
 					<button
 						id="addCardBtn"
 						class="btn btn-primary"
@@ -129,7 +131,7 @@
 				</div>
 			</div>
 
-			<div id="cardContainer" class="card-container"></div>
+			<div id="cardContainer" class="card-container d-flex gap-4"></div>
 		</div>
 
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>

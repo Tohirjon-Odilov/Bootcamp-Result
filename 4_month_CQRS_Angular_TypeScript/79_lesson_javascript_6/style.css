@@ -4,6 +4,6 @@
 }
 
 .card {
-	width: calc(25% - 20px);
+	width: 400px;
 	margin: 5px;
 }

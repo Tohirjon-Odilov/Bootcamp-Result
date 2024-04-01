@@ -4,12 +4,20 @@ document.addEventListener("DOMContentLoaded", function () {
 	const cardContainer = document.querySelector("#cardContainer");
 	const titleInput = document.querySelector("#titleInput");
 	const contentInput = document.querySelector("#contentInput");
-    
+
 	let cardCount = 0;
 	let currentCard = null;
 
+	console.log("salom");
+
 	addCardBtn.addEventListener("click", function () {
+		// document.querySelector("#addCardBtn").style.display = "block";
 		createCard();
+		// document.querySelector("#updateCardBtn").style.display = "none";
+		titleInput.value = "";
+		contentInput.value = "";
+		currentCard = null;
+		cardCount++;
 	});
 
 	updateCardBtn.addEventListener("click", function () {
@@ -49,6 +57,9 @@ document.addEventListener("DOMContentLoaded", function () {
 		const updateBtn = document.createElement("button");
 		updateBtn.classList.add("btn", "btn-success", "mx-2");
 		updateBtn.textContent = "Update";
+		updateBtn.setAttribute("data-bs-toggle", "modal");
+		updateBtn.setAttribute("data-bs-target", "#exampleModal");
+
 		updateBtn.addEventListener("click", function () {
 			titleInput.value = cardTitle.textContent;
 			contentInput.value = cardText.textContent;
@@ -67,11 +78,15 @@ document.addEventListener("DOMContentLoaded", function () {
 		} else {
 			cardContainer.appendChild(card);
 		}
+
+		document.querySelector(".btn-close").click();
 	}
 
 	function updateCard(card) {
 		const cardTitle = card.querySelector(".card-title");
 		const cardText = card.querySelector(".card-text");
+		// console.log(document.querySelector("#updateCardBtn").style);
+		// document.querySelector("#addCardBtn").style.display = "block";
 		cardTitle.textContent = titleInput.value || "Title";
 		cardText.textContent = contentInput.value || "Content";
 	}
