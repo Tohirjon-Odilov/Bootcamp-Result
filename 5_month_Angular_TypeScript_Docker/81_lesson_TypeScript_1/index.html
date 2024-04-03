@@ -25,6 +25,72 @@
 		</header>
 
 		<main>
+			<div
+				class="modal fade"
+				id="exampleModal"
+				tabindex="-1"
+				aria-labelledby="exampleModalLabel"
+				aria-hidden="true"
+			>
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLabel">
+								New card
+							</h5>
+							<button
+								type="button"
+								class="btn-close"
+								data-bs-dismiss="modal"
+								aria-label="Close"
+							></button>
+						</div>
+						<div class="modal-body">
+							<form>
+								<div class="mb-3">
+									<label
+										for="recipient-name"
+										class="col-form-label titleInput"
+										>Name:</label
+									>
+									<input
+										type="text"
+										class="form-control"
+										id="nameModal"
+										placeholder="Enter title..."
+									/>
+								</div>
+								<div class="mb-3">
+									<label
+										for="message-text"
+										class="col-form-label contentInput"
+										>Price:</label
+									>
+									<input
+									type="number"
+									class="form-control productPrice"
+									id="priceModal"
+									placeholder="Password"
+									value="45689"
+								/>
+								</div>
+							</form>
+						</div>
+						<div class="modal-footer">
+							<button
+								type="button"
+								class="btn btn-primary save"
+								data-bs-dismiss="modal"
+								id="saveCard"
+								aria-label="Close"
+							>
+								Save
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
 			<section class="hero-section">
 				<div class="container">
 					<div class="hero py-5">
@@ -38,6 +104,7 @@
 									class="form-control productName"
 									id="floatingInput"
 									placeholder="name@example.com"
+									value="salom"
 								/>
 								<label for="floatingInput">Product name</label>
 							</div>
@@ -47,6 +114,7 @@
 									class="form-control productPrice"
 									id="floatingPassword"
 									placeholder="Password"
+									value="45689"
 								/>
 								<label for="floatingPassword">Price</label>
 							</div>
@@ -57,11 +125,11 @@
 									<th scope="col">#</th>
 									<th scope="col">First</th>
 									<th scope="col">Last</th>
-									<th scope="col">Handle</th>
+									<th scope="col">Update Time</th>
+									<th scope="col">Action</th>
 								</tr>
 							</thead>
 							<tbody></tbody>
-                            
 						</table>
 					</div>
 				</div>

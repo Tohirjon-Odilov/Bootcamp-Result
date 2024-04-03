@@ -1,9 +1,3 @@
-// import { Product } from "./ProductModel";
-
-// var product1 = new Product("Redmi 11", 1200);
-
-// console.log(product1.name)
-
 class Product {
 	readonly name: string;
 	readonly price: number;
@@ -14,13 +8,15 @@ class Product {
 	}
 }
 
-// var list: Array<Product> = [];
-
 var tbody = document.querySelector("tbody");
+var container = document.querySelector(".container");
 var createRow = document.querySelector(".create-row");
 
 var index: number = 1;
-console.log(tbody);
+// console.log(tbody);
+
+var productName: unknown;
+var productPrice: unknown;
 
 createRow?.addEventListener("click", () => {
 	// Create a new Date object
@@ -30,21 +26,17 @@ createRow?.addEventListener("click", () => {
 	const hours = currentDate.getHours(); // 0-23
 	const minutes = currentDate.getMinutes(); // 0-59
 	const seconds = currentDate.getSeconds(); // 0-59
-	// const milliseconds = currentDate.getMilliseconds(); // 0-999
 
-	// tbody = null;
-	// console.log(tbody);
-	// tbody?.innerHTML = ""
-
-	var productName: string = (<HTMLInputElement>(
-		document.querySelector(".productName")
+	productName = (<HTMLInputElement>document.querySelector(".productName"))
+		.value;
+	productPrice = +(<HTMLInputElement>(
+		document.querySelector("#floatingPassword")
 	)).value;
-	var productPrice: number = +(<HTMLInputElement>(
-		document.querySelector(".productPrice")
-	)).value;
-	var product: Product = new Product(productName, productPrice);
+	var product: Product = new Product(
+		productName as string,
+		productPrice as number
+	);
 
-	console.log(product.name);
 	tbody?.insertAdjacentHTML(
 		"beforeend",
 		`<tr>
@@ -52,18 +44,47 @@ createRow?.addEventListener("click", () => {
                 <td>${product.name}</td>
                 <td>${product.price} $</td>
                 <td>${hours}:${minutes}</td>
-                <td><button class="btn btn-danger">Delete</button><button class="btn btn-success">Update</button></td>
+                <td><button class="btn btn-danger">Delete</button><button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Update</button></td>
             </tr>`
 	);
 });
 
-// var deleteBtn = document.querySelector(".btn-danger")
-// var updateBtn = document.querySelector(".btn-success")
+var namee: HTMLTableRowElement;
+var price: HTMLTableRowElement;
+
+var inputName: HTMLInputElement;
+var inputPrice: HTMLInputElement;
 
 tbody?.addEventListener("click", (e) => {
-	// if(e.target.className == "btn-")
-	console.dir(e.target);
-	// deleteBtn?.remove()
+	var el = <Element>e.target;
+	if (el.classList[1] == "btn-danger") {
+		el.parentElement?.parentElement?.remove();
+	} else if (el.classList[1] == "btn-success") {
+		namee = el.parentElement?.parentElement as HTMLTableRowElement;
+		price = el.parentElement?.parentElement as HTMLTableRowElement;
+
+		inputName = document.querySelector("#nameModal") as HTMLInputElement;
+		inputPrice = document.querySelector("#priceModal") as HTMLInputElement;
+
+		inputName.value = namee?.childNodes[3].textContent as string;
+		inputPrice.value = price?.childNodes[5].textContent?.slice(
+			0,
+			-2
+		) as string;
+	}
 });
 
-updateBtn?.addEventListener("click", () => {});
+document.addEventListener("click", (e) => {
+	var el = e.target as HTMLElement;
+
+	if (el.classList[2] == "save") {
+		console.log(
+			el.parentElement?.parentElement?.parentElement?.parentElement
+				?.parentElement?.childNodes[3].childNodes[1].childNodes[1]
+				.childNodes[5].childNodes[3].childNodes[0].childNodes[3]
+		);
+
+		namee.childNodes[3].textContent = inputName.value;
+		price.childNodes[5].textContent = inputPrice.value;
+	}
+});
