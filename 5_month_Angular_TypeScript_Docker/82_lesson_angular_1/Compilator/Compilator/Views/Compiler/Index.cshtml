@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "C# Compiler";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form method="post" action="/Compiler/Compile">
+    <div class="form-group">
+        <label for="code">Enter C# Code:</label>
+        <textarea class="form-control" id="code" name="code" rows="10"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Compile & Execute</button>
+</form>
+
+@if (ViewBag.Result != null)
+{
+    <div class="alert alert-info mt-3">
+        <a href="~/../../../документы/compilator/compilator/views/compiler/index.cshtml">~/../../../документы/compilator/compilator/views/compiler/index.cshtml</a>
+        @ViewBag.Result
+    </div>
+}
