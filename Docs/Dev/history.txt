@@ -1,0 +1,1000 @@
+   96  cd 45_lesson_WebApplication/
+   97  ls
+   98  dotnet run
+   99  dotnet --list-sdks
+  100  dotnet --list-runtimes
+  101  sudo apt-get install nginx
+  102  sudo service nginx start
+  103  sudo service nginx status
+  104  sudo nano /etc/nginx/nginx.conf
+  105  sudo nano /etc/nginx/sites-available/default
+  106  sudo nginx -t
+  107  sudo nginx -s reload
+  108  sudo mkdir /var/www/spot_ubuntu
+  109  sudo chmod -R 777 /var/www/spot_ubuntu 
+  110  scp -r C:\Users\Tohirjon_Odilov\Desktop\TestFile\BlazorApp1\BlazorApp1\bin\Release\net8.0\publish root@samurai:/var/www/spot_ubuntu/
+  111  scp -r C:\Users\Tohirjon_Odilov\Desktop\TestFile\BlazorApp1\BlazorApp1\bin\Release\net8.0\publish root@samurai
+  112  scp -r C:\Users\Tohirjon_Odilov\Desktop\TestFile\BlazorApp1\BlazorApp1\bin\Release\net8.0\publish root@samurai:
+  113  scp -r C:\Users\Tohirjon_Odilov\Desktop\TestFile\BlazorApp1\BlazorApp1\bin\Release\net8.0\publish root@samurai:dotnet
+  114  ls
+  115  cd
+  116  ls
+  117  sudo mkdir /var/www/spot_ubuntu
+  118  sudo chmod -R 777 /var/www/spot_ubuntu 
+  119  ls
+  120  scp -r C:\Users\Tohirjon_Odilov\Desktop\TestFile\BlazorApp1\BlazorApp1\bin\Release\net8.0\publish root@samurai:/var/www/spot_ubuntu/
+  121  sudo chmod -R 777 /var/www/spot_ubuntu
+  122  scp -r C:\Users\Tohirjon_Odilov\Desktop\TestFile\BlazorApp1\BlazorApp1\bin\Release\net8.0\publish root@samurai:/var/www/spot_ubuntu/
+  123  cd /var/www/spot_ubuntu/
+  124  dotnet Spot.NETSDK.WebApp.dll
+  125  sudo nano /etc/systemd/system/kestrel-spotnetsdk.service
+  126  ls
+  127  cd 
+  128  sudo chmod -R 777 /var/www/spot_ubuntu
+  129  ls
+  130  sudo apt install git
+  131  ls
+  132  cd dotnet
+  133  ls
+  134  cd TelegramBots
+  135  ls
+  136  cd TranslateBot
+  137  dotnet run
+  138  cd ..
+  139  git clone https://github.com/Tohirjon-Odilov/VKMbot
+  140  cd VKMbot
+  141  dotnet run
+  142  ls
+  143  cd VKMbot
+  144  ls
+  145  dotnet run
+  146  cd ..
+  147  git clone https://github.com/Tohirjon-Odilov/Youtube_Instagram_Downloader_Bot
+  148  ls
+  149  /root/dotnet/TelegramBots/Youtube_Instagram_Downloader_Bot/
+  150  cd /root/dotnet/TelegramBots/Youtube_Instagram_Downloader_Bot/Youtube_Instagram_Downloader_Bot/
+  151  dotnet run
+  152  ls
+  153  cd dotnet
+  154  ls
+  155  cd TelegramBots/
+  156  ls
+  157  git clone https://github.com/dilshodbek-abdullayev/OnlinePhoneMarket_bot.git
+  158  cd OnlinePhoneMarket_bot/
+  159  ls
+  160  cd OnlinePhoneMarket_bot/
+  161  ls
+  162  dotnet run
+  163  screen
+  164  dotnet run
+  165  screen -ls
+  166  screen -r 20255.pts-0.samurai
+  167  ls
+  168  ls dotnet/
+  169  ls
+  170  clear
+  171  ls
+  172  exit
+  173  ls
+  174  clear
+  175  ls
+  176  cd snap/
+  177  ls
+  178  cd ..
+  179  clear
+  180  ls
+  181  clear
+  182  ls
+  183  git clone git@github.com:xasannosirov/zarnigorbiolog-crm.git
+  184  ls
+  185  git clone git@github.com:xasannosirov/zarnigorbiolog-crm.git
+  186  ls
+  187  git clone git@github.com:xasannosirov/zarnigorbiolog-crm.git
+  188  clear
+  189  ls
+  190  cd dotnet/
+  191  ls
+  192  cd server/
+  193  ls
+  194  ls Bootcamp-Result/
+  195  cd ..
+  196  sl
+  197  ls
+  198  cd ..
+  199  clear
+  200  ls
+  201  git clone https://github.com/xasannosirov/zarnigorbiolog-crm.git
+  202  ls
+  203  cd zarnigorbiolog-crm/
+  204  go run cmd/main.go 
+  205  sudo apt install golang-go
+  206  ls
+  207  go run cmd/main.go 
+  208  sudo apt intall go-classic
+  209  sudo apt install clear
+  210  clear
+  211  cd ..
+  212  clear
+  213  ls
+  214  go version
+  215  cd zarnigorbiolog-crm/
+  216  go version
+  217  go run cmd/main.go 
+  218  go install golang.org/dl/go1.19@latest
+  219  go version
+  220  sudo apt update
+  221  go version
+  222  clear
+  223  cd ..
+  224  clear
+  225  echo $GOPATH
+  226  echo $PATH
+  227  which go
+  228  sudo apt-get remove --auto-remove golang-go
+  229  go version
+  230  clear
+  231  sudo wget https://go.dev/dl/go1.19.1.linux-amd64.tar.gz
+  232  sudo tar -C /usr/local -xzf go1.19.1.linux-amd64.tar.gz
+  233  go version
+  234  ls
+  235  rm -rf go1.19.1.linux-amd64.tar.gz 
+  236  clear
+  237  ls
+  238  cd zarnigorbiolog-crm/
+  239  go run cmd/main.go 
+  240  clear
+  241  cd ..
+  242  ls
+  243  la
+  244  ls go/
+  245  ls go/pkg/
+  246  clear
+  247  go 
+  248  go version
+  249  cd zarnigorbiolog-crm/
+  250  clear
+  251  go run cmd/main.go 
+  252  clear
+  253  history
+  254  sudo apt install golang-go
+  255  go version
+  256  ls
+  257  go run cmd/main.go 
+  258  sudo apt remove golang-go
+  259  cd ...
+  260  cd ..
+  261  clear
+  262  ls
+  263  go version
+  264  rm -rf go/
+  265  ls
+  266  clear
+  267  ls
+  268  go vesion
+  269  wget https://golang.org/dl/go1.19.linux-amd64.tar.gz
+  270  sudo tar -C /usr/local -xzf go1.19.linux-amd64.tar.gz
+  271  go version
+  272  nano ~/.bashrc
+  273  source ~/.bashrc
+  274  go version
+  275  cd zarnigorbiolog-crm/
+  276  go run cmd/main.go 
+  277  cd config/
+  278  ls
+  279  nano config.go 
+  280  cd ..
+  281  go run cmd/main.go 
+  282  psql -i -u postgres
+  283  cd ..
+  284  psql -u -i postgres
+  285  clear
+  286  ls
+  287  psql -U postgres -d postgres -h localhost -W
+  288  ALTER USER postgres WITH ENCRYPTED PASSWORD 'root';
+  289  psql -U postgres
+  290  history
+  291  sudo -i -u postgres
+  292  cd zarnigorbiolog-crm/
+  293  go run cmd/main.go 
+  294  cd ..
+  295  sudo -i -u postgres
+  296  cd zarnigorbiolog-crm/
+  297  go run cmd/main.go 
+  298  screen
+  299  ls
+  300  rm -rf go
+  301  ls
+  302  rm -rf go1.19.linux-amd64.tar.gz 
+  303  ls
+  304  rm -rf zarnigorbiolog-crm/
+  305  ls
+  306  clear
+  307  ls
+  308  ls snap/
+  309  ls dotnet/
+  310  clear
+  311  exit
+  312  ls
+  313  cd dotnet/
+  314  ls
+  315  cd server/
+  316  ls
+  317  cd ..
+  318  ;ls
+  319  ls
+  320  cd TelegramBots/
+  321  ls
+  322  cd ..
+  323  clear
+  324  ls
+  325  cd ..
+  326  ls
+  327  cd home/
+  328  ls
+  329  clear
+  330  sudo passwd
+  331  exit
+  332  apt list --upgradable
+  333  sudo apt update
+  334  sudo apt upgrade
+  335  ls
+  336  cd dotnet/
+  337  ls
+  338  cd TelegramBots/
+  339  l
+  340  ls
+  341  screen -ls
+  342  cd OnlinePhoneMarket_bot/
+  343  ls
+  344  sudo passwd
+  345  cd ..
+  346  ls
+  347  history
+  348  ls
+  349  exit
+  350  dotnet run
+  351  history
+  352  exit
+  353  ls
+  354  history
+  355  exit
+  356  history
+  357  ls
+  358  cd dotnet/
+  359  ls
+  360  cd TelegramBots/
+  361  ls
+  362  cd OnlinePhoneMarket_bot/
+  363  ls
+  364  cd OnlinePhoneMarket_bot/
+  365  ls
+  366  dotnet run
+  367  screen -ls
+  368  screen -r
+  369  screen -r 27242.pts-0.samurai
+  370  screen -r 20255.pts-0.samurai
+  371  history 
+  372  screen -r 20255.pts-0.samurai
+  373  ls
+  374  screen -r
+  375  screen ls
+  376  screen -ls
+  377  screen
+  378  ls
+  379  screen -r 86742.pts-0.samurai
+  380  screen
+  381  lsl
+  382  ls
+  383  screen -ls
+  384  screen
+  385  cd ..
+  386  ls
+  387  cd ..
+  388  ls
+  389  cd server
+  390  ls
+  391  cd Exam.StockManagement/
+  392  ls
+  393  cd Exam.StockManagement.API/
+  394  screen -r 86742.pts-0.samurai
+  395  clrea
+  396  clear
+  397  cd dotnet/
+  398  ls
+  399  cd server/
+  400  ls
+  401  cd Bootcamp-Result/
+  402  ls
+  403  cd 4_month_CQRS_Angular_TypeScript/
+  404  ls
+  405  cd ..
+  406  cd 3_month_linq_mongoDB_orm/
+  407  ls
+  408  cd 45_lesson_WebApplication/
+  409  ls
+  410  cd Properties/
+  411  ls
+  412  nano launchSettings.json 
+  413  cd ..
+  414  dotnet publish --configuration Release
+  415  ls
+  416  cd bin
+  417  ls
+  418  cd Release/
+  419  ls
+  420  cd net8.0/
+  421  ls
+  422  ls -a
+  423  cd publish/
+  424  ls
+  425  cd ..
+  426  ls
+  427  dotnet 45_lesson_WebApplication.dll 
+  428  dotnet 45_lesson_WebApplication.dll cd publish/
+  429  ls
+  430  cd publish/
+  431  ls
+  432  dotnet 45_lesson_WebApplication.dll
+  433  nano appsettings.json
+  434  nano web.config 
+  435  dotnet 45_lesson_WebApplication.dll
+  436  cd ..
+  437  ls
+  438  cd ..
+  439  ls
+  440  cd ..
+  441  ls
+  442  cd Properties/
+  443  ls
+  444  nano launchSettings.json 
+  445  ls
+  446  nano launchSettings.json 
+  447  cd ..
+  448  ls
+  449  nano appsettings.json
+  450  nano appsettings.Development.json 
+  451  dotnet publish --configuration Release
+  452  cd bin/Release/net8.0/publish/
+  453  ls
+  454  dotnet 45_lesson_WebApplication.dll
+  455  sudo apt update
+  456  sudo apt install nginx
+  457  sudo systemctl start nginx
+  458  cd
+  459  sudo systemctl start nginx
+  460  /etc/nginx/sites-available/default
+  461  sudo /etc/nginx/sites-available/default
+  462  nano /etc/nginx/sites-available/default
+  463  sudo ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+  464  nano /etc/nginx/sites-available/default
+  465  cd dotnet/server/Bootcamp-Result/3_month_linq_mongoDB_orm/45_lesson_WebApplication/bin/Release/net8.0/publish
+  466  ls
+  467  sudo nginx -t
+  468  sudo nginx -s reload
+  469  dotnet 45_lesson_WebApplication.dll
+  470  sudo nginx -t
+  471  sudo nginx -s reload
+  472  nano /etc/nginx/sites-available/default
+  473  sudo nginx -t
+  474  nano /etc/nginx/sites-available/default
+  475  sudo nginx -t
+  476  nano /etc/nginx/nginx.conf
+  477  nano /etc/nginx/sites-available/default
+  478  sudo nginx -t
+  479  sudo cat /var/log/nginx/error.log
+  480  sudo nginx -t
+  481  sudo cat /var/log/nginx/error.log
+  482  systemctl status nginx
+  483  sudo systemctl restart nginx
+  484  sudo ufw status
+  485  sudo ufw allow 'Nginx HTTPS'
+  486  sudo ufw allow 'Nginx Full'
+  487  nano /etc/nginx/sites-available/default
+  488  sudo nginx -t
+  489  nano /etc/nginx/sites-available/default
+  490  sudo nginx -t
+  491  sudo nano /etc/nginx/sites-available/default
+  492  sudo ufw status
+  493  sudo systemctl restart nginx
+  494  sudo nginx -s reload
+  495  sudo systemctl start nginx
+  496  ls
+  497  dotnet 45_lesson_WebApplication.dll
+  498  sudo nano /etc/systemd/system/kestrel-helloapp.service
+  499  ls
+  500  ls
+  501  dotnet run
+  502  cd 
+  503  cd dotnet/
+  504  ls
+  505  cd server/
+  506  cd Exam.StockManagement/
+  507  ls Exam.StockManagement.API
+  508  dotnet run
+  509  ls
+  510  cd Exam.StockManagement.API
+  511  ls
+  512  dotnet run
+  513  ls
+  514  cd Properties/
+  515  ls
+  516  cd launchSettings.json 
+  517  nano launchSettings.json 
+  518  dotnet run
+  519  cd ..
+  520  dotnet run
+  521  cd ..
+  522  ls
+  523  cd Bootcamp-Result/
+  524  ls
+  525  cd 4_month_CQRS_Angular_TypeScript/
+  526  ls
+  527  cd ..
+  528  ls
+  529  cd 3_month_linq_mongoDB_orm/
+  530  ls
+  531  cd 45_lesson_WebApplication/
+  532  ls
+  533  dotnet run
+  534  cd Pro
+  535  cd Properties/
+  536  ls
+  537  nano launchSettings.json 
+  538  cd ..
+  539  dotnet run
+  540  cd dotnet
+  541  ls
+  542  sudo nano /etc/nginx/sites-available
+  543  history
+  544  cd /etc/nginx/sites-available
+  545  ls
+  546  cd ..
+  547  ls
+  548  cd sites-enabled/
+  549  ls
+  550  cd ..
+  551  ls
+  552  cd sites-ab
+  553  cd sites-available/
+  554  ls
+  555  sudo nano tohirjon-odilov
+  556  sudo ln -s /etc/nginx/sites-available/tohirjon-odilov /etc/nginx/sites-enabled
+  557  ls
+  558  sudo certbot --nginx -d api.tohirjon-odilov.uz
+  559  sudo apt update
+  560  sudo apt install certbot python3-certbot-apache
+  561  sudo apt install certbot
+  562  sudo certbot --nginx -d api.tohirjon-odilov.uz
+  563  certbot
+  564  sudo apt update
+  565  sudo apt install snapd
+  566  sudo snap install --classic certbot
+  567  sudo ln -s /snap/bin/certbot /usr/bin/certbot
+  568  cd
+  569  sudo ln -s /snap/bin/certbot /usr/bin/certbot
+  570  sudo certbot --nginx
+  571  ls
+  572  cd etc
+  573  cd /etc
+  574  ls
+  575  cd 
+  576  sudo certbot --nginx -d api.tohirjon-odilov.uz
+  577  sudo certbot --nginx
+  578  sudo certbot certonly --nginx
+  579  sudo apt-get install python3-certbot-nginx
+  580  reboot
+  581  cd dotnet/server/
+  582  ls
+  583  cd Bootcamp-Result/
+  584  ls 3_month_linq_mongoDB_orm/
+  585  cd 45
+  586  ls
+  587  cd 3_month_linq_mongoDB_orm/
+  588  cd 45_lesson_WebApplication/
+  589  ls
+  590  cd bin/
+  591  cd 
+  592  cd dotnet/server/Bootcamp-Result/3_month_linq_mongoDB_orm/45_lesson_WebApplication/bin/Release/net8.0/publish
+  593  dotnet 45_lesson_WebApplication.dll
+  594  cd 
+  595  cd dotnet/server/Bootcamp-Result/3_month_linq_mongoDB_orm/45_lesson_WebApplication
+  596  dotnet run
+  597  sudo apt-get install python3-certbot-nginx
+  598  sudo certbot --nginx
+  599  sudo nano /etc/systemd/system/tohirjon-odilov.service
+  600  sudo systemctl start tohirjon-odilov
+  601  sudo systemctl enable tohirjon-odilov
+  602  sudo systemctl status tohirjon-odilov
+  603  sudo systemctl daemon-reload
+  604  sudo systemctl start tohirjon-odilov
+  605  sudo systemctl enable tohirjon-odilov
+  606  sudo systemctl status tohirjon-odilov
+  607  history
+  608  sudo nano /etc/systemd/system/tohirjon-odilov.service
+  609  sudo systemctl start tohirjon-odilov
+  610  sudo systemctl daemon-reload
+  611  sudo systemctl start tohirjon-odilov
+  612  sudo systemctl enable tohirjon-odilov
+  613  sudo systemctl status tohirjon-odilov
+  614  ls
+  615  cd dotnet
+  616  ls
+  617  cd server/
+  618  ls
+  619  cd Bootcamp-Result/
+  620  ls
+  621  cd 3_month_linq_mongoDB_orm/
+  622  ls
+  623  cd 45_lesson_WebApplication/
+  624  ls
+  625  cd bin
+  626  ls
+  627  cd Release/
+  628  ls
+  629  cd net8.0/
+  630  cd publish/
+  631  ls
+  632  dotnet 45_lesson_WebApplication.dll
+  633  dotnet run
+  634  cd 
+  635  ls
+  636  sudo nano /etc/systemd/system/tohirjon-odilov.service
+  637  sudo systemctl start tohirjon-odilovbot
+  638  sudo systemctl enable tohirjon-odilovbot
+  639  sudo systemctl status tohirjon-odilovbot
+  640  scree -S Tohirjon-Odilov
+  641  screen -S Tohirjon-Odilov
+  642  screnn -ls
+  643  screen -ls
+  644  clear
+  645  sudo certbot --nginx -d api.tohirjon-odilov.uz
+  646  cerbot
+  647  certbot
+  648  sudo nano /etc/nginx/sites-available/tohirjon-odilov
+  649  certbot
+  650  certbot install --cert-name tohirjon-odilov.uz
+  651  certbot
+  652  cd /etc/apache2/sites-enabled/000-default-le-ssl.conf
+  653  sudo nano /etc/apache2/sites-enabled/000-default-le-ssl.conf
+  654  systemctl start apache2
+  655  systemctl status apache2
+  656  sudo nano /etc/apache2/sites-enabled/000-default-le-ssl.conf
+  657  stemctl status apache2
+  658  systemctl start apache2
+  659  systemctl status apache2
+  660  sudo nano /etc/apache2/sites-enabled/000-default-le-ssl.conf
+  661  ls
+  662  systemctl restart apache2
+  663  sudo systemctl restart httpd
+  664  sudo service httpd 000-default-le-ssl.conf
+  665  sudo systemctl enable httpd
+  666  sudo nano /etc/systemd/system/kestrel-hellomvc.service
+  667  systemctl enable kestrel-hellomvc.service
+  668  certbot
+  669  sudo certbot --nginx -d tohirjon-odilov.uz
+  670  sudo ufw delete allow 'Nginx HTTP'
+  671  sudo nano /etc/letsencrypt/live/tohirjon-odilov.uz/fullchain.pem
+  672  sudo certbot --nginx -d tohirjon-odilov.uz
+  673  sudo nano /etc/nginx/sites-enabled/tohirjon-odilov
+  674  sudo systemctl restart nginx
+  675  sudo systemctl restart nginx.service
+  676  reboot
+  677  cd dotnet/
+  678  ls
+  679  cd server/
+  680  ls
+  681  cd Bootcamp-Result/
+  682  ls
+  683  cd 3_month_linq_mongoDB_orm/
+  684  ls
+  685  cd 45_lesson_WebApplication/
+  686  ls
+  687  cd bin/Release/net8.0/
+  688  ls
+  689  cd publish/
+  690  ls
+  691  cd
+  692  /root/dotnet/server/Bootcamp-Result/3_month_linq_mongoDB_orm/45_lesson_WebApplication/bin/Release/net8.0/publish
+  693  cd /root/dotnet/server/Bootcamp-Result/3_month_linq_mongoDB_orm/45_lesson_WebApplication/bin/Release/net8.0/publish
+  694  ls
+  695  lss
+  696  ls
+  697  cleear
+  698  clear
+  699  sudo apt update
+  700  sudo apt install python3-pip python3-dev build-essential libssl-dev libffi-dev python3-setuptools
+  701  sudo apt install python3-venv
+  702  python3 -m venv env
+  703  source env/bin/activate
+  704  sudo nano /etc/systemd/system/tohirjon-odilov.service
+  705  sudo nano /etc/systemd/system/tohirjon-odilovbot.service
+  706  screen -ls
+  707  screnn -S tohirjon-odilov
+  708  screen -S tohirjon-odilov
+  709  ls
+  710  clear
+  711  ls
+  712  git config --global user.name "Tohirjon-Odilov"
+  713  git config --global user.email "shahanshoh819@gmail.com"
+  714  clear
+  715  sudo systemctl status
+  716  sudo systemctl status tohirjon-odilov
+  717  nano /etc/systemd/system/tohirjon-odilov.service
+  718  sudo systemctl start tohirjon-odilov
+  719  sudo 'systemctl daemon-reload
+  720  sudo systemctl daemon-reload
+  721  sudo systemctl start tohirjon-odilov
+  722  sudo systemctl enable tohirjon-odilov
+  723  sudo systemctl status tohirjon-odilov
+  724  nano /etc/systemd/system/tohirjon-odilov.service
+  725  history
+  726  ls
+  727  mkdir go
+  728  ls
+  729  sudo passwd
+  730  passwd
+  731  sudo apt install go --classic
+  732  sudo snap install go --classic
+  733  cd go/
+  734  git clone https://github.com/ahrorbekalijonov/dentist.git
+  735  cd dentist/
+  736  ls
+  737  sudo rm -rf go.sum go.mod 
+  738  go mod init github.com/dentist
+  739  go mod tidy
+  740  sudo -u postgres psql
+  741  alter user postgres  with password 'root';
+  742  sudo -u postgres psql
+  743  cd config/
+  744  nano config.go 
+  745  migrate -path migrations -database "postgresql://postgres:root@localhost:5432/doctordb?sslmode=disable" -verbose up
+  746  cd ..
+  747  migrate -path migrations -database "postgresql://postgres:root@localhost:5432/doctordb?sslmode=disable" -verbose up
+  748  sudo apt istall python3-migrate
+  749  sudo apt install python3-migrate
+  750  migrate -path migrations -database "postgresql://postgres:root@localhost:5432/doctordb?sslmode=disable" -verbose up
+  751  migrate up  -path migrations -database "postgresql://postgres:root@localhost:5432/doctordb?sslmode=disable" -verbose
+  752  sudo -u postgres psql
+  753  nano go.mod 
+  754  go run cmd/main.go 
+  755  go mod vendor
+  756  go run cmd/main.go 
+  757  screen -S Ahrorbek
+  758  cd
+  759  ls
+  760  screen -ls
+  761  screen -r 188.166.243.200
+  762  screen -r 1146.tohirjon-odilov
+  763  ls
+  764  supd pro status
+  765  sudo pro status
+  766  ls
+  767  sudo apt update
+  768  sudo apt upgrade
+  769  screen -ls
+  770  screen -r 1146.tohirjon-odilov
+  771  ls
+  772  snap
+  773  ls snap
+  774  cd ..
+  775  ls
+  776  cd dotnet
+  777  ls
+  778  cd server
+  779  ls
+  780  cd Bootcamp-Result/
+  781  ls
+  782  git pull
+  783  ls
+  784  cd 4_month_CQRS_Angular_TypeScript/
+  785  ls
+  786  cd 73_lesson_bootstrap_tailwind_css/
+  787  ls
+  788  git pull
+  789  ls
+  790  cd GPSTracker/
+  791  ls
+  792  cd src/
+  793  ls
+  794  cd GPSTracker.API/
+  795  ls
+  796  clear
+  797  ls
+  798  dotnet run
+  799  ls
+  800  cd Properties/
+  801  ls
+  802  nano launchSettings.json 
+  803  cd Properties/cd ..
+  804  cd ..
+  805  dotnet run
+  806  ls
+  807  dotnet run
+  808  git pull
+  809  cd Properties/
+  810  ls
+  811  nano launchSettings.json 
+  812  cd ..
+  813  dotnet run
+  814  ls
+  815  cd front/
+  816  git clone https://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@github.com/Tohirjon-Odilov/CRM-React.git
+  817  ls
+  818  cd CRM-React/
+  819  ls
+  820  cd ..
+  821  rm -rfv CRM-React/
+  822  ls
+  823  git clone https://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@github.com/Tohirjon-Odilov/CRM-React.git
+  824  ls
+  825  cd CRM-React/
+  826  ls
+  827  cd src/
+  828  ls
+  829  npm start
+  830  sudo apt install node
+  831  sudo apt install npm
+  832  npm start
+  833  ls
+  834  npm run build
+  835  npm run
+  836  npm buil
+  837  npm run build
+  838  ls
+  839  mkdir front
+  840  ls
+  841  cd front/
+  842  ls
+  843  git clone https://github.com/Tohirjon-Odilov/CRM-React.git
+  844  ls
+  845  cd go-src/
+  846  ls
+  847  zarnigorbiolog-crm/
+  848  cd zarnigorbiolog-crm/
+  849  ls
+  850  make run
+  851  screen -S zarnigor
+  852  clear
+  853  ls
+  854  cd go-src/
+  855  ls
+  856  clear
+  857  ls
+  858  cd zarnigorbiolog-crm/
+  859  make migrate-up 
+  860  cd ..
+  861  psql -U postgres -d postgres -h localhost -W
+  862  cd zarnigorbiolog-crm/
+  863  go run cmd/main.go 
+  864  make run 
+  865  go run cmd/main.go 
+  866  ls
+  867  cd ..
+  868  clear
+  869  ls
+  870  cd ..
+  871  clear
+  872  ls
+  873  clear
+  874  ls
+  875  cd dotnet/
+  876  ls
+  877  cd ..
+  878  ls
+  879  cd front/
+  880  ls
+  881  cd ..
+  882  clear
+  883  ls
+  884  cd go-src/
+  885  ls
+  886  cd zarnigorbiolog-crm/
+  887  ls
+  888  cd //
+  889  cd
+  890  ls
+  891  clear
+  892  ls
+  893  cd go-src/
+  894  ls
+  895  cd zarnigorbiolog-crm/
+  896  ls
+  897  cd ..
+  898  clear
+  899  ls
+  900  ls
+  901  cd front
+  902  ls
+  903  cd go
+  904  ls
+  905  cd ..
+  906  cd go
+  907  ls
+  908  cd dentist/
+  909  ls
+  910  cd ..
+  911  ls
+  912  cd ..
+  913  ls
+  914  cd go
+  915  ls
+  916  docker
+  917  ls
+  918  rm -rfv dentist
+  919  ls
+  920  cd ..
+  921  ls
+  922  mkdir go-src
+  923  ls
+  924  cd go-src/
+  925  git clone https://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@github.com/xasannosirov/zarnigorbiolog-crm.git
+  926  ls
+  927  cd zarnigorbiolog-crm/
+  928  ls
+  929  make run 
+  930  go run cmd/main.go 
+  931  cd config/
+  932  nano config.go 
+  933  source config.go 
+  934  nano config.go 
+  935  source config.go 
+  936  nano config.go 
+  937  source config.go 
+  938  cd ..\
+  939  cd ..
+  940  ls
+  941  cd ..
+  942  ls
+  943  rm -rf zarnigorbiolog-crm/
+  944  LS
+  945  ls
+  946  git clone https://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@github.com/xasannosirov/zarnigorbiolog-crm.git
+  947  cd zarnigorbiolog-crm/
+  948  go run cmd/main.go 
+  949  cd ..
+  950  psql -U postgres -d postgres -h localhost -W
+  951  ls
+  952  cd zarnigorbiolog-crm/
+  953  ls
+  954  cd config/
+  955  nano config.go 
+  956  source config.go 
+  957  sudo apt install mailagent
+  958  cat config.go 
+  959  source config.go 
+  960  \q
+  961  cd ..
+  962  go run cmd/main.go 
+  963  clear
+  964  \q
+  965  cd migrations/
+  966  ls
+  967  cat 000001_tables.up.sql 
+  968  cleaar
+  969  clear
+  970  cd ..
+  971  nano Makefile 
+  972  make migrate-up 
+  973  nano Makefile 
+  974  cd migrations/
+  975  nano 000001_tables.up.sql 
+  976  cat 000001_tables.up.sql 
+  977  psql -U postgres -d postgres -h localhost -W
+  978  ls
+  979  cd go-src/
+  980  ls
+  981  cd go-src/
+  982  ls
+  983  cd zarnigorbiolog-crm/
+  984  ls
+  985  cat logfile 
+  986  cd //
+  987  cd
+  988  ls
+  989  sudo apt install lsb-release curl gpg
+  990  curl -fsSL https://packages.redis.io/gpg | sudo gpg --dearmor -o /usr/share/keyrings/redis-archive-keyring.gpg
+  991  echo "deb [signed-by=/usr/share/keyrings/redis-archive-keyring.gpg] https://packages.redis.io/deb $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/redis.list
+  992  sudo apt-get update
+  993  sudo apt-get install redis
+  994  ls
+  995  redis-cli
+  996  ls
+  997  cd dotnet/
+  998  ls
+  999  cd ..
+ 1000  clear
+ 1001  ls
+ 1002  cd snap/
+ 1003  ls
+ 1004  cd ..
+ 1005  ls
+ 1006  clear
+ 1007  ls
+ 1008  cd go-src/
+ 1009  ls
+ 1010  clear
+ 1011  ls
+ 1012  cd ..
+ 1013  clear
+ 1014  psql -U postgres -d postgres -h localhost -W
+ 1015  clear
+ 1016  ls
+ 1017  cd dotnet/
+ 1018  ls
+ 1019  cd ..
+ 1020  ls
+ 1021  cd env/
+ 1022  ls
+ 1023  cd ..
+ 1024  clear
+ 1025  ls
+ 1026  cd go
+ 1027  ls
+ 1028  cd ..
+ 1029  clear
+ 1030  ls
+ 1031  cd snap/
+ 1032  ls
+ 1033  cd ..
+ 1034  clear
+ 1035  ls
+ 1036  cd front/
+ 1037  ls
+ 1038  cd ..
+ 1039  clear
+ 1040  ls
+ 1041  exirt
+ 1042  exit
+ 1043  passwd
+ 1044  screen -r
+ 1045  ls
+ 1046  cd dotnet
+ 1047  ls
+ 1048  cd server/
+ 1049  ls
+ 1050  cd Exam.StockManagement/
+ 1051  ls
+ 1052  cd Exam.StockManagement.API
+ 1053  ls
+ 1054  dotnet run
+ 1055  ls
+ 1056  cd Properties/
+ 1057  ls
+ 1058  nano launchSettings.json 
+ 1059  cd ..
+ 1060  ls
+ 1061  dotnet run
+ 1062  cd ..
+ 1063  ls
+ 1064  cd seq
+ 1065  cd server/
+ 1066  ls
+ 1067  rm -rfv Exam.StockManagement/
+ 1068  ls
+ 1069  psql -d postgres -U postgres
+ 1070  psql
+ 1071  psql -d postgres -U root
+ 1072  exit
+ 1073  ls
+ 1074  screen -l
+ 1075  ls
+ 1076  ssh root@139.59.133.219
+ 1077  ls
+ 1078  cd dotnet/
+ 1079  ls
+ 1080  cd server/
+ 1081  sl
+ 1082  lls
+ 1083  ls
+ 1084  cd ..
+ 1085  ls
+ 1086  git clone https://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github.com/Tohirjon-Odilov/Bootcamp-Result.git
+ 1087  git clone https://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@github.com/Tohirjon-Odilov/Bootcamp-Result.git
+ 1088  ls
+ 1089  cd Bootcamp-Result/
+ 1090  ls
+ 1091  cd Docs/
+ 1092  ls
+ 1093  cd Dev/
+ 1094  ls
+ 1095  history > history.txt
