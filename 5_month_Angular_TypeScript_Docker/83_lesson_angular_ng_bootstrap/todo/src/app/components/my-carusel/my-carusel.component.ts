@@ -4,7 +4,6 @@ import {
   NgbCarouselModule,
 } from '@ng-bootstrap/ng-bootstrap';
 
-
 @Component({
   selector: 'app-my-carusel',
   standalone: true,
@@ -15,7 +14,7 @@ import {
 })
 export class MyCaruselComponent {
   images = [700, 533, 807, 124].map(
-    (n) => `https://picsum.photos/id/${n}/900/500`
+    (n) => `https://picsum.photos/id/${n}/1296/500`
   );
 
   constructor(config: NgbCarouselConfig) {
