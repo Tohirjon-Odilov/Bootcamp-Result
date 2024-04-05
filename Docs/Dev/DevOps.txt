@@ -1,1 +1,24 @@
 85KT2nuQQJ4$p => 139.59.133.219
+ssh root@139.59.133.219
+================================
+root1234 => 188.166.243.200
+ssh root@188.166.243.200
+================================
+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 => github app
+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
+
+dotnet user-secrets init
+dotnet user-secrets set "JWT:ValidIssuer" "127.0.0.1"
+dotnet user-secrets set "JWT:ValidAudience" "StockManagement"
+dotnet user-secrets set "JWT:Secret" "Your Secret Kod 32dan oshishi kerak tohiron odilov menda u"
+dotnet user-secrets set "JWT:ExpireDate" "1440"
+dotnet user-secrets set "EmailSettings:SenderName" "Najot Ta'lim"
+dotnet user-secrets set "EmailSettings:Sender" "coderr819@gmail.com"
+dotnet user-secrets set "EmailSettings:Password" "uyxj pbqg exyp tcmj"
+dotnet user-secrets set "EmailSettings:MailServer" "smtp.gmail.com"
+dotnet user-secrets set "EmailSettings:MailPort" "587"
+dotnet user-secrets set "ConnectionStrings:StockManagementConnectionString" "Host=localhost;Port=5432;Username=postgres;Password=root;Database=Stock.Management.DB;"
+dotnet user-secrets set "AllowedHosts" "*"
+
+==============================
+

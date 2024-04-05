@@ -1,0 +1,2 @@
+history > history_for_print.txt
+	=> historiyni faylga saqlab olish
