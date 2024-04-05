@@ -1,3 +1,47 @@
-.site-header{
+.site-header {
   background-color: #282828;
+
+  .header-link {
+    display: inline-block;
+    padding: 15px;
+    text-transform: capitalize;
+  }
+
+  select {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: #8699a3;
+    font-weight: 500;
+    // appearance: none;
+  }
+  .header-item:last-child select {
+    color: #ffa217;
+  }
+
+  .header-wrapper {
+    gap: 20px;
+  }
+
+  .header-btn {
+    color: #ffa217;
+    background-color: #ffa2173a;
+    padding: 4px 15px 6px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+  }
+}
+
+/* Order */
+@layer reset, primeng;
+
+/* Reset CSS */
+@layer reset {
+    button,
+    input {
+        /* CSS to Reset */
+    }
 }
