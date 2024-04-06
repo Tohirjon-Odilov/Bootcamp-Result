@@ -44,10 +44,27 @@ td {
   padding: 8px; /* Ma'lumot ustuni bilan qatorlar orasidagi masofa */
   text-align: left; /* Matnni chapga joylash */
   border-bottom: 1px solid #ddd; /* Pastki chiziq rangi */
+  cursor: pointer;
+}
+
+td:nth-child(1) {
+  color: #2cb958;
+}
+
+td:nth-child(2):hover {
+  color: rgb(0 122 255);
+}
+
+td:nth-child(3) {
+  color: rgb(0 122 255);
+}
+
+td:last-child {
+  color: #6d6c6c;
 }
 
 tr:nth-child(even) {
-  background-color: #99999947;
+  background-color: #99999939;
   //   color: white;
 }
 
@@ -55,4 +72,8 @@ tr:nth-child(even) {
 .table svg {
   width: 20px;
   height: 20px;
+}
+
+.medium {
+  color: #ffa217;
 }
