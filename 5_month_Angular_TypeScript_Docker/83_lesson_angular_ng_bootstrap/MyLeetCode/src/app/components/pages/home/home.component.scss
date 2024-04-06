@@ -1,0 +1,58 @@
+.table-wrapper {
+  display: flex; /* Flex konteyner */
+  gap: 10px; /* Elementlar orasidagi masofa */
+  justify-content: space-between;
+  width: 100%;
+  margin: 30px 0;
+}
+
+select {
+  padding: 10px;
+  /*Chegaralar*/
+  border-radius: 5px;
+  /*Shaklko'rsatkichi*/
+  background-color: #313131;
+  /*Orqafonrangi*/
+  cursor: pointer;
+  /*Ko'rsatgich*/
+  width: 300px;
+  border: none;
+  outline: none;
+  color: rgb(210, 209, 209);
+}
+
+select:hover {
+  border-color: #999; /* Hover qilinganda chiziq rangi */
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse; /* Qatorlar orasidagi bo'shlikni kattalashtirish */
+  color: #aaa;
+}
+
+/* Sarlavha ustuni ko'rinishi */
+th {
+  background-color: transparent; /* Arqa fon rangi */
+  padding: 15px; /* Arqa fon bilan qatorlar orasidagi masofa */
+  text-align: left; /* Matnni chapga joylash */
+  border-bottom: 1px solid #ddd; /* Pastki chiziq rangi */
+}
+
+/* Ma'lumot ustuni ko'rinishi */
+td {
+  padding: 8px; /* Ma'lumot ustuni bilan qatorlar orasidagi masofa */
+  text-align: left; /* Matnni chapga joylash */
+  border-bottom: 1px solid #ddd; /* Pastki chiziq rangi */
+}
+
+tr:nth-child(even) {
+  background-color: #99999947;
+  //   color: white;
+}
+
+/* Qatorlar ichidagi SVG ikonalarining o'lchami */
+.table svg {
+  width: 20px;
+  height: 20px;
+}
