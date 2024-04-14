@@ -4,8 +4,8 @@ ssh root@139.59.133.219
 root1234 => 188.166.243.200
 ssh root@188.166.243.200
 ================================
-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 => github app
-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
+npm install react-scripts --save => build react
+================================
 
 dotnet user-secrets init
 dotnet user-secrets set "JWT:ValidIssuer" "127.0.0.1"
@@ -22,3 +22,23 @@ dotnet user-secrets set "AllowedHosts" "*"
 
 ==============================
 
+<VirtualHost *:5106>
+    ServerAdmin shahanshoh819@gmail.com
+    ServerName tohirjon.uz
+    ServerAlias api.tohirjon.uz
+
+    DocumentRoot /var/www/html/
+    <Directory /var/www/html/>
+        Options Indexes FollowSymLinks
+        AllowOverride None
+        Require all granted
+    </Directory>
+
+    ErrorLog ${APACHE_LOG_DIR}/example.com_error.log
+    CustomLog ${APACHE_LOG_DIR}/example.com_access.log combined
+</VirtualHost>
+
+
+==============================
+
+sudo ln -s /etc/nginx/sites-available/api.tohirjon.uz /etc/nginx/sites-enabled
