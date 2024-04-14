@@ -1,11 +1,13 @@
 .site-header {
   background-color: #282828;
+  border-bottom: solid 1px #464646;
 
   .header-link {
     display: inline-block;
     padding: 15px;
     text-transform: capitalize;
   }
+
   .header-icon {
     padding-left: 0 !important;
   }

@@ -9,14 +9,14 @@
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-body{
+body {
   background-color: #1a1a1a;
 }
 
 .container {
   margin: 0 auto;
   padding: 0 20px;
-  max-width: 1440px;
+  max-width: 1200px;
 }
 
 .flex {
@@ -39,6 +39,22 @@ ul {
   list-style: none;
 }
 
-.active{
+.gap-05{
+  gap: 5px;
+}
+
+.gap-1{
+  gap: 10px;
+}
+
+.gap-15{
+  gap: 15px;
+}
+
+.gap-2{ 
+  gap: 20px;
+}
+
+.active {
   border-bottom: 1px solid white;
 }

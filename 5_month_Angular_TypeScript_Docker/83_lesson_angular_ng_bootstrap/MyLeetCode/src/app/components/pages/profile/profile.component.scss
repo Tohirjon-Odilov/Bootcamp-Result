@@ -1,7 +1,153 @@
 .profile-section {
   position: relative;
+  color: rgba(255, 255, 255, 0.673);
   .profile {
     padding: 20px 0;
+    gap: 16px;
+  }
+
+  //   ========== User info ==============
+
+  .user-info {
+    width: 350px;
+    .user-img__wrapper {
+      gap: 16px;
+    }
+    .user-img__title {
+      p {
+        font-size: 13px;
+        margin-bottom: 16px;
+      }
+
+      .user-rank {
+        font-size: 18px;
+        margin-bottom: 0px;
+        span {
+          color: white;
+          font-weight: 500;
+        }
+      }
+    }
+
+    .user-edit__wrapper {
+      padding-bottom: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      border-bottom: solid 1px #3e3e3e;
+
+      h2 {
+        margin: 15px 0 0;
+        font-size: 15px;
+        font-weight: 400;
+      }
+      span,
+      & > a {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        color: rgba(255, 255, 255, 0.673);
+      }
+    }
+    .edit-btn {
+      width: 100%;
+      padding: 5px 0px 8px 0;
+      justify-content: center;
+      color: #2bbb5b !important;
+      background-color: #283a2e;
+      font-weight: 500;
+      border-radius: 8px;
+      -webkit-border-radius: 8px;
+      -moz-border-radius: 8px;
+      -ms-border-radius: 8px;
+      -o-border-radius: 8px;
+    }
+
+    .user-edit__tag {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      span {
+        padding: 2px 15px 5px;
+        border-radius: 15px;
+        background-color: #3e3e3e;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        -ms-border-radius: 15px;
+        -o-border-radius: 15px;
+      }
+    }
+    .user-language {
+      padding-bottom: 20px;
+      border-bottom: solid 1px #3e3e3e;
+
+      h2 {
+        margin: 14px 0 0;
+      }
+
+      & > div {
+        margin-top: 14px;
+      }
+
+      h3 {
+        font-size: 14px;
+        padding: 5px 8px;
+        font-weight: 400;
+        border-radius: 15px;
+        background-color: #3e3e3e;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        -ms-border-radius: 15px;
+        -o-border-radius: 15px;
+      }
+    }
+    .user-skill {
+      h2 {
+        margin: 15px 0;
+      }
+
+      h3 {
+        font-size: 13px;
+        color: #f0f8fd;
+        margin: 15px 0 5px;
+      }
+
+      span {
+        padding: 2px 15px 5px;
+        font-size: 14px;
+        border-radius: 15px;
+        background-color: #3e3e3e;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        -ms-border-radius: 15px;
+        -o-border-radius: 15px;
+      }
+    }
+  }
+
+  //   ============ User statistic ===========
+
+  .user-statistic__solved--programs {
+    margin: 0 0 16px 0;
+    gap: 16px;
+  }
+
+  //   =========== Global for page ===========
+
+  .left-title {
+    color: #f0f8fd;
+    font-size: 16px;
+  }
+
+  .bg-profile {
+    background-color: #282828;
+    padding: 20px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
   }
 
   .sticky {
@@ -9,7 +155,7 @@
     bottom: 90px;
     right: 20px;
     padding: 10px 15px;
-    background-color: #65484812;
+    background-color: #282828;
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
