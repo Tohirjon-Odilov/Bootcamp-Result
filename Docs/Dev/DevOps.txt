@@ -1,5 +1,5 @@
 85KT2nuQQJ4$p => 139.59.133.219
-ssh root@139.59.133.219
+ssh root@46.101.212.59
 ================================
 root1234 => 188.166.243.200
 ssh root@188.166.243.200
@@ -41,4 +41,13 @@ dotnet user-secrets set "AllowedHosts" "*"
 
 ==============================
 
-sudo ln -s /etc/nginx/sites-available/api.tohirjon.uz /etc/nginx/sites-enabled
+server {
+    server_name api.tohirjon.uz;
+
+    location / {
+        include proxy_params;
+        proxy_pass http://127.0.0.1:5106;
+    }
+}
+
+sudo ln -s /etc/nginx/sites-available/api.zarnigorbiolog.uz /etc/nginx/sites-enabled
