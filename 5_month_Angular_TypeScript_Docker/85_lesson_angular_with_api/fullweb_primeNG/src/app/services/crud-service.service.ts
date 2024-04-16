@@ -1,14 +1,16 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { User } from '../models/user';
+import { UserModel } from '../models/user-model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CrudServiceService {
+  baseUrl: string = 'https://api.tohirjon.uz/api/Product/GetAll';
   constructor(private http: HttpClient) {}
-  getAll(): Observable<User[]> {
-    return this.http.get<User[]>('https://api.tohirjon.uz/api/Product/GetAll');
+
+  getAll(): Observable<UserModel[]> {
+    return this.http.get<UserModel[]>(this.baseUrl);
   }
 }
