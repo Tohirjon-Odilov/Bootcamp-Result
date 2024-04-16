@@ -9,13 +9,13 @@ import { CrudService } from '../../services/crud.service';
 export class GetallComponent {
   constructor(private crudService: CrudService) {}
   displayedColumns: string[] = [
+    'id',
     'productName',
     'productPrice',
     'productDescription',
     'productPicture',
     'categoryName',
     'createdAt',
-    'id',
   ];
   dataSource = this.crudService.getAll();
 }
