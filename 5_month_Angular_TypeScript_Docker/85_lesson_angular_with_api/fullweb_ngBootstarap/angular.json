@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ngBootStrap": {
+    "fullweb_ngBootstarap": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -24,7 +24,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/ng-boot-strap",
+            "outputPath": "dist/fullweb-ng-bootstarap",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -69,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "ngBootStrap:build:production"
+              "buildTarget": "fullweb_ngBootstarap:build:production"
             },
             "development": {
-              "buildTarget": "ngBootStrap:build:development"
+              "buildTarget": "fullweb_ngBootstarap:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -80,7 +80,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "ngBootStrap:build"
+            "buildTarget": "fullweb_ngBootstarap:build"
           }
         },
         "test": {
@@ -104,8 +104,5 @@
         }
       }
     }
-  },
-  "cli": {
-    "analytics": false
   }
 }

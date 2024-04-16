@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GetAllComponent } from './get-all.component';
+import { GetallComponent } from './getall.component';
 
-describe('GetAllComponent', () => {
-  let component: GetAllComponent;
-  let fixture: ComponentFixture<GetAllComponent>;
+describe('GetallComponent', () => {
+  let component: GetallComponent;
+  let fixture: ComponentFixture<GetallComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [GetAllComponent]
+      declarations: [GetallComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(GetAllComponent);
+    fixture = TestBed.createComponent(GetallComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

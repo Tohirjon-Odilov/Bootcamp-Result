@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { GetAllComponent } from './components/get-all/get-all.component';
+import { GetallComponent } from './components/getall/getall.component';
 
 const routes: Routes = [
-  { path: '', component: GetAllComponent },
+  {path:"", component:GetallComponent}
 ];
 
 @NgModule({
