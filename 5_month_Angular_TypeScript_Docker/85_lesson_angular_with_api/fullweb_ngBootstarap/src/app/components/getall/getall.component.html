@@ -1,21 +1,24 @@
-
 <table class="table table-striped">
-	<thead>
-		<tr>
-			<th scope="col">Id</th>
-			<th scope="col">FullName</th>
-			<th scope="col">Email</th>
-			<th scope="col">Role</th>
-		</tr>
-	</thead>
-	<tbody>
-		@for (user of users; track user.userId) {
-			<tr>
-                <td>{{ user.userId}}</td>
-                <td>{{ user.fullName}}</td>
-				<td>{{ user.email}}</td>
-				<td>{{ user.role}}</td>
-			</tr>
-		}
-	</tbody>
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Product Name</th>
+      <th scope="col">Product Price</th>
+      <th scope="col">Product Description</th>
+      <th scope="col">Category Name</th>
+      <th scope="col">Created At</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (user of users; track user.id) {
+    <tr>
+      <td>{{ user.id }}</td>
+      <td>{{ user.productName }}</td>
+      <td>{{ user.productPrice }}</td>
+      <td>{{ user.productDescription }}</td>
+      <td>{{ user.categoryName }}</td>
+      <td>{{ user.createdAt }}</td>
+    </tr>
+    }
+  </tbody>
 </table>

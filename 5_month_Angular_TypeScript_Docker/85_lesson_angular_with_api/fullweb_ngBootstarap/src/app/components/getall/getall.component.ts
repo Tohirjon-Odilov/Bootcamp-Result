@@ -5,23 +5,22 @@ import { UserModel } from '../../models/user-model';
 @Component({
   selector: 'app-getall',
   templateUrl: './getall.component.html',
-  styleUrl: './getall.component.scss'
+  styleUrl: './getall.component.scss',
 })
 export class GetallComponent implements OnInit {
-users!: UserModel[];
-constructor(private crudService:CrudService){}
+  users!: UserModel[];
+  constructor(private crudService: CrudService) {}
   ngOnInit(): void {
-      this.getAllUsers();
+    this.getAllUsers();
   }
-  getAllUsers(){
+  getAllUsers() {
     this.crudService.getAll().subscribe({
-      next: (data)=>{
-        this.users=data;
+      next: (data) => {
+        this.users = data;
       },
-      error: (err)=>{
+      error: (err) => {
         console.log(err);
-      }
-    })
+      },
+    });
   }
-
 }

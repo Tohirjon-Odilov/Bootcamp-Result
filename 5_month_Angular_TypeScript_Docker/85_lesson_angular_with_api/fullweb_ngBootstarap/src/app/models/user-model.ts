@@ -1,6 +1,9 @@
 export interface UserModel {
-    userId:number,
-    fullName:string,
-    email:string,
-    role:string
+  productName: string;
+  productPrice: number;
+  productDescription: string;
+  productPicture: string;
+  categoryName: string;
+  createdAt: string;
+  id: string;
 }
