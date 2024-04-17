@@ -1,2 +1,4 @@
-![image](https://github.com/MrUmmataliyev/fullweb/assets/145908814/100e8206-5abe-44fa-befd-82572360bdf6)
-![image](https://github.com/MrUmmataliyev/fullweb/assets/145908814/2aa6e3b3-b820-405e-8467-42adf57b23b0)
+![image](https://github.com/Tohirjon-Odilov/Bootcamp-Result/assets/82634626/e6253ac8-bca3-4c8c-bc1f-df294a9ec415)
+![image](https://github.com/Tohirjon-Odilov/Bootcamp-Result/assets/82634626/f287d6bf-c842-45c1-a87d-12775bb1b9a7)
+
+
