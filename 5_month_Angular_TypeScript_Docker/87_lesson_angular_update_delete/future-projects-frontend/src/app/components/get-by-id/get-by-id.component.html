@@ -1,12 +1,33 @@
-<input type="number" class="form-control" [(ngModel)]="myId" (onChange)="getById()">
+<div class="container">
+  <div class="d-flex align-items-center mt-3">
+    <input
+      type="number"
+      class="form-control"
+      [(ngModel)]="myId"
+      (onChange)="getById()"
+    />
 
+    <button class="btn btn-success w-50" (click)="getById()">Find User</button>
+  </div>
 
-<button class="btn btn-success" (click)="getById()">Find User</button>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">User Name</th>
+        <th scope="col">User Email</th>
+        <th scope="col">User Role</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">{{ user.userId }}</th>
+        <td>{{ user.fullName }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.role }}</td>
+      </tr>
+    </tbody>
+  </table>
 
-<h1>{{user.name}}</h1>
-<h1>{{user.email}}</h1>
-<h1>{{user.login}}</h1>
-<h1>{{user.password}}</h1>
-<h1>{{user.role}}</h1>
-
-<input type="text" value="{{user.name}}">
+  <!-- <input type="text" value="{{user.fullName}}"> -->
+</div>

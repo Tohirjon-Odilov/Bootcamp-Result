@@ -5,40 +5,35 @@ import { CrudService } from '../../serices/crud.service';
 @Component({
   selector: 'app-update',
   templateUrl: './update.component.html',
-  styleUrl: './update.component.scss'
+  styleUrl: './update.component.scss',
 })
 export class UpdateComponent {
-  myId!: number;
+  myId: number = 1;
   user: CreateUser = {
-    name: "",
-    email: "",
-    password: "",
-    login: "",
-    role: ""
+    fullName: '',
+    email: '',
+    password: '',
+    login: '',
+    role: '',
   };
 
   setValue: CreateUser = {
-    name: "",
-    email: "",
-    password: "",
-    login: "",
-    role: ""
+    fullName: '',
+    email: '',
+    password: '',
+    login: '',
+    role: '',
   };
 
-  constructor(private http : CrudService){
+  constructor(private http: CrudService) {
     this.getById();
   }
 
   ngOnInit(): void {
-
     this.getById();
-
   }
 
-
-
-  getById(){
-
+  getById() {
     this.http.getById(this.myId).subscribe({
       next: (data) => {
         this.user = data;
@@ -46,12 +41,11 @@ export class UpdateComponent {
       },
       error: (err) => {
         console.log(err);
-      }
-    })
-
+      },
+    });
   }
 
-  setUser(){
+  setUser() {
     this.http.update(this.myId, this.setValue).subscribe({
       next: (data) => {
         this.user = data;
@@ -59,9 +53,7 @@ export class UpdateComponent {
       },
       error: (err) => {
         console.log(err);
-      }
-    })
+      },
+    });
   }
-
-
 }

@@ -5,32 +5,25 @@ import { CreateUser } from '../../models/createUser';
 @Component({
   selector: 'app-create',
   templateUrl: './create.component.html',
-  styleUrl: './create.component.scss'
+  styleUrl: './create.component.scss',
 })
-export class CreateComponent implements OnInit {
-
+export class CreateComponent  {
   isSubmitted: boolean = false;
 
-  resultData! : CreateUser;
+  resultData!: CreateUser;
 
   setValue: CreateUser = {
-    name: "",
-    email: "",
-    password: "",
-    login: "",
-    role: ""
-  }
+    fullName: '',
+    email: '',
+    password: '',
+    login: '',
+    role: '',
+  };
 
-  constructor(private crudService: CrudService) {
-
-  }
-
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
+  constructor(private crudService: CrudService) {}
 
   createUser(data: CreateUser) {
-     this.crudService.create(data).subscribe({
+    this.crudService.create(data).subscribe({
       next: (result) => {
         this.resultData = result;
         console.log(result);
@@ -38,16 +31,11 @@ export class CreateComponent implements OnInit {
       },
       error: (err) => {
         console.log(`Error ketti: ${err}`);
-      }
+      },
     });
   }
 
   setUser() {
     this.createUser(this.setValue);
-    
   }
-
-
-
-
 }

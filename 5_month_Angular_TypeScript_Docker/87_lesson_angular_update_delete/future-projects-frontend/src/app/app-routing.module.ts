@@ -13,11 +13,11 @@ const routes: Routes = [
   { path: 'getbyid', component: GetByIdComponent },
   { path: 'create', component: CreateComponent },
   { path: 'update', component: UpdateComponent },
-  { path: 'delete', component: DeleteComponent }
+  { path: 'delete', component: DeleteComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
