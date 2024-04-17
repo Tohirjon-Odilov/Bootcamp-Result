@@ -1,0 +1,40 @@
+@if(!isSubmited){
+    <div class="card flex justify-content-center">
+        <br>
+        <br>
+        <span class="p-float-label">
+            <input pInputText id="username" [(ngModel)]="setValue.fullName" />
+            <label for="username">Username</label>
+        </span>
+        <br>
+        <br>
+        <span class="p-float-label">
+            <input pInputText id="email" [(ngModel)]="setValue.email" />
+            <label for="email">Email</label>
+        </span>
+        <br>
+        <br>
+        <span class="p-float-label">
+            <input pInputText id="login" [(ngModel)]="setValue.login" />
+            <label for="login">Login</label>
+        </span>
+        <br>
+        <br>
+        <span class="p-float-label">
+            <input type="password" pInputText id="password" [(ngModel)]="setValue.password" />
+            <label for="password">Password</label>
+        </span>
+        <br>
+        <br>
+        <span class="p-float-label">
+            <input pInputText id="role" [(ngModel)]="setValue.role" />
+            <label for="role">Role</label>
+        </span>
+        <br>
+        <p-button label="Submit" icon="pi pi-check" (click)="start()" iconPos="right"></p-button>
+    </div>
+    
+}
+@else{
+    <h1>Malumotlar yaratildi</h1>
+}

@@ -1,0 +1,24 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Product Name</th>
+      <th scope="col">Product Price</th>
+      <th scope="col">Product Description</th>
+      <th scope="col">Category Name</th>
+      <th scope="col">Created At</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (user of users; track user.id) {
+    <tr>
+      <td>{{ user.id }}</td>
+      <td>{{ user.productName }}</td>
+      <td>{{ user.productPrice }}</td>
+      <td>{{ user.productDescription }}</td>
+      <td>{{ user.categoryName }}</td>
+      <td>{{ user.createdAt }}</td>
+    </tr>
+    }
+  </tbody>
+</table>

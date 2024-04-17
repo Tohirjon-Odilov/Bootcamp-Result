@@ -1,0 +1,26 @@
+@if(!isSubmited){
+    <mat-form-field>
+        <mat-label>FullName</mat-label>
+        <input matInput [(ngModel)]="setValue.fullName">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input matInput [(ngModel)]="setValue.email">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Login</mat-label>
+        <input matInput [(ngModel)]="setValue.login">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Password</mat-label>
+        <input type="password" matInput [(ngModel)]="setValue.password">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Role</mat-label>
+        <input matInput [(ngModel)]="setValue.role">
+    </mat-form-field>
+    <button type="submit" mat-flat-button (click)="start()" color="primary">Submit</button>
+}
+@else{
+    <h1>Malumotlar yaratildi</h1>
+}

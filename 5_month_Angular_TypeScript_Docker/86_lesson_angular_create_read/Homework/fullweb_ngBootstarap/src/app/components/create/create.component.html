@@ -1,0 +1,30 @@
+<form class="submit-form">
+    @if(!isSubmitted){
+        <div class="form-group">
+            <label for="FullName">FullName</label>
+            <input type="text" class="form-control" id="FullName" placeholder="Enter fullname" [(ngModel)]="setValue.fullName" name="FullName">
+        </div>
+        <div class="form-group">
+            <label for="Email">Email</label>
+            <input type="text" class="form-control" id="Email" placeholder="Enter email " [(ngModel)]="setValue.email" name="Email">
+        </div>
+        <div class="form-group">
+            <label for="Email">Login</label>
+            <input type="text" class="form-control" id="Login" placeholder="Enter login " [(ngModel)]="setValue.login" name="login">
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" placeholder="Password" [(ngModel)]="setValue.password" name="password">
+        </div>
+        <div class="form-group">
+            <label for="Email">Role</label>
+            <input type="text" class="form-control" id="Role" placeholder="Enter role " [(ngModel)]="setValue.role"  name="Role">
+        </div>
+        <button type="submit" class="btn btn-primary" (click)="lets()">Submit</button> 
+    
+      
+    }
+    @else{
+    <h1>Malumotlar yaratildi</h1>
+    }
+    </form>

@@ -8,15 +8,15 @@ import { CreateUser } from '../models/createUser';
   providedIn: 'root',
 })
 export class CrudService {
-  baseUrl: string = 'https://api.tohirjon.uz/api/Product/';
+  baseUrl: string = 'https://api.tohirjon.uz/api/';
 
   constructor(private http: HttpClient) {}
 
   getAll(): Observable<User[]> {
-    return this.http.get<User[]>(this.baseUrl + 'GetAll');
+    return this.http.get<User[]>(this.baseUrl + 'Product/GetAll');
   }
 
   create(data: CreateUser): Observable<CreateUser> {
-    return this.http.post<CreateUser>(this.baseUrl + 'CreateUser', data);
+    return this.http.post<CreateUser>(this.baseUrl + 'Category/Create', data);
   }
 }
