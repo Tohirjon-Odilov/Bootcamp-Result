@@ -1,0 +1,22 @@
+
+    <p-table [value]="products" [tableStyle]="{ 'min-width': '50rem' }">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>UserId</th>
+                <th>FullName</th>
+                <th>Email</th>
+                <th>Role</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-product>
+        
+              <tr>
+                  <td>{{product.userId}}</td>
+                  <td>{{product.fullName}}</td>
+                  <td>{{product.email}}</td>
+                  <td>{{product.role}}</td>
+                </tr>
+           
+        </ng-template>
+    </p-table>
+

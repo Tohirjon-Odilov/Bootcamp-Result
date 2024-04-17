@@ -1,0 +1,47 @@
+<form class="submit-form">
+
+
+        <div class="form-group">
+            <label for="id">ID</label>
+            <div class="d-flex">
+                <input type="number" class="form-control" id="id" placeholder="enter ID" [(ngModel)]="myId" name="id">
+                <button class="btn btn-success" (click)="getById()">Find User</button>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="enter name" value="{{user.name}}" [(ngModel)]="setValue.name" name="name">
+        </div>
+    
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" value="{{user.email}}" [(ngModel)]="setValue.email" name="email">
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+    
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" id="password" placeholder="Password" required value="{{user.password}}" [(ngModel)]="setValue.password" name="password">
+        </div>
+    
+        <div class="form-group">
+            <label for="login">Login</label>
+            <input type="text" class="form-control" id="login" placeholder="enter login" required value="{{user.login}}" [(ngModel)]="setValue.login" name="login">
+        </div>
+    
+        
+        <div class="form-group">
+            <label for="role">Role</label>
+            <input type="text" class="form-control" id="role" placeholder="enter role" required value="{{user.role}}" [(ngModel)]="setValue.role" name="role">
+        </div>
+    
+        <br>
+        <button type="submit" class="btn btn-primary" (click)="setUser()">Submit</button> 
+
+</form>
+
+
+
+
+<!-- <button class="btn btn-primary" (click)="setUser()" type="submit" >Create User</button> -->

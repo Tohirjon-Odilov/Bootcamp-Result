@@ -4,24 +4,24 @@ import { Observable } from 'rxjs';
 import { UserModel } from '../models/user-model';
 import { CreateUser } from '../models/create-user';
 
-
 export interface Message {
-  fullName:string,
-
+  fullName: string;
 }
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CrudService {
+  baseUrl: string = 'https://localhost:7189/api/User/';
+  constructor(private http: HttpClient) {}
 
-  baseUrl: string = "http://localhost:5025/api/User/"; 
-  constructor(private http: HttpClient) { }
-   
-  getAll(): Observable<UserModel[]>{
-    return this.http.get<UserModel[]>(this.baseUrl+'GetAll')
+  getAll(): Observable<UserModel[]> {
+    return this.http.get<UserModel[]>(this.baseUrl + 'GetAll');
   }
-  createUser(data: CreateUser):Observable<Message>{
-    return this.http.post<Message>('http://localhost:5025/api/User/CreateUser', data)
+  createUser(data: CreateUser): Observable<Message> {
+    return this.http.post<Message>(
+      this.baseUrl+'CreateUser',
+      data
+    );
   }
 }

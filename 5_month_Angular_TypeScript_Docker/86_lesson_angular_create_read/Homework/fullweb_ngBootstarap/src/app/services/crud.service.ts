@@ -14,12 +14,12 @@ export interface Message {
 
 export class CrudService {
 
-  baseUrl: string = "http://localhost:5025/api/User/GetAll";
+  baseUrl: string = "https://localhost:7189/api/User/GetAll";
   constructor(private http:HttpClient) { }
   getAll(): Observable<UserModel[]>{
     return this.http.get<UserModel[]>(this.baseUrl)
   }
   createUser(data: CreateUser):Observable<Message>{
-    return this.http.post<Message>('http://localhost:5025/api/User/CreateUser', data)
+    return this.http.post<Message>(this.baseUrl+'CreateUser', data)
   }
 }
