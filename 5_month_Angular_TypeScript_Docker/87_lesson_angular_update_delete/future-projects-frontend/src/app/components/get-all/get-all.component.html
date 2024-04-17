@@ -9,10 +9,10 @@
     </thead>
     <tbody>
         
-    @for(user of users; track user.id){
+    @for(user of users; track user.userId){
         <tr >
-            <th scope="row">{{user.id}}</th>
-            <td>{{user.name}}</td>
+            <th scope="row">{{user.userId}}</th>
+            <td>{{user.fullName}}</td>
             <td>{{user.email}}</td>
             <td>{{user.role}}</td>
           </tr>
