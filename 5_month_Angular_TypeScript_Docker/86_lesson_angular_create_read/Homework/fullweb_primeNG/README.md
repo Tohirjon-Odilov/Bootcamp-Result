@@ -1,4 +1,9 @@
-![image](https://github.com/MrUmmataliyev/fullweb_primeNG/assets/145908814/c07dcb57-01ca-42c7-98c1-9bbb93c49473)
 
-![image](https://github.com/MrUmmataliyev/fullweb_primeNG/assets/145908814/734999c0-637e-410d-b75e-31411e9eb349)
-![image](https://github.com/MrUmmataliyev/fullweb_primeNG/assets/145908814/f7f44750-5eb0-46e3-8d46-9571ca2e7012)
+![image](https://github.com/Tohirjon-Odilov/Bootcamp-Result/assets/82634626/e1649ed0-3c80-446a-9244-362b6d5d0e4b)
+
+
+![image](https://github.com/Tohirjon-Odilov/Bootcamp-Result/assets/82634626/63ea215d-f8c3-4062-88c8-8e8463c733e6)
+
+
+![image](https://github.com/Tohirjon-Odilov/Bootcamp-Result/assets/82634626/acb90032-65bd-4809-8f32-da1d7288b550)
+
