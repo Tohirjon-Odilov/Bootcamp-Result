@@ -1,1 +1,25 @@
-<p>delete works!</p>
+<form class="submit-form">
+  <div class="form-group">
+    <label for="id">ID</label>
+    <div class="d-flex align-items-center">
+      <input
+        type="number"
+        class="form-control"
+        id="id"
+        placeholder="enter ID"
+        [(ngModel)]="myId"
+        name="id"
+      />
+      <button class="btn btn-success w-100 h-100" (click)="deleteById()">
+        Delete User
+      </button>
+    </div>
+  </div>
+<!-- 
+  <br />
+  <button type="submit" class="btn btn-primary w-100" (click)="setUser()">
+    Submit
+  </button> -->
+</form>
+
+<!-- <button class="btn btn-primary" (click)="setUser()" type="submit" >Create User</button> -->

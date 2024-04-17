@@ -31,7 +31,7 @@ export class CrudService {
     );
   }
 
-  delete(id: number): Observable<boolean> {
+  deleteById(id: number): Observable<boolean> {
     return this.http.delete<boolean>(this.baseUrl + `DeleteUser?id=${id}`);
   }
 }
