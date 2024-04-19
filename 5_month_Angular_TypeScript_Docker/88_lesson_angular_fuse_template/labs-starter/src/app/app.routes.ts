@@ -103,41 +103,6 @@ export const appRoutes: Route[] = [
         ],
     },
 
-    // Pricing
-    {
-        path: 'pricing',
-        children: [
-            {
-                path: 'modern',
-                loadChildren: () =>
-                    import(
-                        'app/modules/admin/pages/pricing/modern/modern.routes'
-                    ),
-            },
-            {
-                path: 'simple',
-                loadChildren: () =>
-                    import(
-                        'app/modules/admin/pages/pricing/simple/simple.routes'
-                    ),
-            },
-            {
-                path: 'single',
-                loadChildren: () =>
-                    import(
-                        'app/modules/admin/pages/pricing/single/single.routes'
-                    ),
-            },
-            {
-                path: 'table',
-                loadChildren: () =>
-                    import(
-                        'app/modules/admin/pages/pricing/table/table.routes'
-                    ),
-            },
-        ],
-    },
-
     // Admin routes
     {
         path: '',
@@ -158,6 +123,55 @@ export const appRoutes: Route[] = [
                 loadChildren: () =>
                     import('app/modules/admin/academy/academy.routes'),
             },
+
+            
+            // Pages
+            {path: 'pages', children: [
+                 // Pricing
+                {path: 'pricing', children: [
+                    {path: 'modern', loadChildren: () => import('app/modules/admin/pages/pricing/modern/modern.routes')},
+                    {path: 'simple', loadChildren: () => import('app/modules/admin/pages/pricing/simple/simple.routes')},
+                    {path: 'single', loadChildren: () => import('app/modules/admin/pages/pricing/single/single.routes')},
+                    {path: 'table', loadChildren: () => import('app/modules/admin/pages/pricing/table/table.routes')}
+                ]},
+            ]},
         ],
+
+        
     },
+
+    // // Pricing
+    // {
+    //     path: 'pricing',
+    //     children: [
+    //         {
+    //             path: 'modern',
+    //             loadChildren: () =>
+    //                 import(
+    //                     'app/modules/admin/pages/pricing/modern/modern.routes'
+    //                 ),
+    //         },
+    //         {
+    //             path: 'simple',
+    //             loadChildren: () =>
+    //                 import(
+    //                     'app/modules/admin/pages/pricing/simple/simple.routes'
+    //                 ),
+    //         },
+    //         {
+    //             path: 'single',
+    //             loadChildren: () =>
+    //                 import(
+    //                     'app/modules/admin/pages/pricing/single/single.routes'
+    //                 ),
+    //         },
+    //         {
+    //             path: 'table',
+    //             loadChildren: () =>
+    //                 import(
+    //                     'app/modules/admin/pages/pricing/table/table.routes'
+    //                 ),
+    //         },
+    //     ],
+    // },
 ];
