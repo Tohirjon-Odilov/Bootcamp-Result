@@ -1,7 +1,7 @@
 https://crm.zarnigorbiolog.uz
 <br/>uchun parol va login <br/>
-Login 10004 <br/>
-Parol 1 <br/>
+Login `10004` <br/>
+Parol `1` <br/>
 # Ichma ich bo'lib ketgani uchun project buni ichida xatolik berdi shu sababli boshqa repo'da yozdim
 [https://github.com/Tohirjon-Odilov/Sign-Identity](https://github.com/Tohirjon-Odilov/Sign-Identity)
 
