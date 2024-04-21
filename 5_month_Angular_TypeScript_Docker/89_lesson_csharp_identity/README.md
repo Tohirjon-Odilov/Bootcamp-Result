@@ -1,4 +1,4 @@
-### Ichma ich bo'lib ketgani uchun project buni ichida xatolik berdi shu sababli boshqa repo'da yozdim
+# Ichma ich bo'lib ketgani uchun project buni ichida xatolik berdi shu sababli boshqa repo'da yozdim
 [https://github.com/Tohirjon-Odilov/Sign-Identity](https://github.com/Tohirjon-Odilov/Sign-Identity)
 
 # CV uchun link fikr qoldirsangiz ham bo'ladi
