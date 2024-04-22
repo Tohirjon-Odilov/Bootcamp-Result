@@ -1,0 +1,6 @@
+@Sign_Identity.API_HostAddress = http://localhost:5169
+
+GET {{Sign_Identity.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
