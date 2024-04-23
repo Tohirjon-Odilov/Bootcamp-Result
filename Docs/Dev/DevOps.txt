@@ -21,7 +21,7 @@ dotnet user-secrets set "ConnectionStrings:StockManagementConnectionString" "Hos
 dotnet user-secrets set "AllowedHosts" "*"
 
 ==============================
-
+For Apache
 <VirtualHost *:5106>
     ServerAdmin shahanshoh819@gmail.com
     ServerName tohirjon.uz
@@ -38,9 +38,8 @@ dotnet user-secrets set "AllowedHosts" "*"
     CustomLog ${APACHE_LOG_DIR}/example.com_access.log combined
 </VirtualHost>
 
-
 ==============================
-
+For Nginx
 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
 
 server {
@@ -57,3 +56,24 @@ sudo ln -s /etc/nginx/sites-available/bookstore.tohirjon.uz /etc/nginx/sites-ena
 ==============================
 
 git reset --hard HEAD => O'zgarishlarni yo'q qilish.
+
+==============================
+appsettings.json ichi
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*",
+  "ConnectionStrings": {
+    "DefaultConnection": "Host=localhost;Port=5432;Username=postgres;Password=coder;Database=IdentitLessonyDb;"
+  },
+  "JWTSettings": {
+    "SecretKey": "snfisnpiubgupieqrIUUIBIUByfbebrfbsagbdhlfgbdlkfbgjhhjash",
+    "ValidAudience": "https://localhost:4200",
+    "ValidIssuer": "https://localhost:5000",
+    "ExpireDate": "60"
+  }
+}
