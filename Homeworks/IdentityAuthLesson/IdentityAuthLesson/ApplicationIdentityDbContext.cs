@@ -7,10 +7,8 @@ namespace IdentityAuthLesson
     public class ApplicationIdentityDbContext : IdentityDbContext<AppUser>
     {
         public ApplicationIdentityDbContext(DbContextOptions<ApplicationIdentityDbContext> options)
-            :base(options)
-        {
-            
-        }
+            : base(options)
+            => Database.Migrate();
 
 
     }
