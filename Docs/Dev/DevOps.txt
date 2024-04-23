@@ -53,3 +53,7 @@ server {
 }
 
 sudo ln -s /etc/nginx/sites-available/bookstore.tohirjon.uz /etc/nginx/sites-enabled
+
+==============================
+
+git reset --hard HEAD => O'zgarishlarni yo'q qilish.
