@@ -1,7 +1,7 @@
 Zarurat
-	Support teacher => video bugungi'ni
-	Main teacher => video bugungi'ni
-	Sheenam => kamida 1 soatli dars
+	Support teacher => video bugungi'ni === Video Yo'q
+	Main teacher => video bugungi'ni ==== DONE
+	Sheenam => kamida 1 soatli dars ==== DONE
 Extijoy
 	Support teacher => o'tgan dars
 	Main teacher => o'tgan dars
