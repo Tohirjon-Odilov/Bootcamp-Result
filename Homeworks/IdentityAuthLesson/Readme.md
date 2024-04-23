@@ -1,0 +1,12 @@
+# Homework
+![image](https://github.com/Tohirjon-Odilov/Bootcamp-Result/assets/82634626/882d8f91-128b-4134-8544-bf8f2d5cb01c)
+![image](https://github.com/Tohirjon-Odilov/Bootcamp-Result/assets/82634626/df0fe153-90be-44b0-bde5-09d0d631a1e5)
+![image](https://github.com/Tohirjon-Odilov/Bootcamp-Result/assets/82634626/879bfd8e-407b-4d07-bd2f-f64b03af3dcd)
+![image](https://github.com/Tohirjon-Odilov/Bootcamp-Result/assets/82634626/814d7e4e-015c-46b0-b8ee-b037dffa637e)
+![image](https://github.com/Tohirjon-Odilov/Bootcamp-Result/assets/82634626/9b98e2df-2ff9-46a4-9b2a-21c40f0987a0)
+![image](https://github.com/Tohirjon-Odilov/Bootcamp-Result/assets/82634626/95695ad5-8593-47ca-8905-552057d6a9ea)
+![image](https://github.com/Tohirjon-Odilov/Bootcamp-Result/assets/82634626/13121e28-8734-4195-bc5d-903014927297)
+![image](https://github.com/Tohirjon-Odilov/Bootcamp-Result/assets/82634626/53c19608-ea79-4bd1-b3ef-be063b7e1cce)
+![image](https://github.com/Tohirjon-Odilov/Bootcamp-Result/assets/82634626/33921311-31d4-427a-96a2-62f63c7a3122)
+![image](https://github.com/Tohirjon-Odilov/Bootcamp-Result/assets/82634626/68bfe677-7692-4813-b3ed-2c2fee99e73e)
+![image](https://github.com/Tohirjon-Odilov/Bootcamp-Result/assets/82634626/7298fbb7-4b8b-45b5-8a1d-af6410e1ac4c)
