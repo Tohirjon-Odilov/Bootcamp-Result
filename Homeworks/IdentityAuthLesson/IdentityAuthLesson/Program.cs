@@ -50,7 +50,18 @@ namespace IdentityAuthLesson
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["JWTSettings:SecretKey"]!))
                 };
             });
-            
+
+            var MyPolicy = "_myAllowSpecificOrigins";
+
+            builder.Services.AddCors(options => {
+                options.AddPolicy(name: MyPolicy, policy =>
+                {
+                    policy.AllowAnyHeader()
+                           .AllowAnyOrigin()
+                           .AllowAnyMethod();
+                });
+            });
+
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -112,7 +123,7 @@ namespace IdentityAuthLesson
             app.UseAuthentication();
             app.UseAuthorization();
 
-
+            app.UseCors(MyPolicy);
 
             app.MapControllers();
 
