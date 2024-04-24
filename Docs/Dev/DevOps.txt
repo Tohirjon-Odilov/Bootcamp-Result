@@ -53,6 +53,10 @@ server {
 
 sudo ln -s /etc/nginx/sites-available/bookstore.tohirjon.uz /etc/nginx/sites-enabled
 
+crontab -e
+ichiga shu kod kiritilsa har kuni yangi sertifikat oladi.
+	0 12 * * * /usr/bin/certbot renew --quiet
+
 ==============================
 
 git reset --hard HEAD => O'zgarishlarni yo'q qilish.
