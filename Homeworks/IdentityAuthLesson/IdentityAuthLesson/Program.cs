@@ -112,7 +112,7 @@ namespace IdentityAuthLesson
             Log.Logger = new LoggerConfiguration()
               .MinimumLevel.Debug()
               .WriteTo.Logger(lc => lc
-                  .Filter.ByIncludingOnly(e => e.Level == LogEventLevel.Error)
+                  .Filter.ByIncludingOnly(e => e.Level == LogEventLevel.Information)
                   .WriteTo.TeleSink("6450224062:AAGrJR3ezR2t2EyWbTL_oYTsgMLzTnRMai8", "1633746526"))
               .WriteTo.Console()
               .WriteTo.File("wwwroot/log.txt")
