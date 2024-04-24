@@ -7,7 +7,10 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using Serilog;
+using Serilog.Events;
 using System.Text;
+using TelegramSink;
 
 namespace IdentityAuthLesson
 {
@@ -105,6 +108,18 @@ namespace IdentityAuthLesson
                 .AddEntityFrameworkStores<IdentityDbContext>()
                 .AddApiEndpoints();
             */
+
+            Log.Logger = new LoggerConfiguration()
+              .MinimumLevel.Debug()
+              .WriteTo.Logger(lc => lc
+                  .Filter.ByIncludingOnly(e => e.Level == LogEventLevel.Error)
+                  .WriteTo.TeleSink("6450224062:AAGrJR3ezR2t2EyWbTL_oYTsgMLzTnRMai8", "1633746526"))
+              .WriteTo.Console()
+              .WriteTo.File("wwwroot/log.txt")
+              .CreateLogger();
+
+            builder.Logging.AddSerilog();
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
