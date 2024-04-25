@@ -39,9 +39,9 @@ export class RegisterComponent implements OnInit {
         // localStorage.setItem('isLogin', 'true');
       },
       error: (err) => {
-        console.log(err);
+        console.log(err.error[0]);
 
-        this.matSnackBar.open(err.error, 'Close', {
+        this.matSnackBar.open(err.error[0].description, 'Close', {
           duration: 5000,
           horizontalPosition: 'center',
         });

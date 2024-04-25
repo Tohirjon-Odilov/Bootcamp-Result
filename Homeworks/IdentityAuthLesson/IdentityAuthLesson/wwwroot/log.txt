@@ -106,3 +106,44 @@ System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport 
 2024-04-24 12:04:01.934 +05:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
 2024-04-24 12:04:01.934 +05:00 [INF] Request finished HTTP/2 GET https://localhost:5000/swagger/favicon-32x32.png - 200 628 image/png 3.2849ms
 2024-04-24 12:04:01.963 +05:00 [INF] Request finished HTTP/2 GET https://localhost:5000/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 62.7964ms
+2024-04-24 12:06:14.604 +05:00 [DBG] Connection id "0HN345IS0O8UL" is closing.
+2024-04-24 12:06:14.608 +05:00 [DBG] Connection id "0HN345IS0O8UL" is closed. The last processed stream ID was 17.
+2024-04-24 12:06:14.610 +05:00 [DBG] Connection id "0HN345IS0O8UL" received FIN.
+2024-04-24 12:06:14.611 +05:00 [DBG] The connection queue processing loop for 0HN345IS0O8UL completed.
+2024-04-24 12:06:14.611 +05:00 [DBG] Connection id "0HN345IS0O8UL" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-04-24 12:06:14.627 +05:00 [DBG] Connection id "0HN345IS0O8UL" stopped.
+2024-04-24 19:22:18.610 +05:00 [DBG] Connection id "0HN345IS0O8UM" received FIN.
+2024-04-24 19:22:18.630 +05:00 [DBG] Connection id "0HN345IS0O8UM" accepted.
+2024-04-24 19:22:18.631 +05:00 [DBG] Connection id "0HN345IS0O8UM" started.
+2024-04-24 19:22:18.642 +05:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-04-24 19:22:18.653 +05:00 [DBG] Connection id "0HN345IS0O8UM" stopped.
+2024-04-24 19:22:18.655 +05:00 [DBG] Connection id "0HN345IS0O8UM" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-04-24 19:22:19.001 +05:00 [DBG] Connection id "0HN345IS0O8UN" accepted.
+2024-04-24 19:22:19.002 +05:00 [DBG] Connection id "0HN345IS0O8UN" started.
+2024-04-24 19:22:19.041 +05:00 [DBG] Connection 0HN345IS0O8UN established using the following protocol: "Tls13"
+2024-04-24 19:22:19.053 +05:00 [INF] Request starting HTTP/2 GET https://localhost:5000/swagger/index.html - null null
+2024-04-24 19:22:19.095 +05:00 [DBG] No candidates found for the request path '/swagger/index.html'
+2024-04-24 19:22:19.095 +05:00 [DBG] Request did not match any endpoints
+2024-04-24 19:22:19.110 +05:00 [DBG] Response markup is scheduled to include Browser Link script injection.
+2024-04-24 19:22:19.111 +05:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2024-04-24 19:22:19.113 +05:00 [DBG] Response markup was updated to include Browser Link script injection.
+2024-04-24 19:22:19.114 +05:00 [DBG] Response markup was updated to include browser refresh script injection.
+2024-04-24 19:22:19.115 +05:00 [INF] Request finished HTTP/2 GET https://localhost:5000/swagger/index.html - 200 null text/html;charset=utf-8 61.7403ms
+2024-04-24 19:22:19.171 +05:00 [INF] Request starting HTTP/2 GET https://localhost:5000/_framework/aspnetcore-browser-refresh.js - null null
+2024-04-24 19:22:19.175 +05:00 [INF] Request finished HTTP/2 GET https://localhost:5000/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript; charset=utf-8 3.8687ms
+2024-04-24 19:22:19.311 +05:00 [INF] Request starting HTTP/2 GET https://localhost:5000/_vs/browserLink - null null
+2024-04-24 19:22:19.329 +05:00 [INF] Request finished HTTP/2 GET https://localhost:5000/_vs/browserLink - 200 null text/javascript; charset=UTF-8 18.0365ms
+2024-04-24 19:22:19.631 +05:00 [INF] Request starting HTTP/2 GET https://localhost:5000/swagger/v1/swagger.json - null null
+2024-04-24 19:22:19.633 +05:00 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2024-04-24 19:22:19.634 +05:00 [DBG] Request did not match any endpoints
+2024-04-24 19:22:19.661 +05:00 [INF] Request finished HTTP/2 GET https://localhost:5000/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 29.8677ms
+2024-04-24 19:24:31.845 +05:00 [DBG] Connection id "0HN345IS0O8UN" is closing.
+2024-04-24 19:24:31.848 +05:00 [DBG] Connection id "0HN345IS0O8UN" is closed. The last processed stream ID was 7.
+2024-04-24 19:24:31.850 +05:00 [DBG] Connection id "0HN345IS0O8UN" received FIN.
+2024-04-24 19:24:31.852 +05:00 [DBG] Connection id "0HN345IS0O8UN" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-04-24 19:24:31.853 +05:00 [DBG] The connection queue processing loop for 0HN345IS0O8UN completed.
+2024-04-24 19:24:31.855 +05:00 [DBG] Connection id "0HN345IS0O8UN" stopped.
