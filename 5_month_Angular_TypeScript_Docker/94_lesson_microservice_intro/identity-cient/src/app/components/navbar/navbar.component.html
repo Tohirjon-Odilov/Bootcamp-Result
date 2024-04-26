@@ -1,0 +1,26 @@
+<mat-toolbar style="background-color: cornflowerblue;">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span routerLink="/" style="cursor: pointer;">Tohirjon Odilov</span>
+    <span class="example-spacer"></span>
+    <button  (click) ="logout()" routerLink="login" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <div style="width: 200px; margin: auto;">
+    <!-- <button
+      *ngFor="let language of languagesList; index as i"
+      (click)="changeLanguage(language.code)"
+    >
+      <img alt="rasm" [src]="language.imgUrl" [alt]="language.name" style="width: 40px; " />
+      <span> {{ language.shorthand }} </span>
+    </button> -->
+  </div>
+      <mat-icon>login</mat-icon>
+    </button>
+    <button routerLink="register" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>logout</mat-icon>
+    </button>
+
+  
+
+  </mat-toolbar>
+  
