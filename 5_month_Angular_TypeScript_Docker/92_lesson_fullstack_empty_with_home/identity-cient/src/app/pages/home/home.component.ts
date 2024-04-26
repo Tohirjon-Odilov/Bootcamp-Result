@@ -7,6 +7,13 @@ import { TranslocoService } from '@ngneat/transloco';
   styleUrl: './home.component.scss',
 })
 export class HomeComponent {
+  currentItem = 'Tohirjon';
+  items = ['Anor', 'Banana', 'Cucumber'];
+
+  addItem(newItem: string) {
+    this.items.push(newItem);
+  }
+
   constructor(private readonly translocoService: TranslocoService) {
     this.translocoService.translate('title');
     this.translocoService.translate('form.firstName');

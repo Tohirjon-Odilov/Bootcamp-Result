@@ -36,6 +36,8 @@ import { StudentProfileComponent } from './admin/students/student-profile/studen
 import { UserProfileComponent } from './admin/users/user-profile/user-profile.component';
 import { ForbiddenComponent } from './pages/forbidden/forbidden.component';
 import { TranslocoRootModule } from './transloco-root.module';
+import { TaskComponent } from './pages/task/task.component';
+import { ToTaskComponent } from './pages/to-task/to-task.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +53,8 @@ import { TranslocoRootModule } from './transloco-root.module';
     StudentProfileComponent,
     UserProfileComponent,
     ForbiddenComponent,
+    TaskComponent,
+    ToTaskComponent
   ],
   imports: [
     BrowserModule,

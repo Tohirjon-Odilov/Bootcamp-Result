@@ -29,11 +29,11 @@ export class LoginComponent implements OnInit {
         this.decodedToken = jwtDecode(localStorage.getItem(this.tokenKey)!);
         for (let index = 0; index < this.decodedToken.role.length; index++) {
           localStorage.setItem('role', this.decodedToken.role);
-          if (this.decodedToken.role == 'Admin') {
-            this.router.navigate(['/']);
-          } else if (this.decodedToken.role == 'Student') {
-            this.router.navigate(['/']);
-          }
+          // if (this.decodedToken.role == 'Admin') {
+            // this.router.navigate(['/home']);
+          // } else if (this.decodedToken.role == 'Student') {
+            this.router.navigate(['/home']);
+          // }
         }
 
         this.matSnackBar.open(response.message, 'Close', {
