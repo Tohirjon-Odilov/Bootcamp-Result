@@ -65,10 +65,14 @@ console.log(routeConfig)
     // provides the path of the route.
     const { path } = routeConfig as Route;
 
-    if (path?.includes('student-profile') && role === 'Admin') {
+    if (
+      path?.includes('student-profile') ||
+      path?.includes('home') &&
+      role === 'Admin'
+    ) {
       // if user is administrator and is trying to access admin routes, allow access.
       // this.router.navigateByUrl('/');
-      
+
       return true;
     }
     

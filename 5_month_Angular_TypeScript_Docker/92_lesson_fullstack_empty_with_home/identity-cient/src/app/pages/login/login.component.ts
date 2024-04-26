@@ -20,31 +20,36 @@ export class LoginComponent implements OnInit {
   decodedToken: any | null;
   tokenKey = 'token';
   roles: string[] = [];
+
+  tokenDecoded: any;
+  
   login() {
     this.authService.login(this.form.value).subscribe({
       next: (response) => {
-        // console.log(response);
-
         this.decodedToken = jwtDecode(localStorage.getItem(this.tokenKey)!);
-        // console.log('rollar kelishi kere');
         for (let index = 0; index < this.decodedToken.role.length; index++) {
-          // console.log(this.decodedToken.role);
           localStorage.setItem('role', this.decodedToken.role);
           if (this.decodedToken.role == 'Admin') {
-            // console.log('admin-test');
-            // console.log(this.decodedToken.role[index]);
-            this.router.navigateByUrl('/student-profile');
+            this.router.navigate(['/']);
           } else if (this.decodedToken.role == 'Student') {
-            console.log('student-test');
-            // console.log(this.decodedToken.role[index]);
+            this.router.navigate(['/']);
           }
-          // this.router.navigate(['/']);
         }
 
         this.matSnackBar.open(response.message, 'Close', {
           duration: 5000,
           horizontalPosition: 'center',
         });
+
+        this.tokenDecoded = jwtDecode(localStorage.getItem(this.tokenKey)!);
+        // console.log('decoded token');
+        // console.log(this.tokenDecoded);
+        // console.log('data kelyabdi');
+        // console.log(Date.now());
+
+        if (this.tokenDecoded.exp * 1000 < Date.now()) {
+          this.router.navigate(['/register']);
+        }
 
         localStorage.setItem('isLogin', 'true');
       },

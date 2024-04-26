@@ -35,6 +35,7 @@ import { StudentDetailsComponent } from './admin/students/student-details/studen
 import { StudentProfileComponent } from './admin/students/student-profile/student-profile.component';
 import { UserProfileComponent } from './admin/users/user-profile/user-profile.component';
 import { ForbiddenComponent } from './pages/forbidden/forbidden.component';
+import { TranslocoRootModule } from './transloco-root.module';
 
 @NgModule({
   declarations: [
@@ -64,6 +65,7 @@ import { ForbiddenComponent } from './pages/forbidden/forbidden.component';
     MatSnackBarModule,
     RouterLink,
     HttpClientModule,
+    TranslocoRootModule,
   ],
   providers: [provideAnimationsAsync(), provideHttpClient()],
   bootstrap: [AppComponent],
