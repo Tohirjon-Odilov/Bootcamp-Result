@@ -4,6 +4,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
 import { jwtDecode } from 'jwt-decode';
+import { TranslocoService } from '@ngneat/transloco';
 
 @Component({
   selector: 'app-login',
@@ -11,6 +12,17 @@ import { jwtDecode } from 'jwt-decode';
   styleUrl: './login.component.scss',
 })
 export class LoginComponent implements OnInit {
+  constructor(private readonly translocoService: TranslocoService) {
+    this.translocoService.translate('title');
+    this.translocoService.translate('form.description');
+    this.translocoService.translate('form.email');
+    this.translocoService.translate('form.password');
+    this.translocoService.translate('form.button');
+    this.translocoService.translate('form.footer_title');
+    this.translocoService.translate('form.register');
+
+    localStorage.clear();
+  }
   matSnackBar = inject(MatSnackBar);
   router = inject(Router);
   hide = true;
@@ -20,9 +32,8 @@ export class LoginComponent implements OnInit {
   decodedToken: any | null;
   tokenKey = 'token';
   roles: string[] = [];
-
   tokenDecoded: any;
-  
+
   login() {
     this.authService.login(this.form.value).subscribe({
       next: (response) => {
@@ -30,9 +41,10 @@ export class LoginComponent implements OnInit {
         for (let index = 0; index < this.decodedToken.role.length; index++) {
           localStorage.setItem('role', this.decodedToken.role);
           // if (this.decodedToken.role == 'Admin') {
-            // this.router.navigate(['/home']);
+          // this.router.navigate(['/home']);
           // } else if (this.decodedToken.role == 'Student') {
-            this.router.navigate(['/home']);
+          this.router.navigate(['/home']);
+          this.router.navigateByUrl('/home');
           // }
         }
 
@@ -46,10 +58,6 @@ export class LoginComponent implements OnInit {
         // console.log(this.tokenDecoded);
         // console.log('data kelyabdi');
         // console.log(Date.now());
-
-        if (this.tokenDecoded.exp * 1000 < Date.now()) {
-          this.router.navigate(['/register']);
-        }
 
         localStorage.setItem('isLogin', 'true');
       },

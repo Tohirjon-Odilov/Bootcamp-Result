@@ -1,7 +1,11 @@
 {
-  "title": "Salom Dunyo",
+  "title": "Kirish",
   "form": {
-    "firstName": "Ism",
-    "lastName": "Familiya"
+    "description": "Accauntinizga kiring",
+    "email": "Email",
+    "password": "Parol",
+    "button": "Kirish",
+    "footer_title": "Akkauntingiz yo'qmi?",
+    "register": "Ro'yhatdan o'tish"
   }
 }

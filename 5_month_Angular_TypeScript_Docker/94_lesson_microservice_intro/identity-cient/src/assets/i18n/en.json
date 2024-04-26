@@ -1,7 +1,11 @@
 {
-  "title": "Hello World!",
+  "title": "Login",
   "form": {
-    "firstName": "First Name",
-    "lastName": "Last Name"
+    "description": "Login in to your account",
+    "email": "Email",
+    "password": "Password",
+    "button": "Login",
+    "footer_title": "Don't have an account?",
+    "register": "Register"
   }
 }

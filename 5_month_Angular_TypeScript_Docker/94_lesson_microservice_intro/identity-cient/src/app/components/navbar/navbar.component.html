@@ -4,15 +4,26 @@
     </button>
     <span routerLink="/" style="cursor: pointer;">Tohirjon Odilov</span>
     <span class="example-spacer"></span>
-    <button  (click) ="logout()" routerLink="login" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-      <div style="width: 200px; margin: auto;">
+    <select (change)="changeLanguage($event.target.value)">
+    <option *ngFor="let language of languagesList" [value]="language.code">
+      <img [src]="language.imgUrl" [alt]="language.name" style="width: 40px;">
+      <span>{{ language.shorthand }}</span>
+    </option>
+  </select>
+
+    <!-- <select name="" id="">
+      <option *ngFor="let language of languagesList; index as i"
+      (click)="changeLanguage(language.code)" value=language.code>{{language.shorthand}}</option>
+    </select> -->
     <!-- <button
       *ngFor="let language of languagesList; index as i"
       (click)="changeLanguage(language.code)"
-    >
-      <img alt="rasm" [src]="language.imgUrl" [alt]="language.name" style="width: 40px; " />
-      <span> {{ language.shorthand }} </span>
+    > -->
+      <!-- <img alt="rasm" [src]="language.imgUrl" [alt]="language.name" style="width: 40px; " /> -->
+      <!-- <span> {{ language.shorthand }} </span>
     </button> -->
+    <button  routerLink="login" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <div style="width: 200px; margin: auto;">
   </div>
       <mat-icon>login</mat-icon>
     </button>
