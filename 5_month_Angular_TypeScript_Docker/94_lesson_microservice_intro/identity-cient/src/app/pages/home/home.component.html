@@ -1,16 +1,6 @@
-<!-- <div style="width: 200px; margin: auto;">
-    <button
-      *ngFor="let language of languagesList; index as i"
-      (click)="changeLanguage(language.code)"
-    >
-      <img alt="rasm" [src]="language.imgUrl" [alt]="language.name" style="width: 40px; " />
-      <span> {{ language.shorthand }} </span>
-    </button>
-  </div> -->
+<app-task (newItemEvent)="addItem($event)"></app-task>
+<app-to-task [item]="currentItem"></app-to-task>
 
-<!-- <app-task (newItemEvent)="addItem($event)"></app-task>
-<app-to-task [item]="currentItem"></app-to-task> -->
-
-<!-- <ul>
+<ul>
   <li *ngFor="let item of items">{{item}}</li>
-</ul> -->
+</ul>

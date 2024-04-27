@@ -60,10 +60,12 @@ export class AuthGuard implements CanActivate {
     //   console.log(this.tokenDecoded);
     //   return false;
     // }
+    console.log("adguard")
 
     if (
+      path?.includes('') ||
       path?.includes('student-profile') ||
-      (path?.includes('home') && role === 'Admin')
+      path?.includes('home') && role === 'Admin'
     ) {
       return true;
     }

@@ -41,7 +41,7 @@ export class HomeComponent {
       shorthand: 'UZB',
     },
   ];
-  // public changeLanguage(languageCode: string): void {
-  //   this.translocoService.setActiveLang(languageCode);
-  // }
+  public changeLanguage(languageCode: string): void {
+    this.translocoService.setActiveLang(languageCode);
+  }
 }
