@@ -4,5 +4,4 @@
 ![image](https://github.com/Tohirjon-Odilov/Bootcamp-Result/assets/82634626/8fbfa68b-026f-4a7e-a2da-1a10164e8d10)
 
 ![image](https://github.com/Tohirjon-Odilov/Bootcamp-Result/assets/82634626/c8e3816f-fc82-4391-b1d1-fd56f59812fa)
-![image](https://github.com/Tohirjon-Odilov/Bootcamp-Result/assets/82634626/275eaa5e-818a-44f3-867a-a71284d8ae5b)
-![image](https://github.com/Tohirjon-Odilov/Bootcamp-Result/assets/82634626/d5457eed-68a2-4b59-b3e6-b2cf7d9a6c8e)
+![image](https://github.com/Tohirjon-Odilov/Bootcamp-Result/assets/82634626/58a5038a-7d25-4b4a-abb5-e0fa939b8b83)
