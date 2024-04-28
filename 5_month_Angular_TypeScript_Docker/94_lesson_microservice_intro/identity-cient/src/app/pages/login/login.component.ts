@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
 
     localStorage.clear();
   }
-  
+
   matSnackBar = inject(MatSnackBar);
   router = inject(Router);
   hide = true;
@@ -39,8 +39,10 @@ export class LoginComponent implements OnInit {
     this.authService.login(this.form.value).subscribe({
       next: (response) => {
         this.decodedToken = jwtDecode(localStorage.getItem(this.tokenKey)!);
+        // if()
         for (let index = 0; index < this.decodedToken.role.length; index++) {
           localStorage.setItem('role', this.decodedToken.role);
+          localStorage.setItem('userName', this.decodedToken.name);
           // if (this.decodedToken.role == 'Admin') {
           // this.router.navigate(['/home']);
           // } else if (this.decodedToken.role == 'Student') {

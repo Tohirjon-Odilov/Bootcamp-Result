@@ -1,4 +1,6 @@
-<div>
-    <input type="text" id="item-input" #newItem>
-    <button type="button" (click)="addNewItem(newItem.value)">Task App Add</button>
+<div class="container">
+  <mat-form-field>
+    <input matInput type="text" placeholder="Task App Add" #newItem>
+  </mat-form-field>
+  <button mat-raised-button color="primary" (click)="addNewItem(newItem.value)">Add</button>
 </div>

@@ -2,9 +2,9 @@
     <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
       <mat-icon>menu</mat-icon>
     </button>
-    <span routerLink="/" style="cursor: pointer;">Tohirjon Odilov</span>
+    <span routerLink="/" style="cursor: pointer;">{{userName}}</span>
     <span class="example-spacer"></span>
-    <select (change)="changeLanguage($event.target.value)">
+    <select (change)="changeLanguage($event.target)">
     <option *ngFor="let language of languagesList" [value]="language.code">
       <img [src]="language.imgUrl" [alt]="language.name" style="width: 40px;">
       <span>{{ language.shorthand }}</span>

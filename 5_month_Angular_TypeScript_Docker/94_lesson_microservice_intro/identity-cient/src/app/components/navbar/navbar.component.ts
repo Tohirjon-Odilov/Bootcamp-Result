@@ -8,7 +8,9 @@ import { Component, inject } from '@angular/core';
   styleUrl: './navbar.component.scss',
 })
 export class NavbarComponent {
-  constructor(public readonly translocoService: TranslocoService) {}
+  userName?: string = localStorage.getItem("userName")?.toString();
+  constructor(public readonly translocoService: TranslocoService) {
+  }
   authService = inject(AuthService);
 
   logout() {
@@ -37,8 +39,8 @@ export class NavbarComponent {
       shorthand: 'UZB',
     },
   ];
-  public changeLanguage(languageCode: string): void {
-    this.translocoService.setActiveLang(languageCode);
+  public changeLanguage(languageCode: any): void {
+    this.translocoService.setActiveLang(languageCode.value);
     languageCode === 'fl'
       ? (document.body.style.direction = 'rtl')
       : (document.body.style.direction = 'ltr');
