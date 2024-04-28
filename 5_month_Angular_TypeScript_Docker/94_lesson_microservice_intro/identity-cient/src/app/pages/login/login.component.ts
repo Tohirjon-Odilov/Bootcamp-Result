@@ -21,7 +21,9 @@ export class LoginComponent implements OnInit {
     this.translocoService.translate('form.footer_title');
     this.translocoService.translate('form.register');
 
+    var language = localStorage.getItem('lang');
     localStorage.clear();
+    localStorage.setItem('lang', language!);
   }
 
   matSnackBar = inject(MatSnackBar);

@@ -32,7 +32,9 @@ export class AuthService {
   }
 
   logout() {
+    var language = localStorage.getItem('lang');
     localStorage.clear();
+    localStorage.setItem('lang', language!);
   }
 
   register(data: RegisterRequest): Observable<RegisterResponse> {

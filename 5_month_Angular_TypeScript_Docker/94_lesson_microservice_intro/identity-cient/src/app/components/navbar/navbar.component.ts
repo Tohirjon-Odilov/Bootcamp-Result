@@ -40,7 +40,8 @@ export class NavbarComponent {
     },
   ];
   public changeLanguage(languageCode: any): void {
-    this.translocoService.setActiveLang(languageCode.value);
+    localStorage.setItem('lang', languageCode.value);
+    this.translocoService.setActiveLang(localStorage.getItem('lang')!);
     languageCode === 'fl'
       ? (document.body.style.direction = 'rtl')
       : (document.body.style.direction = 'ltr');
