@@ -2,33 +2,33 @@
     <form class="shadow-md rounded-md p-5 bg-white w-4/12" [formGroup]="form" (ngSubmit)="register()">
       <div class="">
         <h1 class="font-bold py-2">
-          Register
+          {{'register.title' | transloco}}
         </h1>
         <h6 class="text-slate-600 text-base">
-          Register to your account
+          {{'register.description' | transloco}}
         </h6>
       </div>
   
       <mat-form-field apperance="fill" class="w-full">
-        <mat-label>User Name</mat-label>
-        <input matInput placeholder="User Name" value="Tohirjon" formControlName="fullName"/>
+        <mat-label>{{'register.name' | transloco}}</mat-label>
+        <input matInput placeholder="User Name" formControlName="fullName"/>
         <mat-icon matPrefix>home</mat-icon>
       </mat-form-field>
 
       <mat-form-field apperance="fill" class="w-full">
-        <mat-label>Age</mat-label>
-        <input matInput placeholder="Age" value="21" formControlName="age"/>
+        <mat-label>{{"register.age" | transloco}}</mat-label>
+        <input matInput placeholder="Age" formControlName="age"/>
         <mat-icon matPrefix>event</mat-icon>
       </mat-form-field>
 
       <mat-form-field apperance="fill" class="w-full">
-        <mat-label>Email</mat-label>
+        <mat-label>{{"register.email" | transloco}}</mat-label>
         <input matInput placeholder="Email" formControlName="email" />
         <mat-icon matPrefix>email</mat-icon>
       </mat-form-field>
   
       <mat-form-field appearance="fill" class="w-full">
-        <mat-label>Password</mat-label>
+        <mat-label>{{"register.password" | transloco}}</mat-label>
         <input matInput type="{{ hide ? 'password' : 'text'}}" formControlName="password" placeholder="Password" value="1"/>
         <mat-icon matPrefix>lock</mat-icon>
         <mat-icon (click)="hide = !hide" matSuffix>
@@ -37,7 +37,7 @@
       </mat-form-field>
       
       <mat-form-field appearance="fill" class="w-full">
-        <mat-label>Confirm Password</mat-label>
+        <mat-label>{{"register.confirmPassword" | transloco}}</mat-label>
         <input matInput type="{{ hide ? 'password' : 'text'}}" formControlName="password" placeholder="Password" value="1" />
         <mat-icon matPrefix>lock</mat-icon>
         <mat-icon (click)="hide = !hide" matSuffix>
@@ -47,14 +47,14 @@
   
       <button (click)="register()" type="submit" [disabled]="!form.valid"
         class="w-full border border-slate-200 rounded-md disabled:bg-purple-400 py-2 px-3 bg-purple-700 text-white font-bold">
-        Register
+        {{'register.button' | transloco}}
       </button>
   
       <div class="my-5">
         <span class="text-slate-600">
-          Do have an account?
+          {{'register.footer_title' | transloco}}
         </span>
-        <a class="text-purple-700" routerLink="/login">Login</a>
+        <a class="text-purple-700" routerLink="/login">{{'register.register' | transloco}}</a>
       </div>
     </form>
   </div>

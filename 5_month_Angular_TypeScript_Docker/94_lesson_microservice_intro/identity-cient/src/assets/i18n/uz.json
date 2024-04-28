@@ -1,11 +1,23 @@
 {
   "title": "Kirish",
   "form": {
-    "description": "Accauntinizga kiring",
+    "description": "Accauntingizga kiring",
     "email": "Email",
     "password": "Parol",
     "button": "Kirish",
     "footer_title": "Akkauntingiz yo'qmi?",
     "register": "Ro'yhatdan o'tish"
+  },
+  "register": {
+    "title": "Ro'yhatdan o'tish",
+    "description": "Accauntingizga kiring",
+    "name": "Ismingiz",
+    "age": "Yoshingiz",
+    "email": "Email",
+    "password": "Parol",
+    "confirmPassword": "Parolni qayta kiriting",
+    "button": "Akkaunt yaratish",
+    "footer_title": "Akkauntingiz bormi?",
+    "register": "Kirish"
   }
 }

@@ -7,5 +7,17 @@
     "button": "Login",
     "footer_title": "Don't have an account?",
     "register": "Register"
+  },
+  "register": {
+    "title": "Register",
+    "description": "Create account",
+    "name": "Your name",
+    "age": "Age",
+    "email": "Email",
+    "password": "Parol",
+    "confirmPassword": "Confirm password",
+    "button": "Create account",
+    "footer_title": "Do you have an account?",
+    "register": "Login"
   }
 }

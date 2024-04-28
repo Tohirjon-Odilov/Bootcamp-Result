@@ -4,6 +4,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
 import { jwtDecode } from 'jwt-decode';
+import { TranslocoService } from '@ngneat/transloco';
 
 @Component({
   selector: 'app-login',
@@ -11,6 +12,19 @@ import { jwtDecode } from 'jwt-decode';
   styleUrl: './register.component.scss',
 })
 export class RegisterComponent implements OnInit {
+  constructor(private readonly translocoService: TranslocoService) {
+    this.translocoService.translate('register.title');
+    this.translocoService.translate('register.description');
+    this.translocoService.translate('register.name');
+    this.translocoService.translate('register.age');
+    this.translocoService.translate('register.email');
+    this.translocoService.translate('register.password');
+    this.translocoService.translate('register.confirmPassword');
+    this.translocoService.translate('register.button');
+    this.translocoService.translate('register.footer_title');
+    this.translocoService.translate('register.register');
+  }
+
   matSnackBar = inject(MatSnackBar);
   router = inject(Router);
   hide = true;
@@ -27,8 +41,8 @@ export class RegisterComponent implements OnInit {
 
         // this.decodedToken = jwtDecode(localStorage.getItem(this.tokenKey)!);
         // for (let index = 0; index < this.decodedToken.role.length; index++) {
-          // localStorage.setItem('role', this.decodedToken.role);
-          this.router.navigate(['/login']);
+        // localStorage.setItem('role', this.decodedToken.role);
+        this.router.navigate(['/login']);
         // }
 
         this.matSnackBar.open(response.message, 'Close', {

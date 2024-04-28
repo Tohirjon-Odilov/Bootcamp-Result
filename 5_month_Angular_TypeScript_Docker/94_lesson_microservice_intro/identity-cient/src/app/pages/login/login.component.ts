@@ -23,6 +23,7 @@ export class LoginComponent implements OnInit {
 
     localStorage.clear();
   }
+  
   matSnackBar = inject(MatSnackBar);
   router = inject(Router);
   hide = true;
