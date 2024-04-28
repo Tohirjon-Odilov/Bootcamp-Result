@@ -4,4 +4,5 @@
 ![image](https://github.com/Tohirjon-Odilov/Bootcamp-Result/assets/82634626/8fbfa68b-026f-4a7e-a2da-1a10164e8d10)
 
 ![image](https://github.com/Tohirjon-Odilov/Bootcamp-Result/assets/82634626/c8e3816f-fc82-4391-b1d1-fd56f59812fa)
+# Yangiladim
 ![image](https://github.com/Tohirjon-Odilov/Bootcamp-Result/assets/82634626/58a5038a-7d25-4b4a-abb5-e0fa939b8b83)
