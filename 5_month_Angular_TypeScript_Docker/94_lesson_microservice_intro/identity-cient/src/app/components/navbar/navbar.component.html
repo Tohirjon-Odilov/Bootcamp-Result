@@ -1,37 +1,48 @@
-<mat-toolbar style="background-color: cornflowerblue;">
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-      <mat-icon>menu</mat-icon>
-    </button>
-    <span routerLink="/" style="cursor: pointer;">{{userName}}</span>
-    <span class="example-spacer"></span>
-    <select (change)="changeLanguage($event.target)">
+<mat-toolbar style="background-color: cornflowerblue">
+  <button
+    mat-icon-button
+    class="example-icon"
+    aria-label="Example icon-button with menu icon"
+  >
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span routerLink="/" style="cursor: pointer">{{ userName }}</span>
+  <span class="example-spacer"></span>
+<div class="custom-select">
+  <select (change)="changeLanguage($event.target)">
     <option *ngFor="let language of languagesList" [value]="language.code">
-      <img [src]="language.imgUrl" [alt]="language.name" style="width: 40px;">
+      <img [src]="language.imgUrl" [alt]="language.name" style="width: 40px" />
       <span>{{ language.shorthand }}</span>
     </option>
   </select>
+</div>
 
-    <!-- <select name="" id="">
+  <!-- <select name="" id="">
       <option *ngFor="let language of languagesList; index as i"
       (click)="changeLanguage(language.code)" value=language.code>{{language.shorthand}}</option>
     </select> -->
-    <!-- <button
+  <!-- <button
       *ngFor="let language of languagesList; index as i"
       (click)="changeLanguage(language.code)"
     > -->
-      <!-- <img alt="rasm" [src]="language.imgUrl" [alt]="language.name" style="width: 40px; " /> -->
-      <!-- <span> {{ language.shorthand }} </span>
+  <!-- <img alt="rasm" [src]="language.imgUrl" [alt]="language.name" style="width: 40px; " /> -->
+  <!-- <span> {{ language.shorthand }} </span>
     </button> -->
-    <button  routerLink="login" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-      <div style="width: 200px; margin: auto;">
-  </div>
-      <mat-icon>login</mat-icon>
-    </button>
-    <button routerLink="register" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-      <mat-icon>logout</mat-icon>
-    </button>
-
-  
-
-  </mat-toolbar>
-  
+  <button
+    routerLink="login"
+    mat-icon-button
+    class="example-icon favorite-icon"
+    aria-label="Example icon-button with heart icon"
+  >
+    <div style="width: 200px; margin: auto"></div>
+    <mat-icon>login</mat-icon>
+  </button>
+  <button
+    routerLink="register"
+    mat-icon-button
+    class="example-icon"
+    aria-label="Example icon-button with share icon"
+  >
+    <mat-icon>logout</mat-icon>
+  </button>
+</mat-toolbar>

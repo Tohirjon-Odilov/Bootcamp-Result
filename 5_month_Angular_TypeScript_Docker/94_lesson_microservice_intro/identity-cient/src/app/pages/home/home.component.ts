@@ -7,7 +7,7 @@ import { TranslocoService } from '@ngneat/transloco';
   styleUrl: './home.component.scss',
 })
 export class HomeComponent {
-  currentItem = 'Tohirjon';
+  currentItem = "Mevalar ro'yhati";
   items = ['Anor', 'Banana', 'Cucumber'];
 
   addItem(newItem: string) {

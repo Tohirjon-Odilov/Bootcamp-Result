@@ -1,14 +1,19 @@
-div{
-    display: flex;
-    margin: 0 auto;
-    width: 1440px;
-    input{
-        padding: 10px;
-        border-radius: 5px;
-        border: 1px solid ;
-        -webkit-border-radius: 5px;
-        -moz-border-radius: 5px;
-        -ms-border-radius: 5px;
-        -o-border-radius: 5px;
-}
+div.conatiner {
+  display: flex;
+  margin: 0 auto;
+  width: 1440px;
+  justify-content: center;
+  align-items: center;
+  input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+  }
+  button.btn{
+    padding: 10px !important;
+  }
 }

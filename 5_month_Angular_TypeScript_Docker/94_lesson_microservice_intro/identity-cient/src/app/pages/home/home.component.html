@@ -1,6 +1,8 @@
 <app-task (newItemEvent)="addItem($event)"></app-task>
 <app-to-task [item]="currentItem"></app-to-task>
 
-<ul>
-  <li *ngFor="let item of items">{{item}}</li>
-</ul>
+<div class="home__wrapper">
+  <ul>
+    <li *ngFor="let item of items">{{ item }}</li>
+  </ul>
+</div>
