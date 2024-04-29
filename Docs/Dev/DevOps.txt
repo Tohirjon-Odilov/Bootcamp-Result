@@ -6,6 +6,9 @@ ssh root@188.166.243.200
 ================================
 npm install react-scripts --save => build react
 ================================
+psql
+\x ustun shaklida chiqarish
+================================
 
 dotnet user-secrets init
 dotnet user-secrets set "JWT:ValidIssuer" "127.0.0.1"
