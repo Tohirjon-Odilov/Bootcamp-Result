@@ -1,5 +1,5 @@
-﻿using Catalog.App.Abstraction;
-using Catalog.App.UseCases.CatalogClasses.Commands;
+﻿using Catalog.Application.Abstractions;
+using Catalog.Application.UseCases.CatalogCases.Commands;
 using Catalog.Domain;
 using Catalog.Domain.Entities;
 using MediatR;
@@ -9,13 +9,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Catalog.App.UseCases.CatalogClasses.Handlers.CommandHandlers
+namespace Catalog.Application.UseCases.CatalogCases.Handlers.CommandHandlers
 {
-    public class CreateCatalogCommanHandler : IRequestHandler<CreateCatalogCommand, ResponseModel>
+    public class CreateCatalogCommandHandler : IRequestHandler<CreateCatalogCommand, ResponseModel>
     {
         private readonly ICatalogDbContext _context;
 
-        public CreateCatalogCommanHandler(ICatalogDbContext context)
+        public CreateCatalogCommandHandler(ICatalogDbContext context)
         {
             _context = context;
         }
@@ -30,21 +30,21 @@ namespace Catalog.App.UseCases.CatalogClasses.Handlers.CommandHandlers
                     Description = request.Description,
                 };
 
-                await _context.catalogs.AddAsync(catalog, cancellationToken);
-                await _context.SaveChangesAsync( cancellationToken);
+                await _context.Catalogs.AddAsync(catalog, cancellationToken);
+                await _context.SaveChangesAsync(cancellationToken);
 
                 return new ResponseModel
                 {
                     StatusCode = 201,
-                    Message = $"{request.Name} => Created Catalog",
+                    Message = $"{request.Name} => Catalog Created",
                     IsSuccess = true
                 };
             }
 
             return new ResponseModel
             {
-                Message = "Catalog is maybe null",
-                StatusCode = 400,
+                Message = "Catalog is maybe  null",
+                StatusCode = 400
             };
         }
     }

@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Catalog.App.UseCases.CatalogClasses.Commands
+namespace Catalog.Application.UseCases.CatalogCases.Commands
 {
     public class CreateCatalogCommand : IRequest<ResponseModel>
     {
