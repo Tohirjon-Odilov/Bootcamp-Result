@@ -17,9 +17,4 @@
     <ProjectReference Include="..\Catalog.Domain\Catalog.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="UseCases\CatalogCases\Handlers\QueryHandlers\" />
-    <Folder Include="UseCases\CatalogCases\Queries\" />
-  </ItemGroup>
-
 </Project>
