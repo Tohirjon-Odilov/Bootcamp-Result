@@ -38,7 +38,7 @@
 #
 #
 ## IOC nima?
-#### endi bilib olaman)
+#### Dasturda IOC ni amalga oshirishning bir qatori usullari Dependency Injection (DI), Service Locator va Factory Pattern kabi.Bundan tashqari, IOC asosan Dependency Injection (DI) bilan bog'liq. Bu, obyektlarni boshqa obyektlarga beriladigan xizmatlarni injeksiya etishni ta'minlaydi. Bu, dastur tuzilishini oddiyroq va test qilishni osonlashtiradi.
 #
 #
 ## Constructor nima
