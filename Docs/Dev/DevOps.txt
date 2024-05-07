@@ -46,15 +46,15 @@ For Nginx
 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
 
 server {
-    server_name bookstore.tohirjon.uz;
+    server_name api.akramjondev.uz;
 
     location / {
         include proxy_params;
-        proxy_pass http://127.0.0.1:5189;
+        proxy_pass http://127.0.0.1:5003;
     }
 }
 
-sudo ln -s /etc/nginx/sites-available/bookstore.tohirjon.uz /etc/nginx/sites-enabled
+sudo ln -s /etc/nginx/sites-available/api.akramjondev.uz /etc/nginx/sites-enabled
 
 crontab -e
 ichiga shu kod kiritilsa har kuni yangi sertifikat oladi.

@@ -1,0 +1,28 @@
+DROP DATABASE template1;
+
+psql -U postgres -h localhost => all database
+
+psql -U postgres -d EducationDb -h localhost -W => connect database ayni database
+
+password ==> root
+
+for month Exam => Edcation appsetting.json 
+
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*",
+  "ConnectionStrings": {
+    "EducationDbConnectionString": "Host=localhost;Port=5432;Username=postgres;Password=root;Database=EducationDb;"
+  },
+  "JWTSettings": {
+    "ValidAudence": "https://localhost:4200/",
+    "ValidIssuer": "https://localhost:7026/",
+    "Secret": "dcfvgbftedascvbgfhgtrefwdsdcgfbtefdwsdcf",
+    "Expire": "1"
+  }
+}
