@@ -1,0 +1,15 @@
+{
+  "profiles": {
+    "Docker Compose": {
+      "commandName": "DockerCompose",
+      "commandVersion": "1.0",
+      "serviceActions": {
+        "apigetaway.api": "StartDebugging",
+        "bookstore.api": "StartDebugging",
+        "carstore.api": "StartDebugging",
+        "flowerstore.api": "StartDebugging",
+        "gamestore.api": "StartDebugging"
+      }
+    }
+  }
+}

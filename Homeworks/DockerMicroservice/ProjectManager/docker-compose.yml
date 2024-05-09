@@ -1,0 +1,60 @@
+version: '3.4'
+
+services:
+  apigetaway.api:
+    image: ${DOCKER_REGISTRY-}apigetawayapi
+    build:
+      context: .
+      dockerfile: src/APIGetAway/APIGetAway/Dockerfile
+    depends_on:
+      - db
+    networks:
+      - db-network
+
+  db:
+    container_name: db
+    image: postgres:latest
+    environment:
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=pass
+      - POSTGRES_DB=data
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - db-network
+  
+  bookstore.api:
+    image: ${DOCKER_REGISTRY-}bookstoreapi
+    build:
+      context: .
+      dockerfile: src/BookStore/BookStore.API/Dockerfile
+
+  carstore.api:
+    image: ${DOCKER_REGISTRY-}carstoreapi
+    build:
+      context: .
+      dockerfile: src/CarStore/CarStore/Dockerfile
+
+  flowerstore.api:
+    image: ${DOCKER_REGISTRY-}flowerstoreapi
+    build:
+      context: .
+      dockerfile: src/FlowerStore/FlowerStore/Dockerfile
+
+  gamestore.api:
+    image: ${DOCKER_REGISTRY-}gamestoreapi
+    build:
+      context: .
+      dockerfile: src/GameStore/GameStore/Dockerfile
+
+networks:
+  db-network:
+    driver: bridge
+
+volumes:
+  pgdata:
+
+
+
