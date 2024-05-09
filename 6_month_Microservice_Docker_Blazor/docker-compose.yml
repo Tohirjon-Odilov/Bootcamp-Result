@@ -1,0 +1,33 @@
+version: '3.4'
+
+services:
+  autosalon.api:
+    image: ${DOCKER_REGISTRY-}autosalonapi
+    build:
+      context: .
+      dockerfile: AutoSalon.Api/Dockerfile
+    depends_on:
+      - db
+    networks:
+      - db-network
+
+  db:
+    container_name: db
+    image: postgres:latest
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=coder
+      - POSTGRES_DB=data
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - db-network
+  
+networks:
+  db-network:
+    driver: bridge
+
+volumes:
+  pgdata:

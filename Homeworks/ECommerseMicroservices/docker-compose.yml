@@ -1,0 +1,60 @@
+version: '3.4'
+
+services:
+  catalog.api:
+    image: ${DOCKER_REGISTRY-}catalogapi
+    build:
+      context: .
+      dockerfile: src/Catalog/Catalog.API/Dockerfile
+    depends_on:
+      - db
+    networks:
+      - db-network
+  db:
+    container_name: db
+    image: postgres:latest
+    environment:
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=coder
+      - POSTGRES_DB=ECommerceCatalog.DB
+    volumes:
+      - pgdata:/var/lib/postgresql/ECommerceCatalog.DB
+    ports:
+      - "5432:5432"
+    networks:
+      - db-network    
+  
+  discount.api:
+    image: ${DOCKER_REGISTRY-}discountapi
+    build:
+      context: .
+      dockerfile: src/Discount/Discount.API/Dockerfile
+
+  orders.api:
+    image: ${DOCKER_REGISTRY-}ordersapi
+    build:
+      context: .
+      dockerfile: src/Ordering/Orders.API/Dockerfile
+
+  shoppingcart.api:
+    image: ${DOCKER_REGISTRY-}shoppingcartapi
+    build:
+      context: .
+      dockerfile: src/ShoppingCart/ShoppingCart.API/Dockerfile
+
+  apigateway:
+    image: ${DOCKER_REGISTRY-}apigateway
+    build:
+      context: .
+      dockerfile: src/ApiGateway/Dockerfile
+
+networks:
+  db-network:
+    driver: bridge
+
+volumes:
+  pgdata:
+
+
+
+

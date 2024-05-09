@@ -1,0 +1,6 @@
+@DockerMIcroservice_HostAddress = http://localhost:5101
+
+GET {{DockerMIcroservice_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
