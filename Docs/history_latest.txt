@@ -1,0 +1,1000 @@
+  948  psql -U postgres -d zarnigordb -h localhost -W
+  949  ls
+  950  cd dotnet
+  951  ls
+  952  cd ..
+  953  ls
+  954  cd etc/nginx/sites-available/
+  955  ls
+  956  nano hackaton.tohirjon.uz
+  957  ls
+  958  cd dotnet/Bootcamp-Result/
+  959  git pull
+  960  ls
+  961  cd Mustaqil\ o'rganish\ uchun/
+  962  ls
+  963  cd Mustaqil\ o'rganish\ uchun/
+  964  \q
+  965  git pull
+  966  ls
+  967  cd Mustaqil_organish_uchun
+  968  ls
+  969  git pull
+  970  ls
+  971  cd quiestion_generate
+  972  cd question_generate
+  973  ls
+  974  cd question_generate/
+  975  ls
+  976  git pull
+  977  ls
+  978  cd ..
+  979  ls
+  980  cd questionGenerate/
+  981  ls
+  982  python run
+  983  python3 run
+  984  mkdir .venv
+  985  ls
+  986  touch .venv
+  987  ls
+  988  pipenv install
+  989  python3
+  990  sudo apt install python3.10
+  991  sudo apt update
+  992  apt upgrade
+  993  apt install python3.10
+  994  sudo apt install python3.10
+  995  ;s
+  996  ls
+  997  cd ..
+  998  ls
+  999  cd etc/nginx/
+ 1000  ls
+ 1001  cd sites-available/
+ 1002  ls
+ 1003  nano default
+ 1004  nano auth
+ 1005  sudo ln -s /etc/nginx/sites-available/test /etc/nginx/sites-enabled
+ 1006  certbot
+ 1007  ls
+ 1008  nano auth
+ 1009  ls
+ 1010  nano test
+ 1011  nano auth
+ 1012  sudo ln -s /etc/nginx/sites-available/auth /etc/nginx/sites-enabled
+ 1013  cd ..
+ 1014  ls
+ 1015  cd sites-enabled/
+ 1016  ls
+ 1017  rm test
+ 1018  ls
+ 1019  cerbot
+ 1020  certbot
+ 1021  ls
+ 1022  nano auth
+ 1023  certbot
+ 1024  2
+ 1025  certbot
+ 1026  rm auth
+ 1027  cd ..
+ 1028  cd sites-available/
+ 1029  ls
+ 1030  nano auth
+ 1031  ls
+ 1032  nano auth
+ 1033  ls
+ 1034  rm auth
+ 1035  ls
+ 1036  sudo ln -s /etc/nginx/sites-available/auth.tohirjon.uz /etc/nginx/sites-enabled
+ 1037  sudo certbot --nginx
+ 1038  ls
+ 1039  cd do
+ 1040  cd dotnet/Bootcamp-Result
+ 1041  git pull
+ 1042  ls
+ 1043  cd Homeworks
+ 1044  ls
+ 1045  cd IdentityAuthLesson/
+ 1046  ls
+ 1047  cd IdentityAuthLesson/
+ 1048  ls
+ 1049  dotnet watch run
+ 1050  ls
+ 1051  nano appsettings.json
+ 1052  cd Properties/
+ 1053  ls
+ 1054  nano launchSettings.json
+ 1055  cd ..
+ 1056  git branch
+ 1057  git status
+ 1058  git --help
+ 1059  git reset
+ 1060  git status
+ 1061  git reset --hard HEAD
+ 1062  ls
+ 1063  git status
+ 1064  ls
+ 1065  cd IdentityAuthLesson/
+ 1066  ls
+ 1067  git pull
+ 1068  ls
+ 1069  dotner watch run
+ 1070  dotnet watch run
+ 1071  ls
+ 1072  git pull
+ 1073  ls
+ 1074  nano appsettings.json
+ 1075  git pull
+ 1076  dotnet run
+ 1077  dotnet watch run
+ 1078  screen -S auth.tohirjon.uz
+ 1079  git pull
+ 1080  ls
+ 1081  cd dotnet/Bootcamp-Result/Homeworks/IdentityAuthLesson/IdentityAuthLesson/
+ 1082  screen -ls
+ 1083  screen -r 596066.auth.tohirjon.uz
+ 1084  ls
+ 1085  screen -ls
+ 1086  ls
+ 1087  cd dotnet/Exam.StockManagement/Exam.StockManagement.API/
+ 1088  ls
+ 1089  git pull
+ 1090  ls
+ 1091  screen -ls
+ 1092  screen -r 596066.auth.tohirjon.uz
+ 1093  ls
+ 1094  cd dotnet/Bootcamp-Result/Homeworks/IdentityAuthLesson/
+ 1095  ls
+ 1096  cd IdentityAuthLesson/
+ 1097  git pull
+ 1098  psql -U postgres -d zarnigordb -h localhost -W
+ 1099  cd gosource/
+ 1100  ls
+ 1101  cd crm-education-center/
+ 1102  ls
+ 1103  cat crmedu.log 
+ 1104  psql -U postgres -d zarnigordb -h localhost -W
+ 1105  cd gosource/
+ 1106  ls
+ 1107  rm -rf crm-edu
+ 1108  ls
+ 1109  cd crm-education-center/
+ 1110  clear
+ 1111  cat crmedu.log 
+ 1112  clear
+ 1113  ls
+ 1114  cat Makefile 
+ 1115  clear
+ 1116  ls
+ 1117  cat crmedu.log 
+ 1118  history
+ 1119  psql -U postgres -d zarnigordb -h localhost -W
+ 1120  exit
+ 1121  ls
+ 1122  cd ..
+ 1123  cd etc
+ 1124  ls
+ 1125  cd nginx/sites-available/
+ 1126  ls
+ 1127  sudo certbot --nginx
+ 1128  crontab -e
+ 1129  cd gosource/
+ 1130  cd crm-education-center/
+ 1131  cat crmedu.log 
+ 1132  git pull origin main 
+ 1133  screen -ls 
+ 1134  screen -r 333965.ZarnigorBiolog
+ 1135  clear
+ 1136  ls
+ 1137  clear
+ 1138  ls
+ 1139  clear
+ 1140  cat go.mod
+ 1141  clear
+ 1142  ls
+ 1143  clear
+ 1144  psql -U postgres -d zarnigordb -h localhost -W
+ 1145  ls
+ 1146  screen -ls
+ 1147  cd 
+ 1148  cd ..
+ 1149  ls
+ 1150  cd /etc/ngi
+ 1151  cd /etc/nginx
+ 1152  ls
+ 1153  cd sites-available/
+ 1154  ls
+ 1155  cd dotnet/
+ 1156  ls
+ 1157  cd Bootcamp-Result/
+ 1158  ls
+ 1159  screen -r 596066.auth.tohirjon.uz
+ 1160  ls
+ 1161  cd Homeworks/IdentityAuthLesson/
+ 1162  ls
+ 1163  cd IdentityAuthLesson/
+ 1164  ls
+ 1165  nano Program.cs
+ 1166  ls
+ 1167  cd dotn
+ 1168  cd dotnet/Bootcamp-Result/5_month_Angular_TypeScript_Docker/../Homeworks/IdentityAuthLesson/IdentityAuthLesson/
+ 1169  ls
+ 1170  nano Program.cs
+ 1171  screen -r 596066.auth.tohirjon.uz
+ 1172  ls
+ 1173  cd dotnet/Bootcamp-Result/Homeworks/IdentityAuthLesson/IdentityAuthLesson/
+ 1174  ls
+ 1175  nano Program.cs
+ 1176  screen -r 596066.auth.tohirjon.uz
+ 1177  nano Program.cs
+ 1178  cd gosource/
+ 1179  ls
+ 1180  cd crm-education-center/
+ 1181  git pull 
+ 1182  git pull origin main 
+ 1183  clear
+ 1184  screen -r 43095.Stock.Management
+ 1185  ls
+ 1186  screen -r 596066.auth.tohirjon.uz
+ 1187  exit
+ 1188  screen -r 43095.Stock.Management
+ 1189  exit
+ 1190  screen -r 333965.ZarnigorBiolog
+ 1191  ls
+ 1192  clear
+ 1193  ls
+ 1194  cd gosource/
+ 1195  ls
+ 1196  clear
+ 1197  ls
+ 1198  cd crm-education-center/
+ 1199  ls
+ 1200  clear
+ 1201  ls
+ 1202  cat debug.log 
+ 1203  clear
+ 1204  git pull origin main 
+ 1205  clear
+ 1206  ls
+ 1207  cat Dockerfile 
+ 1208  cat docker-compose.yaml 
+ 1209  cat README.md 
+ 1210  clear
+ 1211  l
+ 1212  ls
+ 1213  clear
+ 1214  cat debug.log 
+ 1215  clear
+ 1216  ls
+ 1217  cd ..
+ 1218  ls
+ 1219  cd ..
+ 1220  ls
+ 1221  clear
+ 1222  ls
+ 1223  cd gosource/
+ 1224  ls
+ 1225  cd ..
+ 1226  ls
+ 1227  clear
+ 1228  ls
+ 1229  cd gosource/crm-education-center/
+ 1230  ls
+ 1231  clear
+ 1232  ls
+ 1233  clear
+ 1234  ls
+ 1235  clear
+ 1236  ls
+ 1237  clear
+ 1238  ls
+ 1239  clear
+ 1240  psql -U postgres -d zarnigordb -h localhost -W
+ 1241  cd gosource/crm-education-center/
+ 1242  git pull
+ 1243  psql -U postgres -d zarnigordb -h localhost -W
+ 1244  clear
+ 1245  git pull origin main 
+ 1246  git revert
+ 1247  git reset --soft HEAD~1
+ 1248  git pull origin main 
+ 1249  git stauts
+ 1250  git status
+ 1251  rm -rf crmedu.log 
+ 1252  git pull origin main 
+ 1253  cd ..
+ 1254  ls
+ 1255  rm -rf crm-education-center/
+ 1256  ls
+ 1257  git clone https://github.com/xasannosirov/crm-education-center.git
+ 1258  ls
+ 1259  make run
+ 1260  cd crm-education-center/
+ 1261  clear
+ 1262  make run
+ 1263  sudo rm -rf /usr/local/go
+ 1264  go verison
+ 1265  snap install go
+ 1266  rm -rvf /usr/local/go/
+ 1267  go version
+ 1268  go --version
+ 1269  sudo tar -C /usr/local/ -xzf go1.22.2.linux-amd64.tar.gz
+ 1270  sudo tar -C /usr/local/ -xzf go1.22.0.linux-amd64.tar.gz
+ 1271  sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.22.2.linux-amd64.tar.gz
+ 1272  rm -rvf /usr/local/go/
+ 1273  go version
+ 1274  go --version
+ 1275  rm -rf /usr/local/go && tar -C /usr/local -xzf go1.22.2.linux-amd64.tar.gz
+ 1276  cd ..
+ 1277  wget https://go.dev/dl/go1.22.2.linux-amd64.tar.gz
+ 1278  ls
+ 1279  tar -C /usr/local -xzf go1.22.2.linux-amd64.tar.gz
+ 1280  ls
+ 1281  cd ..
+ 1282  la
+ 1283  ls
+ 1284  rm -rf go
+ 1285  ls
+ 1286  cd gosource/
+ 1287  ls
+ 1288  tar -C /usr/local -xzf go1.22.2.linux-amd64.tar.gz
+ 1289  ls
+ 1290  cd ..
+ 1291  ls
+ 1292  go version
+ 1293  cd gosource/
+ 1294  go version
+ 1295  cd crm-education-center/
+ 1296  make run
+ 1297  screen ls
+ 1298  screen -ls
+ 1299  screen -r 333965.ZarnigorBiolog
+ 1300  screen -ls
+ 1301  ls
+ 1302  go version
+ 1303  clear
+ 1304  cd gosource/
+ 1305  ls
+ 1306  cd crm-education-center/
+ 1307  cat debug.log 
+ 1308  git pull origin main 
+ 1309  clear
+ 1310  ls
+ 1311  screen -ls
+ 1312  screen -r 333965.ZarnigorBiolog
+ 1313  clear
+ 1314  screen -ls
+ 1315  LS
+ 1316  ls
+ 1317  clear
+ 1318  ls
+ 1319  cd front/CRM-React/src/
+ 1320  ls
+ 1321  git status
+ 1322  git pull
+ 1323  npm install jwt-decode
+ 1324  redis-cli
+ 1325  cd gosource/
+ 1326  cd crm-education-center/
+ 1327  ls
+ 1328  cat debug.log 
+ 1329  clear
+ 1330  git pull origin main 
+ 1331  screen -ls
+ 1332  screen -r
+ 1333  screen -r 333965.ZarnigorBiolog
+ 1334  screen -ls
+ 1335  cd front
+ 1336  cd CRM-React/
+ 1337  git pull
+ 1338  ls
+ 1339  screen -ls
+ 1340  screen -S UIZarnigorBiolog
+ 1341  screen -r 333965.ZarnigorBiolog
+ 1342  screen -r 43095.Stock.Management
+ 1343  sceen -ls
+ 1344  screen -ls
+ 1345  screen -r 337122.UIZarnigorBiolog
+ 1346  screen -r 510505.UIZarnigorBiolog
+ 1347  screen -r 319928.43095.Stock.Management
+ 1348  screen -r 806959.UIZarnigorBiolog
+ 1349  cd front
+ 1350  cd CRM-React/
+ 1351  git pull
+ 1352  exit
+ 1353  clear
+ 1354  ls
+ 1355  cd gosource/
+ 1356  ls
+ 1357  clear
+ 1358  ls
+ 1359  cd crm-education-center/
+ 1360  ls
+ 1361  clear
+ 1362  ls
+ 1363  la
+ 1364  clear
+ 1365  la
+ 1366  ls
+ 1367  clear
+ 1368  la
+ 1369  clear
+ 1370  ll
+ 1371  clear
+ 1372  ls
+ 1373  clear
+ 1374  ls
+ 1375  cat debug.log 
+ 1376  git pull origin main 
+ 1377  rm -rf debug.log 
+ 1378  touch debug.log
+ 1379  git pull origin main 
+ 1380  screen -ls
+ 1381  screen -r 333965.ZarnigorBiolog
+ 1382  clear
+ 1383  psql -U postgres -d zarnigordb -h localhost -W
+ 1384  screen -ls
+ 1385  screen -r 333965.ZarnigorBiolog
+ 1386  screen -ls
+ 1387  psql -U postgres -d zarnigordb -h localhost -W
+ 1388  rm -rf debug.log 
+ 1389  touch debug.log
+ 1390  git pull origin main 
+ 1391  cd ..
+ 1392  clear
+ 1393  ls
+ 1394  rm -rf crm-education-center/
+ 1395  ls
+ 1396  clear
+ 1397  ls
+ 1398  git clone https://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@github.com/xasannosirov/crm-education-center.git
+ 1399  ls
+ 1400  cd crm-education-center/
+ 1401  screen -ls
+ 1402  screen -r 333965.ZarnigorBiolog
+ 1403  screen -ls
+ 1404  psql -U postgres -d zarnigordb -h localhost -W
+ 1405  clear
+ 1406  ls
+ 1407  screen -ls
+ 1408  screen -r 333965.ZarnigorBiolog
+ 1409  screen -ls
+ 1410  ls
+ 1411  git pull origin main 
+ 1412  git status
+ 1413  cat debug.log 
+ 1414  rm -rf debug.log 
+ 1415  touch debug.log
+ 1416  git status
+ 1417  clear
+ 1418  ls
+ 1419  screen -r 333965.ZarnigorBiolog
+ 1420  ls
+ 1421  cd front
+ 1422  ls
+ 1423  git clone https://github.com/Education-Platforma/SignalR.git
+ 1424  ls
+ 1425  cd SignalR/
+ 1426  ls
+ 1427  cd VideoChat/
+ 1428  dotnet watch run
+ 1429  ls
+ 1430  git pull
+ 1431  dotnet watch run
+ 1432  ls
+ 1433  screen -S VideoChat
+ 1434  cd
+ 1435  cd ..
+ 1436  ls
+ 1437  cd etc
+ 1438  ls
+ 1439  cd nginx/sites-available/
+ 1440  ls
+ 1441  nano skype.tohirjon.uz
+ 1442  sudo ln -s /etc/nginx/sites-available/skype.tohirjon.uz /etc/nginx/sites-enabled
+ 1443  sudo certbot --nginx
+ 1444  screen -ls
+ 1445  screen -r 1013593.VideoChat
+ 1446  curl -s https://ngrok-agent.s3.amazonaws.com/ngrok.asc | sudo tee /etc/apt/trusted.gpg.d/ngrok.asc >/dev/null && echo "deb https://ngrok-agent.s3.amazonaws.com buster main" | sudo tee /etc/apt/sources.list.d/ngrok.list && sudo apt update && sudo apt install ngrok
+ 1447  ngrok config add-authtoken 2aqIYsM7xhpBmsbZYaxfh1ZC5En_qM6ypeT9ctJzeg8h8usE
+ 1448  ngrok http http://localhost:5261
+ 1449  ngrok http 5261
+ 1450  screen -r 1013593.VideoChat
+ 1451  lsclear
+ 1452  celar
+ 1453  ls
+ 1454  cd front/Education-Platforma/
+ 1455  screen -r 1013593.VideoChat
+ 1456  screen -ls
+ 1457  screen -r 1028884.Education-Platforma
+ 1458  cd
+ 1459  cd ..
+ 1460  cd et
+ 1461  cd etc/nginx/sites-available/
+ 1462  nano education.tohirjon.uz
+ 1463  sudo ln -s /etc/nginx/sites-available/skype.tohirjon.uz /etc/nginx/sites-enabled
+ 1464  sudo ln -s /etc/nginx/sites-available/education.tohirjon.uz /etc/nginx/sites-enabled
+ 1465  certbot
+ 1466  screen -ls
+ 1467  screen -r 1028884.Education-Platforma
+ 1468  ls
+ 1469  cd dotnet/
+ 1470  ls
+ 1471  git clone https://github.com/Education-Platforma/Api-Education-Platforma.git
+ 1472  ls
+ 1473  cd Api-Education-Platforma/
+ 1474  cd src/
+ 1475  ls
+ 1476  dotnet run
+ 1477  ls
+ 1478  cd Education.API/
+ 1479  ls
+ 1480  dotnet run
+ 1481  ls
+ 1482  git log
+ 1483  git reset --hard 86fb3b4459905ab934fb20949bc0180f87dbb5ae
+ 1484  ls
+ 1485  cd ..
+ 1486  ls
+ 1487  cd Education.Api/
+ 1488  ls
+ 1489  cd Properties/
+ 1490  nano launchSettings.json
+ 1491  cd ..
+ 1492  nano appsettings.json
+ 1493  cd ..
+ 1494  ls
+ 1495  cd Education.Infrastructure/Persistance/
+ 1496  ls
+ 1497  nano EducationDbContext.cs
+ 1498  ls
+ 1499  cd ,,
+ 1500  cd ..
+ 1501  ls
+ 1502  nano EducationInfrastructureDependencyInjection.cs
+ 1503  nano Persistance/EducationDbContext.cs
+ 1504  cd ..
+ 1505  cd Education.Api/
+ 1506  ls
+ 1507  dotnet run
+ 1508  screen -S Api.Education.Platforma
+ 1509  clear
+ 1510  screen -ls
+ 1511  screen -r 1057958.Api.Education.Platforma
+ 1512  screen -ls
+ 1513  screen -h
+ 1514  screen -d 1057958.Api.Education.Platforma
+ 1515  screen -r 1057958.Api.Education.Platforma
+ 1516  cd ..
+ 1517  cd etc/nginx/sites-available/
+ 1518  nano edu-api.tohirjon.uz
+ 1519  sudo ln -s /etc/nginx/sites-available/edu-api.tohirjon.uz /etc/nginx/sites-enabled
+ 1520  sudo certbot --nginx
+ 1521  nano edu-api.tohirjon.uz
+ 1522  sudo ln -s /etc/nginx/sites-available/edu-api.tohirjon.uz /etc/nginx/sites-enabled
+ 1523  cd ..
+ 1524  rm -rf sites-enabled/edu-api.tohirjon.uz
+ 1525  cd sites-available/
+ 1526  sudo ln -s /etc/nginx/sites-available/edu-api.tohirjon.uz /etc/nginx/sites-enabled
+ 1527  sudo certbot --nginx
+ 1528  screen -r 1057958.Api.Education.Platforma
+ 1529  screen -ls
+ 1530  screen -r 1057958.Api.Education.Platforma 
+ 1531  screen -d 1057958.Api.Education.Platforma 
+ 1532  screen -r 1057958.Api.Education.Platforma 
+ 1533  ls
+ 1534  cd dotnet/
+ 1535  ls
+ 1536  cd Api-Education-Platforma/
+ 1537  ls
+ 1538  git status
+ 1539  git reset --hard HEAD
+ 1540  git status
+ 1541  git pull
+ 1542  ls
+ 1543  cd src/
+ 1544  ls
+ 1545  git brang
+ 1546  git brancch
+ 1547  git branch
+ 1548  ls
+ 1549  cd Education.Api/
+ 1550  ls
+ 1551  git log
+ 1552  git pull
+ 1553  git pull origin
+ 1554  ls
+ 1555  git log
+ 1556  git reset --hard 289633ce5b5fd333ddb57f4168b82efc9f6c2ade
+ 1557  ls
+ 1558  screen -ls
+ 1559  screen -r 1057958.Api.Education.Platforma
+ 1560  history
+ 1561  psql -U postgres -d EducationDb -h localhost -W
+ 1562  psql -U postgres
+ 1563  psql -U postgres -d
+ 1564  psql
+ 1565  psql -U postgres -h localhost
+ 1566  git pull
+ 1567  git reset --hard HEAD
+ 1568  git pull
+ 1569  ls
+ 1570  cd ..
+ 1571  ls
+ 1572  cd Education.API/
+ 1573  ls
+ 1574  nano appsettings.json
+ 1575  dotnet run
+ 1576  screen -r 1057958.Api.Education.Platforma
+ 1577  screen -r 1013593.VideoChat
+ 1578  screen -ls
+ 1579  screen -r 1026333.skype
+ 1580  cd
+ 1581  cd ..
+ 1582  cd /etc/nginx/nginx.conf
+ 1583  nano /etc/nginx/nginx.conf
+ 1584  sudo nginx -t
+ 1585  nginx -s reload
+ 1586  cd
+ 1587  cd dotnet/Api-Education-Platforma/src/Education.API/wwwroot/lessons/Data\ structure\ and\ Entity\ Framework\ .NET/
+ 1588  ls
+ 1589  cd ..
+ 1590  cd UI/UX/
+ 1591  ls
+ 1592  cd ..
+ 1593  ls
+ 1594  cd ..
+ 1595  ls
+ 1596  screen -r 1057958.Api.Education.Platforma
+ 1597  cd ..
+ 1598  ls
+ 1599  cd ..
+ 1600  ls
+ 1601  cd ..
+ 1602  ls
+ 1603  cd Education.Application/UseCases/AuthServise/
+ 1604  ls
+ 1605  nano AuthServise.cs
+ 1606  screen -r 1057958.Api.Education.Platforma
+ 1607  screen - ls
+ 1608  cd ..
+ 1609  nano var/log/nginx/access.log
+ 1610  nano var/log/nginx/error.log
+ 1611  make run
+ 1612  ls
+ 1613  cd ..
+ 1614  ls
+ 1615  cd ..
+ 1616  git clone https://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github.com/xasannosirov/crm-education-center.git
+ 1617  git clone https://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@github.com/xasannosirov/crm-education-center.git
+ 1618  git clone https://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@github.com/xasannosirov/crm-education-center.git
+ 1619  ls
+ 1620  cd crm-education-center/
+ 1621  make run
+ 1622  cd ..
+ 1623  cd gosource
+ 1624  ls
+ 1625  cd crm-education-center/
+ 1626  make run
+ 1627  creen -ls
+ 1628  ls
+ 1629  cd ..
+ 1630  clear
+ 1631  ls
+ 1632  cd crm-education-center/
+ 1633  ls
+ 1634  make run
+ 1635  screen -S 333965.ZarnigorBiolog
+ 1636  ls
+ 1637  screen -r 333965.ZarnigorBiolog
+ 1638  screen -ls
+ 1639  screen -r 333965.ZarnigorBiolog
+ 1640  screen -S 333965.ZarnigorBiolog
+ 1641  ls
+ 1642  screen -ls
+ 1643  screen -S 333965.ZarnigorBiolog
+ 1644  make run
+ 1645  ls
+ 1646  cd ..
+ 1647  ls
+ 1648  cd crm-education-center/
+ 1649  ls
+ 1650  make run
+ 1651  ls
+ 1652  make run
+ 1653  ls
+ 1654  make run
+ 1655  clear
+ 1656  make run
+ 1657  npm start
+ 1658  clear
+ 1659  ls
+ 1660  cd front/
+ 1661  cd ..
+ 1662  cd front/
+ 1663  ls
+ 1664  cd SignalR/
+ 1665  ls
+ 1666  cd VideoChat/
+ 1667  l
+ 1668  ls
+ 1669  dotnet run
+ 1670  cd front/SignalR/VideoChat/
+ 1671  dotnet run
+ 1672  dotnet watch run
+ 1673  ls
+ 1674  cd ..
+ 1675  ls
+ 1676  cd ..
+ 1677  ls
+ 1678  mkdir test
+ 1679  cd test
+ 1680  ls
+ 1681  git clone https://github.com/SardorSohinazarov/SignalR.git
+ 1682  ls
+ 1683  cd SignalR/
+ 1684  ls
+ 1685  dotnet
+ 1686  dotnet -h
+ 1687  dotnet publish
+ 1688  ls
+ 1689  cd VideoChat/
+ 1690  ls
+ 1691  dotnet publish
+ 1692  cd bin
+ 1693  cd Release/net8.0/
+ 1694  ls
+ 1695  cd publish/
+ 1696  ls
+ 1697  dotnet run
+ 1698  cd ..
+ 1699  dotnet run
+ 1700  ls
+ 1701  cd VideoChat
+ 1702  ls
+ 1703  cd publish/
+ 1704  ls
+ 1705  dotnet -h
+ 1706  lls
+ 1707  ls
+ 1708  cd dotnet VideoChat.dll
+ 1709  dotnet run VideoChat.dll
+ 1710  dotnet
+ 1711  cd ..
+ 1712  ls
+ 1713  cd Properties/
+ 1714  ls
+ 1715  nano launchSettings.json 
+ 1716  dotnet run
+ 1717  cd ..
+ 1718  dotnet run
+ 1719  cd ..
+ 1720  ls
+ 1721  cd SignalR/
+ 1722  cd VideoChat/
+ 1723  dotnet run
+ 1724  screen -S ngrok
+ 1725  ls
+ 1726  screen -ls
+ 1727  screen -r 510505.UIZarnigorBiolog
+ 1728  screen -r 337122.UIZarnigorBiolog
+ 1729  screen -r 510505.UIZarnigorBiolog
+ 1730  screen -r 806959.UIZarnigorBiolog
+ 1731  screen -ls
+ 1732  screen -r 806959.UIZarnigorBiolog
+ 1733  history
+ 1734  screen -ls
+ 1735  screen -r 319928.43095.Stock.Management
+ 1736  screen -r 43095.Stock.Management
+ 1737  ls
+ 1738  clear
+ 1739  dotnet run
+ 1740  ngrok http 5261
+ 1741  ng serve
+ 1742  npm start
+ 1743  npm install -g @angular/cli
+ 1744  ng serve
+ 1745  node -v
+ 1746  npm cache clean --force
+ 1747  npm install -g n
+ 1748  n latest
+ 1749  node -v
+ 1750  nvm --version
+ 1751  sudo apt-get install nodejs
+ 1752  npm start
+ 1753  ng serve
+ 1754  npm install '@angular-devkit/build-angular:dev-server
+ 1755  npm install @angular-devkit/build-angular:dev-server
+ 1756  sudo apt install npm
+ 1757  sudo apt-get install curl
+ 1758  curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+ 1759  sudo apt-get install -y nodejs
+ 1760  node -v 
+ 1761  ng serve
+ 1762  npm start
+ 1763  npm install -g npm@10.5.2
+ 1764  ng serve
+ 1765  npm start
+ 1766  ng run app:build exited with exit code 1.
+ 1767  ls
+ 1768  ng serve
+ 1769  npm install @angular-devkit/build-angular:dev-server
+ 1770  cd V
+ 1771  cd /root/.npm/_logs/2024-04-14T16_29_08_192Z-debug-0.log
+ 1772  /root/.npm/_logs/2024-04-14T16_29_08_192Z-debug-0.log
+ 1773  cd
+ 1774  cd /root/.npm/_logs/2024-04-14T16_29_08_192Z-debug-0.log
+ 1775  cd ..
+ 1776  ls
+ 1777  cd
+ 1778  ls
+ 1779  cd front/
+ 1780  ls
+ 1781  cd Bootcamp-Result/
+ 1782  ls
+ 1783  cd 5_month_Angular_TypeScript_Docker/
+ 1784  ls
+ 1785  cd 84_lesson_materialui/
+ 1786  ls
+ 1787  cd ..
+ 1788  cd 83_lesson_angular_ng_bootstrap/
+ 1789  ls
+ 1790  cd MyLeetCode/
+ 1791  ls
+ 1792  ng serve
+ 1793  ls
+ 1794  cd ..
+ 1795  ls
+ 1796  cd github-master/
+ 1797  l
+ 1798  npm start
+ 1799  screen -ls
+ 1800  ls
+ 1801  npm install eslint-plugin-jsx-a11y
+ 1802  npm start
+ 1803  ls
+ 1804  nano package
+ 1805  nano package.json
+ 1806  npm install eslint-plugin-react --save-dev
+ 1807  npm start
+ 1808  eslint src
+ 1809  npm outdated eslint
+ 1810  npm update eslint
+ 1811  npm cache clean --force
+ 1812  npm start
+ 1813  screen -ls
+ 1814  screen -r 300006.LeetCode
+ 1815  screen -r 373773.MyLeetCodeUI
+ 1816  screen -ls
+ 1817  ls
+ 1818  cd gosource/
+ 1819  ls
+ 1820  rm -rf go1.22.2.linux-amd64.tar.gz 
+ 1821  ls
+ 1822  cd crm-education-center/
+ 1823  git pull origin main 
+ 1824  ls
+ 1825  screen -ls
+ 1826  clear
+ 1827  ls
+ 1828  clear
+ 1829  screen -ls
+ 1830  screen -r 333965.ZarnigorBiolog
+ 1831  screen -ls
+ 1832  clear
+ 1833  ls
+ 1834  screen -ls
+ 1835  screen -r 333965.ZarnigorBiolog
+ 1836  screen -r 333965 -X quit
+ 1837  screen -ls
+ 1838  screen -r 786819 -X quit
+ 1839  screen -ls
+ 1840  screen -r 786854 -X quit
+ 1841  screen -r 786909 -X quit
+ 1842  screen -ls
+ 1843  screen -r 1025337 -X quit
+ 1844  screen -ls
+ 1845  screen -r 337122 -X quit
+ 1846  screen -ls
+ 1847  screen -r 510505 -X quit
+ 1848  screen -ls
+ 1849  screen -r 1025337 -X quit
+ 1850  screen -r 1026333 -X quit
+ 1851  screen -r 1013593 -X quit
+ 1852  screen -ls
+ 1853  screen -S crm-back
+ 1854  screen -ls
+ 1855  screen -r 1013593 -X quit
+ 1856  screen -r 319928 -X quit
+ 1857  screen -sl
+ 1858  clear
+ 1859  screen -ls
+ 1860  screen -r 1025337 -X quit
+ 1861  screen -ls
+ 1862  screen -r 300006 -X quit
+ 1863  screen -ls
+ 1864  clear
+ 1865  screen -ls
+ 1866  ls
+ 1867  cd front/
+ 1868  ls
+ 1869  cd CRM-React/
+ 1870  screen -r 806959.UIZarnigorBiolog
+ 1871  ls
+ 1872  cd dotnet/Api-Education-Platforma/src/Education.Api
+ 1873  ls
+ 1874  cd ..
+ 1875  ls
+ 1876  cd Education.API/
+ 1877  ls
+ 1878  nano Progra
+ 1879  nano Program.cs 
+ 1880  screen -r 1057958.Api.Education.Platforma
+ 1881  exit
+ 1882  ls
+ 1883  cd dotnet/Api-Education-Platforma/src/
+ 1884  git log
+ 1885  git status
+ 1886  git pull
+ 1887  git reset --hard HEAD 
+ 1888  git pull
+ 1889  ls
+ 1890  screen -r 1057958.Api.Education.Platforma
+ 1891  sudo certbot --nginx
+ 1892  cd 
+ 1893  cd ..
+ 1894  cd etc/nginx/sites-enabled/
+ 1895  sudo ln -s /etc/nginx/sites-available/carservice.tohirjon.uz /etc/nginx/sites-enabled
+ 1896  sudo certbot --nginx
+ 1897  ls
+ 1898  cd dotnet/Api-Education-Platforma/src/Education.API/
+ 1899  git pull
+ 1900  screen -r 1057958.Api.Education.Platforma
+ 1901  ls
+ 1902  cd dotnet/
+ 1903  ls
+ 1904  cd Api-Education-Platforma/
+ 1905  git pull
+ 1906  ls
+ 1907  cd ..
+ 1908  ls
+ 1909  cd Api-Education-Platforma/
+ 1910  ls
+ 1911  cd src/Education.API
+ 1912  ls
+ 1913  nano launchSettings.json
+ 1914  ls
+ 1915  nano appsettings.json
+ 1916  screen -r 1057958.Api.Education.Platforma
+ 1917  ls
+ 1918  cd  dotnet
+ 1919  cd Api-Education-Platforma/ 
+ 1920  git pull
+ 1921  git branch 
+ 1922  screen -ls
+ 1923  screen -r 1057958.Api.Education.Platforma 
+ 1924  exit
+ 1925  psql -U postgres -d zarnigordb -h localhost -W
+ 1926  ls
+ 1927  screen -ls
+ 1928  ls
+ 1929  cd dotnet
+ 1930  ls
+ 1931  cd Api-Education-Platforma/
+ 1932  cd src/
+ 1933  ls
+ 1934  cd Education.API/
+ 1935  dotnet run
+ 1936  ls
+ 1937  history
+ 1938  cd ..
+ 1939  ls
+ 1940  cd Bootcamp-Result/
+ 1941  ls
+ 1942  cd Docs/
+ 1943  history > history.txt
+ 1944  ls
+ 1945  nano history.txt
+ 1946  nano history_latest.txt
+ 1947  history > history_latest.txt
