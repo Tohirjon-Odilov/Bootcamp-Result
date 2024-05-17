@@ -1,2 +1,4 @@
 history > history_for_print.txt
 	=> historiyni faylga saqlab olish
+
+scp -r path root@54.565.255.555.55

@@ -20,7 +20,7 @@ dotnet user-secrets set "EmailSettings:Sender" "coderr819@gmail.com"
 dotnet user-secrets set "EmailSettings:Password" "uyxj pbqg exyp tcmj"
 dotnet user-secrets set "EmailSettings:MailServer" "smtp.gmail.com"
 dotnet user-secrets set "EmailSettings:MailPort" "587"
-dotnet user-secrets set "ConnectionStrings:StockManagementConnectionString" "Host=localhost;Port=5432;Username=postgres;Password=root;Database=Stock.Management.DB;"
+dotnet user-secrets set "ConnectionStrings:StockManagementConnectionString" "Host=localhost;Port=5432;Username=postgres;Password=coder;Database=Stock.Management.DB;"
 dotnet user-secrets set "AllowedHosts" "*"
 
 ==============================
@@ -46,15 +46,15 @@ For Nginx
 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
 
 server {
-    server_name api.akramjondev.uz;
+    server_name edu-api.tohirjon.uz;
 
     location / {
         include proxy_params;
-        proxy_pass http://127.0.0.1:5003;
+        proxy_pass http://127.0.0.1:8080;
     }
 }
 
-sudo ln -s /etc/nginx/sites-available/api.akramjondev.uz /etc/nginx/sites-enabled
+sudo ln -s /etc/nginx/sites-available/edu-api.tohirjon.uz /etc/nginx/sites-enabled
 
 crontab -e
 ichiga shu kod kiritilsa har kuni yangi sertifikat oladi.
