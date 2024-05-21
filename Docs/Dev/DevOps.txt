@@ -75,7 +75,7 @@ appsettings.json ichi
   },
   "AllowedHosts": "*",
   "ConnectionStrings": {
-    "DefaultConnection": "Host=localhost;Port=5432;Username=postgres;Password=coder;Database=IdentitLessonyDb;"
+    "DefaultConnection": "Host=localhost;Port=5432;Username=postgres;Password=coder;Database=Education.Platforma;"
   },
   "JWTSettings": {
     "SecretKey": "snfisnpiubgupieqrIUUIBIUByfbebrfbsagbdhlfgbdlkfbgjhhjash",
