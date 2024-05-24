@@ -63,6 +63,8 @@ ichiga shu kod kiritilsa har kuni yangi sertifikat oladi.
 ==============================
 
 git reset --hard HEAD => O'zgarishlarni yo'q qilish.
+-------##########--------
+git lfs clone linka => ko'proq kutadi
 
 ==============================
 appsettings.json ichi
