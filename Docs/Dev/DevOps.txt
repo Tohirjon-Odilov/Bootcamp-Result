@@ -46,6 +46,7 @@ For Nginx
 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
 
 server {
+    listen 8081;
     server_name edu-api.tohirjon.uz;
 
     location / {
@@ -54,7 +55,7 @@ server {
     }
 }
 
-sudo ln -s /etc/nginx/sites-available/cms-api_v1.tohirjon.uz /etc/nginx/sites-enabled
+sudo ln -s /etc/nginx/sites-available/rumassa.tohirjon.uz /etc/nginx/sites-enabled
 
 crontab -e
 ichiga shu kod kiritilsa har kuni yangi sertifikat oladi.

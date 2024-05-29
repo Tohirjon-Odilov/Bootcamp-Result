@@ -1,3 +1,4 @@
+using Notifications.Api.Middlewares;
 using SignalRWebpack.Hubs;
 
 var builder = 
@@ -30,6 +31,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseMiddleware<MyRateLimiting>();
 app.UseHttpsRedirection();
 app.UseAuthorization();
 app.UseCors();

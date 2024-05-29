@@ -9,7 +9,7 @@ export class NotificationService {
 
   constructor() {
     this.hubConnection = new signalR.HubConnectionBuilder()
-      .withUrl('https://localhost:7000/notificationHub')
+      .withUrl('http://localhost:5029/notificationHub')
       .build();
     
     this.hubConnection.start()
